@@ -130,11 +130,11 @@ Checkpoints and Metrics
                                                                                                             
 >CD Transformation Metrics                             
 >                                                     
->> Phase				   Metric						Measurement Value                         
 >                           
 >>Commit Phase                
->>                        
->>                           Build Duration 				Minutes            
+>>						<b>Metric						Measurement Value</b>                       
+>>
+>>                         Build Duration 				Minutes            
 >>                                                      
 >>                         Manual testing duration    
 >>                         (automatable) 				Person Weeks      
