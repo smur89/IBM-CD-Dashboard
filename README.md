@@ -135,7 +135,7 @@ CD Transformation Metrics
 ---------------------------                             
                          
 <b>Commit Phase</b>                
->					   <i>Metric						Measurement Value</i>                     
+>					      Metric						Measurement Value                     
 >
 >                         Build Duration 				Minutes            
 >                                                      
@@ -144,14 +144,14 @@ CD Transformation Metrics
 >
                             
 Acceptance Test Phase      
->					   <i>Metric						Measurement Value</i>                      
+>					       Metric						Measurement Value                     
 >                          
->                         API Test Coverage (via     
->                         automated measurement) 		% Value            
+>                          API Test Coverage (via     
+>                          automated measurement) 		% Value            
 >
 
 Manual Test Phase         
->					   <i>Metric						Measurement Value</i>                     
+>					       Metric						Measurement Value               
 >                           
 >                          Manual testing duration    
 >                          (non-automatable) 			Person Weeks       
@@ -170,14 +170,16 @@ Manual Test Phase
 >
                                                
 CD Business Value           
->					   <i>Metric						Measurement Value</i>                     
+>					       Metric						Measurement Value                     
 >                         
 >                          Cumulative open+deferred   
 >                          defects (technical debt)     Number
 >                                               
                                                       
                                                       
-Project                                               
+Project       
+-----------------
+                                        
 Develop an Continuous Delivery ICS Adoption Dashboard 
 which reports out each CD Transformation and Metric as
 defined above on a per software product development   
@@ -199,7 +201,8 @@ The dashboard must be capable of being easily merged
 with any future common metrics repository and         
 dashboard.                                            
                                                       
-Benefits                                              
+Benefits     
+---------------                                         
 The main purpose of the dashboard is to provide       
 information to team members, management and executives
 on how they are doing against defined goals.          
