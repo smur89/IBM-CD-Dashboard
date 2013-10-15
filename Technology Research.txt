@@ -1,22 +1,194 @@
 Jenkins
-Jenkins plugins
--Static code analysis (like checkstyle)
+-Jenkins plugins
+--Static code analysis (like checkstyle)
+
+_________________________________________________________________________________________
 
 RTC
 https://jazz.net/downloads/rational-team-concert/releases/4.0?p=allDownloads
 -RTC API?
 Javadoc - https://jazz.net/downloads/rational-team-concert/releases/4.0/RTC-Client-plainJavaLib-API-javadoc-4.0.zip
+Using RTC - https://www.youtube.com/watch?feature=player_embedded&v=8SippiZJqqQ
+
+-https://www.youtube.com/watch?v=X7nrHC9YO4Y
+-Planning
+--Documentation
+--Estimates
+--Widgets/Dashboard??
+--Change Requests
+----Delegation
+--Work Items
+--Build
+----Test
+----History
+--SCM
+----Role Based (privileges useable in dashboard?)
+
+Streams - Projects/team areas
+Components - User/Project/team areas
+
+_________________________________________________________________________________________
 
 Continuous Delivery Dashboards
 -Continuous Delivery in the Cloud – Part 6: Create a Dashboard of your System
 https://blog.codecentric.de/en/2012/06/continuous-delivery-in-the-cloud-part6-create-a-dashbord-of-your-system/
 
+_________________________________________________________________________________________
+
 knockout.js - http://knockoutjs.com/index.html
 
+_________________________________________________________________________________________
+
 angular.js - http://angularjs.org/
+_________________________________________________________________________________________
 
 backbone.js - http://backbonejs.org/
+_________________________________________________________________________________________
+
 
 node.js - http://nodejs.org/
 Push updates from the server to the client without having to poll or refresh?
 -Polling?
+
+_________________________________________________________________________________________
+
+Java Spring
+_________________________________________________________________________________________
+
+Test environments?
+-cloud based?
+--HP? AWS?
+_________________________________________________________________________________________
+
+Requirements
+Transformation Checkpoint                             
+                                                      
+                           Each code submission       
+                           triggers the pipeline in   
+                           serial                     
+                                                      
+                                                      
+                           Jenkins provides CI        
+                           pipeline                   
+                                                      
+                                                      
+                           CI pipeline is fully       
+                           automated                  
+                                                      
+                                                      
+                           Single source              
+                           repository/trunk           
+                                                      
+                                                      
+                           All artifacts kept in      
+                           version control            
+                                                      
+                                                      
+                           All Commit Phase failures  
+                           stop the pipeline          
+                                                      
+                                                      
+                           SPRs add data to track test
+                           escapes                    
+                                                      
+CI pipeline is implemented                            
+                           Leverage common metrics    
+                           repository and dashboard   
+                                                      
+                                                      
+                           Push-button automated      
+                           pre-submission validation  
+                                                      
+                                                      
+                           All new code is code       
+                           reviewed                   
+                                                      
+                                                      
+                           All new code has unit and  
+                           functional test coverage   
+                                                      
+                                                      
+                           Automated tests added for  
+                           all resolved SPRs          
+                                                      
+Developer role and enablement                         
+                           SPRs created for all issues
+                           outside of the Commit Phase
+                                                      
+                                                      
+                           All test deployments use   
+                           production deployment      
+                           processes and are fully    
+                           automated/repeatable       
+                                                      
+                                                      
+                           All test deployments use   
+                           production-congruent       
+                           environments/stacks        
+                                                      
+                                                      
+                           Full                       
+                           regression/compatibility   
+                           testing of APIs and        
+                           extensions                 
+                                                      
+                                                      
+                           Simian Army testing occurs 
+                           continuously               
+                                                      
+                                                      
+                           Dashboard metrics gathering
+                           is automated               
+                                                      
+                                                      
+                           Continuous on-premises     
+                           testing (NFR and on-prem   
+                           only features)             
+                                                      
+                                                      
+                           Zero downtime updates      
+                                                      
+Continuous delivery                                   
+                           Additional SCSB            
+                           usage/defect metrics stored
+                           in repository              
+                                                      
+                                                      
+CD Transformation Metrics                             
+                                                      
+Phase                                                 
+                           Metric                     
+                                   Measurement Value  
+Commit Phase                                          
+                           Build Duration             
+                                   Minutes            
+                                                      
+                           Manual testing duration    
+                           (automatable)              
+                                   Person Weeks       
+Acceptance Test Phase                                 
+                           API Test Coverage (via     
+                           automated measurement)     
+                                   % Value            
+Manual Test Phase                                     
+                           Manual testing duration    
+                           (non-automatable)          
+                                   Person Weeks       
+                                                      
+                           Time from final code       
+                           submission to production   
+                           (Cloud)                    
+                                   Days               
+                                                      
+                           Time from final code       
+                           submission to GA           
+                           (On-Premises)              
+                                   Days               
+                                                      
+                           SPRs opened per capita     
+                           (general quality measure)  
+                                   Number             
+CD Business Value                                     
+                           Cumulative open+deferred   
+                           defects (technical debt)   
+                                   Number      

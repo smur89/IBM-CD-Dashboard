@@ -1,0 +1,8 @@
+Week Beginning 14/10/13
+	Created git repository
+	Investigating project management tools similar to Confluence.
+		-Trello
+		-LeanKitKanban
+		-Phabricator
+	Created Project Task Board
+		-https://trello.com/b/nQeWNCIM/ibm-cd-dashboard
