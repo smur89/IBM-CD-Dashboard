@@ -33,9 +33,7 @@ teams, comprising OnPrem, Cloud and Mobile.
 CD Transformation Checkpoints and Metrics             
                                                       
 The following are the key measurable CD Transformation
-Checkpoints and Metrics                               
-                                                      
-                                                      
+Checkpoints and Metrics                                                                             
                                                       
 >Transformation Checkpoint                                                                                       
 >                           Each code submission       
