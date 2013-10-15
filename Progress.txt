@@ -6,3 +6,7 @@ Week Beginning 14/10/13
 		-Phabricator
 	Created Project Task Board
 		-https://trello.com/b/nQeWNCIM/ibm-cd-dashboard
+	Researching Jenkins
+		-How to get information from Jenkins remotely?
+			-REST API in XML/JSON/Python format
+			-

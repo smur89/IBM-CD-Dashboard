@@ -1,6 +1,6 @@
 Jenkins
 -Jenkins plugins
---Static code analysis (like checkstyle)
+- REST API resulting in XML/JSON/Python
 
 _________________________________________________________________________________________
 
@@ -49,6 +49,11 @@ ________________________________________________________________________________
 node.js - http://nodejs.org/
 Push updates from the server to the client without having to poll or refresh?
 -Polling?
+
+_________________________________________________________________________________________
+
+d3.js - http://d3js.org/
+Data visualisation
 
 _________________________________________________________________________________________
 
