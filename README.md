@@ -134,7 +134,7 @@ Continuous delivery
 CD Transformation Metrics
 ---------------------------                             
                          
-><b>Commit Phase</b>                
+<b>Commit Phase</b>                
 >						  Metric						Measurement Value                       
 >
 >                         Build Duration 				Minutes            
