@@ -1,6 +1,7 @@
 Jenkins
 -Jenkins plugins
 - REST API resulting in XML/JSON/Python
+-Internal Data model stored as a tree, API calls return a subtree.
 
 _________________________________________________________________________________________
 

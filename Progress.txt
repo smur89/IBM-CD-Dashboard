@@ -1,5 +1,7 @@
 Week Beginning 14/10/13
 	Created git repository
+		-using SourceTree as Client 
+			-http://www.sourcetreeapp.com/
 	Investigating project management tools similar to Confluence.
 		-Trello
 		-LeanKitKanban
@@ -9,4 +11,4 @@ Week Beginning 14/10/13
 	Researching Jenkins
 		-How to get information from Jenkins remotely?
 			-REST API in XML/JSON/Python format
-			-
+			-XML format supports XPath include/exclude query patterns

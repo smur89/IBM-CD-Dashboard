@@ -35,8 +35,7 @@ Checkpoints and Metrics
                                                       
                                                       
                                                       
-Transformation Checkpoint                             
-                                    Yes  No          
+Transformation Checkpoint                                    
                                                       
                            Each code submission       
                            triggers the pipeline in   
@@ -66,7 +65,8 @@ Transformation Checkpoint
                            SPRs add data to track test
                            escapes                    
                                                       
-CI pipeline is implemented                            
+CI pipeline is implemented         
+                   
                            Leverage common metrics    
                            repository and dashboard   
                                                       
@@ -86,7 +86,8 @@ CI pipeline is implemented
                            Automated tests added for  
                            all resolved SPRs          
                                                       
-Developer role and enablement                         
+Developer role and enablement   
+                      
                            SPRs created for all issues
                            outside of the Commit Phase
                                                       
@@ -123,7 +124,8 @@ Developer role and enablement
                                                       
                            Zero downtime updates      
                                                       
-Continuous delivery                                   
+Continuous delivery          
+                         
                            Additional SCSB            
                            usage/defect metrics stored
                            in repository              
@@ -131,42 +133,40 @@ Continuous delivery
                                                       
 CD Transformation Metrics                             
                                                       
-Phase                                                 
-                           Metric                     
-                                   Measurement Value  
-Commit Phase                                          
-                           Build Duration             
-                                   Minutes            
+Phase                      Metric 						Measurement Value                             
+                           
+Commit Phase                
+                          
+                           Build Duration 				Minutes            
                                                       
                            Manual testing duration    
-                           (automatable)              
-                                   Person Weeks       
-Acceptance Test Phase                                 
+                           (automatable) 				Person Weeks      
+                            
+Acceptance Test Phase       
+                          
                            API Test Coverage (via     
-                           automated measurement)     
-                                   % Value            
+                           automated measurement) 		% Value            
 Manual Test Phase                                     
                            Manual testing duration    
-                           (non-automatable)          
-                                   Person Weeks       
+                           (non-automatable) 			Person Weeks       
                                                       
                            Time from final code       
-                           submission to production   
-                           (Cloud)                    
-                                   Days               
+                           submission to production     Days
+                           (Cloud) 						               
                                                       
                            Time from final code       
-                           submission to GA           
+                           submission to GA             Days
                            (On-Premises)              
-                                   Days               
+                                                  
                                                       
                            SPRs opened per capita     
-                           (general quality measure)  
-                                   Number             
-CD Business Value                                     
+                           (general quality measure)    Number
+                                                
+CD Business Value           
+                          
                            Cumulative open+deferred   
-                           defects (technical debt)   
-                                   Number             
+                           defects (technical debt)     Number
+                                                
                                                       
                                                       
 Project                                               
