@@ -1,7 +1,7 @@
 Jenkins
 -Jenkins plugins
 - REST API resulting in XML/JSON/Python
--Internal Data model stored as a tree, API calls return a subtree.
+-Internal Data model stored as a tree, API calls return a subtree, subtree cuts off at a certain point, this point can be adjusted.
 
 _________________________________________________________________________________________
 
@@ -33,6 +33,35 @@ ________________________________________________________________________________
 Continuous Delivery Dashboards
 -Continuous Delivery in the Cloud – Part 6: Create a Dashboard of your System
 https://blog.codecentric.de/en/2012/06/continuous-delivery-in-the-cloud-part6-create-a-dashbord-of-your-system/
+
+_________________________________________________________________________________________
+
+Python - https://pypi.python.org/pypi/jenkinsapi
+-JenkinsAPI
+--Query the test-results of a completed build
+--Get objects representing the latest builds of a job
+--Search for artifacts by simple criteria
+--Block until jobs are complete
+--Install artifacts to custom-specified directory structures
+--username/password auth support for jenkins instances with auth turned on
+--Ability to search for builds by subversion revision
+--Ability to add/remove/query jenkins slaves
+_________________________________________________________________________________________
+
+Ruby - https://rubygems.org/gems/jenkins_api_client
+-JenkinsAPI
+--Creating jobs by sending xml file or by specifying params as options with more customization options including source control, notifications, etc.
+--Building jobs (with params), stopping builds, querying details of recent builds, obtaining build params, etc.
+--Listing jobs available in Jenkins with job name filter, job status filter.
+--Adding/removing downstream projects.
+--Chaining jobs i.e given a list of projects each project is added as a downstream project to the previous one.
+--Obtaining progressive console output.
+--Username/password based authentication.
+--Command Line Interface with a lot of options provided in the libraries.--Creating, listing views.
+--Adding jobs to views and removing jobs from views.
+--Adding/removing jenkins slaves, querying details of slaves.
+-Obtaining the tasks in build queue, and their age, cause, reason, ETA, ID, params and much more.
+--Quiet down, cancel quiet down, safe restart, force restart, and wait till Jenkins becomes available after a restart.
 
 _________________________________________________________________________________________
 
