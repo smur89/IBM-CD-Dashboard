@@ -2,6 +2,7 @@ Week Beginning 14/10/13
 	Created git repository
 		-using SourceTree as Client 
 			-http://www.sourcetreeapp.com/
+		-Formatted README.md file to display appropriately using Markdown
 	Investigating project management tools similar to Confluence.
 		-Trello
 		-LeanKitKanban

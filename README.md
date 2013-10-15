@@ -2,6 +2,8 @@ IBM-CD-Dashboard
 ================
 
 Continuous Delivery IBM Collaboration Services Adoption dashboard
+---------------------
+
 
 Project Dashboard: https://trello.com/b/zX38z3EV/ibm-cd-dashboard
 
@@ -35,19 +37,19 @@ Checkpoints and Metrics
                                                       
                                                       
                                                       
-Transformation Checkpoint                                    
-                                                      
-                           Each code submission       
-                           triggers the pipeline in   
-                           serial                     
-                                                      
-                                                      
-                           Jenkins provides CI        
-                           pipeline                   
-                                                      
-                                                      
-                           CI pipeline is fully       
-                           automated                  
+>Transformation Checkpoint                                    
+>                                                      
+>                           Each code submission       
+>                           triggers the pipeline in   
+>                           serial                     
+>                                                      
+>                                                      
+>                           Jenkins provides CI        
+>                           pipeline                   
+>                                                      
+>                                                      
+>                           CI pipeline is fully       
+>                           automated                  
                                                       
                                                       
                            Single source              
