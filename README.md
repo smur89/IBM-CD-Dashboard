@@ -133,7 +133,7 @@ Continuous delivery
                                                       
 CD Transformation Metrics                             
                                                       
-Phase                      Metric 						Measurement Value                             
+	Phase				   Metric						Measurement Value                         
                            
 Commit Phase                
                           
@@ -146,7 +146,8 @@ Acceptance Test Phase
                           
                            API Test Coverage (via     
                            automated measurement) 		% Value            
-Manual Test Phase                                     
+Manual Test Phase         
+                            
                            Manual testing duration    
                            (non-automatable) 			Person Weeks       
                                                       
