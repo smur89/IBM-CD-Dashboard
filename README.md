@@ -84,7 +84,8 @@ Checkpoints and Metrics
 >                                                     
 >                                                     
 >                          Automated tests added for  
->                          all resolved SPRs          
+>                          all resolved SPRs  
+>        
                                                       
 >Developer role and enablement                         
 >                          SPRs created for all issues
@@ -122,29 +123,31 @@ Checkpoints and Metrics
 >                                                     
 >                                                     
 >                          Zero downtime updates      
+>
                                                       
 >Continuous delivery                                  
 >                          Additional SCSB            
 >                          usage/defect metrics stored
 >                          in repository              
                                                                                                             
->CD Transformation Metrics                             
->                                                     
->                           
->>Commit Phase                
->>						<b>Metric						Measurement Value</b>                       
->>
->>                         Build Duration 				Minutes            
->>                                                      
->>                         Manual testing duration    
->>                         (automatable) 				Person Weeks      
->                            
->>Acceptance Test Phase       
->>                          
->>                         API Test Coverage (via     
->>                         automated measurement) 		% Value            
+CD Transformation Metrics
+---------------------------                             
+                         
+>Commit Phase                
+>						<b>Metric						Measurement Value</b>                       
 >
->>Manual Test Phase         
+>                         Build Duration 				Minutes            
+>                                                      
+>                         Manual testing duration    
+>                         (automatable) 				Person Weeks      
+>
+                            
+>Acceptance Test Phase       
+>                          
+>                         API Test Coverage (via     
+>                         automated measurement) 		% Value            
+>
+>Manual Test Phase         
                             
                            Manual testing duration    
                            (non-automatable) 			Person Weeks       
