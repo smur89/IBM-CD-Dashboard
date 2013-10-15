@@ -135,7 +135,7 @@ CD Transformation Metrics
 ---------------------------                             
                          
 <b>Commit Phase</b>                
->						  Metric						Measurement Value                       
+>					   <i>Metric						Measurement Value</i>                     
 >
 >                         Build Duration 				Minutes            
 >                                                      
@@ -143,13 +143,15 @@ CD Transformation Metrics
 >                         (automatable) 				Person Weeks      
 >
                             
-Acceptance Test Phase       
+Acceptance Test Phase      
+>					   <i>Metric						Measurement Value</i>                      
 >                          
 >                         API Test Coverage (via     
 >                         automated measurement) 		% Value            
 >
 
 Manual Test Phase         
+>					   <i>Metric						Measurement Value</i>                     
 >                           
 >                          Manual testing duration    
 >                          (non-automatable) 			Person Weeks       
@@ -168,6 +170,7 @@ Manual Test Phase
 >
                                                
 CD Business Value           
+>					   <i>Metric						Measurement Value</i>                     
 >                         
 >                          Cumulative open+deferred   
 >                          defects (technical debt)     Number
