@@ -37,8 +37,7 @@ Checkpoints and Metrics
                                                       
                                                       
                                                       
->Transformation Checkpoint                                    
->                                                      
+>Transformation Checkpoint                                                                                       
 >                           Each code submission       
 >                           triggers the pipeline in   
 >                           serial                     
@@ -50,105 +49,102 @@ Checkpoints and Metrics
 >                                                      
 >                           CI pipeline is fully       
 >                           automated                  
+>                                                      
+>                                                     
+>                           Single source              
+>                          repository/trunk           
+>                                                      
+>                                                      
+>                           All artifacts kept in      
+>                           version control            
+>                                                      
+>                                                      
+>                           All Commit Phase failures  
+>                           stop the pipeline          
+>                                                      
+>                                                      
+>                           SPRs add data to track test
+>                           escapes                    
                                                       
+>CI pipeline is implemented                            
+>                          Leverage common metrics    
+>                          repository and dashboard   
+>                                                      
+>                                                      
+>                          Push-button automated      
+>                          pre-submission validation  
+>                                                     
+>                                                     
+>                          All new code is code       
+>                          reviewed                   
+>                                                     
+>                                                     
+>                          All new code has unit and  
+>                          functional test coverage   
+>                                                     
+>                                                     
+>                          Automated tests added for  
+>                          all resolved SPRs          
                                                       
-                           Single source              
-                           repository/trunk           
+>Developer role and enablement                         
+>                          SPRs created for all issues
+>                          outside of the Commit Phase
+>                                                     
+>                                                     
+>                          All test deployments use   
+>                          production deployment      
+>                          processes and are fully    
+>                          automated/repeatable       
+>                                                     
+>                                                     
+>                          All test deployments use   
+>                          production-congruent       
+>                          environments/stacks        
+>                                                     
+>                                                     
+>                          Full                       
+>                          regression/compatibility   
+>                          testing of APIs and        
+>                          extensions                 
+>                                                     
+>                                                     
+>                          Simian Army testing occurs 
+>                          continuously               
+>                                                     
+>                                                     
+>                          Dashboard metrics gathering
+>                          is automated               
+>                                                     
+>                                                     
+>                          Continuous on-premises     
+>                          testing (NFR and on-prem   
+>                          only features)             
+>                                                     
+>                                                     
+>                          Zero downtime updates      
                                                       
-                                                      
-                           All artifacts kept in      
-                           version control            
-                                                      
-                                                      
-                           All Commit Phase failures  
-                           stop the pipeline          
-                                                      
-                                                      
-                           SPRs add data to track test
-                           escapes                    
-                                                      
-CI pipeline is implemented         
-                   
-                           Leverage common metrics    
-                           repository and dashboard   
-                                                      
-                                                      
-                           Push-button automated      
-                           pre-submission validation  
-                                                      
-                                                      
-                           All new code is code       
-                           reviewed                   
-                                                      
-                                                      
-                           All new code has unit and  
-                           functional test coverage   
-                                                      
-                                                      
-                           Automated tests added for  
-                           all resolved SPRs          
-                                                      
-Developer role and enablement   
-                      
-                           SPRs created for all issues
-                           outside of the Commit Phase
-                                                      
-                                                      
-                           All test deployments use   
-                           production deployment      
-                           processes and are fully    
-                           automated/repeatable       
-                                                      
-                                                      
-                           All test deployments use   
-                           production-congruent       
-                           environments/stacks        
-                                                      
-                                                      
-                           Full                       
-                           regression/compatibility   
-                           testing of APIs and        
-                           extensions                 
-                                                      
-                                                      
-                           Simian Army testing occurs 
-                           continuously               
-                                                      
-                                                      
-                           Dashboard metrics gathering
-                           is automated               
-                                                      
-                                                      
-                           Continuous on-premises     
-                           testing (NFR and on-prem   
-                           only features)             
-                                                      
-                                                      
-                           Zero downtime updates      
-                                                      
-Continuous delivery          
-                         
-                           Additional SCSB            
-                           usage/defect metrics stored
-                           in repository              
-                                                      
-                                                      
-CD Transformation Metrics                             
-                                                      
-	Phase				   Metric						Measurement Value                         
-                           
-Commit Phase                
-                          
-                           Build Duration 				Minutes            
-                                                      
-                           Manual testing duration    
-                           (automatable) 				Person Weeks      
-                            
-Acceptance Test Phase       
-                          
-                           API Test Coverage (via     
-                           automated measurement) 		% Value            
-Manual Test Phase         
+>Continuous delivery                                  
+>                          Additional SCSB            
+>                          usage/defect metrics stored
+>                          in repository              
+                                                                                                            
+>CD Transformation Metrics                             
+>                                                     
+> Phase				   Metric						Measurement Value                         
+>                           
+>>Commit Phase                
+>>                        
+>>                           Build Duration 				Minutes            
+>>                                                      
+>>                         Manual testing duration    
+>>                         (automatable) 				Person Weeks      
+>                            
+>>Acceptance Test Phase       
+>>                          
+>>                         API Test Coverage (via     
+>>                         automated measurement) 		% Value            
+>
+>>Manual Test Phase         
                             
                            Manual testing duration    
                            (non-automatable) 			Person Weeks       
