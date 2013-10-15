@@ -1,0 +1,16 @@
+Jenkins
+Jenkins plugins
+-Static code analysis (like checkstyle)
+
+RTC
+https://jazz.net/downloads/rational-team-concert/releases/4.0?p=allDownloads
+-RTC API?
+Javadoc - https://jazz.net/downloads/rational-team-concert/releases/4.0/RTC-Client-plainJavaLib-API-javadoc-4.0.zip
+
+Continuous Delivery Dashboards
+-Continuous Delivery in the Cloud – Part 6: Create a Dashboard of your System
+https://blog.codecentric.de/en/2012/06/continuous-delivery-in-the-cloud-part6-create-a-dashboard-of-your-system/
+
+Polling
+
+
