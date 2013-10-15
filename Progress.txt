@@ -13,3 +13,14 @@ Week Beginning 14/10/13
 		-How to get information from Jenkins remotely?
 			-REST API in XML/JSON/Python format
 			-XML format supports XPath include/exclude query patterns
+		-Running Jenkins on a RasberryPi for test purposes at home?
+			-RasPi has 30% CPU load when Jenkins is idle
+				--70-93% CPU Load when running Jenkins tasks and CPU is overclocked
+			-Too slow
+		-Run locally/Virtualised environment?
+			—Installed Jenkins Locally (localhost:8080)
+			
+			
+Week Beginning 21/10/13
+
+Week Beginning 28/10/13
