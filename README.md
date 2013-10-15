@@ -130,7 +130,7 @@ Checkpoints and Metrics
                                                                                                             
 >CD Transformation Metrics                             
 >                                                     
-> Phase				   Metric						Measurement Value                         
+>> Phase				   Metric						Measurement Value                         
 >                           
 >>Commit Phase                
 >>                        
