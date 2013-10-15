@@ -4,7 +4,6 @@ IBM-CD-Dashboard
 Continuous Delivery IBM Collaboration Services Adoption dashboard
 ---------------------
 
-
 Project Dashboard: https://trello.com/b/zX38z3EV/ibm-cd-dashboard
 
 Background
