@@ -9,8 +9,14 @@ Javadoc - https://jazz.net/downloads/rational-team-concert/releases/4.0/RTC-Clie
 
 Continuous Delivery Dashboards
 -Continuous Delivery in the Cloud – Part 6: Create a Dashboard of your System
-https://blog.codecentric.de/en/2012/06/continuous-delivery-in-the-cloud-part6-create-a-dashboard-of-your-system/
+https://blog.codecentric.de/en/2012/06/continuous-delivery-in-the-cloud-part6-create-a-dashbord-of-your-system/
 
-Polling
+knockout.js - http://knockoutjs.com/index.html
 
+angular.js - http://angularjs.org/
 
+backbone.js - http://backbonejs.org/
+
+node.js - http://nodejs.org/
+Push updates from the server to the client without having to poll or refresh?
+-Polling?
