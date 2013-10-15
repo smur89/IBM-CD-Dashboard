@@ -7,7 +7,9 @@ Continuous Delivery IBM Collaboration Services Adoption dashboard
 
 Project Dashboard: https://trello.com/b/zX38z3EV/ibm-cd-dashboard
 
-Background                                            
+Background
+----------------
+                                            
 Continuous Delivery (CD) is a pattern language used in
 software development to automate and improve the      
 process of software delivery. Techniques such as      
@@ -30,7 +32,8 @@ on a regular and scheduled basis.
 ICS consists of a large range of software development 
 teams, comprising OnPrem, Cloud and Mobile.           
                                                       
-CD Transformation Checkpoints and Metrics             
+CD Transformation Checkpoints and Metrics 
+--------------------            
                                                       
 The following are the key measurable CD Transformation
 Checkpoints and Metrics                                                                             
