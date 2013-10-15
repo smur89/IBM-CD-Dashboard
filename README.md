@@ -64,7 +64,8 @@ Checkpoints and Metrics
 >                                                      
 >                                                      
 >                           SPRs add data to track test
->                           escapes                    
+>                           escapes   
+>                 
                                                       
 >CI pipeline is implemented                            
 >                          Leverage common metrics    
@@ -126,15 +127,15 @@ Checkpoints and Metrics
 >
                                                       
 >Continuous delivery                                  
->                          Additional SCSB            
->                          usage/defect metrics stored
->                          in repository              
+>   					   Additional SCSB            
+>						   usage/defect metrics stored
+>						   in repository              
                                                                                                             
 CD Transformation Metrics
 ---------------------------                             
                          
->Commit Phase                
->						<b>Metric						Measurement Value</b>                       
+><b>Commit Phase</b>                
+>						  Metric						Measurement Value                       
 >
 >                         Build Duration 				Minutes            
 >                                                      
@@ -147,28 +148,30 @@ CD Transformation Metrics
 >                         API Test Coverage (via     
 >                         automated measurement) 		% Value            
 >
+
 >Manual Test Phase         
-                            
-                           Manual testing duration    
-                           (non-automatable) 			Person Weeks       
-                                                      
-                           Time from final code       
-                           submission to production     Days
-                           (Cloud) 						               
-                                                      
-                           Time from final code       
-                           submission to GA             Days
-                           (On-Premises)              
-                                                  
-                                                      
-                           SPRs opened per capita     
-                           (general quality measure)    Number
-                                                
-CD Business Value           
-                          
-                           Cumulative open+deferred   
-                           defects (technical debt)     Number
-                                                
+>                           
+>                          Manual testing duration    
+>                          (non-automatable) 			Person Weeks       
+>                                                     
+>                          Time from final code       
+>                          submission to production     Days
+>                          (Cloud) 						               
+>                                                     
+>                          Time from final code       
+>                          submission to GA             Days
+>                          (On-Premises)              
+>                                                 
+>                                                     
+>                          SPRs opened per capita     
+>                          (general quality measure)    Number
+>
+                                               
+>CD Business Value           
+>                         
+>                          Cumulative open+deferred   
+>                          defects (technical debt)     Number
+>                                               
                                                       
                                                       
 Project                                               
