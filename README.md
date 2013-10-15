@@ -35,7 +35,7 @@ CD Transformation Checkpoints and Metrics
 The following are the key measurable CD Transformation
 Checkpoints and Metrics                                                                             
                                                       
->Transformation Checkpoint                                                                                       
+Transformation Checkpoint                                                                                       
 >                           Each code submission       
 >                           triggers the pipeline in   
 >                           serial                     
@@ -63,9 +63,10 @@ Checkpoints and Metrics
 >                                                      
 >                           SPRs add data to track test
 >                           escapes   
->                 
+>    
+            
                                                       
->CI pipeline is implemented                            
+CI pipeline is implemented                            
 >                          Leverage common metrics    
 >                          repository and dashboard   
 >                                                      
@@ -85,8 +86,9 @@ Checkpoints and Metrics
 >                          Automated tests added for  
 >                          all resolved SPRs  
 >        
+
                                                       
->Developer role and enablement                         
+Developer role and enablement                         
 >                          SPRs created for all issues
 >                          outside of the Commit Phase
 >                                                     
@@ -124,7 +126,7 @@ Checkpoints and Metrics
 >                          Zero downtime updates      
 >
                                                       
->Continuous delivery                                  
+Continuous delivery                                  
 >   					   Additional SCSB            
 >						   usage/defect metrics stored
 >						   in repository              
@@ -141,13 +143,13 @@ CD Transformation Metrics
 >                         (automatable) 				Person Weeks      
 >
                             
->Acceptance Test Phase       
+Acceptance Test Phase       
 >                          
 >                         API Test Coverage (via     
 >                         automated measurement) 		% Value            
 >
 
->Manual Test Phase         
+Manual Test Phase         
 >                           
 >                          Manual testing duration    
 >                          (non-automatable) 			Person Weeks       
@@ -165,7 +167,7 @@ CD Transformation Metrics
 >                          (general quality measure)    Number
 >
                                                
->CD Business Value           
+CD Business Value           
 >                         
 >                          Cumulative open+deferred   
 >                          defects (technical debt)     Number
