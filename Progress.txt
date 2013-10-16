@@ -20,6 +20,12 @@ Week Beginning 14/10/13
 		-Run locally/Virtualised environment?
 			—Installed Jenkins Locally (localhost:8080)
 			
+	Researching knockout.js
+		-Useful to bind DOM objects with the model
+	Researching Angular.js
+		-MVC architecture
+		-Angular Service (Controller)
+			
 			
 Week Beginning 21/10/13
 
