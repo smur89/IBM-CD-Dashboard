@@ -19,12 +19,14 @@ Week Beginning 14/10/13
 			-Too slow
 		-Run locally/Virtualised environment?
 			—Installed Jenkins Locally (localhost:8080)
+	Researching Node.js
+		- Installed Node.js
 			
 	Researching knockout.js
-		-Useful to bind DOM objects with the model
 	Researching Angular.js
-		-MVC architecture
-		-Angular Service (Controller)
+	Researching Backbone.js
+	Researching Karma (Test runner for Javascript)
+	Researching MongoDB
 			
 			
 Week Beginning 21/10/13
