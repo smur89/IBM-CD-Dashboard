@@ -66,21 +66,28 @@ Ruby - https://rubygems.org/gems/jenkins_api_client
 _________________________________________________________________________________________
 
 knockout.js - http://knockoutjs.com/index.html
+	-Data-binding library
 	-Bind variables in the View Model (DOM)
 	-Observable Arrays
 	-Model View View Model (MVVM) Pattern
 	-shallower learning curve when compared to angular/backbone
 	-Becomes complicated when you want to do things that are not supported out of the box
+	- No IDE plugin
 _________________________________________________________________________________________
 
 Angular.js - http://angularjs.org/
+	- Full Framework
 	- Useful for Data Driven applications, nice data binding
+	- JQuery or JQueryLite dependant
 	- Offers similar data binding to knockout, but also controllers and sets of services
 	- Dependancy injection is used quite a lot
 		- Name function arguments with the same name
 	- Steep learning curve for more advanced features
 	- Popular
-	-Supports automatic testing out of the box
+	- Supports automatic testing out of the box
+	- IntelliJ plugin/VisualStudio plugin
+		- Angular Batarang plugin for Google Chrome developer tools
+	- Large support community
 	
 _________________________________________________________________________________________
 
