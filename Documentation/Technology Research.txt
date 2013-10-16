@@ -130,7 +130,9 @@ Karma runner - http://karma-runner.github.io/0.10/index.html
 	
 _________________________________________________________________________________________
 
-Jasmine Test Framework
+Jasmine
+	-Test Framework for Javascript
+	-Behaviour Driven
 _________________________________________________________________________________________
 
 Java Spring
