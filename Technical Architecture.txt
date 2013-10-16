@@ -1,0 +1,43 @@
+Technical Architecture
+
+1 Use Cases
+—Per use case (total of 6):
+
+1.1 Title (goal)
+
+1.2 Primary Actor
+
+1.3 Scope
+
+1.4 Level
+
+1.5 (Story)
+the body of the use case is simply a paragraph or two of text, informally describing what happens.
+
+-----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+
+
+2 Technical Architecture 2.1 Software Components
+Databases, app engines, mobile platforms
+
+
+2.2 Platform libraries
+APIs and languages (per component)
+
+
+2.3 Distribution and Deployment
+	1. Cloud, REStful, JDBC, sessionless etc
+	2. security e.g. Https, certificates, authentication, etc.
+
+
+2.4 Risks
+Discuss the risks which may effect the delivery of the project.
+
+
+3 Prototype
+3.1 Prototype Deliverable for week 8
+List the uses cases to be delivered in the first prototype and discuss the testing strategy
+
+3.2 Prototype Deliverable for week 11
+List the uses cases to be delivered in the second prototype and discuss the testing strategy

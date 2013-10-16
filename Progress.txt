@@ -27,7 +27,7 @@ Week Beginning 14/10/13
 	Researching Backbone.js
 	Researching Karma (Test runner for Javascript)
 	Researching MongoDB
-			
+	Reading article on developing for RTC APIs - http://rsjazz.wordpress.com/2013/02/28/setting-up-rational-team-concert-for-api-development/				
 			
 Week Beginning 21/10/13
 
