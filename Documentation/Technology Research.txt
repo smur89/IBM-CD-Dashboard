@@ -159,6 +159,12 @@ MongoDb
 	- Store Results of Jenkins queries for analysis of team improvements etc.?
 	- Document-orientated Database
 	- NoSQL
+	
+	MONGODB NOT APPROVED FOR USE IN IBM, SUGGESTED DB2 INSTEAD
+_________________________________________________________________________________________
+
+DB2
+
 _________________________________________________________________________________________
 
 Test environments?
