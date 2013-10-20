@@ -29,7 +29,15 @@ Week Beginning 14/10/13
 	Researching MongoDB
 	Reading article on developing for RTC APIs - http://rsjazz.wordpress.com/2013/02/28/setting-up-rational-team-concert-for-api-development/				
 	
-	MongoDB not approved for use within IBM, DB2 preferred choice
+	Email reply from Brendan:
+		-MongoDB not approved for use within IBM, DB2 preferred choice
+		-Use Jasmine for Javascript tests
+		-Scope of project is just to display results, no control needed.
+
+	Installed Webstorm IDE 30 day trial - can get Educational licence
+		-Emailed Ben Walsh asking to fill out lecturer form for Educational licence.
+
+	Watching Introductory tutorials for Grunt
 			
 Week Beginning 21/10/13
 

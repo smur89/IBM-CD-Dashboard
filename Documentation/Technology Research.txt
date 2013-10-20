@@ -130,12 +130,21 @@ ________________________________________________________________________________
 Grunt.js -  http://gruntjs.com/
 	- Task runner
 	- Automate repetitive tasks
+	- Large JS projects
+	- Preprocessor files
 _________________________________________________________________________________________
  
 Karma runner - http://karma-runner.github.io/0.10/index.html
 	- Test Runner
 	- Spawns a web server and executes source and test code for each browser connected
 	- Results displayed via command line
+
+_________________________________________________________________________________________
+
+Bower
+	- http://bower.io/
+	-package manager
+	-Store a bower file, can pull down dependencies automatically.
 	
 _________________________________________________________________________________________
 
@@ -143,16 +152,18 @@ Jasmine
 	-Test Framework for Javascript
 	-Behaviour Driven
 	-Clear syntax
-	-
+	-IBM Preference
 _________________________________________________________________________________________
 
 QUnit
-_________________________________________________________________________________________
-
-Java Spring
+	IBM PREFER JASMINE
 _________________________________________________________________________________________
 
 Webstorm IDE
+	-Intellisense
+	-Git integration
+	-Educational Licence available
+
 _________________________________________________________________________________________
 
 MongoDb
@@ -164,10 +175,23 @@ MongoDb
 _________________________________________________________________________________________
 
 DB2
+	-Support for XML storage
 
 _________________________________________________________________________________________
 
-Test environments?
--cloud based?
---HP? AWS?
+
+LESS
+	-CSS preprocessing
+	http://lesscss.org/
+_________________________________________________________________________________________
+
+COFFEE
+	-Javascript preprocessing
+	http://coffeescript.org/
+
+_________________________________________________________________________________________
+
+Twitter Bootstrap
+	-Anything not provided by IBM CSS
+		-Emailed Brendan for CSS/HTML IBM Templates
 _________________________________________________________________________________________
