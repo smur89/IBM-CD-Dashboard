@@ -7,12 +7,16 @@ ________________________________________________________________________________
 
 RTC
 
+Setting up RTC for development
 http://rsjazz.wordpress.com/2013/02/28/setting-up-rational-team-concert-for-api-development/
+What API's are available?
+http://rsjazz.wordpress.com/2013/03/14/what-apis-are-available-for-rtc-and-what-can-you-extend/
 
 https://jazz.net/downloads/rational-team-concert/releases/4.0?p=allDownloads
 -RTC API?
 	-Javascript (limited)
 	-Java
+	-REST
 Javadoc - https://jazz.net/downloads/rational-team-concert/releases/4.0/RTC-Client-plainJavaLib-API-javadoc-4.0.zip
 Using RTC - https://www.youtube.com/watch?feature=player_embedded&v=8SippiZJqqQ
 
