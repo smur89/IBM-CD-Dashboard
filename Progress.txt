@@ -38,7 +38,16 @@ Week Beginning 14/10/13
 		-Emailed Ben Walsh asking to fill out lecturer form for Educational licence.
 
 	Watching Introductory tutorials for Grunt
+	
 			
 Week Beginning 21/10/13
+	IBM Meetings
+		-Clarified Use Cases
+		- To send revised and completed Use Cases to Brendan for review
+			- Submission due 28/10/13
+	Added Additional Use cases, to flesh these out tomorrow asap and forward to Brendan
+
+	Researching Groovy and Grails, as this seems like a viable option and similar to MVC in C# which I have experience with.
+
 
 Week Beginning 28/10/13

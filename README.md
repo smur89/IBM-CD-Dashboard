@@ -139,43 +139,43 @@ CD Transformation Metrics
 <b>Commit Phase</b>                
 >					      Metric						Measurement Value                     
 >
->                         Build Duration 				Minutes            
+>                         Build Duration 				Minutes        		build logs (jenkins)     
 >                                                      
 >                         Manual testing duration    
->                         (automatable) 				Person Weeks      
+>                         (automatable) 				Person Weeks      	RQM
 >
                             
 Acceptance Test Phase      
 >					       Metric						Measurement Value                     
 >                          
 >                          API Test Coverage (via     
->                          automated measurement) 		% Value            
+>                          automated measurement) 		% Value            	RQM
 >
 
 Manual Test Phase         
 >					       Metric						Measurement Value               
 >                           
 >                          Manual testing duration    
->                          (non-automatable) 			Person Weeks       
+>                          (non-automatable) 			Person Weeks       	RQM
 >                                                     
 >                          Time from final code       
->                          submission to production     Days
+>                          submission to production     Days				DevOps/Jenkins (XML?)
 >                          (Cloud) 						               
 >                                                     
 >                          Time from final code       
->                          submission to GA             Days
+>                          submission to GA             Days				Jenkins (XML?)
 >                          (On-Premises)              
 >                                                 
 >                                                     
 >                          SPRs opened per capita     
->                          (general quality measure)    Number
+>                          (general quality measure)    Number				RTC
 >
                                                
 CD Business Value           
 >					       Metric						Measurement Value                     
 >                         
 >                          Cumulative open+deferred   
->                          defects (technical debt)     Number
+>                          defects (technical debt)     Number				RTC
 >                                               
                                                       
                                                       
