@@ -195,3 +195,10 @@ Twitter Bootstrap
 	-Anything not provided by IBM CSS
 		-Emailed Brendan for CSS/HTML IBM Templates
 _________________________________________________________________________________________
+
+RQM
+_________________________________________________________________________________________
+
+Groovy & Grails
+	- Compiles to Java bytecode on JVM
+	- 
