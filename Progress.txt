@@ -47,7 +47,17 @@ Week Beginning 21/10/13
 			- Submission due 28/10/13
 	Added Additional Use cases, to flesh these out tomorrow asap and forward to Brendan
 
+	Sent Use cases to Brendan for review.
+
 	Researching Groovy and Grails, as this seems like a viable option and similar to MVC in C# which I have experience with.
+
+	Installed grails and groovy via GVM
+		-http://gvmtool.net/
+
+	Installed IntelliJ plugin for groovy/grails
+	Installed Groovy/Grails Sublime Text 2 plugin
+
+	Set up Groovy SDK in IntelliJ
 
 
 Week Beginning 28/10/13
