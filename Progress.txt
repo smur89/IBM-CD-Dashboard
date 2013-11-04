@@ -51,3 +51,21 @@ Week Beginning 21/10/13
 
 
 Week Beginning 28/10/13
+	Installed Groovy/Grails and IDE plugins for IntelliJ and Eclipse.
+		- Grails not natively suported in IntelliJ CE.
+
+	Watched Groovy/Grails Tutorial - http://www.youtube.com/watch?v=8d1hp8n1stA
+								   - http://www.youtube.com/watch?v=cIjInOkUDy8
+
+	JMS - Asyncronous calls
+
+	Looking at IBM CSS files
+		-ICS UI Developer Guide (file:///Users/shanemurphy/IBM-CD-Dashboard/IBMTemplates/OneUI-3.0.3_20120816-1522_Documentation-BusinessPartnerFiles/docPartner/guidelines/quickstart.htm)
+
+	Created Grails project for Adoption Dashboard
+		-Looking at implementing the IBM CSS files into a template for views
+		Jenkins running on same port as default Grails server - 
+			| Error Server failed to start for port 8080: Address already in use (Use --stacktrace to see the full trace)
+			- Changed default launch port to :8090 (BuildConfig.groovy)
+				- grails.server.port.http = 8090
+		- Use Static Resource imports instead of CSS folders in Grails? - http://grails.org/doc/latest/guide/theWebLayer.html#resources
