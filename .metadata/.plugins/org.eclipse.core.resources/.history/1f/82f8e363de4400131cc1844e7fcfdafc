@@ -1,0 +1,25 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for help
+companion files: help.css / helpTheme.css
+companion files: helpRTL.css / helpThemeRTL.css*/
+/*** P O P U P   H E L P ***/ 
+
+.lotusui30 .lotusHelp{
+	margin:0;padding:5px;position:absolute;width:200px;
+	background-color:#ffffe1;border:1px solid #ccc;
+	-webkit-box-shadow:0 2px 5px #eee;-moz-box-shadow:0 2px 5px #eee;box-shadow:0 2px 5px #eee;
+	overflow:hidden;
+}
+.lotusui30 .lotusHelp .lotusHelpHeader{margin:5px 5px 0 3px;float:right;overflow:hidden;}
+.lotusui_ie .lotusui30 .lotusHelp .lotusHelpHeader{margin-top:1px;}
+.lotusui30 .lotusHelp .lotusHeading{font-size:1.1em;color:#222;font-weight:bold;}
+.lotusui30 .lotusHelp p{padding:0 5px 5px 0;line-height:1.5;/*this line-height is important for alignment and needs to be here in case this winds up on a page with a different line-height*/}
+.lotusui30 .lotusMedium{width:300px;}/*you can put this as an additional class to set the width to 300 pixels*/
+
+
+
+/***********************************************************/
+

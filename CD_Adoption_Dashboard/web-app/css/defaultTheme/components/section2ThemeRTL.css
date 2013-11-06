@@ -1,0 +1,55 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for section
+companion files: section.css / sectionTheme.css
+companion files: sectionRTL.css / sectionThemeRTL.css*/
+/*S E C T I O N */
+/*this is used to space out different elements in all three columns*/
+/*a section contains a header*/
+
+
+
+.lotusui30 .lotusSection2{margin:0 0 20px;padding:0;}
+.lotusui30 .lotusSectionPlain .lotusSectionHeader{border-width:0;background-image:none;}
+.lotusui30 .lotusSection2 .lotusSectionHeader .lotusArrow{padding-right:5px}
+.lotusui30 .lotusSection2 .lotusSectionHeader .lotusIcon{padding:5px 0}
+.lotusui30 .lotusSection2 .lotusDragHandle{right:0; top:4px;}
+.lotusui30 .lotusSection2 .lotusSectionBody{margin:0;}
+.lotusui30 .lotusSection2 .lotusSubheader .lotusIcon{padding-left:0;}
+.lotusui30 .lotusSection2 .lotusChunk{margin-top:0;margin-bottom:5px;}
+.lotusui30 .lotusSection2 .lotusSectionFooter{border-top:1px solid #eee;}
+.lotusui30 .lotusSection2 .lotusSectionFooter .lotusPaging{margin:0;}
+
+
+
+
+
+.lotusui30 .lotusSection2 {border:0;}
+.lotusui30 .lotusSection2 .lotusSectionHeader {border-top:2px solid #141414; border-bottom:1px solid #ededed; margin:0;}
+.lotusui30 .lotusSection2 .lotusSectionHeader a.lotusArrow, .lotusui30 .lotusSection2 .lotusSectionHeader a.lotusArrow:visited, .lotusui30 .lotusSection2 .lotusSectionHeader a.lotusArrow:hover, .lotusui30 .lotusSection2 .lotusSectionHeader a.lotusArrow:focus, .lotusui30 .lotusSection2 .lotusSectionHeader a.lotusArrow:active {padding:5px 0;}
+.lotusui30 .lotusSection2 .lotusDraggable a.lotusArrow, .lotusui30 .lotusSection2 .lotusDraggable a.lotusArrow:visited, .lotusui30 .lotusSection2 .lotusDraggable a.lotusArrow:hover, .lotusui30 .lotusSection2 .lotusDraggable a.lotusArrow:focus, .lotusui30 .lotusSection2 .lotusDraggable a.lotusArrow:active {padding:5px 5px 5px 0;} /*make room if there is a drag handle*/
+.lotusui30 .lotusSection2 .lotusSectionHeader .lotusIcon {padding:5px 5px 5px 0; width:16px;}
+.lotusui30 .lotusSection2 .lotusSectionHeader .lotusFirst {padding-right:0;} /*overrides lotusHeading when sections don't have a twisty arrow*/
+.lotusui30 .lotusSection2 .lotusSubheader {padding:7px 0;}
+/*action icons*/
+.lotusui30 .lotusSection2 .lotusHeading, .lotusui30 .lotusSection2 .lotusHeading2 {font-size:1.2em; color:#444;}
+.lotusui30 .lotusSection2 .lotusHeading a, .lotusui30 .lotusSection2 .lotusHeading a:visited, .lotusui30 .lotusSection2 .lotusHeading a:hover, .lotusui30 .lotusSection2 .lotusHeading a:focus, .lotusui30 .lotusSection2 .lotusHeading a:active{color:#444;}
+.lotusui30 .lotusSection2 .lotusSectionBody {background-color:transparent; padding:5px;}
+.lotusui30 .lotusSection2 .lotusSectionFooter {padding-right:0; padding-left:0;}
+/*lists within a section*/
+.lotusui30 .lotusSection2 .lotusList {margin:0 -5px;} /*allows selection to extend to the left and right of the list items*/
+.lotusui30 .lotusSection2 .lotusList li {padding-right:5px; padding-left:5px;}
+.lotusui30 .lotusSection2 .lotusDragHandle {top:7px;}
+
+.lotusui30 .lotusPortlet {padding:10px; background-color:#fff; border:1px solid #eee;
+	-moz-box-shadow:0 1px 3px #eee;
+	-webkit-box-shadow:0 1px 3px #eee; 
+	box-shadow:0 1px 3px #eee;}
+.lotusui30 .lotusPortlet .lotusSectionHeader {background-color:transparent; background-image:none;}
+.lotusui30 .lotusPortlet .lotusSectionBody {padding:5px 0;} /*left align the portlets*/
+
+
+/****************************************************************/
+

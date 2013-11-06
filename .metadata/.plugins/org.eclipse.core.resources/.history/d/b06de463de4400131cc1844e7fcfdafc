@@ -1,0 +1,28 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for lists
+companion files: lists.css / listsTheme.css
+companion files: listsRTL.css / listsThemeRTL.css*/
+/*** L I S T S ***/ 
+/*use in conjuction with sections if you want a more complex list*/
+
+.lotusui30 ul.lotusList{clear:both;overflow:hidden;margin:0;padding:0;list-style-type:none}
+.lotusui30 ul.lotusMeta.lotusList{font-size:1em;}/*lists that have meta text use normal text size but meta color. the class order is important so IE6 reads ul.lotusList*/
+.lotusui30 ul.lotusList ul{list-style-type:none} /*makes sure all nested lists don't have bullets, even though we don't typically nest these straight lists*/
+.lotusui30 ul.lotusList li {margin:1px 0;padding:3px 2px;clear:both;zoom:1}
+.lotusui30 ul.lotusEditable li{text-align:right;overflow:hidden} /*use this class in combination with list class - allows you to put a delete button on a list item*/
+.lotusui30 ul.lotusList li.lotusSelected{background-color:#eee}
+.lotusui30 ul.lotusList li.lotusSelected a{text-decoration:none;color:#000;}
+.lotusui30 ul.lotusList img.lotusLeft{margin-right:3px}
+.lotusui30 ul.lotusList div p{margin-top:3px;margin-bottom:0}/*second line of data*/
+.lotusui30.lotusImagesOff .lotusEditable .lotusDelete img, .lotusImagesOff .lotusui30 .lotusEditable .lotusDelete img{display:none}
+/*styles for a definitions list*/
+.lotusui30 dl.lotusList dt{padding:3px 10px;margin:10px 0 0 0;font-size:1.1em}
+.lotusui30 dl.lotusList dd{margin:0;padding:5px 10px}
+
+
+
+/***********************************************************/
+

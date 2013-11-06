@@ -1,0 +1,344 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for media viewer
+companion files: mediaViewer.css / mediaViewerTheme.css
+companion files: mediaViewerRTL.css / mediaViewerThemeRTL.css*/
+/*** M E D I A   V I E W E R ***/
+
+
+/*overall widget styling */
+
+.lotusui30 .lotusGallery {
+	background: none repeat scroll 0 0 #212327;
+	text-align: left;
+	width: 700px; /*default*/
+}
+
+
+/*Main item section styling*/
+.lotusui30 .lotusGallery .lotusItemViewer {
+	position: relative;
+	height: 323px;
+	border-top: 1px solid #34363A;
+	clear: both;
+	overflow: hidden;
+}
+
+
+.lotusui30 .lotusGallery .lotusItemViewer .lotusItem {
+	margin:20px 0;
+	text-align: center;
+}
+
+.lotusui30 .lotusGallery .lotusItemViewer .lotusItem .lotusNoImage { /*goes on lotusItem inner div*/
+	color: white;
+	font-size: 1em;
+	padding-top: 135px;
+}
+
+.lotusui30 .lotusGallery .lotusItemViewer .lotusItem img {
+	border: 0 none;
+}
+
+.lotusui30 .lotusGallery .lotusItemViewer .lotusClickable {
+	cursor: pointer;
+}
+
+.lotusui30 .lotusGallery .lotusItemViewer .lotusNavControl {
+	top: 0;
+    height: 100%;
+    position: absolute;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.lotusui30 .lotusGallery .lotusItemViewer .lotusNavControl img {
+    height: 100%;
+    width: 32px;
+}
+
+.lotusui30 .lotusGallery .lotusItemViewer .lotusNavNext {
+	float: right;
+	right: 0;
+	padding: 0 20px;
+}
+
+.lotusui30 .lotusGallery .lotusItemViewer .lotusNavNext img{
+	background-position: -785px 50%;
+}
+
+.lotusui30 .lotusGallery .lotusItemViewer .lotusNavEnd img{
+	background-position: -709px 50%;
+}
+
+.lotusui30 .lotusGallery .lotusItemViewer .lotusNavPrev {
+	float: left;
+	left: 0;
+	padding: 0 20px;
+}
+
+.lotusui30 .lotusGallery .lotusItemViewer .lotusNavPrev img{
+	background-position: -747px 50%;
+}
+
+.lotusui30 .lotusGallery .lotusItem img{
+	-moz-box-shadow:0 0 5px #111;-webkit-box-shadow:0 0 5px #111;box-shadow:0 0 5px #111;
+} 
+
+/*thumbnail section styling*/
+.lotusui30 .lotusGallery .lotusThumbnails {
+	position: relative;
+	overflow:hidden;
+	border-bottom: 1px solid #111;
+	height: 81px; /*this is needed so webkit browsers can do the vertical icon centering*/
+	background-color:#222428;
+	background-image:-moz-linear-gradient(top, #383A3E 0%, #222428 100%);
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#383A3E), to(#222428));
+}
+
+.lotusui_ie .lotusui30 .lotusGallery .lotusThumbnails{
+ 	height:80px; /*need this for IE to contain the 100% height of the nav controls*/
+}
+
+
+.lotusui30 .lotusGallery .lotusThumbnails .lotusNavControl {
+	top: 0;
+    height: 100%;
+    position: absolute;    
+	padding:0 23px;
+    z-index: 999;    
+    cursor: pointer;
+	border-top: 1px solid #494A4E;
+}
+
+.lotusui30 .lotusGallery .lotusThumbnails .lotusNavControl img{
+	height:100%;
+	width:10px;
+}
+
+
+.lotusui30 .lotusGallery .lotusThumbnails .lotusNavNext {
+	right: -1px;
+	-moz-box-shadow: -5px 0 10px #111;
+	-webkit-box-shadow: -5px 0 10px #111;
+	-box-shadow: -5px 0 10px #111;
+}
+
+.lotusui30 .lotusGallery .lotusThumbnails .lotusNavNext img {
+	background-position: -839px 50%;
+}
+
+.lotusui30 .lotusGallery .lotusThumbnails .lotusNavPrev {
+	left: -1px;
+	-moz-box-shadow: 5px 0 10px #111;
+	-webkit-box-shadow: 5px 0 10px #111;
+	-box-shadow: 5px 0 10px #111;
+}
+
+.lotusui30 .lotusGallery .lotusThumbnails .lotusNavPrev img{
+	background-position: -823px 50%;
+}
+
+
+.lotusui30 .lotusGallery .lotusThumbnailScroller {
+	text-align: left;
+	border-top: 1px solid #1B1C20;
+	position:relative; /*for IE7*/
+	width:auto; /*IE6 needs this set, 590px for example*/
+    overflow: hidden;
+    padding-top: 15px;
+	padding-bottom: 15px;
+    text-align: left;	
+	margin:0 55px;
+	background-color:#191A1E;-moz-box-shadow:inset 0 -2px 5px #111;-webkit-box-shadow:inset 0 -2px 5px #111;box-shadow:inset 0 -2px 5px #111;
+}
+
+.lotusui30 .lotusGallery .lotusThumbnailScroller_rtl {
+	float: right;
+}
+
+.lotusui30 .lotusGallery .lotusThumbnailStrip {
+	width:5000px; /*need to make this foolproof length to accommodate longest batch of images, to keep from wrapping in IE6.*/
+	padding-left: 10px;
+	padding-right: 10px;
+
+}
+
+.lotusui_ie .lotusui30 .lotusGallery .lotusThumbnailStrip {
+	position: relative;
+	left: auto;
+}
+
+.lotusui30 .lotusGallery .lotusThumbnailStrip .lotusThumbnail {
+    float: left;
+    margin: 0 5px;
+	position: relative;
+	width:50px;height:50px;/*default image size*/
+}
+
+.lotusui30 .lotusGallery .lotusThumbnailStrip .lotusLast{
+	width:60px;
+	border-right:3px solid #777;
+	margin-right:5px;
+}
+
+.lotusui30 .lotusGallery .lotusThumbnailStrip .lotusSelected {
+	margin: -5px;
+	padding:3px;
+	border: 2px solid #eee; 
+}
+
+.lotusui30 .lotusGallery .lotusThumbnailStrip .lotusThumbnail .lotusImageTrim {
+	position:absolute;
+	height: 50px; width: 50px; /*default image size*/
+    overflow: hidden;
+}
+
+.lotusui30 .lotusGallery .lotusThumbnailStrip .lotusNoThumbnail .lotusImageTrim {
+	border:2px dashed #444;
+	height: 46px; width: 46px; /*adjusted default image size*/
+}
+
+
+.lotusui30 .lotusGallery .lotusThumbnails .lotusThumbnailTemplate {
+	position: absolute;
+	left: 0;
+	top: -9999px;
+	width:50px;
+	height:50px;
+}
+
+.lotusui30 .lotusGallery .lotusThumbnailStrip .lotusThumbnail_rtl {
+    float: right;
+}
+
+.lotusui30 .lotusGallery .lotusThumbnailStrip .lotusThumbnail img{
+	position: relative;
+	cursor: pointer;
+}
+
+
+
+.lotusui30 .lotusGallery .lotusThumbnailStrip .lotusThumbnail .lotusThumbOverlay {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.lotusui30 .lotusGallery .lotusThumbnailStrip .lotusLast .lotusThumbOverlay {
+	width:50px; /*needed to override this to match the thumbnail size*/
+}
+
+.lotusui_ie .lotusui30 .lotusGallery .lotusThumbnailStrip .lotusThumbnail .lotusThumbOverlay {
+	left: auto;
+}
+
+/*.lotusui30 .lotusThumbnails .lotusGallery .lotusThumbnailStrip .lotusThumbnail .lotusSelected  {
+	top: -5px;
+	left: -5px;
+	border: 1px solid #6D6F72;
+}*/
+
+
+
+
+/*footer section styling*/
+.lotusui30 .lotusGallery .lotusItemDetails {
+	clear: both;
+	padding: 20px 20px 0;
+	background-color:#1B1C20;border-top:1px solid #323336;
+	height:6.75em;
+}
+
+.lotusui30 .lotusGallery .lotusItemDetails .lotusDetails {
+	color: #ccc;
+	font-size: 1.2em;
+}
+
+.lotusui30 .lotusGallery .lotusItemDetails .lotusDetails .lotusInner {
+	overflow: hidden;
+}
+
+.lotusui30 .lotusGallery .lotusItemDetails .lotusDetails .lotusTitle {
+	font-size:inherit;
+	line-height:inherit; /*don't let the oneui30 dijit theme apply here*/
+	color:#fff;
+	font-weight:bold;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.lotusui30 .lotusGallery .lotusItemDetails .lotusDetails .lotusTitle .lotusCount{
+	margin-right:10px;
+	padding-right:10px;
+	color: #ccc; /*this should be the same color as lotusMeta*/
+	border-right:1px solid #B2B2B2;
+	font-weight:normal;
+}
+.lotusui30 .lotusGallery .lotusItemDetails .lotusDetails p {
+	margin:0;
+	display: inline;
+	line-height:inherit;
+	font-size:.9em;
+	white-space:nowrap;
+	width:100%;overflow:hidden;
+	-o-text-overflow:ellipsis;-ms-text-overflow:ellipsis;text-overflow:ellipsis;
+}
+
+.lotusui30 .lotusGallery .lotusItemDetails .lotusMeta {
+	font-size:.75em;
+	color:#ccc;
+}
+
+.lotusui30 .lotusGallery .lotusItemDetails .lotusMeta a {
+	color: #84cbf4;
+	text-decoration: none;
+}
+
+
+/*shared styling*/ 
+.lotusui30 .lotusGallery a.lotusNavDisabled {
+	cursor: default !important;
+}
+
+.lotusui30 .lotusGallery a.lotusNavControl img {
+	background-image: url("../../images/lotusHSprite-8bit.png");
+	background-repeat: no-repeat;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+
+.lotusui30 .lotusGallery a.lotusNavControl:hover img, .lotusui30 .lotusGallery a.lotusNavControl:focus img {
+	opacity: 0.75;
+	filter: alpha(opacity=75);
+}
+
+.lotusui30 .lotusGallery a.lotusNavDisabled img, .lotusui30 .lotusGallery a.lotusNavDisabled:hover img, .lotusui30 .lotusGallery a.lotusNavDisabled:focus img {
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+}
+
+.lotusui30 .lotusGallery .lotusItemViewer .lotusLoading {
+	background: url("../../images/loading.gif") no-repeat scroll center center transparent;
+	height: 100%;
+}
+
+.lotusui30 .lotusGallery .lotusLoading {
+	background: url("../../images/loading.gif") no-repeat scroll center center transparent;
+	width: auto;
+	height: auto;
+}
+
+.lotusui_ie .lotusui30 .lotusGallery .lotusThumbnails .lotusLoading {
+	background-position: 34px center;
+}
+
+/***********************************************************/
+

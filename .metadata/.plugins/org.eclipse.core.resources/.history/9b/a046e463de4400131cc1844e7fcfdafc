@@ -1,0 +1,23 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for legal
+companion files: legal.css / legalTheme.css
+companion files: legalRTL.css / legalThemeRTL.css*/
+/*** L E G A L   S T A T E M E N T ***/
+/*IBM logo and legal statement*/
+/*3 different versions - regular pages, login page, and about page*/
+
+.lotusui30 .lotusLegal .lotusLicense{color:#666;}
+.lotusui30 .lotusLegal .lotusBuild{color:#000;}
+.lotusui30 table.lotusLegal td{font-size:0.8em;line-height:1.2;}
+.lotusui30 table.lotusLegal{margin:5px 25px 10px 25px;}
+.lotusui30 table.lotusLegal td{vertical-align:middle;padding:5px;}
+.lotusui30 .lotusLogin .lotusLegal{margin-right:10px;}
+.lotusui30 .lotusLogin table.lotusLegal{margin-top:15px;}
+
+
+
+/***********************************************************/
+

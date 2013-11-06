@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+module-start-timeout=300000
+runtimes=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<runtimes>\n  <runtime id\="VMware vFabric tc Server Developer Edition (Runtime) v2.9" id-set\="true" location\="/Users/shanemurphy/springsource/vfabric-tc-server-developer-2.9.3.RELEASE" name\="VMware vFabric tc Server Developer Edition (Runtime) v2.9" runtime-type-id\="com.vmware.server.tc.runtime.70" timestamp\="0"/>\n</runtimes>\n

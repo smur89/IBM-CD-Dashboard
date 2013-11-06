@@ -1,0 +1,43 @@
+/*! Licensed Materials - Property of IBM.
+   (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+   U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for the display controls
+companion files: views.css / viewsTheme.css
+companion files: viewsRTL.css / viewsThemeRTL.css*/
+/***************************************/
+/*** D I S P L A Y   C O N T R O L S ***/
+/***************************************/
+
+.lotusui30 .lotusViewControl{display:table;}
+.lotusui30 .lotusViewControl span{margin:5px 10px 0 0;float:right;}/*styles for the text preceeding the control*/
+.lotusui30 .lotusViewControl div{padding:1px;border:1px solid #ccc;display:table;background-color:#f1f1f1;
+    background-image:-moz-linear-gradient(top, #ffffff 0%, #ebebeb 100%);background-image:-webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ebebeb));background-position:top left;zoom:1;}
+.lotusui30.lotusImagesOff .lotusViewControl div, .lotusImagesOff .lotusui30 .lotusViewControl div{border-width:0;}
+.lotusui30 .lotusViewControl td{vertical-align:middle;padding:0 2px 0 0;}
+.lotusui30 .lotusViewControl td div{display:-moz-inline-box;display:inline-block;overflow:hidden;}
+.lotusui30.lotusImagesOff .lotusViewControl td div, .lotusImagesOff .lotusui30 .lotusViewControl td div{overflow:visible;}
+.lotusui30 .lotusViewControl .lotusView{padding:0;width:18px;height:18px;display:block;float:right;background-image:url(../../images/lotusHSprite-8bit.png);background-repeat:no-repeat;}
+
+.lotusui30 .lotusDetailsOff {background-position:-351px -7px;margin:1px;border-width:0;}
+.lotusui30 .lotusDetailsOn {background-position:-351px -7px;background-color:#fff;margin:0;border:1px solid #444;}
+.lotusui30 .lotusSummaryOff {background-position:-395px -7px;margin:1px;border-width:0;}
+.lotusui30 .lotusSummaryOn {background-position:-395px -7px;background-color:#fff;margin:0;border:1px solid #444;}
+.lotusui30 .lotusTreeOff {background-position:-439px -7px;margin:1px;border-width:0;}
+.lotusui30 .lotusTreeOn {background-position:-439px -7px;background-color:#fff;margin:0;border:1px solid #444;}
+.lotusui30 .lotusTileOff {background-position:-417px -7px;margin:1px;border-width:0;}
+.lotusui30 .lotusTileOn {background-position:-417px -7px;background-color:#fff;margin:0;border:1px solid #444;}
+.lotusui30 .lotusFolderOff {background-position:-373px -7px;margin:1px;border-width:0;}
+.lotusui30 .lotusFolderOn {background-position:-373px -7px;background-color:#fff;margin:0;border:1px solid #444;}
+/*accessibility*/
+.lotusui30.lotusImagesOff .lotusViewControl .lotusView, .lotusImagesOff .lotusui30 .lotusViewControl .lotusView{width:auto;height:auto;}
+.lotusui30.lotusImagesOff .lotusViewControl .lotusView span, .lotusImagesOff .lotusui30 .lotusViewControl .lotusView span{margin:0 5px;}
+.lotusui30.lotusImagesOff .lotusViewControl a.lotusSelected:hover, .lotusImagesOff .lotusui30 .lotusViewControl a.lotusSelected:hover, .lotusui30.lotusImagesOff .lotusViewControl a.lotusSelected:focus, .lotusImagesOff .lotusui30 .lotusViewControl a.lotusSelected:focus{cursor:default;text-decoration:none;}
+.lotusui30.lotusImagesOff .lotusViewControl .lotusSelected .lotusAltText, .lotusImagesOff .lotusui30 .lotusViewControl .lotusSelected .lotusAltText{font-weight:bold;}
+
+
+
+
+
+/***********************************************************/
+

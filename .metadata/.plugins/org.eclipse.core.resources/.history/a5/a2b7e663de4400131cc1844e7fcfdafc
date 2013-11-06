@@ -1,0 +1,19 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for the docked footer (layout)
+companion files: zDeprecated_footerDocked.css / zDeprecated_footerDockedTheme.css
+companion files: zDeprecated_footerDockedRTL.css / zDeprecated_footerDockedThemeRTL.css*/
+/*** D O C K E D   F O O T E R ***/
+/*this sits at the bottom of the UI and shows your online status. It also lets you communicate using Sametime*/
+
+.lotusui30 .lotusFooterDocked {width:100%; position:fixed; bottom:0;}
+.lotusui30 .lotusFooterDocked .lotusActionBar {float:right; height:auto; width:auto; margin:0;}
+.lotusui30 .lotusFooterDocked .lotusInlinelist li {display:block; float:left; border:0; padding:0; margin-right:-1px;}
+.lotusui30 .lotusFooterDocked .lotusInlinelist li a {background:#595b5d; border-color:#000; border-style:solid; border-width:1px 1px 0; color:#fff; display:inline-block; padding:5px 10px; text-decoration:none; height:1.5em;}
+.lotusui30 .lotusFooterDocked .lotusDropDownSprite {background-position:0 -1260px;}
+
+
+
+/***********************************************************/

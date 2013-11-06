@@ -1,0 +1,41 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for section
+companion files: section.css / sectionTheme.css
+companion files: sectionRTL.css / sectionThemeRTL.css*/
+/*S E C T I O N */
+/*this is used to space out different elements in all three columns*/
+/*a section contains a header*/
+
+
+
+.lotusui30 .lotusSection2{margin:0 0 20px;padding:0;}
+.lotusui30 .lotusSectionPlain .lotusSectionHeader{border-width:0;background-image:none;}
+.lotusui30 .lotusSection2 .lotusSectionHeader .lotusArrow{padding-right:5px}
+.lotusui30 .lotusSection2 .lotusSectionHeader .lotusIcon{padding:5px 0}
+.lotusui30 .lotusSection2 .lotusDragHandle{right:0; top:4px;}
+.lotusui30 .lotusSection2 .lotusSectionBody{margin:0;}
+.lotusui30 .lotusSection2 .lotusSubheader .lotusIcon{padding-left:0;}
+.lotusui30 .lotusSection2 .lotusChunk{margin-top:0;margin-bottom:5px;}
+.lotusui30 .lotusSection2 .lotusSectionFooter{border-top:1px solid #eee;}
+.lotusui30 .lotusSection2 .lotusSectionFooter .lotusPaging{margin:0;}
+
+
+
+.lotusui30 .lotusSection2 {border:1px solid #ccc;box-shadow:0 3px 5px #eee;-webkit-box-shadow:#eee 0 3px 5px;-moz-box-shadow:#eee 0 3px 5px;border-top-left-radius:3px;border-top-right-radius:3px;-moz-border-radius-topright:3px;-moz-border-radius-topleft:3px;-webkit-border-top-right-radius:3px;-webkit-border-top-left-radius:3px;border-top-right-radius:3px;border-top-left-radius:3px;background-color:#fff;}
+.lotusui30 .lotusSection2 .lotusSectionHeader {border-bottom:1px solid #ccc;background-color:#f4f4f4;background-image:none;background-image:-moz-linear-gradient(top, #f4f4f4 0%, #eaeaea 100%);background-image:-webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#eaeaea));background-position:left top;}
+.lotusui30 .lotusSection2 .lotusHeading, .lotusui30 .lotusSection2 .lotusHeading2{font-size:1em;color:#000;}
+.lotusui30 .lotusSection2 .lotusSectionBody {padding:5px 10px;}
+/*lists within a section*/
+.lotusui30 .lotusSection2 .lotusList {margin:0 -10px;} /*allows selection to extend to the left and right of the list items*/
+.lotusui30 .lotusSection2 .lotusList li {padding-right:10px; padding-left:10px;}
+
+/*needs to go at the end to override border and shadow*/
+.lotusui30 .lotusSectionPlain{border-width:0;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;background-color:transparent;}
+
+
+
+/****************************************************************/
+

@@ -1,0 +1,55 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for the banner (layout)
+companion files: banner.css / bannerTheme.css
+companion files: bannerRTL.css / bannerThemeRTL.css*/
+/*** B A N N E R **/
+/*this is the very top of the UI, that contains the logo, application links, user name, login/logout*/
+
+.lotusui30 .lotusBanner {padding:5px 10px; text-align:left; overflow:hidden; zoom:1;}
+.lotusui30 .lotusBanner .lotusLogo {float:left;}
+.lotusui30 .lotusBanner .lotusLogo img {display:none; margin-right:20px;} /*to display the image instead of the text, remove this display:none and the display:block in the below lotusAltText selector*/
+.lotusui30 .lotusBanner .lotusLogo .lotusAltText {display:block; padding:1px 10px;}
+.lotusui_ie6 .lotusui30 .lotusBanner ul {margin-top:0; margin-bottom:2px;}
+.lotusui30 .lotusBanner ul.lotusInlinelist li {margin:0 2px; padding:0; border-left-width:0;}
+.lotusui30 .lotusBanner ul.lotusLinks li {margin:0;}
+.lotusui30 .lotusBanner ul.lotusLinks li.lotusSelected a {text-decoration:underline; font-weight:bold;}
+.lotusui30 .lotusBanner ul.lotusUtility li {font-size:.9em; line-height:1.67/*this accounts for a 0.9em font size so the click targets are consistent with lotusLinks. 18/10.8 = 1.67*/;}
+.lotusui30 .lotusBanner ul li a {padding:1px 10px;}
+.lotusui30 .lotusBanner ul.lotusUtility {float:right;}
+.lotusui30 .lotusBanner ul.lotusUtility li a {padding:1px 5px;}
+.lotusui30 .lotusBanner img.lotusDropDownSprite{opacity:0.75;filter:alpha(opacity=75);}
+/*unread badge*/
+.lotusui30 .lotusBanner .lotusUnreadBadge {position:relative; bottom:0.7em; margin-left:2px; padding:0 0.4em; color:#fff; background:#595b5d; display:inline; font-size:0.9em; line-height:1.2/*fixes link height with tall languages*/;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;}
+.lotusui30.lotusImagesOff .lotusBanner .lotusUnreadBadge, .lotusImagesOff .lotusui30 .lotusBanner .lotusUnreadBadge {background:none;}/*to not cover text*/
+.lotusui30 .lotusBanner .lotusBadgeIcon {display:inline-block; line-height:0.8; padding:2px 3px 3px; margin-left:-5px; bottom:7px;}
+.lotusui_ie .lotusui30 .lotusBanner .lotusBadgeIcon {padding-bottom:0;}
+.lotusui30.lotusImagesOff .lotusBanner .lotusBadgeIcon, .lotusImagesOff .lotusui30 .lotusBanner .lotusBadgeIcon {margin-left:0;}
+.lotusui30 .lotusBanner .lotusBadgeIcon img {background-image:url(../../images/lotusHSprite-8bit.png); background-position:-1246px -12px; height:8px; width:7px; vertical-align:top;}
+/*logo*/
+.lotusui30 .lotusBanner .lotusIBMLogo {width:41px; height:16px; background-position:-258px -8px; background-image:url(../../images/lotusHSprite-8bit.png);}
+.lotusui_ie6 .lotusui30 .lotusBanner .lotusIBMLogo {background-position:-305px -8px;} /*IE6 does not support translucent icons. So use opaque instead.*/
+/*banner extension*/
+.lotusui30 .lotusBannerExt {font-size:0.9em; padding:0 20px;}
+.lotusui30 .lotusBannerExt .lotusBreadcrumbs {margin:6px 0; font-weight:bold;}
+.lotusui30 .lotusBannerExt .lotusBreadcrumbs a {font-weight:normal;}
+.lotusui30 .lotusBannerExt .lotusBreadcrumbs .lotusDivider {padding:0 5px; background:none/*overrides deprecated CSS*/;}
+.lotusui30 .lotusBannerExt .lotusBreadcrumbMore {background:#ccc; margin-left:5px; padding:0 3px; zoom:1;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;}
+.lotusui30 .lotusBannerExt .lotusDropDownSprite {background-position:0 -1260px;opacity:1;filter:alpha(opacity=100);}
+
+
+
+
+
+
+
+/***********************************************************/
+

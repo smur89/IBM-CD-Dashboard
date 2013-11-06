@@ -1,0 +1,40 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for the customization palette
+companion files: palette.css / paletteTheme.css
+companion files: paletteRTL.css / paletteThemeRTL.css*/
+/*** P A L E T T E ***/
+/*this is the palette that opens under the place bar to allow users to customize the UI */
+
+
+
+.lotusui30 .lotusPalette{border-bottom-width:0;}
+.lotusui30 .lotusPaletteHeader{border-top-width:0;border-bottom:4px solid #2a2a2a;padding:5px 10px 0;}
+.lotusui30 .lotusPaletteHeader .lotusRight, 
+.lotusui30 .lotusPaletteHeader .lotusClose{margin-top:7px;}
+.lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu li.lotusSelected, 
+.lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu li.lotusSelected a{color:#fff;}
+.lotusui30 .lotusPaletteHeader ul.lotusTabs{margin-top:5px;}
+.lotusui30 .lotusPaletteHeader ul.lotusTabs li a, 
+.lotusui30 .lotusPaletteHeader ul.lotusTabs li a:visited{display:block;margin:0;padding:9px 10px;background-color:#414648;border-width: 1px 1px 0 1px;border-style:solid;border-color: #2a2a2a;float:right;}
+.lotusui30 .lotusPaletteBody{margin-bottom:0;border-width:0;}
+.lotusui30 .lotusPaletteNav{padding:0 10px;height:auto;}
+.lotusui30 .lotusPalette .lotusChunk, 
+.lotusui30 .lotusPalette .lotusPaletteNavHeader, 
+.lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu{margin:10px 0;width:auto;}
+.lotusui30 .lotusPaletteContent{padding:10px 20px 10px 10px;}
+.lotusui30 .lotusPalette .lotusClose{padding:3px;}
+.lotusui30 .lotusPalette .lotusSearch input.lotusText{margin:0 0 0 4px;width:158px;}
+
+
+
+.lotusui30 .lotusPaletteHeader ul.lotusTabs li.lotusSelected a, .lotusui30 .lotusPaletteHeader ul.lotusTabs li.lotusSelected a:visited {background-color:#2a2a2a;}
+.lotusui30 .lotusPalette .lotusBtnImg, .lotusui30 .lotusPalette .lotusSearch .lotusBtnImg{border:1px solid #fff;}
+.lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu li.lotusMore a{background-position:6px -565px;opacity:1;filter:alpha(opacity=100)/*reset opacity*/}
+
+
+
+/***********************************************************/
+

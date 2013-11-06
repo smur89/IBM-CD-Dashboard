@@ -1,0 +1,41 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for tabs
+companion files: tabs.css / tabsTheme.css
+companion files: tabsRTL.css / tabsThemeRTL.css*/
+/*** T A B S ***/
+/*tabs are used in content area and titlebar.  The style adjustments needed for the titlebar are grouped with the titleBar styles*/
+
+.lotusui30 .lotusTabContainer{position:relative;border-bottom:1px solid #ccc;z-index:1;margin-top:8px;margin-bottom:10px;zoom:1;}
+.lotusui30 ul.lotusTabs{margin:0 10px 0 0;padding:0;position:relative;bottom:-3px;overflow:hidden;list-style:none;zoom:1;width:100%;/*needed for IE*/}
+/*not needed in right-to-left*/
+.lotusui30.lotusImagesOff ul.lotusTabs, .lotusImagesOff .lotusui30 ul.lotusTabs{bottom:-4px;}
+.lotusui30.lotusImagesOff ul.lotusTabs li.lotusSelected, .lotusImagesOff .lotusui30 ul.lotusTabs li.lotusSelected{border-bottom-width:0;}
+.lotusui30 .lotusTabs li{margin:0 0 2px 2px;float:right;border-width:1px;border-style:solid;border-color:#eee;border-bottom-color:#ccc;background-color:#eee;zoom:1;}/*set margins to important so they are preserved within other components*/
+.lotusui30 .lotusTabs li.lotusSelected{background-color:#fff;border-color:#ccc #ccc #fff;}
+.lotusui30 .lotusTabs a, .lotusui30 .lotusTabs a:visited{padding:6px 8px;display:block;text-decoration:none;line-height:1;white-space:nowrap;}/*line-height is for IE, to keep the selected tab sitting on top of the border when there is a drop-down image in the tab. white-space is needed for some IEs.*/
+.lotusui30 .lotusTabs li.lotusSelected a, .lotusui30 .lotusTabs li.lotusSelected a:visited{font-weight:bold;color:#000;}
+.lotusui30 .lotusTabs a:hover, .lotusui30 .lotusTabs a:focus{text-decoration:none;}
+/*a style that can be applied to a div that allows you to surround a tab content area with a border*/
+.lotusui30 .lotusTabContent{margin:-10px 0 12px 0;padding:10px;border-width:0 1px 1px 1px;border-style:solid;border-color:#d9d9d9;}
+
+/*condensed tabs*/
+.lotusui30 .lotusTabCondensed {margin-top:5px;}
+.lotusui30 .lotusTabCondensed .lotusTabs {margin:0; bottom:-1px; width:auto;}
+.lotusui_ie .lotusui30 .lotusTabCondensed .lotusTabs {width:100%;} /*IE6 and IE7 need the 100% width in RTL*/
+.lotusui30 .lotusTabCondensed .lotusTabs li {border-width:0 0 1px; border-color:#fff; margin:0; background:#fff;}
+.lotusui30 .lotusTabCondensed .lotusTabs a {color:#666; padding:7px 5px; border-bottom:1px solid #ccc; position:relative; bottom:-1px; zoom:1;}
+.lotusui30 .lotusTabCondensed .lotusTabs .lotusSelected a {margin:0 5px;}
+.lotusui30 .lotusTabCondensed .lotusTabs li.lotusSelected:first-child a {margin-right:0;}
+.lotusui30 .lotusTabCondensed .lotusTabs a:hover, .lotusui30 .lotusTabCondensed .lotusTabs a:focus, .lotusui30 .lotusTabCondensed .lotusTabs a:active, .lotusui30 .lotusTabCondensed .lotusTabs .lotusSelected a, .lotusui30 .lotusTabCondensed .lotusTabs .lotusSelected a:hover, .lotusui30 .lotusTabCondensed .lotusTabs .lotusSelected a:focus, .lotusui30 .lotusTabCondensed .lotusTabs .lotusSelected a:active {color:#000; border-color:#000;}
+.lotusui_ie6 .lotusui30 .lotusTabCondensed .lotusTabs a, .lotusui_ie6 .lotusui30 .lotusTabCondensed .lotusTabs a:visited {display:inline-block;}
+.lotusui30.lotusImagesOff .lotusTabCondensed ul.lotusTabs, .lotusImagesOff .lotusui30 .lotusTabCondensed ul.lotusTabs{bottom:-1px;}
+.lotusui30.lotusImagesOff .lotusTabCondensed .lotusTabs .lotusSelected a, .lotusImagesOff .lotusui30 .lotusTabCondensed .lotusTabs .lotusSelected a {border:1px dashed #000;}
+
+
+
+
+
+/****************************************************************/

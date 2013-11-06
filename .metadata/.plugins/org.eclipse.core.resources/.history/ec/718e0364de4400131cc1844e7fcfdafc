@@ -1,0 +1,29 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for buttons
+companion files: buttons.css / buttonsTheme.css
+companion files: buttonsRTL.css / buttonsThemeRTL.css*/
+/*NOTE: buttons have a lot of overrides to make them consistent across browsers and support deprecated versions.  Be very careful when modifying this code - more code found in deprecated.css*/
+/*** B U T T O N S ***/
+
+
+
+.lotusui30 .lotusBtn, .lotusui30 .lotusBtnImg{border:1px solid #aaa;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	color:#000;}
+.lotusui30 .lotusBtn{padding:3px 7px;}
+.lotusui30 .lotusBtnImg{padding:3px;}
+/*browser size adjustments*/
+.lotusui_ie8 .lotusui30 input.lotusBtn{padding:4px 7px;}
+.lotusui_ie9 .lotusui30 input.lotusBtn{padding:5px 7px;}
+.lotusui_ie .lotusui30 .lotusBtn{padding:1px 7px;}
+.lotusui_ie .lotusui30 .lotusBtnImg{padding:4px 3px;}
+.lotusui30 .lotusBtn:hover, .lotusui30 .lotusBtn:focus, .lotusui30 .lotusBtn:active, .lotusui30 .lotusBtnImg:hover, .lotusui30 .lotusBtnImg:focus, .lotusui30 .lotusBtnImg:active{border-color:#666;}
+
+
+
+/***********************************************************/

@@ -1,0 +1,23 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for help and tips
+companion files: zDeprecated_infobox.css / zDeprecated_infoboxTheme.css
+companion files: zDeprecated_infoboxRTL.css / zDeprecated_infoboxThemeRTL.css*/
+/*** D E P R E C A T E D   I N F O   B O X ***/ 
+/*this is used for help and tips*/
+
+
+
+.lotusui30 .lotusInfoBox{border-color:#efd159;}
+.lotusui30 .lotusHelp .lotusInfoBox{-moz-border-radius:0;-webkit-border-radius:0;border-radius:0;background-color:#fff;border-width:0;}
+/***pulled from layout.css because this version is being deprecated*/
+.lotusui30 .lotusColLeft .lotusInfoBox, .lotusui30 .lotusColRight .lotusInfoBox{margin:0 15px 15px;}
+
+
+
+
+
+/***********************************************************/
+

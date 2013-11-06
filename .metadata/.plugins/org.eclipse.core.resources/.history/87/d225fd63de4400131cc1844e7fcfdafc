@@ -1,0 +1,33 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for comments
+companion files: comments.css / commentsTheme.css
+companion files: commentsRTL.css / commentsThemeRTL.css*/
+/*** C O M M E N T ***/
+
+
+
+/*----------------------FORUMS------------------------*/
+.lotusui30 .lotusForum .lotusPostDetails blockquote{background-color:#eee;border-color:#DFE4E9;}
+.lotusui30 .lotusForum .lotusPaging{margin:0;padding-left:0;background-color:#fff;border-width:1px 0;border-style:solid;border-color:#ccc;}
+.lotusui30 .lotusForum .lotusPostContent{border-width:0;}
+.lotusui30 .lotusForum .lotusPostDetails blockquote{width:auto;}
+.lotusui_ie6 .lotusui30 .lotusForum .lotusPostDetails blockquote{width:95%;}/*fixes display issues with gray box*/
+.lotusui30 .lotusForum .lotusPostAuthorInfo{padding:5px 10px 10px 15px;background-position:100% -1373px;background-repeat:no-repeat;}
+.lotusui30 .lotusForum .lotusCaption{margin-top:0;background-color:#fff;border-width:0;float:left;}
+.lotusui30 .lotusForum .lotusFeeds{float:right;}
+.lotusui30 .lotusForum .lotusPost{margin-top:0;margin-bottom:10px;padding-top:4px;padding-bottom:4px;background-color:#fff; border:1px solid #ccc;-webkit-box-shadow:0 2px 5px #eee;-moz-box-shadow:0 2px 5px #eee;box-shadow:0px 2px 5px #eee;}
+.lotusui30 .lotusForum ul.lotusCommentList .lotusPost{background-color:#fff;}
+.lotusui30 .lotusForum ul.lotusCommentList .lotusChild{background-color:#fff;border-top-width:0;}
+.lotusui30 .lotusForum ul.lotusCommentList .lotusChild li{margin-left:0;padding:0 0 0 5px;background-color:#fff;background-image:none;background-repeat:repeat-y;}
+.lotusui30 .lotusForum ul.lotusCommentList .lotusChild .lotusActions li{padding:0 7px;border-width:0 0 0 1px;}
+.lotusui30 .lotusForum ul.lotusCommentList .lotusChild .lotusActions li.lotusFirst{padding-left:0;border-left-width:0;}
+.lotusui30 .lotusForum .lotusPostAuthorInfo{text-align:left;}
+.lotusui30 .lotusBoard .lotusStream .lotusPostHover, .lotusui30 .lotusBoard .lotusStream .lotusPostSelected{background-color:#e1f4f9;}
+/*we need to reset links that have picked up the lotusMeta color back to their original color*/
+.lotusui30 .lotusBoard .lotusCommentItem > a.lotusMeta{color:#1970B0;}
+.lotusui_ie6 .lotusui30 .lotusBoard .lotusCommentItem a.lotusMeta{color:#1970B0;}
+
+/***********************************************************/

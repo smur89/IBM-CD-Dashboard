@@ -1,0 +1,29 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for section
+companion files: zDeprecated_section.css / zDeprecated_sectionTheme.css
+companion files: zDeprecated_sectionRTL.css / zDeprecated_sectionThemeRTL.css*/
+/*D E P R E C A T E D   S E C T I O N */
+/*this is used to space out different elements in all three columns*/
+/*a section contains a header*/
+
+
+
+.lotusui30 .lotusSection{margin:0 0 20px;padding:0;border-width:0;width:auto;}
+.lotusui30 .lotusSection h2, .lotusui30 .dijitTitlePaneTitle{margin-bottom:0;padding:4px 5px 6px;font-size:1em;color:#000;-webkit-box-shadow:#eee 0px 3px 5px;-moz-box-shadow:#eee 0 3px 5px;box-shadow:#eee 0 3px 5px;border:1px solid #ccc;background-color:#f4f4f4;background-image:none;background-image:-moz-linear-gradient(top, #f4f4f4 0%, #eaeaea 100%);background-image:-webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#eaeaea));background-position:left top;-moz-border-radius-topright:3px;-moz-border-radius-topleft:3px;-webkit-border-top-right-radius:3px;-webkit-border-top-left-radius:3px;border-top-right-radius:3px;border-top-left-radius:3px;}
+.lotusui30 .lotusSection .lotusDragHandle{right:0;}
+.lotusui30 .lotusSection .lotusChunk h3{margin-top:5px;}
+.lotusui30 .lotusSection .lotusSectionBody{margin:0;padding:5px 10px;border-width:0 1px 1px 1px;border-style:solid;border-color:#ccc;background-color:#fff;-webkit-box-shadow:#eee 0 3px 5px;-moz-box-shadow:#eee 0 3px 5px;box-shadow:#eee 0 3px 5px;}
+.lotusui30 .lotusSection .lotusChunk{margin-top:0;margin-bottom:5px;}
+
+
+
+.lotusui30 .lotusSection .lotusList {margin:0 -10px;}
+.lotusui30 .lotusSection .lotusList li {padding-right:10px; padding-left:10px;}
+
+
+
+/****************************************************************/
+

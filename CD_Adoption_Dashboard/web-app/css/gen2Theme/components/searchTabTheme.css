@@ -1,0 +1,25 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for search tab
+companion files: searchTab.css / searchTabTheme.css
+companion files: searchTabRTL.css / searchTabThemeRTL.css*/
+/*** S E A R C H   T A B ***/
+/*this is the UI for a search/find control that hides the input fields until the user opens them*/
+/*this must be inside a relatively positioned div - override default positioning in the code, if necessary*/
+
+
+
+.lotusui30 .lotusSearchForm .lotusSearchButton{color:#000;}
+
+.lotusui30 .lotusSearchTab{padding:2px 6px 4px 8px;border-color:#aaa;background-color:#f1f1f1;background-image:-moz-linear-gradient(top, #ffffff 0%, #ebebeb 100%);background-image:-webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ebebeb));-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;}
+.lotusui30 .lotusTabExpanded{-moz-border-radius:0;-webkit-border-radius:0;border-radius:0;-moz-border-radius-topright:2px;-moz-border-radius-topleft:2px;-webkit-border-top-left-radius:2px;-webkit-border-top-right-radius:2px;border-top-right-radius:2px;border-top-left-radius:2px;}
+.lotusui30 .lotusSearchTab a, .lotusui30 .lotusSearchTab a:visited{padding-right:12px;font-size:0.9em;line-height:1.7;}
+.lotusui30 .lotusSearchTab a, .lotusui30 .lotusSearchTab a:visited, .lotusui30 .lotusSearchTab a:hover, .lotusui30 .lotusSearchTab a:focus, .lotusui30 .lotusSearchTab a:active { text-decoration: none; }
+.lotusui30 form.lotusSearchForm{z-index:1;-moz-border-radius:0px;-webkit-border-radius:0px;border-radius:0px;-webkit-box-shadow:0px 2px 5px #eee;-moz-box-shadow:0px 2px 5px #eee;box-shadow:0px 2px 5px #eee;}
+.lotusui30 .lotusSearchForm .lotusBtnImg{padding:3px;}
+.lotusui30 .lotusSearchForm input.lotusText{padding-top:3px;padding-bottom:4px;}
+
+/***********************************************************/
+

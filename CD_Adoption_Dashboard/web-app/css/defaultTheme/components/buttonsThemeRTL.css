@@ -1,0 +1,54 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for buttons
+companion files: buttons.css / buttonsTheme.css
+companion files: buttonsRTL.css / buttonsThemeRTL.css*/
+/*NOTE: buttons have a lot of overrides to make them consistent across browsers and support deprecated versions.  Be very careful when modifying this code - more code found in deprecated.css*/
+/*** B U T T O N S ***/
+
+
+
+
+
+.lotusui30 .lotusBtn{border:0; margin:0 1px 3px 4px; background-color:#e7e7e7; border-collapse:separate/*needed to show the box shadow in IE9 when in a table with border-collapse:collapse*/;
+	background-image:-moz-linear-gradient(top, #ededed 0%, #e1e1e1 100%);
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#ededed), to(#e1e1e1));
+	background-image:linear-gradient(top, #ededed, #e1e1e1);
+	color:#333; font-weight:bold; text-align:center;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	-moz-box-shadow:0 1px 1px rgba(0,0,0,0.5);
+	-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.5);
+	box-shadow:0 1px 1px rgba(0,0,0,0.5);}
+.lotusui_ie .lotusui30 .lotusBtn, .lotusui_ie8 .lotusui30 .lotusBtn{border:1px solid #ccc;}
+.lotusui_ie .lotusui30 .lotusBtn, .lotusui_ie8 .lotusui30 .lotusBtn, .lotusui_ie9 .lotusui30 .lotusBtn {margin-right:0; margin-left:5px;}/*IE6-8 do not have the shadow, and IE9s shadow does not need the 1px left margin*/
+.lotusui30 .lotusBtnImg{border:0; background:none; color:#333; font-weight:bold; text-align:center;}
+.lotusui30 .lotusBtn{padding:5px 15px;text-shadow:0 1px 1px #fff;}
+.lotusui_ie .lotusui30 .lotusBtn{padding:2px 3px;}
+.lotusui_ie8 .lotusui30 input.lotusBtn{padding:6px 15px;}
+.lotusui_ie9 .lotusui30 input.lotusBtn{padding:7px 15px;}
+.lotusui30 .lotusBtnImg{padding:5px;}
+.lotusui30 input.lotusBtnDisabled, .lotusui30 button.lotusBtnDisabled{color:#7c7c7c !important; border-width:0; 
+	-moz-box-shadow:0 1px 1px rgba(0,0,0,0.5) !important;
+	-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.5) !important;
+	box-shadow:0 1px 1px rgba(0,0,0,0.5) !important;}
+.lotusui30 span.lotusBtnDisabled{background-color:transparent !important;
+	-moz-box-shadow:none !important;
+	-webkit-box-shadow:none !important;
+	box-shadow:none !important;}/*we don't want a background color or shadow on disabled image buttons*/
+.lotusui_ie .lotusui30 input.lotusBtnDisabled, .lotusui_ie8 .lotusui30 input.lotusBtnDisabled,
+.lotusui_ie .lotusui30 button.lotusBtnDisabled, .lotusui_ie8 .lotusui30 button.lotusBtnDisabled{border-color:#ccc !important;}
+.lotusui_ie .lotusui30 .lotusBtnImg{padding:5px 4px;}
+.lotusui30 .lotusBtn:hover, .lotusui30 .lotusBtn:focus, .lotusui30 .lotusBtn:active{color:#000; 
+	-moz-box-shadow:0 2px 1px rgba(0,0,0,0.5);
+	-webkit-box-shadow:0 2px 1px rgba(0,0,0,0.5);
+	box-shadow:0 2px 1px rgba(0,0,0,0.5);}
+.lotusui30 .lotusBtnImg:hover, .lotusui30 .lotusBtnImg:focus, .lotusui30 .lotusBtnImg:active{color:#000;}
+
+.lotusui_ie .lotusui30.lotusImagesOff .lotusBtn, .lotusui_ie .lotusImagesOff .lotusui30 .lotusBtn, 
+.lotusui_ie8 .lotusui30.lotusImagesOff .lotusBtn, .lotusui_ie8 .lotusImagesOff .lotusui30 .lotusBtn{border:2px outset #000;}
+
+/***********************************************************/

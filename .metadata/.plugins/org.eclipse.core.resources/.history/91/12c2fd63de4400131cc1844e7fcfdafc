@@ -1,0 +1,25 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for the footer (layout)
+companion files: footer.css / footerTheme.css
+companion files: footerRTL.css / footerThemeRTL.css*/
+/*** F O O T E R ***/
+/*this sits at the bottom of the UI and contains a lot of support links, like help and about*/
+
+
+
+.lotusui30 .lotusFooter {margin:0; padding:5px; background-image:none; background-color:transparent; border-width:0;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	border-radius:0;}
+.lotusui30 .lotusFooter th, .lotusui30 .lotusFooter td{border-left-width:0;}
+.lotusui30 .lotusFooter table{width: auto;margin:5px auto;}
+.lotusui30 .lotusFooter a{display:inline;color:#666;}
+.lotusui30 .lotusFooter a:visited{color:#777777;}
+.lotusui30 .lotusFooter a:hover, .lotusui30 .lotusFooter a:focus, .lotusui30 .lotusFooter a:active{color:#05386b;}
+
+
+
+/***********************************************************/

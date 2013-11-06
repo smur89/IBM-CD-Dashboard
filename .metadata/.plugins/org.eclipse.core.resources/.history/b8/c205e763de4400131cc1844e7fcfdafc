@@ -1,0 +1,49 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for section
+companion files: zDeprecated_section.css / zDeprecated_sectionTheme.css
+companion files: zDeprecated_sectionRTL.css / zDeprecated_sectionThemeRTL.css*/
+/*D E P R E C A T E D   S E C T I O N */
+/*this is used to space out different elements in all three columns*/
+/*a section contains a header*/
+
+.lotusui30 .lotusSection{margin:0 0 15px -3px;padding:0 0 5px 0;clear:both;zoom:1;position:relative;}
+.lotusui30 .lotusSectionBody{margin:0 0 0 15px;}
+.lotusui30 .lotusSection div.lotusChunk, .lotusui30 .lotusSection div.lotusSubsection{margin-top:5px;clear:both;zoom:1;}
+.lotusui30 .lotusSection h2, .lotusui30 .lotusSection h3{margin:0;padding:0;font-size:1.2em;font-weight:bold;color:#444;zoom:1;}/*sets hasLayout in IE*/
+.lotusui30 .lotusSection h2{overflow:hidden;padding:4px 3px 4px 0;}/*use important to override move cursor when the lotusDraggable class is assigned to the header*/
+/*draggable sections*/
+.lotusui30 .lotusSection h2.lotusDraggable{cursor:default;}
+.lotusui30 .lotusSection .lotusDragHandle{background-image:url(../../images/lotusHSprite-8bit.png);background-position:-462px -8px;}
+/*.lotusSection .lotusTwistyOpen, .lotusSection .lotusTwistyClosed{margin:3px 4px 0 3px} */
+.lotusui30 .lotusSection a.lotusArrow:visited, .lotusSection a.lotusArrow:hover, .lotusui30 .lotusSection a.lotusArrow:focus, .lotusui30 .lotusSection a.lotusArrow:active{text-decoration:none}
+.lotusui30.lotusImagesOff .lotusSection .lotusArrow, .lotusImagesOff .lotusui30 .lotusSection .lotusArrow{margin-top:0}
+/*twisty definitions are moved back to base to share with widget.css*/
+.lotusui30 .lotusSection .lotusArrow{width:16px;height:16px;background-image:url(../../images/lotusSprite-8bit.png);background-repeat:no-repeat;float:left;display:block;}
+.lotusui30 .lotusSection h2 span.lotusLeft, .lotusui30 .lotusSection h3 span.lotusLeft{width:80%;}/*header text*/
+.lotusui30 .lotusSection h3{margin:0;padding:0;font-size:1.1em;font-weight:bold;padding-right:4px;}/*for when there is a help icon*/
+.lotusui30.lotusImagesOff .lotusSection h2 span.lotusLeft, .lotusImagesOff .lotusui30 .lotusSection h2 span.lotusLeft, .lotusui30.lotusImagesOff .lotusSection h3 span.lotusLeft, .lotusImagesOff .lotusui30 .lotusSection h3 span.lotusLeft{width:auto;margin-right:10px;}/*we need more room for text in place of the action icon*/
+.lotusui30 .lotusSection h2 a{color:#222 !important;}
+.lotusui30 .lotusSection h2 a.lotusIcon{float:right;width:16px;height:18px;background-repeat:no-repeat;}/*this is the action menu icon*/
+.lotusui30 .lotusSection h2 a.lotusActionMenu{background-image:url(../../images/lotusHSprite-8bit.png);background-position:-499px -9px;opacity:0.45;filter:alpha(opacity=45)/*45% is the min opacity for meeting contrast requirements on white/off-white background*/}
+.lotusui30 .lotusSectionBody{background-color:#fff;}
+.lotusui30.lotusImagesOff .lotusSection h2 a.lotusIcon, .lotusImagesOff .lotusui30 .lotusSection h2 a.lotusIcon{font-size:.78em;font-weight:normal;width:auto;height:auto;}/*settings for alternate text*/
+.lotusui30 .lotusSection h2.lotusIcons img, .lotusui30 .lotusSection h3.lotusIcons img{margin-left:3px;}
+.lotusui30 .lotusSection .lotusDragHandle{width:9px;height:17px;position:absolute;left:-7px;top:5px;background-repeat:no-repeat;zoom:1;cursor:move;visibility:hidden;}/*we may want to move this outside of a section and make it a more general class.  It must be positioned within a relative div*/
+.lotusui30 .lotusSection div.lotusLast{margin-bottom:0;}/*gets rid of extra bottom margin on the last "subsection"*/
+.lotusui30 .lotusSection .lotusTagCloud{width:100%; overflow:hidden;}
+/*for left alignment in a section*/
+.lotusui30 .lotusSection .lotusVertTable, .lotusui30 .lotusSection div.lotusChunk .lotusVertTable{margin-left:-2px;}/*to offset the 2px padding on the first table cell*/
+.lotusui30 .lotusSection ul.lotusTree{margin-left:-10px;}
+.lotusui30.lotusImagesOff .lotusSection ul.lotusTree, .lotusImagesOff .lotusui30 .lotusSection ul.lotusTree{margin-left:15px;}
+
+
+
+
+
+
+
+/****************************************************************/
+

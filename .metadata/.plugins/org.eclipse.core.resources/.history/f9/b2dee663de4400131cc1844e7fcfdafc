@@ -1,0 +1,43 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for help and tips
+companion files: zDeprecated_infobox.css / zDeprecated_infoboxTheme.css
+companion files: zDeprecated_infoboxRTL.css / zDeprecated_infoboxThemeRTL.css*/
+/*** D E P R E C A T E D   I N F O   B O X ***/ 
+/*this is used for help and tips*/
+
+.lotusui30 .lotusInfoBox{margin:15px 0 5px 0;padding:5px;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;overflow:hidden;zoom:1;background-color:#fffabc;border:1px solid #ccc;}
+.lotusui30 .lotusInfoBox.lotusFirst{margin-top:0;}/*this style definition (with no spaces) applies to any div with class="lotusInfoBox lotusFirst"*/
+.lotusui30 .lotusInfoBox h3{margin:5px 0 10px 0;padding:0 5px 0 0;font-size:1.1em;overflow:hidden;zoom:1;color:#222;}
+.lotusui30 .lotusInfoBox h3 img{
+margin:0 0 0 5px;
+width:8px;height:8px;vertical-align:top;/*better alignment choice to support both strict and transitional doctypes*/background-image:url(../../images/lotusHSprite-8bit.png);
+background-position:-559px -12px;opacity:0.45;
+filter:alpha(opacity=45);}
+.lotusui_ie .lotusui30 .lotusInfoBox h3 img{vertical-align:middle;}/*ie6 & 7 don't need the adjustment for strict doctype*/
+.lotusui30 .lotusInfoBox h3 a:hover img, .lotusui30 .lotusInfoBox h3 a:focus img{opacity:0.55;filter:alpha(opacity=55);}
+.lotusui30 .lotusSection .lotusInfoBox h4 span.lotusLeft{width:auto;}/*level 2 headings in a section are set to 90% width - need to reset*/
+.lotusui30 .lotusInfoBox h4{margin:2px 5px;font-weight:bold;color:#222;}
+.lotusui30 .lotusInfoBox p{margin:0;padding:5px;}
+.lotusui30 .lotusInfoBox ul{margin:0;padding-right:20px;}
+.lotusui30 .lotusInfoBox li{margin:0;padding:0;}
+.lotusui30 .lotusInfoBox .lotusInlinelist{padding-bottom:5px;padding-right:0;}
+.lotusui30 .lotusInfoBox .lotusInlinelist li{padding-bottom:5px;border-right-width:0;}
+/*put lotusHelp as an additional style to lotusInfoBox for help popups*/
+.lotusui30 .lotusHelp{position:absolute;width:200px;left:0;top:-9999px;-webkit-box-shadow:0 2px 5px #eee;-moz-box-shadow:0 2px 5px #eee;box-shadow:0 2px 5px #eee;}
+.lotusui30 .lotusHelp .lotusInfoBox{margin:0;padding:5px 0 0 0;border-width:0;-moz-border-radius:0;-webkit-border-radius:0;border-radius:0;background-color:#ffffe1;}
+.lotusui30 .lotusHelp .lotusInfoBox h3{margin:0 0 0 3px;float:right;font-size:1.1em;line-height:1.2;}
+.lotusui30 .lotusHelp .lotusInfoBox p{padding:0 0 5px 5px;}
+.lotusui30 .lotusMedium{width:300px;}/*you can put this as an additional class to set the width to 300 pixels*/
+.lotusui30.lotusImagesOff a.lotusRight img, .lotusImagesOff .lotusui30 a.lotusRight img{display:none;}/*this is the delete button on the tips box*/
+
+
+
+
+
+
+
+/***********************************************************/
+

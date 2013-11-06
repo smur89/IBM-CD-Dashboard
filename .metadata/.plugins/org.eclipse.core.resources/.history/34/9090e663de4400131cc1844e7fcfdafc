@@ -1,0 +1,45 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for the title bar (layout)
+companion files: titlebar.css / titlebarTheme.css
+companion files: titlebarRTL.css / titlebarThemeRTL.css*/
+/*** T I T L E   B A R 	***/
+/*the blue bar under the , that contains tabs and search UI*/
+
+.lotusui30 .lotusTitleBar{margin:0 10px; position:relative; clear:both/*fix for IE6*/; zoom:1; border-bottom:1px solid #747678;
+	background:#747678;
+	background:-moz-linear-gradient(top, #87898b 0%, #656769 100%);
+	background:-webkit-gradient(linear, left top, left bottom, from(#87898b), to(#656769));
+	-moz-border-radius-topright:4px;
+	-moz-border-radius-topleft:4px;
+	-webkit-border-top-right-radius:4px;
+	-webkit-border-top-left-radius:4px;
+	border-top-right-radius:4px;
+	border-top-left-radius:4px;}
+.lotusui30 .lotusTitleBar .lotusInner{height:3em;width:100%;}
+.lotusui30 .lotusTitleBar h2{margin:0;padding:7px 15px 0 0;float:right;font-size:1.4em;letter-spacing:0;font-weight:normal;color:#fff;} /*this is used in place of tabs, if desired*/
+.lotusui30 .lotusTitleBar h2.lotusEllipsis{width:180px;}
+.lotusui30 .lotusTitleBar .lotusTabs{position:absolute;right:15px;margin:0;width:950px;}/*when you aren't using an application title*/
+.lotusui_ie6 .lotusui30 .lotusTitleBar .lotusTabs{width:100%;/*keeps rightmost tab border from being cut off*/}
+.lotusui30 .lotusTitleBar .lotusTabsIndented{right:215px;width:750px;}/*add this class when you want to use an application title*/
+.lotusui30 .lotusTitleBar .lotusSearch .lotusText, .lotusui30 .lotusTitleBar .lotusSearch .lotusScope, .lotusui30 .lotusTitleBar .lotusSearch .lotusBtnImg, .lotusui30 .lotusTitleBar .lotusTabs li{border:1px solid #747678;}
+.lotusui30 .lotusTitleBar .lotusTabs li, .lotusui30 .lotusTitleBar .lotusSearch .lotusBtnImg{background-color:#595b5d;}
+.lotusui30 .lotusTitleBar .lotusTabs li{border-bottom-color:#656769;}
+.lotusui30 .lotusTitleBar .lotusSearch{position:absolute;top:.7em;left:10px;}  
+.lotusui30 .lotusTitleBar .lotusTabs a, .lotusui30 .lotusTitleBar .lotusTabs a:visited{display:block;padding:7px 10px;text-decoration:none;line-height:1;background-position:top right;background-repeat:no-repeat;color:#fff;}/*line-height is for IE, to keep the selected tab sitting on top of the border when there is a drop-down image in the tab*/
+.lotusui30 .lotusTitleBar .lotusTabs li.lotusSelected{background-color:#fff;border-bottom:1px solid #fff;}
+.lotusui30 .lotusTitleBar .lotusTabs li.lotusSelected a, .lotusui30 .lotusTitleBar .lotusTabs li.lotusSelected a:visited{color:#000;}
+.lotusui30 .lotusTitleBar .lotusTabs li a:hover, .lotusui30 .lotusTitleBar .lotusTabs li a:focus, .lotusui30 .lotusTitleBar .lotusTabs li a:active{color:#fff;}
+.lotusui30 .lotusTitleBar .lotusTabs li.lotusSelected a:hover, .lotusui30 .lotusTitleBar .lotusTabs li.lotusSelected a:focus, .lotusui30 .lotusTitleBar .lotusTabs li.lotusSelected a:active{color:#000;}
+.lotusui30.lotusImagesOff .lotusTitleBar .lotusBtnImg .lotusAltText, .lotusImagesOff .lotusui30 .lotusTitleBar .lotusBtnImg .lotusAltText{color:#000;}
+.lotusui30.lotusImagesOff .lotusTitleBar ul.lotusTabs .lotusSelected, .lotusImagesOff .lotusui30 .lotusTitleBar ul.lotusTabs .lotusSelected{border-bottom-width:0;}
+
+
+
+
+
+
+
+/***********************************************************/

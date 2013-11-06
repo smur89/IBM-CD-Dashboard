@@ -1,0 +1,62 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for the title bar (layout)
+companion files: titlebar.css / titlebarTheme.css
+companion files: titlebarRTL.css / titlebarThemeRTL.css*/
+/*** T I T L E   B A R 	***/
+/*the blue bar under the , that contains tabs and search UI*/
+
+
+
+.lotusui30 .lotusTitleBar {margin:0; border-bottom:0;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	border-radius:0;}
+
+/*accesibility*/
+.lotusui30.lotusImagesOff .lotusTitleBar .lotusRightCorner, .lotusImagesOff .lotusui30 .lotusTitleBar .lotusRightCorner{border-bottom-width:0;}
+.lotusui30.lotusImagesOff .lotusTitleBar .lotusBtnImg .lotusAltText, .lotusImagesOff .lotusui30 .lotusTitleBar .lotusBtnImg .lotusAltText{color:#fff;}
+
+
+
+
+
+.lotusui30 .lotusTitleBar {border-bottom:1px solid #d2d2d2;
+	background:#f8f8f8;
+	background:-moz-linear-gradient(top, #f8f8f8 0%, #f8f8f8 92%, #eaeaea 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(92%,#f8f8f8), color-stop(100%,#eaeaea));
+	background:linear-gradient(top, #f8f8f8 0%, #f8f8f8 92%, #eaeaea 100%);}
+.lotusui30 .lotusTitleBar h2 {color:#222; font-size:1.5em; font-weight:bold; padding-top:12px; padding-left:0;}
+.lotusui30 .lotusTitleBar h2.lotusEllipsis {width:210px;}
+.lotusui30 .lotusTitleBar .lotusInner {height:4.2em/*to make the title bar 50px tall*/; position:relative;}
+
+.lotusui30 .lotusTitleBar .lotusTabs {overflow:visible; left:0; bottom:-1px;}
+.lotusui30.lotusImagesOff .lotusTitleBar ul.lotusTabs, .lotusImagesOff .lotusui30 .lotusTitleBar ul.lotusTabs{bottom:-2px;}
+.lotusui30 .lotusTitleBar .lotusTabsIndented {left:220px;} /*to line up with center column*/
+.lotusui30 .lotusTitleBar .lotusTabs li {border:0; background:none; margin:0 -1px 0 0;}
+.lotusui30 .lotusTitleBar .lotusTabs li.lotusSelected {border:0;}
+.lotusui30 .lotusTitleBar .lotusTabs li a {padding:11px 20px; border-style:solid; border-width:1px; border-color:transparent #e5e5e5 #d2d2d2; font-weight:bold;}
+.lotusui_ie6 .lotusui30 .lotusTitleBar .lotusTabs li a {border-top-color:#f8f8f8;}
+.lotusui30 .lotusTitleBar .lotusTabs li a, .lotusui30 .lotusTitleBar .lotusTabs li a:visited {color:#444; font-size:0.9em;}
+.lotusui30 .lotusTitleBar .lotusTabs li a:hover, .lotusui30 .lotusTitleBar .lotusTabs li a:focus, .lotusui30 .lotusTitleBar .lotusTabs li a:active {border-color:#dfdfdf #dfdfdf #d2d2d2; color:#000;}
+.lotusui30 .lotusTitleBar .lotusTabs li.lotusSelected a, .lotusui30 .lotusTitleBar .lotusTabs li.lotusSelected a:hover, .lotusui30 .lotusTitleBar .lotusTabs li.lotusSelected a:focus, .lotusui30 .lotusTitleBar .lotusTabs li.lotusSelected a:active {border-color:#d2d2d2 #d2d2d2 #fff;}
+.lotusui30.lotusImagesOff .lotusTitleBar .lotusTabs li.lotusSelected a, .lotusImagesOff .lotusui30 .lotusTitleBar .lotusTabs li.lotusSelected a {border-bottom-width:0;}
+
+.lotusui30 .lotusTitleBar .lotusTabs li.lotusSelected + li > div > a {border-left-color:#d2d2d2;} /*gives the next tab a different left border because it overlaps the selected border. should work in everything but IE6.*/
+
+.lotusui30 .lotusTitleBar .lotusSearch {top:13px; right:0;}
+.lotusui30 .lotusTitleBar .lotusSearch .lotusScope {border:0; border-right:1px solid #e3e3e3; padding-right:17px; margin:0 0 0 4px; background-color:transparent;}
+.lotusui_ie .lotusui30 .lotusTitleBar .lotusSearch .lotusScope, .lotusui_ie8 .lotusui30 .lotusTitleBar .lotusSearch .lotusScope {margin:0;} /*because of no rounded borders*/
+ {min-width:0;} /*IE7 in RTL is setting a width*/
+.lotusui30 .lotusTitleBar .lotusSearch a.lotusScope, .lotusui30 .lotusTitleBar .lotusSearch a.lotusScope:visited, .lotusui30 .lotusTitleBar .lotusSearch a.lotusScope:hover, .lotusui30 .lotusTitleBar .lotusSearch a.lotusScope:focus, .lotusui30 .lotusTitleBar .lotusSearch a.lotusScope:active {color:#000;background-color:transparent; background-position:100% -1680px;}
+.lotusui30 .lotusTitleBar .lotusSearch .lotusText {border:0; padding:4px 0 3px 4px; background:none; color:#666;}
+.lotusui30 .lotusTitleBar .lotusSearch .lotusText:focus, .lotusui30 .lotusTitleBar .lotusSearch .lotusText:active {color:#222;}
+.lotusui30 .lotusTitleBar .lotusSearch .lotusBtnImg {border:0; margin:1px 4px 1px 2px; background:none; padding:2px}
+.lotusui30 .lotusTitleBar .lotusSearch .lotusLayout {border:1px solid #e3e3e3; background:#f3f3f3;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;}
+
+/***********************************************************/

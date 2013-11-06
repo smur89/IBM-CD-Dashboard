@@ -1,0 +1,63 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for the flyout
+companion files: flyout.css / flyoutTheme.css
+companion files: flyoutRTL.css / flyoutThemeRTL.css*/
+/*** F L Y O U T **/
+/*The flyout extends from a UI component to provide a preview or additional content*/
+
+.lotusui30 .lotusFlyout {border:1px solid #aaa; background:#fff;
+	-moz-border-radius:13px;
+	-webkit-border-radius:13px;
+	border-radius:13px;
+	-moz-box-shadow:0 2px 8px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow:0 2px 8px rgba(0, 0, 0, 0.1);
+	box-shadow:0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.lotusui30 .lotusFlyout .lotusWrapper {overflow:hidden;} /*for the inset shadow on the header*/
+.lotusui30 .lotusFlyout .lotusFlyoutHeader {padding:13px 20px; font-size:0.9em;}
+.lotusui30.lotusImagesOff .lotusFlyout .lotusFlyoutHeader, .lotusImagesOff .lotusui30 .lotusFlyout .lotusFlyoutHeader {border-bottom:1px solid #ccc;} /*because the header only has a background color*/
+.lotusui30 .lotusFlyout .lotusFlyoutHeader .lotusInlinelist {margin-right:20px;} /*to make room for the close icon*/
+.lotusui30 .lotusFlyout .lotusFlyoutHeader .lotusMeta {font-size:1em;}
+.lotusui30 .lotusFlyout .lotusFlyoutHeader .lotusPerson {font-weight:bold;}
+
+.lotusui30 .lotusFlyout .lotusClose {position:absolute; top:10px; right:10px; line-height:0.5/*to keep the click target square*/;}
+
+.lotusui30 .lotusFlyout .lotusFlyoutContent {overflow-y:auto; margin-bottom:10px; position:relative/*for IE6/7*/;}
+.lotusui_ie .lotusui30 .lotusFlyout .lotusFlyoutContent, .lotusui_ie8 .lotusui30 .lotusFlyout .lotusFlyoutContent {margin-bottom:0;} /*because IE6-8 don't have rounded corners*/
+.lotusui30 .lotusFlyout .lotusFlyoutContentArea {padding:0 10px 10px; zoom:1;}
+
+.lotusui30 .lotusFlyoutConnector {background-image:url(../../images/lotusHSprite-8bit.png); background-position:-1076px -9px; width:8px; height:15px; position:absolute;}
+
+/*the following styles are scoped to lotusFlyoutInner because they are in an iFrame*/
+.lotusui30 .lotusFlyoutInner {padding:0 10px;}
+.lotusui_ie6 .lotusui30 .lotusFlyoutInner .lotusHideOverflow {zoom:1;}
+.lotusui30 .lotusFlyoutInner .lotusHeadingChunk {font-size:1.5em; line-height:1.2; margin-bottom:15px; clear:both;}
+.lotusui30 .lotusFlyoutInner .lotusHeading2Chunk {font-size:1.5em; line-height:1.2; margin-bottom:15px; clear:both;} /*smaller text size when it is a status message with a file*/
+.lotusui30 .lotusFlyoutInner .lotusHeading {font-size:1em; font-weight:normal; display:inline;}
+.lotusui30 .lotusFlyoutInner .lotusHeading img {vertical-align:baseline; margin-right:5px;}
+.lotusui_ie .lotusui30 .lotusFlyoutInner .lotusHeadingAction {margin-left:5px;}
+.lotusui30 .lotusFlyoutInner .lotusHeadingAction img {vertical-align:baseline;}
+.lotusui30 .lotusFlyoutInner .lotusFlyoutImage {float:left; padding:5px 20px 15px 0;}
+.lotusui30 .lotusFlyoutInner .lotusDivider{margin:0 5px;color:#666;}
+
+/* overrides */
+.lotusui30 .lotusFlyoutInner .lotusChunk {margin-top:0; margin-bottom:15px;}
+.lotusui30 .lotusFlyoutInner .lotusStatus {font-size:1.1em; font-style:italic; color:#444; font-family:Georgia, Tahoma, "Times New Roman", serif;}/*make sure this goes after lotusChunk*/
+.lotusui30 .lotusFlyoutInner .lotusLike {position:relative;}/*for IE6/7*/
+.lotusui30 .lotusFlyoutInner .lotusCommentList {margin:10px 0 0;}
+.lotusui30 .lotusFlyoutInner .lotusBoard .lotusCommentList .lotusAddComment {top:-1px;}
+.lotusui30 .lotusFlyoutInner .lotusBoard .lotusCommentList:after {background:none;}
+
+.lotusui30 .lotusFlyoutInner .lotusForm2 {background-color:#f2f2f2;}
+.lotusui30 .lotusFlyoutInner .lotusForm2 .lotusFormTitle {padding:15px;}
+.lotusui30 .lotusFlyoutInner .lotusForm2 .lotusHeading2 {color:#222; font-size:1.3em;}
+.lotusui30 .lotusFlyoutInner .lotusForm2 .lotusFormBody {padding:0 15px 10px;}
+.lotusui30 .lotusFlyoutInner .lotusForm2 .lotusFormFooter {margin:0 15px; overflow:hidden; padding:10px 0; border-top:1px dotted #aaa; background:none;}
+.lotusui30 .lotusFlyoutInner .lotusForm2 .lotusFormFooter li {margin-left:7px; padding:0 0 0 7px;}
+.lotusui30 .lotusFlyoutInner .lotusForm2 .lotusFormFooter li.lotusFirst {margin-left:0; padding-left:0;}
+
+/***********************************************************/
+

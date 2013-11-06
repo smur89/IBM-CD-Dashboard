@@ -1,0 +1,124 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for the customization palette
+companion files: palette.css / paletteTheme.css
+companion files: paletteRTL.css / paletteThemeRTL.css*/
+/*** P A L E T T E ***/
+/*this is the palette that opens under the place bar to allow users to customize the UI */
+
+.lotusui30 .lotusPalette{overflow:hidden;zoom:1;background-color:#7a7f84;border-bottom:6px solid #676b6f;}
+.lotusui30 .lotusPalette .lotusLoading{background-image:url(../../images/loading.gif);}
+.lotusui30 .lotusPaletteHeader{padding:7px 10px 0;overflow:hidden;zoom:1;position:relative;line-height:1.9em;background-color:#62656a;color:#fff;border-width:1px 0;border-style:solid;border-top-color:#62656a;border-bottom-color:#777b81;}
+.lotusui30 .lotusPaletteHeader .lotusHeading{margin:0;padding:0;float:left;font-size:1.2em;font-weight:bold;color:#fff;}
+/*.lotusPaletteHeader a{text-decoration:none;}*/
+.lotusui30 .lotusPalette .lotusPaletteHeader a, 
+.lotusui30 .lotusPalette .lotusPaletteHeader a:hover, 
+.lotusui30 .lotusPalette .lotusPaletteHeader a:focus, 
+.lotusui30 .lotusPalette .lotusPaletteHeader a:active, 
+.lotusui30 .lotusPalette .lotusPaletteHeader a:visited{color:#fff;}
+.lotusui30 .lotusPaletteHeader ul.lotusTabs{float:left; margin-left:0; width:75%;}
+.lotusui30 .lotusPaletteHeader .lotusTabs li{border-width:0;}
+.lotusui30 .lotusPaletteHeader .lotusTabs li, 
+.lotusui30 .lotusPaletteHeader .lotusTabs li.lotusSelected{background-color:transparent;}
+.lotusui30 .lotusPaletteHeader .lotusTabs li.lotusSelected a, 
+.lotusui30 .lotusPaletteHeader .lotusTabs li.lotusSelected a:visited{color:#fff;}
+.lotusui30 .lotusPaletteHeader .lotusTabs a, 
+.lotusui30 .lotusPaletteHeader .lotusTabs a:visited{margin:2px 0 8px 0;padding:3px 8px;color:#fff;}
+.lotusui30 .lotusPaletteHeader .lotusTabs li.lotusSelected a{font-weight:bold;}
+.lotusui30 .lotusPaletteHeader .lotusTabs li a:hover, 
+.lotusui30 .lotusPaletteHeader .lotusTabs li a:focus{text-decoration:underline;}
+.lotusui30 .lotusPaletteHeader .lotusTabs li.lotusSelected a:hover, 
+.lotusui30 .lotusPaletteHeader .lotusTabs li.lotusSelected a:focus{text-decoration:none;}
+.lotusui30 .lotusPalette .lotusClose{margin-left:20px;padding:2px;float:right;}/*there is also a lotusBtnImg class on this element*/
+.lotusui30 .lotusPaletteBody{margin-bottom:1px;background-color:#414648;border-width:2px 0;border-style:solid;border-top-color:#222;border-bottom-color:#222;overflow:hidden;zoom:1;}
+.lotusui30 .lotusPaletteNav{width:200px;float:left;height:20.2em;padding:10px 15px 10px 0;border-right:1px solid #222;}
+.lotusui30.lotusImagesOff .lotusPaletteNav, .lotusImagesOff .lotusui30 .lotusPaletteNav{height:22em;}/*to allow for expanded UI with image alt text*/
+.lotusui30 .lotusPalette .lotusChunk{margin:0 0 10px 10px;overflow:hidden;}
+.lotusui30 .lotusPalette .lotusSearch input.lotusText{width:143px;}
+.lotusui30 .lotusPaletteNav .lotusPaletteNavHeader{margin:0 0 3px 10px;padding:0;color:#fff;}
+.lotusui30 .lotusPaletteNav .lotusPaletteNavHeader .lotusHeading2{font-size:1.1em;font-weight:bold;color:#fff;}
+.lotusui30 .lotusPaletteNav .lotusPaletteNavHeader .lotusBtnImg{margin-right:3px;padding:0 2px;float:left;vertical-align:bottom;}
+.lotusui30 .lotusPaletteNav .lotusPaletteNavHeader .lotusBtnImg input{color:#fff;background:url(../../images/lotusHSprite-8bit.png) -629px -8px;}
+.lotusui30 .lotusPalette .lotusSearch input.lotusText{background-color:#fff;color:#222;border-color:#fff;}
+.lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu{margin-left:10px;border-width:0;-moz-border-radius:0;-webkit-border-radius:0;border-radius:0;height:15em;overflow:auto;background-color:#232426;}
+.lotusui_ie .lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu{height:12.8em;position:relative/*bug fix, need this here to overcome fixed positioning ie bug*/;}/*we want 6 items to show. Adjustment for IE*/
+.lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu li a, .lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu li a:visited, .lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu li a:hover, .lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu li a:focus, .lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu li a:active{margin-right:2px;/*to keep horizontal scrollbar from showing on click*/color:#fff;background-color:transparent;}
+.lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu li.lotusSelected a, 
+.lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu li.lotusSelected a:visited{border-width:0;}
+.lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu li.lotusMore a{margin-right:5px;background:url(../../images/lotusSprite-8bit.png) 94% -149px no-repeat;/*opacity:0.55;filter:alpha(opacity=55) opacity lightens the text, too,  disabling for now*//*55% is the min opacity for meeting contrast requirements on white/off-white background for small text*/}
+.lotusui30 .lotusPaletteHeader .lotusTabs li.lotusSelected a, 
+.lotusui30 .lotusPaletteHeader .lotusTabs li.lotusSelected a:visited, 
+.lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu li.lotusSelected, 
+.lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu li.lotusSelected a{background-color:#595b5d;}
+.lotusui30 .lotusPaletteContent{padding:10px 0 10px 10px;overflow:auto;zoom:1;height:20.2em;background-color:#37393c;}
+.lotusui_ie6 .lotusui30 .lotusPaletteContent{position:relative;left:-3px;}
+.lotusui30 .lotusPaletteContent.lotusPlain div.lotusIcon, 
+.lotusui_ie6 .lotusui30 .lotusPlain div.lotusIcon{width:1em;} /*when there are no icons, add this additional class to lotusPaletteContent and write out the lotusIcon div with an &nbsp;*/
+.lotusui30 .lotusPaletteWidgets{min-height:18.2em;}
+.lotusui30 .lotusPaletteWidgets .lotusSelected{border-color:#fff;}
+.lotusui30 .lotusPaletteWidget{margin:0 10px 6px 0;padding:6px 0;width:19em;height:2.6em;float:left;overflow:hidden;line-height:1.4em;border:1px solid #222;display:table; table-layout: fixed;background-color:#4d5054;color:#fff;}
+.lotusui30 .lotusPaletteWidgetHover{cursor:pointer;border-color:#fff;}/*this class needs to be added by javascript on hover because it is not on an anchor tag*/
+
+.lotusui30.lotusImagesOff .lotusPaletteWidgets .lotusSelected, .lotusImagesOff .lotusui30 .lotusPaletteWidgets .lotusSelected, 
+.lotusui30.lotusImagesOff .lotusPaletteWidgetHover, .lotusImagesOff .lotusui30 .lotusPaletteWidgetHover{border-style:dotted;}
+.lotusui30 .lotusPaletteContent .lotusPaletteWidget a, 
+.lotusui30 .lotusPaletteContent .lotusPaletteWidget a:hover, 
+.lotusui30 .lotusPaletteContent .lotusPaletteWidget a:focus, 
+.lotusui30 .lotusPaletteContent .lotusPaletteWidget a:active, 
+.lotusui30 .lotusPaletteContent .lotusPaletteWidget a:visited{color:#fff;}
+.lotusui30 .lotusPaletteWidget .lotusInner{display:table-row;height:2.6em;/*height fixes safari skinny widgets*/}
+.lotusui30 .lotusPaletteWidget div{font-weight:bold;display:table-cell;vertical-align:middle;}
+.lotusui30 .lotusPaletteWidget div.lotusIcon{width:34px;text-align:center;}
+.lotusui30 .lotusPaletteWidget div.lotusIcon span{display:block;height:16px;width:16px;padding:3px;margin:.5em 5px;}
+.lotusui30 .lotusPaletteWidget div.lotusIcon img{width:16px;height:16px;}/*need to force this size to preserve layout - so widgets will float properly*/
+.lotusui30 .lotusPaletteWidget a.lotusIcon{display:table-cell;width:25px;vertical-align:middle;background:url(../../images/lotusSprite-8bit.png) 0 -4017px no-repeat;font-size:2em/*to make alt text larger*/;opacity:.8;filter:alpha(opacity=80);}
+.lotusui30 .lotusPaletteWidget a.lotusIcon:hover, 
+.lotusui30 .lotusPaletteWidget a.lotusIcon:focus{text-decoration:none;opacity:1;filter:alpha(opacity=100);}
+.lotusui30 .lotusPaletteWidget div.lotusIcon span{background-color:transparent;}
+.lotusui_ie .lotusui30 .lotusPaletteWidget div{float:left;padding-top:.25em;}
+.lotusui_ie .lotusui30 .lotusPaletteWidget div.lotusIcon span, 
+.lotusui_ie .lotusui30 .lotusPaletteWidget img{margin-top:-1px;}
+.lotusui_ie .lotusui30 .lotusPaletteWidget a.lotusIcon{float:right;display:block;margin-top:-2px;}
+.lotusui30 .lotusPaletteWidget .lotusWidgetTitle{padding-right:.1em;}
+.lotusui30 .lotusPaletteWidget .lotusWidgetTitle .lotusTitle {display:block;height:1.2em;margin:0;font-weight:bold;white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.lotusui30 .lotusPaletteWidget .lotusWidgetTitle .lotusTitle span{font-size:.8em;}/*alt text for ratings, or any other text under the title*/
+.lotusui_ie .lotusui30 .lotusPaletteWidget .lotusWidgetTitle .lotusTitle{width:10em;}
+.lotusui_ie7 .lotusui30 .lotusPaletteWidget .lotusWidgetTitle .lotusTitle{width:11em;}
+.lotusui_ie7 .lotusui30 .lotusPaletteContent.lotusPlain .lotusPaletteWidget .lotusWidgetTitle .lotusTitle{width:13em;}
+.lotusui30 .lotusLargeWidgets .lotusPaletteWidget{height:5.3em;}
+.lotusui30 .lotusLargeWidgets .lotusPaletteWidget div.lotusIcon{width:50px;}
+.lotusui30 .lotusLargeWidgets .lotusPaletteWidget div.lotusIcon span{height:50px;width:50px;margin:0;padding:0 5px;background-color:transparent;border-width:0;}
+.lotusui30 .lotusLargeWidgets .lotusPaletteWidget div.lotusIcon img{width:48px;height:48px;border:1px solid #000;}
+.lotusui30 .lotusPaletteContent .lotusPaging{border-width:0;padding:2px 0;background-color:transparent;}
+.lotusui30 .lotusPaletteContent .lotusPaging div{padding-left:0;margin-left:0;}
+.lotusui30 .lotusPaletteContent .lotusPaging ul li, 
+.lotusui30 .lotusPaletteContent .lotusPaging div{color:#C1C0C0;}
+.lotusui30 .lotusPaletteContent .lotusPaging .lotusInlinelist{margin-right:5px;}
+.lotusui30 .lotusPalette .lotusPaging input.lotusText{border:1px solid #181818;background-color:#222;color:#fff;}
+.lotusui30 .lotusPalette .lotusPaging a, 
+.lotusui30 .lotusPalette .lotusPaging a:visited{text-decoration:none;color:#fff;}
+.lotusui30 .lotusPalette .lotusPaging a:hover, 
+.lotusui30 .lotusPalette .lotusPaging a:focus{text-decoration:underline;color:#fff;}
+/*some additional options for widgets*/
+.lotusui30 .lotusPalette lotusPaletteWidget .lotusAdded,  
+.lotusui30 .lotusPalette lotusPaletteWidget .lotusAdded a{padding:0 0 16px 2px;}
+.lotusui30 .lotusPalette .lotusShowHide{display:table-cell;vertical-align:middle;text-align:right;padding-right:10px;}/*replaces the plus sign with show hide text, for an add features customize UI*/
+.lotusui_ie .lotusui30 .lotusPaletteWidget .lotusShowHide{float:right;display:block;margin-top:.35em;}
+.lotusui_ie .lotusui30 .lotusPaletteWidget lotusPaletteWidget .lotusAdded{margin-top:-.5em;}
+.lotusui30.lotusImagesOff a.lotusIcon img, .lotusImagesOff .lotusui30 a.lotusIcon img{display:none;}
+/*some additional options for widgets*/
+.lotusui30 .lotusPalette .lotusAdded,  
+.lotusui30 .lotusPalette .lotusAdded a{color:#0c0;}/*to indicate that a widget has been added to the page*/
+.lotusui30 .lotusPalette lotusPaletteWidget .lotusAdded,  
+.lotusui30 .lotusPalette lotusPaletteWidget .lotusAdded a{color:#c1c0c0;}/*grays out header, if widget is already added to the page*/
+
+
+
+
+
+
+
+/***********************************************************/
+

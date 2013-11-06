@@ -1,0 +1,21 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for tips
+companion files: tips.css / tipsTheme.css
+companion files: tipsRTL.css / tipsThemeRTL.css*/
+/*** T I P S ***/ 
+
+
+
+
+
+.lotusui30 .lotusTips {padding:15px; background:#afe2f9; border-color:#82d1f5;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;}
+.lotusui30 .lotusTips .lotusClose {left:4px;}
+
+/***********************************************************/
+

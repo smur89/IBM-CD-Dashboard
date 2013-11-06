@@ -1,0 +1,59 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for menu
+companion files: menu.css / menuTheme.css
+companion files: menuRTL.css / menuThemeRTL.css*/
+/*** M E N U ***/
+/*this menu is set up to allow for rounded corners in all browsers and is a set width*/
+
+.lotusui30 .lotusMenu{margin:0 0 15px 0;padding:5px 0;width:178px;word-wrap:break-word;background-color:#eee;border:1px solid #ccc;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;}
+.lotusui30 .lotusMenu .lotusInner{overflow:hidden;}
+.lotusui30 .lotusMenu .lotusMenuSection{overflow:hidden;margin:0 0 5px 0;padding-bottom:5px;border-bottom:1px solid #ccc;zoom:1;}/*creates a section in the menu, with a divider at the bottom*/
+.lotusui30 .lotusMenu .lotusMenuSubsection{padding:5px 20px 0 0;}/*allows you to indent a section of the menu*/
+.lotusui30 .lotusMenu .lotusMenuHeader{margin:0 5px;padding:2px 25px 2px 0;}
+.lotusui30 .lotusMenu .lotusMenuHeader, .lotusui30 .lotusMenu .lotusHeaderSelected .lotusMenuHeader{color:#000;}
+.lotusui30 .lotusMenu .lotusMenuHeader a, .lotusui30 .lotusMenu .lotusMenuHeader a:visited, .lotusui30 .lotusMenu .lotusMenuHeader a:hover, .lotusui30 .lotusMenu .lotusMenuHeader a:focus, .lotusui30 .lotusMenu .lotusMenuHeader a:active{color:#000;}
+.lotusui30 .lotusMenu .lotusHeaderSelected, .lotusui30 .lotusMenu .lotusHeaderSelected a, .lotusui30 .lotusMenu .lotusHeaderSelected a:visited, .lotusui30 .lotusMenu .lotusHeaderSelected a:hover, .lotusui30 .lotusMenu .lotusHeaderSelected a:focus, .lotusui30 .lotusMenu .lotusHeaderSelected a:active{color:#fff;}
+.lotusui30 .lotusMenu .lotusMenuSubsection .lotusMenuHeader{margin-right:-15px;}
+.lotusui30 .lotusMenu .lotusHeaderSelected{color:#fff;background-color:#595b5d;border-width:1px 0;border-style:solid;border-color:#595b5d;}
+.lotusui30 .lotusMenu .lotusMenuHeader a.lotusArrow{position:absolute;right:9px;top:3px;}
+.lotusui30 .lotusMenu .lotusHeading{font-size:1em;line-height:1.5;}
+/*Use a ul element for menu items. Put an additional lotusIcons class on it if your menu items have icons*/
+.lotusui30 .lotusMenu ul{margin:0;padding:0;list-style-type:none;}
+.lotusui30 .lotusMenu li{zoom:1;}/*sets hasLayout in IE*/
+.lotusui30 .lotusMenu li a{padding:2px 10px 2px 0;display:block;font-weight:normal;}
+.lotusui30 .lotusMenu li a, .lotusui30 .lotusMenu .lotusMenuHeader{position:relative;zoom:1;}
+.lotusui30 .lotusMenu li a, .lotusui30 .lotusMenu li a:visited, .lotusui30 .lotusMenu li a:hover, .lotusui30 .lotusMenu li a:focus, .lotusui30 .lotusMenu li a:active{color:#000;}
+/*.lotusui30 .lotusMenu li a:hover, .lotusui30 .lotusMenu li a:focus, .lotusui30 .lotusMenu li a:active{text-decoration:underline;}*/
+/*lotusIcons is assigned to a list of menu items with icons; an image is added inside the link before the text.  This is legacy code*/
+.lotusui30 .lotusMenu ul.lotusIcons img{position:absolute;right:10px;}
+.lotusui30 .lotusMenu ul.lotusIcons .lotusSelected img{right:25px;}
+.lotusui30 .lotusMenu ul.lotusIcons a{padding-right:29px;}
+/*----------*/
+.lotusui30 .lotusMenu li.lotusSelected a{margin:0 5px;padding-right:5px;background-color:#595b5d;border-width:1px 0;border-style:solid;border-color:#595b5d;font-weight:bold;}
+.lotusui30 .lotusMenu li.lotusSelected a, .lotusui30 .lotusMenu li.lotusSelected a:visited, .lotusui30 .lotusMenu li.lotusSelected a:hover, .lotusui30 .lotusMenu li.lotusSelected a:focus, .lotusui30 .lotusMenu li.lotusSelected a:active{color:#fff;text-decoration:none;}
+.lotusui30 .lotusMenu ul.lotusIcons .lotusSelected a{ padding-right: 24px; }
+.lotusui30 .lotusMenu .lotusMenuSubsection li.lotusSelected a{margin-right:-15px;padding-right:25px;}
+.lotusui30 .lotusMenu .lotusMenuSubsection ul.lotusIcons .lotusSelected a{ padding-right: 44px; }
+.lotusui30.lotusImagesOff .lotusMenu .lotusMenuSubsection ul.lotusIcons a, .lotusImagesOff .lotusui30 .lotusMenu .lotusMenuSubsection ul.lotusIcons a{padding-right:10px;}
+.lotusui30.lotusImagesOff .lotusMenu .lotusMenuSubsection ul.lotusIcons .lotusSelected a, .lotusImagesOff .lotusui30 .lotusMenu .lotusMenuSubsection ul.lotusIcons .lotusSelected a{padding-right:25px;}
+.lotusui_ie6 .lotusui30 .lotusMenu .lotusMenuSubsection li.lotusSelected a{position:relative;zoom:1;}/*fix so negative margins aren't truncated by container*/
+.lotusui30 .lotusMenu div.lotusChunk{margin:5px 0 0 5px;}/*lotusChunk allows you to apply vertical spacing within sections - wrap a div with this class around "chunks" of data*/
+.lotusui30 .lotusMenu .lotusAction{margin-right:30px;display:inline-block;}
+/*menu arrows are created as CSS sprites, using the lotusArrow class found in baseTheme.css*/
+.lotusui30 .lotusMenu .lotusTwistyOpenMenu{background-position:4px -1016px;opacity:0.55;filter:alpha(opacity=55);}/*the section is selected*/
+.lotusui30 .lotusMenu .lotusTwistyClosedMenu{background-position:4px -1112px;opacity:0.55;filter:alpha(opacity=55);}
+.lotusui30 .lotusMenu a.lotusArrow, .lotusui30 .lotusMenu a.lotusArrow:hover, .lotusui30 .lotusMenu a.lotusArrow:focus{text-decoration:none;}
+/*unread badge*/
+.lotusui30 .lotusMenu .lotusUnreadBadge {margin-right:15px; padding:0 0.4em; color:#fff; background:#767676; display:inline-block;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;font-size:.85em;} /* display:inline; makes the background disappear in IE9 */
+.lotusui30.lotusImagesOff .lotusMenu .lotusUnreadBadge, .lotusImagesOff .lotusui30 .lotusMenu .lotusUnreadBadge{border-width:1px;border-style:solid;}
+
+                                                                                                                      
+
+
+
+
+
+/***********************************************************/

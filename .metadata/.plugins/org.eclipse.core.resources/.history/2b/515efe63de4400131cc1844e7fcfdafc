@@ -1,0 +1,20 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+This file contains contains common icons.
+Icon positions in the sprite may change at any time. Therefore, use only the class names provided and never use the background positions shown below.*/
+
+/*** I C O N S ***/
+
+.lotusui30 .lotusIconLike,
+.lotusui30 .lotusIconMsgSuccess,
+.lotusui30 .lotusIconMsgError,
+.lotusui30 .lotusIconMsgInfo,
+.lotusui30 .lotusIconMsgWarning {background-image:url(../../images/lotusHSprite-8bit.png);width:16px;height:16px;background-repeat:no-repeat;display:-moz-inline-box;display:inline-block;}
+
+.lotusui30 .lotusIconLike {background-position:-88px -8px;}
+.lotusui30 .lotusIconMsgSuccess {background-position:0 -8px;}
+.lotusui30 .lotusIconMsgError {background-position:-22px -8px;}
+.lotusui30 .lotusIconMsgInfo {background-position:-44px -8px;}
+.lotusui30 .lotusIconMsgWarning {background-position:-66px -8px;}

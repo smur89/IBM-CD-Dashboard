@@ -1,0 +1,49 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for the title bar (layout)
+companion files: titlebar.css / titlebarTheme.css
+companion files: titlebarRTL.css / titlebarThemeRTL.css*/
+/*** T I T L E   B A R 	***/
+/*the blue bar under the , that contains tabs and search UI*/
+
+
+
+.lotusui30 .lotusTitleBar {margin:0; border-bottom:0;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	border-radius:0;}
+
+/*accesibility*/
+.lotusui30.lotusImagesOff .lotusTitleBar .lotusRightCorner, .lotusImagesOff .lotusui30 .lotusTitleBar .lotusRightCorner{border-bottom-width:0;}
+.lotusui30.lotusImagesOff .lotusTitleBar .lotusBtnImg .lotusAltText, .lotusImagesOff .lotusui30 .lotusTitleBar .lotusBtnImg .lotusAltText{color:#fff;}
+
+
+
+.lotusui30 .lotusTitleBar {
+	background:#223344;
+	background:-moz-linear-gradient(#8495ad 0, #8495ad 1px, #6f849f 1px, #3c587d 45%, #304b70 45%, #283f5e 100%);
+	background:-webkit-gradient(linear, left top, left bottom, from(#8495ad), to(#283f5e), color-stop(.03, #8495ad), color-stop(.03, #6f849f), color-stop(50%, #3c587d), color-stop(50%, #304b70), color-stop(100%, #283f5e));}
+.lotusui30 .lotusTitleBar h2{color:#fff;padding-top:8px;margin-top:3px;}
+.lotusui30 .lotusTitleBar .lotusRightCorner{position:relative; border-bottom:8px solid #fff;}
+.lotusui30 .lotusTitleBar .lotusInner{height:3.6em;}
+
+.lotusui30 .lotusTitleBar .lotusTabs {bottom:-2px;}
+.lotusui_ie .lotusui30 .lotusTitleBar .lotusTabs {bottom:0;}/*not needed in right-to-left*/
+.lotusui30 .lotusTitleBar .lotusTabs li {border-color:#1e2f47; border-bottom-color:#1e2f47; background-color:#283f5e;}
+.lotusui30 .lotusTitleBar .lotusTabs li.lotusSelected {border-color:#1e2f47 #1e2f47 #fff;}
+.lotusui30 .lotusTitleBar .lotusTabs li a{padding:10px 12px;}
+.lotusui30 .lotusTitleBar .lotusTabs li a, .lotusui30 .lotusTitleBar .lotusTabs li a:visited, .lotusui30 .lotusTitleBar .lotusTabs li a:hover, .lotusui30 .lotusTitleBar .lotusTabs li a:focus, .lotusui30 .lotusTitleBar .lotusTabs li a:active {color:#fff;}
+
+.lotusui30 .lotusTitleBar .lotusSearch {top:10px; right:15px;}
+.lotusui30 .lotusTitleBar .lotusSearch .lotusScope {background-position:100% -1768px;}
+.lotusui30 .lotusTitleBar .lotusSearch .lotusScope, .lotusui30 .lotusTitleBar .lotusSearch .lotusBtnImg {background-color:#283f5e; color:#fff; border-color:#1e2f47;}
+.lotusui_ie6 .lotusui30 .lotusTitleBar .lotusSearch .lotusScope, .lotusui_ie6 .lotusui30 .lotusTitleBar .lotusSearch .lotusScope:visited {color:#fff;}
+.lotusui30 .lotusTitleBar .lotusSearch .lotusText {border-color:#1e2f47;}
+.lotusui30 .lotusTitleBar .lotusSearch .lotusBtnImg {background-image:none;}
+.lotusui30 .lotusTitleBar .lotusSearch .lotusSearchButton {background-position:-609px -8px; opacity:0.7; filter:alpha(opacity=70); color:#fff;}
+
+
+
+/***********************************************************/

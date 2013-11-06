@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<!--
+Licensed Materials - Property of IBM.
+(c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<meta charset="UTF-8" />
+<title>Put Your Title Here</title>
+<meta name="Description" content="Example template page - Put Your Description Here"/>
+<!--[if IE 6]><![endif]--><!--fixes IE8 performance issue of conditional comments blocking css download-->
+
+<!-- 
+<g:resource dir="css/base" file="core.css" />
+<g:resource dir="css/base" file="defaultTheme.css" />
+ -->
+ 
+ <link type="text/css" href="${resource(dir: 'css', file: 'core.css')}" />
+ <link type="text/css" href="${resource(dir: 'css', file: 'defaultTheme.css')}" />
+ 
+
+<!-- REAL PAGE INFORMATION
+	In a real page, you would link in the CSS files here.  For documentation purposes, there is
+	code above that links in the CSS based upon settings the user has chosen in the documentation UI.
+		<link rel='stylesheet' href='core.css' type='text/css' />
+		<link rel='stylesheet' href='defaultTheme.css' type='text/css' />
+	OR
+		<link rel='stylesheet' href='coreRTL.css' type='text/css' />
+		<link rel='stylesheet' href='defaultThemeRTL.css' type='text/css' />
+-->
+
+<!--
+	The following conditional logic is needed to add in the IE specific classes.
+	If you really wanted to do this on the server with browser sniffing, you could do that too,
+	but that would not be the way Microsoft recommends doing it.
+ -->
+<!--[if IE 6]>
+<script>
+	document.getElementsByTagName("html")[0].className+=" lotusui_ie lotusui_ie6";
+</script>
+<![endif]--> 
+<!--[if IE 7]>
+<script>
+	document.getElementsByTagName("html")[0].className+=" lotusui_ie lotusui_ie7";
+</script>
+<![endif]--> 
+<!--[if IE 8]>
+<script>
+	document.getElementsByTagName("html")[0].className+=" lotusui_ie8";
+</script>
+<![endif]--> 
+<!--[if IE 9]>
+<script>
+	document.getElementsByTagName("html")[0].className+=" lotusui_ie9";
+</script>
+<![endif]--> 
+<!--[if IE]>
+<script>
+	document.createElement('article');
+	document.createElement('aside');
+	document.createElement('footer');
+	document.createElement('header');
+	document.createElement('hgroup');
+	document.createElement('nav');
+	document.createElement('section');
+</script>
+<![endif]-->
+
+
+</head>
+
+<body class="lotusui30_body lotusui30_fonts lotusui30">
+
+
+<div class="lotusFrame lotusui30_layout">
+	<!-- header is an HTML5 element. Remove header if you are using HTML4. -->
+	<header role="banner">
+		<div class="lotusBanner"><div class="lotusRightCorner"><div class="lotusInner">
+	<a href="#lotusMainContent" accesskey="S" class="lotusAccess"><img src="../../css/images/blank.gif" alt="Skip to main content link. Accesskey S" /></a><a class="lotusLogo" href="javascript:;"><img alt="Product Name" src="../../css/images/blank.gif" /><span class="lotusAltText">Product Name</span></a>
+	<ul class="lotusInlinelist lotusUtility"><li class="lotusFirst"><a role="button" aria-haspopup="true" href="javascript:;">Alex Kay <img class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt="" aria-label="Show menu" /><span class="lotusAltText">&#x25bc;</span></a></li><li><a class="lotusBannerBtn" role="button" aria-haspopup="true" href="javascript:;">Share</a></li><li><a role="button" aria-haspopup="true" aria-label="Email" href="javascript:;"><img class="yourProductSprite yourProductSprite-iconPlaceholder16" src="../../css/images/blank.gif" alt="" /><span class="lotusAltText">Email</span><span class="lotusUnreadBadge lotusBadgeIcon"><img src="../../css/images/blank.gif" alt="" aria-label="New items"><span class="lotusAltText">*</span></span> <img class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt="" aria-label="Show menu" /><span class="lotusAltText">&#x25bc;</span></a></li><li><a role="button" aria-haspopup="true" aria-label="Calendar" href="javascript:;"><img class="yourProductSprite yourProductSprite-iconPlaceholder16" src="../../css/images/blank.gif" alt="" /><span class="lotusAltText">Calendar</span> <img class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt="" aria-label="Show menu" /><span class="lotusAltText">&#x25bc;</span></a></li><li><a role="button" aria-haspopup="true" aria-label="Help" href="javascript:;"><img class="yourProductSprite yourProductSprite-bannerHelp16" src="../../css/images/blank.gif" alt="" /><span class="lotusAltText">Help</span></a></li><li><span class="lotusBranding"><img src="../../css/images/blank.gif" alt="IBM" class="lotusIBMLogo" /><span class="lotusAltText">IBM</span></span></li></ul>
+	<!-- nav is an HTML5 element. Use div if you are using HTML4. -->
+	<nav role="navigation" aria-label="[Product]">
+	<ul class="lotusInlinelist lotusLinks" role="toolbar"><li class="lotusFirst lotusSelected" role="presentation"><a href="javascript:;" role="button" aria-pressed="true"><strong>Home</strong></a></li><li role="presentation"><a role="button" aria-haspopup="true" href="javascript:;">People <img class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt="" aria-label="Show menu" /><span class="lotusAltText">&#x25bc;</span></a></li><li role="presentation"><a role="button" aria-haspopup="true" href="javascript:;">Communities <img class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt="" aria-label="Show menu" /><span class="lotusAltText">&#x25bc;</span></a></li><li role="presentation"><a role="button" aria-haspopup="true" href="javascript:;">Apps <img class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt="" aria-label="Show menu" /><span class="lotusAltText">&#x25bc;</span></a></li></ul>
+	</nav>
+</div></div></div><!--end lotusBanner-->
+	
+		<div class="lotusTitleBar2"><div class="lotusWrapper"><div class="lotusInner"> 
+	<div class="lotusTitleBarContent">
+		<h2 class="lotusHeading"><img alt="" class="lotusIcon yourProductSprite yourProductSprite-iconPlaceholder24" src="../../css/images/blank.gif"><span class="lotusText">Application Name</span></h2>
+	</div>
+	<form class="lotusSearch" action="javascript:;" method="post" role="search">
+		<table class="lotusLayout" cellspacing="0" role="presentation"><tr><td><a href="javascript:;" id="searchScope" class="lotusScope" role="button" aria-haspopup="true" aria-label="Refine search scope" title="Refine search scope"><img class="lotusIcon yourProductSprite yourProductSprite-iconPlaceholder16" src="../../css/images/blank.gif" alt="[Search scope]" /><span class="lotusAltText">&#x25bc;</span></a></td><td><input id="lotusSearchtext" name="lotusSearchtext" class="lotusText lotusInactive" type="text" value="Search" title="Search" /></td><td><span class="lotusBtnImg"><input class="lotusSearchButton" type="image" alt="Submit search" title="Submit search" src="../../css/images/blank.gif" /><a href="javascript:;" class="lotusAltText">Search</a></span></td></tr></table>
+	</form>
+</div></div></div><!--end titleBar-->
+<div class="lotusTitleBarExt"><div class="lotusWrapper"><div class="lotusInner">
+	<ul class="lotusInlinelist lotusRight lotusActions"><li class="lotusFirst"><a href="javascript:;" role="button">Action</a></li><li><a href="javascript:;" role="button">Action</a></li><li><a href="javascript:;" role="button" aria-haspopup="true">More Actions <img class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt="" /><span class="lotusAltText">&#x25bc;</span></a></li></ul>
+</div></div></div><!--end lotusTitleBarExt-->
+
+	</header>	
+		<div class="lotusMain">
+			<div class="lotusColLeft">
+			</div><!--end colLeft-->
+		
+			<!-- aside is an HTML5 element. Use div if you are using HTML4. -->
+			<aside class="lotusColRight">
+			</aside><!--end colRight-->
+			<a id="lotusMainContent" name="lotusMainContent"></a>
+			<div class="lotusContent" role="main"> 	
+
+
+				<!-- Insert your content here -->
+
+
+			</div><!--end content-->
+		</div><!--end main-->
+		<!-- footer is an HTML5 element. Use div if you are using HTML4. -->
+<footer class="lotusFooter" role="contentinfo">
+	<ul>
+	<li><a href="javascript:;">Home</a></li>
+	<li><a href="javascript:;">Demo</a></li>
+	<li><a href="javascript:;">Help</a></li>
+	<li><a href="javascript:;">Support Forums</a></li>
+	<li><a href="javascript:;">Link</a></li>
+	<li><a href="javascript:;">Link</a></li>
+	<li><a href="javascript:;">About</a></li>
+	<li><a href="javascript:;">[Application] on ibm.com</a></li>
+	<li><a href="javascript:;">Submit Feedback</a></li>
+	</ul>
+</footer><!--end footer-->
+
+		<!-- footer is an HTML5 element. Use div if you are using HTML4. -->
+<footer role="contentinfo">
+<table class="lotusLegal" cellspacing="0" role="presentation">
+	<tr>
+	<td><img class="lotusIBMLogoFooter" src="../../css/images/blank.gif" alt="IBM" /></td>
+	<td class="lotusLicense">&copy; Copyright IBM Corporation &lt;Year 1&gt;, &lt;Year 2&gt;. Replace this example with copyright information.</td>
+	</tr>
+</table>
+</footer>
+</div><!--end frame-->
+
+<!--popups go here-->	
+	
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for tag cloud
+companion files: tagCloud.css / tagCloudTheme.css
+companion files: tagCloudRTL.css / tagCloudThemeRTL.css*/
+/*** T A G   C L O U D ***/
+/*a tag cloud is a visual way of displaying the relative importance of tags, with lotusF1 being of least importance and lotusF5 being most important*/
+
+
+
+.lotusui30 a.lotusF5, .lotusui30 a.lotusF5:visited{color:#008abf}
+.lotusui30 a.lotusF4, .lotusui30 a.lotusF4:visited{color:#003f69}
+.lotusui30 a.lotusF3, .lotusui30 a.lotusF3:visited{color:#003f69}
+.lotusui30 a.lotusF2, .lotusui30 a.lotusF2:visited{color:#00649d}
+.lotusui30 a.lotusF1, .lotusui30 a.lotusF1:visited{color:#00649d}
+
+/***********************************************************/
+

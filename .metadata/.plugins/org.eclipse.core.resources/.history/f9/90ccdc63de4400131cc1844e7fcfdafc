@@ -1,0 +1,32 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for drop-down menus
+companion files: actionMenu.css / actionMenuTheme.css
+companion files: actionMenuRTL.css / actionMenuThemeRTL.css*/
+/*****************************/
+/*** A C T I O N   M E N U ***/
+/*****************************/
+
+.lotusui30 ul.lotusActionMenu{margin:0;padding:0;list-style-type:none;display:table;position:absolute;z-index:900px;border:1px solid #aaa;background-color:#fff;-webkit-box-shadow:0 2px 5px #eee;-moz-box-shadow:0 2px 5px #eee;box-shadow:0 2px 5px #eee;}
+.lotusui_ie6 .lotusui30 ul.lotusActionMenu{width:15em;}
+.lotusui30 .lotusActionMenu li{white-space:nowrap;background-color:transparent;}
+.lotusui_ie6 .lotusui30 .lotusActionMenu li{white-space:normal;}/*since we have a fixed width, we have to allow for wrapping*/
+.lotusui30 .lotusActionMenu li.lotusSelected a{background-image:url(../../images/lotusSprite-8bit.png);background-position:96% -1865px;background-repeat:no-repeat;}
+.lotusui30 .lotusActionMenu li.lotusMenuSeparator{border-top :1px solid #ccc;}
+.lotusui30 .lotusActionMenu a{padding:3px 25px 5px 40px;text-decoration:none;display:block;}
+.lotusui30 .lotusActionMenu a, .lotusui30 .lotusActionMenu a:link, .lotusui30 .lotusActionMenu a:visited{color:#000;background-color:#fff;}
+.lotusui_ie6 .lotusui30 .lotusActionMenu a{zoom:1}
+.lotusui30 .lotusActionMenu .lotusIcon a{padding-right:2px;}
+.lotusui30 .lotusActionMenu .lotusIcon img{width:16px;height:16px;margin-left:6px;}
+.lotusui30.lotusImagesOff .lotusActionMenu .lotusIcon img, .lotusImagesOff .lotusui30 .lotusActionMenu .lotusIcon img{display:inline-block;}
+.lotusui30 .lotusActionMenu a:hover, .lotusui30 .lotusActionMenu a:focus, .lotusui30 .lotusActionMenu a:active{text-decoration:none;color:#000;background-color:#eee;}
+.lotusui30 .lotusActionMenu.lotusPlain a{padding-right:10px;}
+.lotusui30.lotusImagesOff .lotusActionMenu li.lotusSelected a, .lotusImagesOff .lotusui30 .lotusActionMenu li.lotusSelected a{padding-right:15px;}
+.lotusui30.lotusImagesOff .lotusActionMenu a:visited, .lotusImagesOff .lotusui30 .lotusActionMenu a:visited, .lotusui30.lotusImagesOff .lotusActionMenu a:hover, .lotusImagesOff .lotusui30 .lotusActionMenu a:hover, .lotusui30.lotusImagesOff .lotusActionMenu a:focus, .lotusImagesOff .lotusui30 .lotusActionMenu a:focus, .lotusui30.lotusImagesOff .lotusActionMenu a:active, .lotusImagesOff .lotusui30 .lotusActionMenu a:active{text-decoration:underline;}
+
+
+
+/***********************************************************/
+

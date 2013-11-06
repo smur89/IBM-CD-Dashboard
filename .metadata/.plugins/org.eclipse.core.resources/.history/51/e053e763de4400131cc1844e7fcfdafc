@@ -1,0 +1,55 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for widget
+companion files: zDeprecated_widget2.css / zDeprecated_widget2Theme.css
+companion files: zDeprecated_widget2RTL.css / zDeprecated_widget2ThemeRTL.css*/
+/*** D E P R E C A T E D    W I D G E T ***/
+
+.lotusui30 .lotusWidget2{margin:0 0 10px 0;border:1px solid #ccc;}
+.lotusui30 .lotusWidgetPlain{border-width:0;}/*the title bar shows up on hover*/
+/*.lotusui30 .lotusWidgetPlain:hover h2, .lotusui30 .lotusWidgetPlain:focus h2{display:block;} - done with javascript to solve IE7/8 performance issues*/
+.lotusui30 .lotusWidget2 h2, .lotusWidget2 h3{zoom:1;}/*sets hasLayout in IE*/
+.lotusui30 .lotusWidget2 h2{margin:0;padding:4px 10px 4px 3px;font-size:1.2em;font-weight:bold;color:#444;border-bottom:1px solid #ccc;background-color:#f4f4f4;
+    background-image:-moz-linear-gradient(top, #f4f4f4 0%, #eaeaea 100%);background-image:-webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#eaeaea));background-position:left top;background-repeat:repeat-x;overflow:hidden;cursor:move;}
+.lotusui30 .lotusWidgetPlain h2{display:none;border-width:1px;border-style:solid;border-color:#ccc;}
+.lotusui30 .lotusWidget2 .lotusWidgetBody h2{border-width:0;background-image:none;}
+.lotusui30 .lotusWidget2 .lotusArrow{width:16px;height:16px;background-image:url(../../images/lotusSprite-8bit.png);background-repeat:no-repeat;float:right;display:block;}
+.lotusui30 .lotusWidget2 h2 img{margin-right:3px;}
+.lotusui30 .lotusWidget2 h2 .lotusDivider{float:left;}
+.lotusui30 .lotusWidget2 h3{margin:0 -10px;padding:4px 10px;overflow:hidden;color:#444;border-bottom:1px solid #eee;line-height:1em;height:1.3em;font-size:1em;font-weight:normal;}
+.lotusui_ie .lotusui30 .lotusWidget2 h3{display:inline;width:100%;}/*makes negative margins behave*/
+.lotusui30 .lotusWidget2 h3 a.lotusAction{padding:4px 0 5px 0;}
+.lotusui30 .lotusWidget2 .lotusWidgetBody{clear:both;padding:3px 10px;}
+.lotusui30 .lotusWidget2 .lotusWidgetBody .lotusSection {margin-top:0;}
+.lotusui30 .lotusWidget2 .lotusWidgetBody div.lotusChunk{margin-top:5px;clear:both;zoom:1;}
+.lotusui30 .lotusWidget2 .lotusWidgetFooter{padding:4px 10px 7px 10px;border-top:1px solid #eee;height:1.3em;clear:both;}
+.lotusui30 .lotusWidget2 .lotusWidgetFooter ul.lotusVCard {margin-right:95px;margin-top:5px;}
+.lotusui30 .lotusWidget2 .lotusWidgetFooter img{vertical-align:top;}
+.lotusui30 .lotusWidget2 .lotusWidget .lotusWidgetSearch{padding:5px 10px 0 10px;}
+.lotusui30 .lotusWidgetSearch img {padding-left:10px;}
+/*paging controls within a widget*/
+.lotusui30 .lotusWidget2 .lotusWidgetFooter .lotusPaging{padding:2px 0;font-size:1em;line-height:1em;height:1em;background-color:transparent;border-width:0;}
+.lotusui30 .lotusWidget2 .lotusPaging div{padding-right:0;}
+/*scrolling*/
+.lotusui30 .lotusWidget2 .lotusWidgetScroll{overflow:hidden;clear:both;}
+.lotusui30 .lotusWidget2 .lotusWidgetScroll a{margin:0 auto;float:none;}
+.lotusui30.lotusImagesOff .lotusWidget2 .lotusWidgetScroll, .lotusImagesOff .lotusui30 .lotusWidget2 .lotusWidgetScroll{overflow:visible;padding-bottom:3px;}
+/*action menu icon*/
+.lotusui30 .lotusWidget2 h2 a.lotusIcon{float:left;width:18px;height:18px;background-repeat:no-repeat;}
+.lotusui30.lotusImagesOff .lotusWidget2 h2 a.lotusIcon, .lotusImagesOff .lotusui30 .lotusWidget2 h2 a.lotusIcon{font-size:.8em;font-weight:normal;width:auto;height:auto;}/*settings for alternate text*/
+.lotusui30 .lotusWidget2 h2 a.lotusActionMenu{background-image:url(../../images/lotusHSprite-8bit.png);background-position:-499px -9px;opacity:0.45;filter:alpha(opacity=45)/*45% is the min opacity for meeting contrast requirements on white/off-white background*/}
+/*add any additional buttons you need to expose here*/
+.lotusui30.lotusImagesOff .lotusWidget2 .lotusArrow, .lotusImagesOff .lotusui30 .lotusWidget2 .lotusArrow{margin-top:0}
+/*new for supporting deprecated widgets*/
+.lotusui30 .lotusWidget2 .lotusTable h4{margin:0;padding:0;font-size:1.2em;}
+.lotusui30 .lotusWidget2 .lotusTable h5{margin:0;padding:0;font-size:1.1em;font-weight:bold;}
+.lotusui30 .lotusWidget2 .lotusTable .lotusDetails h5{margin-bottom:2px;}
+
+
+
+
+
+/***********************************************************/
+

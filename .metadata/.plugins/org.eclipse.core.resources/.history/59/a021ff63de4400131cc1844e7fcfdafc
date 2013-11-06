@@ -1,0 +1,65 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for menu
+companion files: menu.css / menuTheme.css
+companion files: menuRTL.css / menuThemeRTL.css*/
+/*** M E N U ***/
+/*this menu is set up to allow for rounded corners in all browsers and is a set width*/
+
+                                                                                                                      
+
+.lotusui30 .lotusMenu{width:auto;margin:0 0 25px;padding:0;background-color:transparent;border-width:0;}
+.lotusui30 .lotusMenu .lotusMenuSection{border-color:#ccc;}
+.lotusui30 .lotusMenu li a, .lotusui30 .lotusMenu .lotusMenuHeader{margin:0;padding:3px 10px 5px 20px;border-width:0;font-weight:bold;}
+.lotusui30 .lotusMenu li a, .lotusui30 .lotusMenu li a:visited, .lotusui30 .lotusMenu li a:hover, .lotusui30 .lotusMenu li a:active{color:#000;text-decoration:none;}
+.lotusui30 .lotusMenu li a:focus{text-decoration:underline;}/*for accessibility, since focus outline isn't visible in this theme*/
+.lotusui30 .lotusMenu .lotusMenuSubsection a{font-weight:normal;}
+.lotusui30 .lotusMenu li.lotusSelected a, .lotusui30 .lotusMenu .lotusHeaderSelected{margin:0;padding-left:20px;border-width:1px 0;}
+.lotusui30.lotusImagesOff .lotusMenu li.lotusSelected a, .lotusImagesOff .lotusui30 .lotusMenu li.lotusSelected a, .lotusui30.lotusImagesOff .lotusMenu .lotusHeaderSelected, .lotusImagesOff .lotusui30 .lotusMenu .lotusHeaderSelected{border-width:1px;}
+.lotusui30 .lotusMenu .lotusMenuHeader a, .lotusui30 .lotusMenu .lotusMenuHeader a:visited, .lotusui30 .lotusMenu .lotusMenuHeader a:hover, .lotusui30 .lotusMenu .lotusMenuHeader a:focus, .lotusui30 .lotusMenu .lotusMenuHeader a:active{color:#000;text-decoration:none;}
+.lotusui30 .lotusMenu .lotusMenuHeader a.lotusArrow{left:4px;top:4px;}
+.lotusui30 .lotusMenu .lotusAction{margin-left:20px;margin-bottom:5px;}
+.lotusui30 .lotusMenu .lotusMenuSubsection{margin:0;padding-top:0;}
+.lotusui30 .lotusMenu .lotusMenuSubsection{padding-left:0;}/*allows you to indent a section of the menu*/
+.lotusui30 .lotusMenu .lotusMenuSubsection li.lotusSelected a{margin-left:0;padding-left:20px;}
+.lotusui30.lotusImagesOff .lotusMenu .lotusMenuSubsection li.lotusSelected a, .lotusImagesOff .lotusui30 .lotusMenu .lotusMenuSubsection li.lotusSelected a{padding-left:15px;}
+.lotusui30 .lotusMenu ul.lotusIcons a{ padding-left: 39px; }
+.lotusui30 .lotusMenu ul.lotusIcons img, .lotusui30 .lotusMenu ul.lotusIcons .lotusSelected img{left:19px;}
+.lotusui30 .lotusMenu ul.lotusIcons .lotusSelected a{ padding-left: 39px; }
+.lotusui30 .lotusMenu .lotusMenuSubsection ul.lotusIcons a{ padding-left: 39px; }
+.lotusui30 .lotusMenu .lotusMenuSubsection ul.lotusIcons .lotusSelected a{padding-left: 39px; }
+.lotusui30.lotusImagesOff .lotusMenu .lotusMenuSubsection ul.lotusIcons a, .lotusImagesOff .lotusui30 .lotusMenu .lotusMenuSubsection ul.lotusIcons a, .lotusui30.lotusImagesOff .lotusMenu .lotusMenuSubsection ul.lotusIcons .lotusSelected a, .lotusImagesOff .lotusui30 .lotusMenu .lotusMenuSubsection ul.lotusIcons .lotusSelected a{padding-left:20px;}
+
+
+
+
+
+.lotusui30 .lotusMenu li a, .lotusui30 .lotusMenu .lotusMenuHeader{font-weight:normal;}
+.lotusui30 .lotusMenu li.lotusSelected a, .lotusui30 .lotusMenu .lotusHeaderSelected{background-color:transparent; border-width:0; color:#000;}
+.lotusui30 .lotusMenu .lotusHeaderSelected .lotusHeading a{font-weight:bold;}
+.lotusui30 .lotusMenu li.lotusSelected a:before{content:"\25AA";color:#BD4218;float: left;margin-left:-10px;margin-right:5px;font-family:Arial, Helvetica, sans-serif;}/*regular select indicator*/
+.lotusui30 .lotusMenu li.lotusPrimarySelect a:before{content:"\25A0";margin-right:3px;margin-top:-2px;}/*larger select indicator, for when there is a primary and secondary selection*/
+.lotusui30 .lotusMenu .lotusIcons li.lotusSelected a:before{margin-left:-30px;margin-right:25px;margin-top:-2px;}/*fixes the selector next to a selected item with an icon*/
+.lotusui30 .lotusMenu .lotusIcons li.lotusPrimarySelect a:before{margin-right:23px;}/*for a larger indicator next to an icon*/
+
+.lotusui30 .lotusMenu li a, .lotusui30 .lotusMenu li a:visited, .lotusui30 .lotusMenu li a:hover, .lotusui30 .lotusMenu li a:focus, .lotusui30 .lotusMenu li a:active, .lotusui30 .lotusMenu li.lotusSelected a, .lotusui30 .lotusMenu li.lotusSelected a:visited, .lotusui30 .lotusMenu li.lotusSelected a:hover, .lotusui30 .lotusMenu li.lotusSelected a:focus, .lotusui30 .lotusMenu li.lotusSelected a:active, .lotusui30 .lotusMenu .lotusHeaderSelected a, .lotusui30 .lotusMenu .lotusHeaderSelected a:visited, .lotusui30 .lotusMenu .lotusHeaderSelected a:hover, .lotusui30 .lotusMenu .lotusHeaderSelected a:focus, .lotusui30 .lotusMenu .lotusHeaderSelected a:active{color:#000;text-decoration:none;}
+.lotusui30.lotusImagesOff .lotusMenu li.lotusSelected a, .lotusImagesOff .lotusui30 .lotusMenu li.lotusSelected a, .lotusui30.lotusImagesOff .lotusMenu .lotusHeaderSelected, .lotusImagesOff .lotusui30 .lotusMenu .lotusHeaderSelected{border-width:0;}
+.lotusui30 .lotusMenu .lotusUnreadBadge{background-color:#107bbb;}
+.lotusui30 .lotusMenu .lotusMenuHeader{padding:0;}
+.lotusui30 .lotusMenu .lotusMenuHeader a.lotusArrow{z-index:10;/*so arrow doesn't disappear on hover*/}
+.lotusui30 .lotusMenu .lotusMenuHeader .lotusHeading a{margin:0;display:block;padding:3px 10px 5px 20px;}/*margin and padding are adjusted for the link inside an h3 tag in deprecated css, which is why we have to specify margin:0 here, where there is more specificity*/
+.lotusui30 .lotusMenu li a:hover, .lotusui30 .lotusMenu li a:focus, .lotusui30 .lotusMenu li a:active, .lotusui30 .lotusMenu .lotusMenuHeader .lotusHeading a:hover, .lotusui30 .lotusMenu .lotusMenuHeader .lotusHeading a:focus, .lotusui30 .lotusMenu .lotusMenuHeader .lotusHeading a:active {background-color:#e1f4f9;}
+.lotusui30 .lotusMenu .lotusMenuSection{border-bottom-style:dotted;}
+.lotusui30 .lotusMenu .lotusMenuSection:last-child{border-width:0;}
+.lotusui30 .lotusMenu .lotusMenuSubsection li a, .lotusui30.lotusImagesOff .lotusMenu .lotusMenuSubsection li.lotusSelected a, .lotusImagesOff .lotusui30 .lotusMenu .lotusMenuSubsection li.lotusSelected a{padding-left:30px;}
+.lotusui30 .lotusMenu .lotusMenuSubsection li.lotusSelected a{padding-left:30px;}
+.lotusui30 .lotusMenu ul.lotusIcons a, 
+.lotusui30 .lotusMenu ul.lotusIcons .lotusSelected a{padding-left:39px;}
+.lotusui30 .lotusMenu .lotusMenuSubsection ul.lotusIcons a, 
+.lotusui30 .lotusMenu .lotusMenuSubsection ul.lotusIcons .lotusSelected a{padding-left:49px;}
+.lotusui30 .lotusMenu ul.lotusIcons img, .lotusui30 .lotusMenu ul.lotusIcons .lotusSelected img{left:19px;}
+.lotusui30 .lotusMenu .lotusMenuSubsection ul.lotusIcons img, .lotusui30 .lotusMenu .lotusMenuSubsection ul.lotusIcons .lotusSelected img{left:29px;}
+
+/***********************************************************/

@@ -1,0 +1,29 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for paging
+companion files: paging.css / pagingTheme.css
+companion files: pagingRTL.css / pagingThemeRTL.css*/
+/*** P A G I N G ***/
+/*these are the page bars at the top and bottom of a table/list of entries*/
+
+.lotusui30 .lotusPaging {margin-top:2px; padding:5px; overflow:hidden; clear:both; text-align:center; font-size:.9em; background-color:#fafafa; border:1px solid #ccc; zoom:1;}
+.lotusui30 .lotusPaging a, .lotusui30 .lotusPaging a:visited {font-weight:bold;}
+.lotusui30 .lotusPaging input {width:20px; text-align:center; font-size:0.9em;}
+.lotusui30 .lotusPaging input, .lotusui30 .lotusPaging select {margin-top:-2px; margin-bottom:-2px;}
+.lotusui30 .lotusPaging div, 
+.lotusui30 .lotusPaging .lotusInlinelist li.lotusFirst {padding-left:5px;}
+.lotusui30 .lotusPaging .lotusInlinelist li {padding:0 6px; border-color:#8d8d8d;}
+.lotusui30 .lotusPaging .lotusInlinelist li.lotusLast {padding-left:0;}
+.lotusui30 .lotusPaging .lotusView a, .lotusui30 .lotusPaging .lotusView a:visited, .lotusui30 .lotusPaging .lotusView a:hover, .lotusui30 .lotusPaging .lotusView a:focus, .lotusui30 .lotusPaging .lotusView a:active {color:#444; font-weight:normal;}
+.lotusui30 .lotusPaging .lotusView .lotusSelected a {font-weight:bold; text-decoration:none;}
+
+
+
+
+
+
+
+/***********************************************************/
+

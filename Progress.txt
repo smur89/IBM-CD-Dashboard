@@ -79,3 +79,8 @@ Week Beginning 28/10/13
 			- Changed default launch port to :8090 (BuildConfig.groovy)
 				- grails.server.port.http = 8090
 		- Use Static Resource imports instead of CSS folders in Grails? - http://grails.org/doc/latest/guide/theWebLayer.html#resources
+
+Week Beginning 6/11/12
+	Watching Groovy tutorials to get familliar with the language
+		- http://www.youtube.com/watch?v=-mRlc_vjiqE
+		- http://www.youtube.com/watch?v=k7KNtLrkNsg

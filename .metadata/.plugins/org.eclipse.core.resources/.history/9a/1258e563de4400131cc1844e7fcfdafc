@@ -1,0 +1,37 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for popup
+companion files: popup.css / popupTheme.css
+companion files: popupRTL.css / popupThemeRTL.css*/
+/*** P O P U P ***/
+
+/*Apply this class to the dijitDialogUnderlay node only when the browser supports fixed positioning. This improves performance so scrolling doesn't repaint the underlay.*/
+.lotusui30 .lotusPopupUnderlayFixed {position:fixed; width:100%; height:100%;}
+
+.lotusui30 .lotusPopup {position:relative; border:3px solid #ababab/*this is needed for IE*/; border:3px solid rgba(3, 3, 3, 0.45); color:#222; z-index:10000/*when wrapped in dijit, the dijit node gets set to 10,000. we need to set this so the close icon can sit on top.*/; zoom:1;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	-moz-box-shadow:0 0 5px rgba(34, 34, 34, 0.5);
+	-webkit-box-shadow:0 0 5px rgba(34, 34, 34, 0.5);
+	box-shadow:0 0 5px rgba(34, 34, 34, 0.5);}
+.lotusui30 .lotusPopup .lotusPopupHeader {background:#fff; margin-bottom:-10px; position:relative; zoom:1;}
+.lotusui30 .lotusPopup .lotusPopupHeader .lotusHeading {margin:0 20px; padding:20px 0 10px; border-bottom:2px solid #888; font-size:1.2em; font-weight:bold;}
+.lotusui30 .lotusPopup .lotusPopupContent {background:#fff;}
+.lotusui30 .lotusPopup .lotusPopupContentArea {padding:20px;}
+.lotusui30 .lotusPopup .lotusPopupFooter {margin-top:-10px; padding:0 20px 20px; background:#fff;}
+
+.lotusui30 .lotusPopup .lotusPopupClose {position:absolute; right:-14px; top:-14px; z-index:10001/*make this larger than lotusPopup*/; line-height:0/*so the anchor doesn't grow with large font-size*/;}
+.lotusui30.lotusImagesOff .lotusPopup .lotusPopupClose, .lotusImagesOff .lotusui30 .lotusPopup .lotusPopupClose {line-height:1.5;} /*reverse above 0 height*/
+.lotusui30 .lotusPopup .lotusPopupClose img {background-image:url(../../images/lotusHSprite-8bit.png); background-position:-150px 0; width:32px; height:32px;}
+.lotusui30.lotusImagesOff .lotusPopup .lotusPopupClose img, .lotusImagesOff .lotusui30 .lotusPopup .lotusPopupClose img {display:none;}
+.lotusui30.lotusImagesOff .lotusPopup .lotusPopupClose, .lotusImagesOff .lotusui30 .lotusPopup .lotusPopupClose {right:10px; top:10px;}
+
+.lotusui30 .lotusPopup .lotusPopupConnector {background-image:url(../../images/lotusHSprite-8bit.png); position:absolute;}
+.lotusui30 .lotusPopupBottom .lotusPopupConnector {background-position:-855px -11px; width:15px; height:11px; top:-11px; left:20px;}
+.lotusui30 .lotusPopupLeft .lotusPopupConnector {background-position:-914px -9px; width:11px; height:15px; top:20px; right:-11px;}
+.lotusui30 .lotusPopupTop .lotusPopupConnector {background-position:-876px -11px; width:15px; height:11px; bottom:-11px; left:20px;}
+.lotusui30 .lotusPopupRight .lotusPopupConnector {background-position:-897px -9px; width:11px; height:15px; top:20px; left:-11px;}
+
+/***********************************************************/

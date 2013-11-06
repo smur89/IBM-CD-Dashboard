@@ -1,0 +1,23 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for tables
+companion files: tables.css / tablesTheme.css
+companion files: tablesRTL.css / tablesThemeRTL.css*/
+/*** T A B L E S ***/
+
+
+
+.lotusui30 .lotusInfoTable{-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;background-color:#fff;-webkit-box-shadow:0 2px 5px #eee;-moz-box-shadow:0 2px 5px #eee;box-shadow:0 2px 5px #eee;}
+.lotusui30 .lotusInfoTable td, .lotusui30 .lotusInfoTable th{border-width:0;}
+.lotusui30 .lotusTable .lotusAltRow td, .lotusui30 .lotusTable .lotusAltRow th.lotusRowHeader{background-color:transparent;}
+
+
+
+.lotusui30 .lotusTable .lotusForm2 {background-color:#f4f5f6;}
+
+
+
+/****************************************************************/
+

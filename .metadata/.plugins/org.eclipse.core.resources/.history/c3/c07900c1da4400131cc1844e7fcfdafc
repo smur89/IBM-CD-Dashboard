@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<!--
+Licensed Materials - Property of IBM.
+(c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<meta charset="UTF-8" />
+<title>Put Your Title Here</title>
+<meta name="Description" content="Example template page - Put Your Description Here"/>
+<!--[if IE 6]><![endif]--><!--fixes IE8 performance issue of conditional comments blocking css download-->
+
+
+
+
+<!--
+The blocks of code with the DOCUMENTATION comment prefix are used to build the page in the Toolkit environment, 
+but they may not be required in real pages. The optional content includes meta data, favicon, right-to-left support, 
+high contrast detection, and JavaScript to support the toolkit environment. Please refer to the Developer Guide to 
+determine what is appropriate in a real page.
+-->
+
+<!-- DOCUMENTATION meta tags - REAL PAGES WOULD NOT NEED THIS CODE -->
+<meta charset="UTF-8" />
+<meta name="Keywords" content="ICS UI Documentation"/>
+<meta name="Owner" content="IBM Collaboration Solutions User Experience"/>
+<meta name="Robots" content="index,follow"/>
+<meta name="Security" content="public"/>
+<meta name="Source" content="custom authored"/>
+<meta name="IBM.Country" content="ZZ" />
+<meta name="IBM.Effective" scheme="W3CDTF" content="2012-08-16" />
+<meta name="DC.Date" scheme="iso8601" content="2012-08-16"/>
+<meta name="DC.Language" scheme="rfc1766" content="en" />
+<meta name="DC.Rights" content="&#169; Copyright IBM Corp. 2001, 2012."/>
+
+<!-- DOCUMENTATION favicon - REAL PAGES WOULD NOT NEED THIS CODE -->
+<link rel="shortcut icon" href="../../docResources/devdocImages/devdoc.ico" />
+
+<!-- DOCUMENTATION JavaScript - REAL PAGES WOULD NOT NEED THIS CODE -->
+<script src="../../docResources/js/devdoc-all.js"></script>
+<script>
+	// This is only needed for the documentation to work properly and would not be needed in a real page.
+	// Call common doc onload processing so updates can be kept to the .js files.
+	// The images directory is passed so the high contrast test code will know where to find an image.
+	devdoc.commonDocumentationOnloadProcessingForExampleIFrames("../../css/images");
+</script>
+
+<!-- DOCUMENTATION CSS - REAL PAGES WOULD NOT NEED THIS CODE -->
+<script>
+	// The following links in the proper CSS file based upon settings in the documentation UI.
+	var theme = devdoc.urlStateManager.getTheme();
+	var yourProductSpriteCSS = "yourProductSprite_"+theme+"Theme.css";
+	if ("off"==theme) {
+		yourProductSpriteCSS = "yourProductSprite_defaultTheme.css";
+	}
+	var rtl = devdoc.urlStateManager.getRTL();
+	document.write("<link rel='stylesheet' href='../../css/base/core"+rtl+".css' type='text/css' />");
+	if ("off" != theme) {
+		document.write("<link rel='stylesheet' href='../../css/" + theme + "Theme/" + theme + "Theme" + rtl + ".css' type='text/css' />");
+	}
+	document.write("<link rel='stylesheet' href='../../docResources/css/"+yourProductSpriteCSS+"' type='text/css' />");
+
+	if (devdoc.urlStateManager.alwaysLoadDojoCSS()) {
+		document.write("<link rel='stylesheet' href='../../docResources/dojo15/dijit/themes/lotusui30dojo/lotusui30dojo.css' type='text/css' />");
+		document.write("<link rel='stylesheet' href='../../css/base/dojo"+rtl+".css' type='text/css' />");
+		document.write("<link rel='stylesheet' href='../../css/"+theme+"Theme/dojoTheme"+rtl+".css' type='text/css' />");
+	}
+	
+	var themeOverrideURL = devdoc.urlStateManager.getThemeOverrideURL();
+	if (themeOverrideURL) {
+		document.write("<link rel='stylesheet' href='"+themeOverrideURL+"' type='text/css' />");
+	}
+</script>
+
+<!-- REAL PAGE INFORMATION
+	In a real page, you would link in the CSS files here.  For documentation purposes, there is
+	code above that links in the CSS based upon settings the user has chosen in the documentation UI.
+		<link rel='stylesheet' href='core.css' type='text/css' />
+		<link rel='stylesheet' href='defaultTheme.css' type='text/css' />
+	OR
+		<link rel='stylesheet' href='coreRTL.css' type='text/css' />
+		<link rel='stylesheet' href='defaultThemeRTL.css' type='text/css' />
+-->
+
+<!--
+	The following conditional logic is needed to add in the IE specific classes.
+	If you really wanted to do this on the server with browser sniffing, you could do that too,
+	but that would not be the way Microsoft recommends doing it.
+ -->
+<!--[if IE 6]>
+<script>
+	document.getElementsByTagName("html")[0].className+=" lotusui_ie lotusui_ie6";
+</script>
+<![endif]--> 
+<!--[if IE 7]>
+<script>
+	document.getElementsByTagName("html")[0].className+=" lotusui_ie lotusui_ie7";
+</script>
+<![endif]--> 
+<!--[if IE 8]>
+<script>
+	document.getElementsByTagName("html")[0].className+=" lotusui_ie8";
+</script>
+<![endif]--> 
+<!--[if IE 9]>
+<script>
+	document.getElementsByTagName("html")[0].className+=" lotusui_ie9";
+</script>
+<![endif]--> 
+<!--[if IE]>
+<script>
+	document.createElement('article');
+	document.createElement('aside');
+	document.createElement('footer');
+	document.createElement('header');
+	document.createElement('hgroup');
+	document.createElement('nav');
+	document.createElement('section');
+</script>
+<![endif]-->
+
+
+</head>
+
+<body class="lotusui30_body lotusui30_fonts lotusui30">
+
+
+
+<!-- DOCUMENTATION RTL and Dojo - REAL PAGES WOULD NOT NEED THIS CODE -->
+<script>
+	// Add dir="rtl" to the <body> tag as soon as we can.
+	// We cannot wait until onLoad on Dojo pages unless we get a handler hooked in BEFORE Dojo loads.
+	if (devdoc.urlStateManager.isRTL()) {
+		document.getElementsByTagName("body")[0].dir="rtl";
+	}
+	if (devdoc.urlStateManager.alwaysLoadDojoCSS()) {
+		document.getElementsByTagName("body")[0].className+=" lotusui30dojo";
+	}
+</script>
+
+<div class="lotusFrame lotusui30_layout">
+	<!-- header is an HTML5 element. Remove header if you are using HTML4. -->
+	<header role="banner">
+		<div class="lotusBanner"><div class="lotusRightCorner"><div class="lotusInner">
+	<a href="#lotusMainContent" accesskey="S" class="lotusAccess"><img src="../../css/images/blank.gif" alt="Skip to main content link. Accesskey S" /></a><a class="lotusLogo" href="javascript:;"><img alt="Product Name" src="../../css/images/blank.gif" /><span class="lotusAltText">Product Name</span></a>
+	<ul class="lotusInlinelist lotusUtility"><li class="lotusFirst"><a role="button" aria-haspopup="true" href="javascript:;">Alex Kay <img class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt="" aria-label="Show menu" /><span class="lotusAltText">&#x25bc;</span></a></li><li><a class="lotusBannerBtn" role="button" aria-haspopup="true" href="javascript:;">Share</a></li><li><a role="button" aria-haspopup="true" aria-label="Email" href="javascript:;"><img class="yourProductSprite yourProductSprite-iconPlaceholder16" src="../../css/images/blank.gif" alt="" /><span class="lotusAltText">Email</span><span class="lotusUnreadBadge lotusBadgeIcon"><img src="../../css/images/blank.gif" alt="" aria-label="New items"><span class="lotusAltText">*</span></span> <img class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt="" aria-label="Show menu" /><span class="lotusAltText">&#x25bc;</span></a></li><li><a role="button" aria-haspopup="true" aria-label="Calendar" href="javascript:;"><img class="yourProductSprite yourProductSprite-iconPlaceholder16" src="../../css/images/blank.gif" alt="" /><span class="lotusAltText">Calendar</span> <img class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt="" aria-label="Show menu" /><span class="lotusAltText">&#x25bc;</span></a></li><li><a role="button" aria-haspopup="true" aria-label="Help" href="javascript:;"><img class="yourProductSprite yourProductSprite-bannerHelp16" src="../../css/images/blank.gif" alt="" /><span class="lotusAltText">Help</span></a></li><li><span class="lotusBranding"><img src="../../css/images/blank.gif" alt="IBM" class="lotusIBMLogo" /><span class="lotusAltText">IBM</span></span></li></ul>
+	<!-- nav is an HTML5 element. Use div if you are using HTML4. -->
+	<nav role="navigation" aria-label="[Product]">
+	<ul class="lotusInlinelist lotusLinks" role="toolbar"><li class="lotusFirst lotusSelected" role="presentation"><a href="javascript:;" role="button" aria-pressed="true"><strong>Home</strong></a></li><li role="presentation"><a role="button" aria-haspopup="true" href="javascript:;">People <img class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt="" aria-label="Show menu" /><span class="lotusAltText">&#x25bc;</span></a></li><li role="presentation"><a role="button" aria-haspopup="true" href="javascript:;">Communities <img class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt="" aria-label="Show menu" /><span class="lotusAltText">&#x25bc;</span></a></li><li role="presentation"><a role="button" aria-haspopup="true" href="javascript:;">Apps <img class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt="" aria-label="Show menu" /><span class="lotusAltText">&#x25bc;</span></a></li></ul>
+	</nav>
+</div></div></div><!--end lotusBanner-->
+	
+		<div class="lotusTitleBar2"><div class="lotusWrapper"><div class="lotusInner"> 
+	<div class="lotusTitleBarContent">
+		<h2 class="lotusHeading"><img alt="" class="lotusIcon yourProductSprite yourProductSprite-iconPlaceholder24" src="../../css/images/blank.gif"><span class="lotusText">Application Name</span></h2>
+	</div>
+	<form class="lotusSearch" action="javascript:;" method="post" role="search">
+		<table class="lotusLayout" cellspacing="0" role="presentation"><tr><td><a href="javascript:;" id="searchScope" class="lotusScope" role="button" aria-haspopup="true" aria-label="Refine search scope" title="Refine search scope"><img class="lotusIcon yourProductSprite yourProductSprite-iconPlaceholder16" src="../../css/images/blank.gif" alt="[Search scope]" /><span class="lotusAltText">&#x25bc;</span></a></td><td><input id="lotusSearchtext" name="lotusSearchtext" class="lotusText lotusInactive" type="text" value="Search" title="Search" /></td><td><span class="lotusBtnImg"><input class="lotusSearchButton" type="image" alt="Submit search" title="Submit search" src="../../css/images/blank.gif" /><a href="javascript:;" class="lotusAltText">Search</a></span></td></tr></table>
+	</form>
+</div></div></div><!--end titleBar-->
+<div class="lotusTitleBarExt"><div class="lotusWrapper"><div class="lotusInner">
+	<ul class="lotusInlinelist lotusRight lotusActions"><li class="lotusFirst"><a href="javascript:;" role="button">Action</a></li><li><a href="javascript:;" role="button">Action</a></li><li><a href="javascript:;" role="button" aria-haspopup="true">More Actions <img class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt="" /><span class="lotusAltText">&#x25bc;</span></a></li></ul>
+</div></div></div><!--end lotusTitleBarExt-->
+
+	</header>	
+		<div class="lotusMain">
+			<div class="lotusColLeft">
+			</div><!--end colLeft-->
+		
+			<!-- aside is an HTML5 element. Use div if you are using HTML4. -->
+			<aside class="lotusColRight">
+			</aside><!--end colRight-->
+			<a id="lotusMainContent" name="lotusMainContent"></a>
+			<div class="lotusContent" role="main"> 	
+
+
+				<!-- Insert your content here -->
+
+
+			</div><!--end content-->
+		</div><!--end main-->
+		<!-- footer is an HTML5 element. Use div if you are using HTML4. -->
+<footer class="lotusFooter" role="contentinfo">
+	<ul>
+	<li><a href="javascript:;">Home</a></li>
+	<li><a href="javascript:;">Demo</a></li>
+	<li><a href="javascript:;">Help</a></li>
+	<li><a href="javascript:;">Support Forums</a></li>
+	<li><a href="javascript:;">Link</a></li>
+	<li><a href="javascript:;">Link</a></li>
+	<li><a href="javascript:;">About</a></li>
+	<li><a href="javascript:;">[Application] on ibm.com</a></li>
+	<li><a href="javascript:;">Submit Feedback</a></li>
+	</ul>
+</footer><!--end footer-->
+
+		<!-- footer is an HTML5 element. Use div if you are using HTML4. -->
+<footer role="contentinfo">
+<table class="lotusLegal" cellspacing="0" role="presentation">
+	<tr>
+	<td><img class="lotusIBMLogoFooter" src="../../css/images/blank.gif" alt="IBM" /></td>
+	<td class="lotusLicense">&copy; Copyright IBM Corporation &lt;Year 1&gt;, &lt;Year 2&gt;. Replace this example with copyright information.</td>
+	</tr>
+</table>
+</footer>
+</div><!--end frame-->
+
+<!--popups go here-->	
+	
+
+
+
+<!-- DOCUMENTATION Toolkit environment JavaScript - REAL PAGES WOULD NOT NEED THIS CODE -->
+<script src="../../docResources/js/example-iframes-all.js"></script>
+<script>
+	// Call a common script so updates can be kept to the .js files.
+	// This common processing script does stuff like browser and high contrast detection.
+	// We create the function this way so we can pass in the proper path to an image to load.
+	var fn=function(x){lotusui_commonExamplePageFooterProcessing("../../css/images/blank.gif")};
+	lotusui_addEvent(window, "load", fn, true);
+</script>
+
+</body>
+</html>

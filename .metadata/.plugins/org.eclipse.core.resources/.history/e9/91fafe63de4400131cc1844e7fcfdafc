@@ -1,0 +1,55 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for the mega menus
+companion files: megaMenu.css / bannerTheme.css
+companion files: megaMenuRTL.css / bannerThemeRTL.css*/
+/*** M E G A  M E N U **/
+/*these are a type of dropdown used for global navigation*/
+
+
+
+
+
+.lotusui30 .lotusNavMenu {border:3px solid #454545/*this is needed for IE*/; border:3px solid rgba(23, 23, 23, 0.8);
+	-moz-box-shadow:0 0 4px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow:0 0 4px rgba(0, 0, 0, 0.4);
+	box-shadow:0 0 4px rgba(0, 0, 0, 0.4);
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;}
+.lotusui30 .lotusNavMenu table, .lotusui30 .lotusNavMenu th, .lotusui30 .lotusNavMenu td, .lotusui30 .lotusNavMenu table td, .lotusui30 .lotusNavMenu tr.lotusMenuSeparator + tr th, .lotusui30 .lotusNavMenu tr.lotusMenuSeparator + tr td {padding:0;}
+.lotusui30 .lotusNavMenu tr a {display:block; margin:1px; padding:5px 10px;}
+.lotusui30 .lotusNavMenu tr a, .lotusui30 .lotusNavMenu tr a:visited {color:#222;}
+.lotusui30 .lotusNavMenu .lotusNavMenuLarge tr a {display:inline-block;} /*TODO remove when refactoring apps menu*/
+.lotusui30 .lotusNavMenu tr.lotusMenuSeparator th, .lotusui30 .lotusNavMenu tr.lotusMenuSeparator td {padding-bottom:0; border-bottom:1px dotted #ccc;}
+.lotusui30 .lotusNavMenu tr a:hover, .lotusui30 .lotusNavMenu tr a:focus, .lotusui30 .lotusNavMenu tr a:active, .lotusui30 .lotusNavMenu tr a.lotusHover {background-color:#e1f4f9;text-decoration:none;}
+.lotusui30 .lotusNavMenu .lotusNavMenuConnector {position:absolute; background-image:url(../../images/lotusHSprite-8bit.png); background-position:-931px -11px; width:15px; height:11px; top:-11px; right:20px;}
+
+/*menu specific definitions*/
+.lotusui30 .lotusNavMenu tr .lotusInlinelist {padding:10px; white-space:normal;}
+.lotusui30 .lotusNavMenu tr .lotusInlinelist li a {margin:0; padding:0; display:inline; font-weight:normal; color:#222;}
+
+/*two column*/
+.lotusui30 .lotusNavMenu .lotusTwoCol tr a {padding:10px;}
+.lotusui30 .lotusNavMenu .lotusTwoCol tr.lotusMenuSeparator th, .lotusui30 .lotusNavMenu .lotusTwoCol tr.lotusMenuSeparator td {border-bottom:1px solid #f0f0f0;}
+
+.lotusui30 .lotusNavMenu .lotusMenuFooter .lotusInlinelist {color:#222;}
+.lotusui30 .lotusNavMenu .lotusMenuFooter .lotusInlinelist a, .lotusui30 .lotusNavMenu .lotusMenuFooter .lotusInlinelist a:visited {color:#1970B0;}
+.lotusui30 .lotusNavMenu .lotusMenuFooter .lotusInlinelist a:hover, .lotusui30 .lotusNavMenu .lotusMenuFooter .lotusInlinelist a:focus, .lotusui30 .lotusNavMenu .lotusMenuFooter .lotusInlinelist a:active {color:#05386b}
+
+.lotusui30 .lotusNavMenu tr .lotusInlinelist a:hover, .lotusui30 .lotusNavMenu tr .lotusInlinelist a:focus, .lotusui30 .lotusNavMenu tr .lotusInlinelist a:active {background-color:#fff; text-decoration:underline;}/*reset to white for the header list*/
+
+.lotusui30 .lotusNavMenu .lotusSearch {position:relative; clear:both; padding:0 10px 10px;}
+.lotusui30 .lotusNavMenu .lotusSearch .lotusText {padding:4px 8px 4px 25px; margin:0; border:1px solid #ececec; width:480px; font-size:0.9em; color:#666; background:#f1f1f1;
+	background:-moz-linear-gradient(center top, #f4f4f4 25%, #f1f1f1 100%); 
+	background:-webkit-gradient(linear, left top, left bottom, from(#f4f4f4), color-stop(25%, #f4f4f4), to(#f1f1f1));
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;}
+.lotusui30 .lotusNavMenu .lotusSearch .lotusSearchButton {color:#fff/*to get focus indicator to show*/; background-image:url(../../images/lotusHSprite-8bit.png); background-position:-591px -8px; height:16px; width:16px; position:absolute; left:16px; top:4px;}
+.lotusui30 .lotusNavMenu .lotusSearch .lotusAltText {display:none;}/*TODO clean this up for HC*/
+
+/***********************************************************/
+
