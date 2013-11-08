@@ -11,16 +11,22 @@ Databases, app engines, mobile platforms
 2.2 Platform libraries
 APIs and languages (per component)
 
+The data sources for the project will primarily come from the following sources:
+	Build Logs
+		Groovy has excellent support for reading in log files in text/XML/other formats using the built in classes XMLParser and XMLSlurper.
+	DevOps
+		To be advised.
+	Jenkins
+		REST API available which returns information in XML or JSON format. Again, easily and simply handled by groovy. Using the inbuilt HTTPBuilder class, messages can easily be formatted correctly to be sent accross the network. As an extension to this class there is also a RESTClient class which makes concessions in HTTPBuilders flexibility to make REST operations as simple as possible.
+	RTC
+		REST API provided to interact with IBM Jazz based tools
+	RQM
+		Still to be researched.
+
+
 Groovy
 	The bulk of the application will be developed using the groovy language and will be built around the Grails framework. Groovy is dynamic statically typed language that runs on the JVM. Is designed to extend the Java language and make programming clearer and less cluttered.
 	There is a very shallow learning curve getting to grips with groovy when coming from a Java background, infact most Java classes can be run as a Groovy class, and Java can be written directly into a groovy class.
-
-	http://groovy.codehaus.org/
-
-
-	GORM - Groovy object relational mapping
-		Generates Hibernate configuration information
-		Optimistic Blocking
 
 Grails
 	Grails is a Framework built on Groovy. It has a Plugin based architecture making it very flexible and extensible. As a default, the following technology stack is used out of the box.
