@@ -88,3 +88,9 @@ Week Beginning 6/11/12
 	Created Technical Architecture document
 
 	Emailed Brendan with Logical Architecture document and questions relating to what data is relevant to and needs to be stored from each summary data to enable greater levels of granularity.
+
+	Created Class Diagrams
+
+	Updated Project Status Report slides
+
+Week Beginning 13/11/13

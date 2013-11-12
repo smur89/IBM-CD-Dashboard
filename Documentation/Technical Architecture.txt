@@ -8,6 +8,30 @@ Technical Architecture
 2.1 Software Components
 Databases, app engines, mobile platforms
 
+Groovy
+	The bulk of the application will be developed using the groovy language and will be built around the Grails framework. Groovy is dynamic statically typed language that runs on the JVM. Is designed to extend the Java language and make programming clearer and less cluttered.
+	There is a very shallow learning curve getting to grips with groovy when coming from a Java background, infact most Java classes can be run as a Groovy class, and Java can be written directly into a groovy class.
+
+Grails
+	Grails is a Framework built on Groovy. It has a Plugin based architecture making it very flexible and extensible. As a default, the following technology stack is used out of the box.
+
+	The default database is HSQL run in-memory. However, I will swap this out for a DB2 database to comply with IBM standards. This should be a simple process as Grails stack includes Hibernate out of the box.
+
+	Spring MVC - Sprint.io
+		It implements Spring MVC application web framework (Though Grails is now capable of more than web developement). This framework seperates the presentation layer from the request handling layer, and the request handling layer from the model. By doing so, Spring MVC allows for cleaner front end code and easier testing and maintainablility.
+
+	Hibernate
+		Hibernate provides Object Relational Mapping for Java. Using GORM (Groovy Object Relational Mapping) and POGO (Plain Old Groovy Objects - like POJO for Java) this also works for Groovy. It provides a layer of abstraction from the database used in the applications implementation, allowing databases to be changed easily after deployment, as no database commands are hard coded into the source code. It does this by replacing direct persistence-related database accesses with high-level object handling functions.
+
+	Sitemaesh View Templates
+		Sitemesh is used as a framework for providing user views of an application to any HTML page requests using a gang of four decorator pattern. It allows for partial views to be created and embedded inside other views, allowing code reuse and quick building of pages.
+
+Because of the plugin architecture, Javascript libraries can be plugged directly into the project.This will be particularly helpful in implementing the AJAX calls required to refresh the page content after some elapsed time period. Some libraries that might prove useful in this project are Prototype, Scriptaculous, Compass, Lucene and Dojo. These requirements will become more apparent over time and will be explored in later iterations as development progresses.
+
+DB2
+	IBM's DB2 is a database which can handle multiple types of database schemas (Relational, object-relational, Native XML storage, etc.). It supports both SQL and XQuery query languages for database manipulation, allowing for faster access to the natively stored XML using XQuery. I will be using DB2 through the Hibernate abstraction layer provided in Grails, however it also have a number of native APIs for various programming languages.
+
+
 2.2 Platform libraries
 APIs and languages (per component)
 
@@ -24,27 +48,6 @@ The data sources for the project will primarily come from the following sources:
 		Still to be researched.
 
 
-Groovy
-	The bulk of the application will be developed using the groovy language and will be built around the Grails framework. Groovy is dynamic statically typed language that runs on the JVM. Is designed to extend the Java language and make programming clearer and less cluttered.
-	There is a very shallow learning curve getting to grips with groovy when coming from a Java background, infact most Java classes can be run as a Groovy class, and Java can be written directly into a groovy class.
-
-Grails
-	Grails is a Framework built on Groovy. It has a Plugin based architecture making it very flexible and extensible. As a default, the following technology stack is used out of the box.
-
-	Spring MVC - Sprint.io
-	It implements Spring MVC application web framework (Though Grails is now capable of more than web developement). This framework seperates the presentation layer from the request handling layer, and the request handling layer from the model. By doing so, Spring MVC allows for cleaner front end code and easier testing and maintainablility.
-
-	The default database is HSQL run in-memory. However, I will swap this out for a DB2 database to comply with IBM standards. This should be a simple process as Grails stack includes Hibernate out of the box.
-
-	Hibernate
-	Hibernate provides Object Relational Mapping for Java. Using GORM (Groovy Object Relational Mapping) and POGO (Plain Old Groovy Objects - like POJO for Java) this also works for Groovy. It provides a layer of abstraction from the database used in the applications implementation, allowing databases to be changed easily after deployment, as no database commands are hard coded into the source code. It does this by replacing direct persistence-related database accesses with high-level object handling functions.
-
-	Sitemaesh View Templates
-	Sitemesh is used as a framework for providing user views of an application to any HTML page requests using a gang of four decorator pattern. It allows for partial views to be created and embedded inside other views, allowing code reuse and quick building of pages.
-
-	Because of the plugin architecture, Javascript libraries can be plugged directly into the project. this will be particularly helpful in implementing the AJAX calls required to refresh the page content after some elapsed time period. Some libraries that might prove useful in this project are Prototype, Scriptaculous, Compass, Lucene and Dojo. These requirements will become more apparent over time and will be explored in later iterations as development progresses.
-
-
 2.3 Distribution and Deployment
 	1. Cloud, REStful, JDBC, sessionless etc
 		Can be deployed to a server as a WAR file.
@@ -55,10 +58,3 @@ Grails
 2.4 Risks
 Discuss the risks which may effect the delivery of the project.
 
-
-3 Prototype
-3.1 Prototype Deliverable for week 8
-List the uses cases to be delivered in the first prototype and discuss the testing strategy
-
-3.2 Prototype Deliverable for week 11
-List the uses cases to be delivered in the second prototype and discuss the testing strategy
