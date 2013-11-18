@@ -35,9 +35,19 @@ DB2
 2.2 Platform libraries
 APIs and languages (per component)
 
+Build Duration - from RTC
+Manual testing Duration - Test Case Executions Records
+API Test Coverage - TBD - We don't know how API Test Coverage will be
+tracked. RQM would represent a tick box exercise
+time from final code submission to production (cloud and on-premises) -
+Jenkins will drive the commit but UrbanDeploy or CHEF will do the
+deployment.  How long it takes to execute the pipeline.  Jenkins.
+Defects opened per capita - RTC Query for Defects
+Cumulative open+deferred defects - RTC Query
+
 The data sources for the project will primarily come from the following sources:
 	Build Logs
-		Groovy has excellent support for reading in log files in text/XML/other formats using the built in classes XMLParser and XMLSlurper.
+		RTC has Build Duration time stored, this should be easy to access.
 	DevOps
 		To be advised.
 	Jenkins
@@ -57,4 +67,5 @@ The data sources for the project will primarily come from the following sources:
 
 2.4 Risks
 Discuss the risks which may effect the delivery of the project.
+
 

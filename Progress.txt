@@ -94,3 +94,51 @@ Week Beginning 6/11/12
 	Updated Project Status Report slides
 
 Week Beginning 13/11/13
+
+	Brendan provided additional information regarding summary metrics:
+		Build Duration - from RTC
+		Manual testing Duration - Test Case Executions Records
+		API Test Coverage - TBD - We don't know how API Test Coverage will be
+		tracked. RQM would represent a tick box exercise
+		time from final code submission to production (cloud and on-premises) -
+		Jenkins will drive the commit but UrbanDeploy or CHEF will do the
+		deployment.  How long it takes to execute the pipeline.  Jenkins.
+		Defects opened per capita - RTC Query for Defects
+		Cumulative open+deferred defects - RTC Query
+
+	Jazz Server/RTC/RQM not available for Mac OS X. Installing Ubuntu 13.10 via VirtualBox to install Jazz Server etc. through Linux. Will need to access this through the Virtual Box using NAT (Chapter 6 of VirtualBox guide)
+
+	Installed Jazz Team Server
+		-Change and Configuration Management
+		-Quality Management
+		-Requirements Management
+		-Lifecycle Project Administration
+
+	Configured NAT and Port Forwarding for virtual machine
+		-Can now access JTS from Host OS using localhost:9443 or localhost:9080
+
+	Installing the JKE Banking sample project
+		This sample provides an in-flight perspective of the collaborations that occur on a typical Agile team. Walk through an iteration with the team as they deliver a new feature to support an important corporate initiative called Money that Matters. To learn more about the Money that Matters sample.
+
+			Error creating the sample: com.ibm.team.lpa.automation.TaskException: CRJCA0009E The request could not be completed, because a 403 Forbidden status was returned. The request URI was https://localhost:9443/rm/clmSampleProject.hide details
+				Error Stacktrace:
+
+				com.ibm.team.lpa.automation.TaskException: com.ibm.team.lpa.automation.TaskException: CRJCA0009E The request could not be completed, because a 403 Forbidden status was returned. The request URI was https://localhost:9443/rm/clmSampleProject.
+				at com.ibm.team.lpa.tasks.SampleValidationTask.validateApplicationRemote(SampleValidationTask.java:132)
+				at com.ibm.team.lpa.tasks.SampleValidationTask.runTask(SampleValidationTask.java:66)
+				at com.ibm.team.lpa.common.tasks.AbstractTask.run(AbstractTask.java:56)
+				at com.ibm.team.lpa.automation.CompositeTask.run(CompositeTask.java:208)
+				at com.ibm.team.lpa.automation.CompositeTask$MonitoredSubTask.run(CompositeTask.java:124)
+				at com.ibm.team.lpa.automation.CompositeTask.run(CompositeTask.java:208)
+				at com.ibm.team.lpa.common.tasks.LoggingCompositeTask.run(LoggingCompositeTask.java:37)
+				at com.ibm.team.lpa.automation.AsyncTask$TaskRunner.run(AsyncTask.java:40)
+				at java.lang.Thread.run(Thread.java:738)
+				Caused by: com.ibm.team.lpa.automation.TaskException: CRJCA0009E The request could not be completed, because a 403 Forbidden status was returned. The request URI was https://localhost:9443/rm/clmSampleProject.
+				at com.ibm.team.lpa.common.tasks.AbstractTask.handleError(AbstractTask.java:143)
+				at com.ibm.team.lpa.tasks.SampleValidationTask.validateApplicationRemote(SampleValidationTask.java:129)
+				... 8 more
+			Needed to assign Enterprise Developer licence to my user as per - https://jazz.net/forum/questions/95134/unable-to-create-jke-in-401
+
+		Sample Project installed
+		(((/Images/Installing Sample Project.jpg)))
+	

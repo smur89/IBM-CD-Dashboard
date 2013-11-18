@@ -139,7 +139,7 @@ CD Transformation Metrics
 <b>Commit Phase</b>                
 >					      Metric						Measurement Value                     
 >
->                         Build Duration 				Minutes        		build logs (jenkins)     
+>                         Build Duration 				Minutes        		RTC     
 >                                                      
 >                         Manual testing duration    
 >                         (automatable) 				Person Weeks      	RQM
@@ -149,7 +149,7 @@ Acceptance Test Phase
 >					       Metric						Measurement Value                     
 >                          
 >                          API Test Coverage (via     
->                          automated measurement) 		% Value            	RQM
+>                          automated measurement) 		% Value            	TBD - Unlikely to be RQM
 >
 
 Manual Test Phase         
@@ -159,11 +159,11 @@ Manual Test Phase
 >                          (non-automatable) 			Person Weeks       	RQM
 >                                                     
 >                          Time from final code       
->                          submission to production     Days				DevOps/Jenkins (XML?)
+>                          submission to production     Days				DevOps/UrbanDeploy/CHEF/(Jenkins)Pipeline
 >                          (Cloud) 						               
 >                                                     
 >                          Time from final code       
->                          submission to GA             Days				Jenkins (XML?)
+>                          submission to GA             Days				DevOps/UrbanDeploy/CHEF/(Jenkins)
 >                          (On-Premises)              
 >                                                 
 >                                                     
