@@ -141,4 +141,16 @@ Week Beginning 13/11/13
 
 		Sample Project installed
 		(((/Images/Installing Sample Project.jpg)))
+
+		Sample JKE Project has no data in it, need to drop and recreate.
+		Added lib dependencies to grails app.
+		
+		RTC Server appears to start in the logs, sometimes it is accessible from the weblink, sometimes not. Server requests 4GB of memory at startup laptop currently only has 4GB or RAM memory installed (Will upgrade), changed 
+			JAVA_OPTS="$JAVA_OPTS -Xmx4G"
+			JAVA_OPTS="$JAVA_OPTS -Xms4G"
+		in server.startup file to
+			JAVA_OPTS="$JAVA_OPTS -Xmx2G"
+			JAVA_OPTS="$JAVA_OPTS -Xms2G"
+		
+
 	
