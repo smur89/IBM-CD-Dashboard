@@ -151,6 +151,66 @@ Week Beginning 13/11/13
 		in server.startup file to
 			JAVA_OPTS="$JAVA_OPTS -Xmx2G"
 			JAVA_OPTS="$JAVA_OPTS -Xms2G"
-		
+		This has no effect, the server still will not startup. - Big Roadblock - emailed Brendan.
+
+Week Beginning 19/11/13
+	Ordered additional (16GB) RAM for laptop
+
+	Uninstalled Jenkins - uses a lot of RAM in the background even with no jobs.
+
+	Uninstalled RTC Server and reinstalled. Working fine now, waiting for RAM to arrive before attempting to install the sample project.
+
+	Working with Site Template - Added Title and Nav bar components as per the IBM OneUI Template. Linked in CSS files and file structure - CSS not being utilised.
+
+	Installed RTC Server on desktop computer on home network. Installed Sample Projects, Error, but looks as if all is there, will suffice until additional RAM arrives and can install locally on virtualbox. Can access this now through my local network at home.
+
+Week Beginning 27/11/13
+	
+	Connecting to JTS I get:
+		Error 500: Internal Server Error
+		URI
+		/IBM_CD_Dashboard/rtcTest/index
+		Class
+		org.xml.sax.SAXParseException
+		Message
+		The reference to entity "etag" must end with the ';' delimiter.
+	Seems to be related to basic and form authentication
+
+	Changing Tomcat authentication from FORM to BASIC as per - https://jazz.net/forum/questions/100510/jazz-authentication-change-from-form-to-basic-on-tomacat
+
+	Form returned with 200 success code now.
+
+	Printing the returned XML from /ccm/oslc/workitems/catalog to screen produces one string "Project Areas" - need to install sample project JKE Banking on Virtual Machine JTS Server.
+
+	Installing the JKE Banking sample - Error.
+		Licence issue.
+		Assigned Rational Quality Manager - Quality Professional, Rational Requirements Composer - Analyst, and both Rational Team Concert - Developer licences to user.
+
+	Installing the JKE Banking sample - Error.
+		Timeout
+		Changed admin.properties file to increase timeout from 5minutes to 100minutes.
+
+	Installing CCM JKE Banking Sample
+		Successful
+
+	Installing QM JKE Banking Sample
+		After 2 hours, Chrome closed unexpectedly.
+		Restarted laptop and server.
+		Error: ID CRJAZ1972E - Error fetching server status information
+
+	Used repotools to drop QM tables - error taken care of.
+	Still issue with creating JKE prject - RM and QM projects recognised as already in existance for some reason - archived whole JKE project to try again, 500 error accessing whoami service.
+
+	Need to recreate tables I think. repotools -createTables.
+
+	Deleted JTS, reinstalled, started steps again, will spend less time starting again than recovering the server to  useable state.
+
+	Installed sample project again, progress screen froze but left running regardless and seems to have installed everything, to double check this is correctly installed.
+
+
+Week Beginning 27/11/13
+
+
+
 
 	
