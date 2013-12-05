@@ -210,7 +210,76 @@ Week Beginning 27/11/13
 
 Week Beginning 27/11/13
 
+	Looking into using ReportsRESTAPI.
+
+
+	ReportsRESTAPI (https://jazz.net/wiki/bin/view/Main/ReportsRESTAPI#Resources_provided_by_RTC)
+
+	Build Duration 				Minutes        		RTC 				buildResult (type: com.ibm.team.build.BuildResult)
+																		timeTaken (type: xs:long). How long the build took, in milliseconds
+																		https://jazz.net/wiki/bin/view/Main/ReportsRESTAPI#build
+	                                                 
+	SPRs opened per capita     											workItem (com.ibm.team.workitem.WorkItemType)
+	(general quality measure)    Number				RTC 				id (type: xs:string). The id of the 																	type (e.g. "com.ibm team.workitem.																		defect"), unique 
+																			in a repository.
+																		name (type: xs:string). The name of the type (e.g. "Defect"). Not necessarily unique.
+																		https://jazz.net/wiki/bin/view/Main/ReportsRESTAPI#com_ibm_team_workitem_WorkItemTy
+	                                                
+	Cumulative open+deferred   											workItem (com.ibm.team.workitem.State)
+	defects (technical debt)     Number				RTC 				group (type: xs:string). The "State Group" of this state. A 
+																		state group is a process-independent grouping of states, which is useful for creating reports which are not dependent on a particular process but still need to know, for example, whether work items are open or closed. Every state belongs to one of the following state groups: "OPEN_STATES", "CLOSED_STATES", "IN_PROGRESS_STATES".
+																		https://jazz.net/wiki/bin/view/Main/ReportsRESTAPI#com_ibm_team_workitem_State
+
+	------------------------------------------------------------------------------------------------------------------------
+	User requires RQM Connector licence and RQM Contributor licence in addition to licences already assigned - added these to my user profile.
+
+	Manual testing duration    
+	(automatable) 	          Person Weeks      	RQM 		Test Case Execution records
+
+	Manual testing duration    
+	(non-automatable) 			Person Weeks       	RQM
+	-------------------------------------------------------------------------------------------------------------------------
+
+	Time from final code       
+	submission to production     Days				DevOps/UrbanDeploy/CHEF/(Jenkins)Pipeline
+	(Cloud) 						               
+	                                                     
+	Time from final code       
+	submission to GA             Days				DevOps/UrbanDeploy/CHEF/(Jenkins)
+	(On-Premises)              
+
+	-------------------------------------------------------------------------------------------------------------------------
+		
+	API Test Coverage (via     
+	automated measurement) 		% Value            	TBD - Unlikely to be RQM
 
 
 
-	
+	Came across this on a forum - "Tip: In general, use the OSLC QM V2 API unless requiring unsupported resources." -http://sleroyblog.wordpress.com/2013/04/09/querying-rqm-40-through-oslc-and-rest-api/
+	Will look into OSLC instead of Reporable API.
+	Not trying to provide additional functionality on tom of the CLM, so Reportable REST should be ok for my needs. OSLC may be better supported.
+	"Consumers should not rely on or remember any specific URLs, or perform 'path math' on URLs. Instead, they should use the discovery chain. All they need to know is the URL of the root services document." Always start from root services.
+
+	Exploring Reportable REST API - https://localhost:9443/ccm/rpt/repository
+
+	Updating class diagrams
+		- Moving models under newly identified packages (i.e Build Duration under RTC instead of Jenkins)
+		- Identifying useful information to hold in model for finer detail when needed:
+
+	Starting to create domain models in Grails app
+		http://grails.org/doc/latest/guide/GORM.html#domainClasses
+
+	Looking at Plain Java API for RTC
+	Able to connect to repository
+		Can identify project areas and display names
+	Trying to access build information
+	Able to access BuildResult and BuildDefinitions
+		- have access to Build Durations
+	Seperating this logic into a Service as recommended by the Grails best practices.
+	issue with TeamPlatform.shutdown() - connection should stay open for entire life of the application
+
+Week Beginning 4/12/13
+
+	Refactored code in Service - seperated login, startup etc into seperate methods and added groovydoc comments for some methods.
+
+	Trying to get a list of contributors for each ProjectArea. GetMembers returns a IContributorHandle[], trying to get an IContributor from this handle using the ITeamRepository.itemManager().fetchCompleteItems() but method will not accept the IContributorHandle[] type.
