@@ -283,3 +283,7 @@ Week Beginning 4/12/13
 	Refactored code in Service - seperated login, startup etc into seperate methods and added groovydoc comments for some methods.
 
 	Trying to get a list of contributors for each ProjectArea. GetMembers returns a IContributorHandle[], trying to get an IContributor from this handle using the ITeamRepository.itemManager().fetchCompleteItems() but method will not accept the IContributorHandle[] type.
+
+	Created method getProjectMembers(IPRojectArea) which returns all members for the project argument as a list of IContributors.
+
+	Printed members to test view grouped by project area.
