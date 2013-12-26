@@ -287,3 +287,24 @@ Week Beginning 4/12/13
 	Created method getProjectMembers(IPRojectArea) which returns all members for the project argument as a list of IContributors.
 
 	Printed members to test view grouped by project area.
+
+	Trying to access WorkItems under each project.
+		- Code should return all workitems under each project but only returns one
+			-Returns the same for each project which is correct. In the Web GUI, seems like there is more WorkItems, unsure if my understanding of a workitem is wrong or the code is wrong.
+
+	Updating Project Status Report.
+
+	WorkItems printed out to screen/
+
+Week Beginning 11/12/13
+	
+	Checking code examples of accessing RQM - https://jazz.net/wiki/bin/view/Main/RqmApi#Code_Examples.%A0
+
+Week Beginning 18/12/13
+
+	No Java API for RQM, REST/OSLC only.
+
+Week Beginning 25/12/13
+
+	Trying to understand how to traverse the REST API resources.
+
