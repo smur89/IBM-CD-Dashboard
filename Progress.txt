@@ -308,3 +308,20 @@ Week Beginning 25/12/13
 
 	Trying to understand how to traverse the REST API resources.
 
+Week Beginning 29/12/13
+	
+	Returning to RTC Java API to finish more functionality here before continuing on to RQM REST inferface in order to have something properly demoable for IBM meetings 5/2/14.
+	Would be nice to have the builds saving to the database, results being displayed on screen and some graphs etc. if possible. May not get all implemented in a week, but these are the goals.
+
+	Added mapping to domain classes to override default primary key for Team and Build domains.
+
+	Created method to get work items associated with a build result and return these as workitemimpl instead of workitemhandleimpl.
+
+	Class structure revision Team >>1>n>> Build >>1>n>> WorkItems
+	One team (Project) has many builds (BuildResult) which can contain many WorkItems. Workitems will just be used for granularity in the application, as well as for defect counting.
+
+	Cannot cascade save Team>Build>WorkItems because of null issues. Was able to solve this on WorkItems by allowing Builds to contain nullable WorkItems.
+
+
+
+
