@@ -308,7 +308,7 @@ Week Beginning 25/12/13
 
 	Trying to understand how to traverse the REST API resources.
 
-Week Beginning 29/12/13
+Week Beginning 22/01/13
 	
 	Returning to RTC Java API to finish more functionality here before continuing on to RQM REST inferface in order to have something properly demoable for IBM meetings 5/2/14.
 	Would be nice to have the builds saving to the database, results being displayed on screen and some graphs etc. if possible. May not get all implemented in a week, but these are the goals.
@@ -321,7 +321,68 @@ Week Beginning 29/12/13
 	One team (Project) has many builds (BuildResult) which can contain many WorkItems. Workitems will just be used for granularity in the application, as well as for defect counting.
 
 	Cannot cascade save Team>Build>WorkItems because of null issues. Was able to solve this on WorkItems by allowing Builds to contain nullable WorkItems.
+	Set all fields to null to check behaviour - No change
 
+	Teams are now saving correctly.
 
+	Able to cascade delete teams.
 
+	created domainService service, added delete and populate methods to this.
+
+	Original implementation of primary key/foreign key and constraints were wrong. Fixed this issue. 
+
+	Errors thrown - One WorkItem can be associated with more than one build. This violates the new constraints which makes workitem IDs be unique (id's assigned by itemId from RTC). Created many-to-many association between workItems and builds.
+
+	Error Caused by: java.lang.OutOfMemoryError: PermGen space
+
+	Key issue on Workitems, commented out code, will come back to this.
+
+	Created table view of builds with link to delve deeper into team/project and view build information. It's probably about time I started to seperate the methods into appropriate controllers, currently just using one controller RTCTestController for everything and all views under this (currently only two views)
+
+Week Beginning 29/01/14
+
+	Seperated everything into seperate views and controllers (TeamController, BuildController and WorkItemController)
+
+	Created views to display information for Teams, Buils and WorkItems. Team now displays average build for the project overall.
+
+	Trying to get workItems to save properly, but unable to figure out why Key issues are happening, tried to create break points, but breakpoints not breaking the code as they should. Red circle for breakpoint doesn't have 'v' inside it, just empty red circle.
+
+	Managed to get breakpoints working. Set grails.project.fork = false.
+
+	Stepping through the code, breakpoint at if(WorkItem.get(id))
+
+	Code breaks on newTeam.save()
+
+	Seperated out code from populateDatabase() into 3 seperate methods populateTeams(), populateBuilds() and populateWorkItems()
+
+	error persists. debugging.
+
+	New error on DomainClass.get() method:
+
+	| Error java.lang.IllegalStateException: Method on class [ibm_cd_dashboard.WorkItem] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+	| Error 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	| Error 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	| Error 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	| Error 	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+
+	fixed getBuildWorkItems(IBuildResult buildResult) method to return null if no work items exist for build.
+
+	| Error groovy.lang.MissingMethodException: No signature of method: ibm_cd_dashboard.Team.addToBuilds() is applicable for argument types: (ibm_cd_dashboard.Build) values: [ibm_cd_dashboard.Build : (unsaved)]
+
+	The key constraint error is coming from the archived project and the current project being the same. so workitems are the same with same ID, maybe...
+
+	Workitems added to build. Changed unique identifier to be concatination of build id and workitem id.
+
+	Changed some things and this is not being reflected in workitems
+
+	| Error 2014-02-03 16:05:16,948 [http-bio-8090-exec-1] ERROR util.JDBCExceptionReporter  - Referential integrity constraint violation: "FKCF0A9F832E451BAA: PUBLIC.BUILD_WORK_ITEMS FOREIGN KEY(WORK_ITEM_ID) REFERENCES PUBLIC.WORK_ITEM(WORK_ITEM_ID) ('_UukD4FfVEeOe-fhOpjWp0Q__n4XRMFfTEeOe-fhOpjWp0Q')"; SQL statement:
+	insert into build_work_items (build_id, work_item_id) values (?, ?) [23506-173]
+
+	Summary field is no longer correct. added a literal value into this for the time being, this solved the error issues.
+
+	Couldn't drop tables. added constraints to enable proper table structure as found on Stack overflow 
+	(http://stackoverflow.com/questions/16869006/grom-create-needless-table-with-many-to-many-mapping)
+	(http://stackoverflow.com/questions/4131174/how-do-i-override-the-cascade-delete-for-a-relation-in-grails-gorm)
+
+	Work Items no longer being saved.
 
