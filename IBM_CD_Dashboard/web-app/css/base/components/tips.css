@@ -1,0 +1,35 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for tips
+companion files: tips.css / tipsTheme.css
+companion files: tipsRTL.css / tipsThemeRTL.css*/
+/*** T I P S ***/ 
+
+.lotusui30 .lotusTips{
+	margin:15px 0 5px 0;padding:5px;
+	-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;
+	background-color:#fffabc;border:1px solid #ccc;
+	overflow:hidden;zoom:1;
+}
+.lotusui30 .lotusTips.lotusFirst{margin-top:0;}/*this style definition (with no spaces) applies to any div with class="lotusTips lotusFirst"*/
+.lotusui30 .lotusTips .lotusTipsHeader{margin:5px 0 10px 0;padding:0 0 0 5px;position:relative;overflow:hidden;zoom:1;}
+.lotusui30 .lotusTips .lotusHeading{font-size:1.1em;color:#222;line-height:inherit;/*1.2 line-height defined globally for lotusHeading hides the underline of the x on hover and degrades alignment*/}
+.lotusui_ie .lotusui30 .lotusTips .lotusHeading{line-height:1.5;}/*ie7 and prior don't support line-height:inherit*/
+.lotusui30 .lotusTips .lotusClose{position:absolute;right:0;top:0;display:block;padding:2px;font-weight:bold;/*for HC mode*/}
+.lotusui30 .lotusTips .lotusClose input{width:12px;height:12px;vertical-align:top;/*better supports layout in both strict and transitional doctypes*/background-position:-557px -10px;}
+.lotusui_ie6 .lotusui30 .lotusTips .lotusClose{font-size:12px;}/*preserves the height of the close button when the font size is made larger*/
+.lotusui30 .lotusTips .lotusHeading2{margin:2px 5px;font-weight:bold;color:#222;}
+.lotusui30 .lotusTips p{margin:0;padding:5px;}
+.lotusui30 .lotusTips ul{margin:0;padding-left:20px;}
+.lotusui30 .lotusTips li{margin:0;padding:0;}
+.lotusui30 .lotusTips .lotusInlinelist{padding-bottom:5px;padding-left:0;}
+.lotusui30 .lotusTips .lotusInlinelist li{padding-bottom:5px;border-left-width:0;}
+
+
+
+
+
+/***********************************************************/
+

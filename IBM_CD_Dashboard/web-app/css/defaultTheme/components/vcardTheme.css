@@ -1,0 +1,47 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+styles for the person card, a component sometimes used outside our framework
+companion files: vcard.css / vcardTheme.css
+companion files: vcardRTL.css / vcardThemeRTL.css*/
+
+/*** V C A R D (P E R S O N   C A R D)***/
+/*this is the popup person card that shows up when you click on a person link (via a hover link)*/
+
+
+
+.lotusui30 .lotusVCard a:link, .lotusui30 .lotusVCard a:visited, .lotusui30 .lotusVCard a:hover, .lotusui30 .lotusVCard a:focus, .lotusui30 .lotusVCard a:active{color:#1970B0}
+.lotusui30 .lotusVCard .lotusAppLinks td{background-color:#f1f1f1;background-image:-moz-linear-gradient(top, #ffffff 0%, #ebebeb 100%);background-image:-webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ebebeb));background-position:top left;}
+.lotusui30 .lotusVCard .lotusActionMenu a, .lotusui30 .lotusVCard .lotusActionMenu a:visited{color:#000;}
+/*new adjustments*/
+.lotusui30 .lotusVCard .lotusPhoto{border-color:#ccc;background-color:#fff;}
+.lotusui30 .lotusVCard .lotusAppLinks td{border-color:#ccc;}
+.lotusui30 .lotusVCard .lotusDetails{background-color:#fafafa;border-top-width:0;}
+
+
+
+.lotusui30 .lotusVCard .lotusActionMenu a:hover, .lotusui30 .lotusVCard .lotusActionMenu a:focus, .lotusui30 .lotusVCard .lotusActionMenu a:active{color:#000;background-color:#e1f4f9;}
+
+/***********************************************************/
+
+/*** V C A R D   H O V E R ***/
+/*this is the hover link that shows when you hover over a person's name and allows you to open their profile card*/
+
+
+
+.lotusui30 .lotusVCardHover {padding:6px 10px 6px 25px; border-color:#fff; font-size:0.9em;
+	background:url(../../images/lotusSprite-8bit.png) 5px -3226px no-repeat #003f69;
+	background:url(../../images/lotusSprite-8bit.png) 5px -3226px no-repeat, -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 63, 105, .95)), to(rgba(0, 30, 50, .95)));
+	background:url(../../images/lotusSprite-8bit.png) 5px -3226px no-repeat, -moz-linear-gradient(rgba(0, 63, 105, .95), rgba(0, 30, 50, .95));
+	background:url(../../images/lotusSprite-8bit.png) 5px -3226px no-repeat, linear-gradient(rgba(0, 63, 105, .95), rgba(0, 30, 50, .95));
+	-moz-box-shadow:0 0 7px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow:0 0 7px rgba(0, 0, 0, 0.3);
+	box-shadow:0 0 7px rgba(0, 0, 0, 0.3);
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	border-radius:0;}
+.lotusui30.lotusImagesOff .lotusVCardHover, .lotusImagesOff .lotusui30 .lotusVCardHover {background-color:#003f69;}
+.lotusui30 a.lotusVCardHover, .lotusui30 a.lotusVCardHover:visited {color:#fff;}
+
+/***********************************************************/

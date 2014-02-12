@@ -1,0 +1,48 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+this file contains layout style adjustments for dojo widgets
+they override/add to the styles in dijit.css
+companion files: dojo.css / dojoTheme.css
+companion files: dojoRTL.css / dojoThemeRTL.css*/
+/******************************/
+/*** D O J O   S T Y L E S ****/
+/******************************/
+
+
+
+/*** M E N U  T R E E ***/
+
+
+
+/* Apply identical styles to dijit tree menus */
+.lotusui30 .lotusMenu .lotusTree .dijitTreeRow{margin:0;padding:6px 20px 6px 10px;border-width:0;color:#000 !important;font-weight:bold;text-decoration:none !important;}
+.lotusui30 .lotusMenu .lotusTree .dijitTreeRow.lotusSelected{margin:-1px 0;padding-right:20px;border-width:1px 0;}
+.lotusui30 .lotusMenu .lotusTree .dijitTreeRow a{text-decoration:none !important;}
+/* Dojo-only menu styles */
+.lotusui30 .lotusMenu .lotusTree .dijitTreeRow.lotusSelected a { color: #fff !important;}
+.lotusui30 .lotusMenu .lotusTree .lotusSelected .dijitTreeExpando {margin-right: 5px;}
+.lotusui30 .lotusMenu .lotusTree .dijitTreeIsRoot .dijitTreeRow, /* Normal root */
+.lotusui30 .lotusMenu .lotusTree .dijitTreeIsRoot .dijitTreeRow a, /* Link root */
+.lotusui30 .lotusMenu .lotusTree .dijitTreeIsRoot .dijitTreeIsRoot .dijitTreeRow, /* Visible root when showRoot=false */
+.lotusui30 .lotusMenu .lotusTree .dijitTreeIsRoot .dijitTreeIsRoot .dijitTreeRow a /* Link root when showRoot=false */
+{font-weight: bold;}
+.lotusui30 .lotusMenu .lotusTree .dijitTreeContainer .dijitTreeRow, /* Normal child items */
+.lotusui30 .lotusMenu .lotusTree .dijitTreeContainer .dijitTreeRow a, /* Link child items */
+.lotusui30 .lotusMenu .lotusTree .dijitTreeIsRoot .dijitTreeIsRoot .dijitTreeContainer .dijitTreeRow, /* Visible child items when showRoot=false */
+.lotusui30 .lotusMenu .lotusTree .dijitTreeIsRoot .dijitTreeIsRoot .dijitTreeContainer .dijitTreeRow a /* Link child items when showRoot=false */
+{font-weight: normal;}
+
+
+
+
+
+.lotusui30 .lotusMenu .lotusTree .dijitTreeIsRoot .dijitTreeRow, .lotusui30 .lotusMenu .lotusTree .dijitTreeIsRoot .dijitTreeRow a, .lotusui30 .lotusMenu .lotusTree .dijitTreeIsRoot .dijitTreeIsRoot .dijitTreeRow, .lotusui30 .lotusMenu .lotusTree .dijitTreeIsRoot .dijitTreeIsRoot .dijitTreeRow a{font-weight:normal;}
+.lotusui30 .lotusMenu .lotusTree .dijitTreeRow.lotusSelected{color:#000 !important;background-color:transparent;border-color:transparent;font-weight:bold;}
+.lotusui30 .lotusMenu .lotusTree .dijitTreeRow.lotusSelected .dijitTreeExpandoLeaf + span + .dijitTreeContent:before{content:"\25AA";color:#BD4218;margin-right:-10px;margin-left:5px;font-family:Arial, Helvetica, sans-serif;} /*this is what we need to do to target an item that does not have a twistie.*/
+.lotusui_ie6 .lotusui30 .lotusMenu .lotusTree .dijitTreeRow.lotusSelected{border-width:0;}/*makes the menu jump, but IE6 doesn't support border-color:transparent*/
+.lotusui30 .lotusMenu .lotusTree .dijitTreeRow.lotusSelected a { color: #000 !important;}
+.lotusui30 .lotusMenu .lotusTree .dijitTreeRow.dijitTreeRowHover, .lotusui30 .lotusMenu .lotusTree .dijitTreeRow.dijitTreeRowActive { background-color:#e1f4f9; }
+
+/***********************************************************/

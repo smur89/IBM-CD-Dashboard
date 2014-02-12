@@ -1,0 +1,53 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for buttons
+companion files: buttons.css / buttonsTheme.css
+companion files: buttonsRTL.css / buttonsThemeRTL.css*/
+/*NOTE: buttons have a lot of overrides to make them consistent across browsers and support deprecated versions.  Be very careful when modifying this code - more code found in deprecated.css*/
+/*** B U T T O N S ***/
+
+/*all buttons*/
+.lotusui30 .lotusBtn, .lotusui30 .lotusBtnImg{margin:0;/*reset to get rid of Safari 0em user agent style*/background-color:#f1f1f1;
+	background-image:-moz-linear-gradient(top, #ffffff 0%, #ebebeb 100%);
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ebebeb));color:#000;
+	font-weight:bold;text-align:center;border:1px solid #aaa;}
+.lotusui30 .lotusBtn{margin-right:5px;padding:2px 7px;font-size:.9em;cursor:pointer;}
+/*browser adjustments*/
+.lotusui_ie .lotusui30 .lotusBtn{padding:1px;/*adjustment for IE funky extra padding*/line-height:1.7em;/*fix for discrepancy in button tag height between buttons with and without an image*/}
+.lotusui_ie .lotusui30 .lotusBtn img{margin:.5em 0 .3em 0;} /*need this for button with drop-down arrow to look okay in IE*/
+/*adjustment to make input elements the same height as button elements*/
+.lotusui_ie8 .lotusui30 input.lotusBtn{padding:3px 7px;}
+.lotusui_ie9 .lotusui30 input.lotusBtn{padding:4px 7px;}
+/*image buttons - an input type=image wrapped with a span or an img wrapped with a link*/
+.lotusui30 .lotusBtnImg{padding:2px;/*default padding, which makes a 16 pixel icon if the image uses the default image size*/
+	display:-moz-inline-box;
+	display:inline-block;
+	vertical-align:top;/*to better align an image button with regular buttons when they are in a row*/
+	line-height:1;}
+.lotusui30 .lotusBtnImg input{margin:0;width:16px;height:16px;background-repeat:no-repeat;vertical-align:middle;/*fixes IE6*/}/*default margin, padding and size*/
+.lotusui_ie .lotusui30 .lotusBtnImg input{margin-top:-1px;}/*extra tweak to center image in IE*/
+.lotusui30.lotusImagesOff .lotusBtnImg input, .lotusImagesOff .lotusui30 .lotusBtnImg input{display:none;}
+/*disabled buttons*/
+.lotusui30 .lotusBtnDisabled{color:#b0b0b0 !important;background-color:#eee !important;cursor:default !important;border-color:#ccc !important;}/*we don't want disabled button border color to change on hover*/
+.lotusui30 .lotusBtnDisabled input{cursor:default !important;opacity:.3 !important;filter:alpha(opacity=30) !important;}/*disabled image buttons*/
+/*for high contrast mode*/
+.lotusui30.lotusImagesOff .lotusBtnDisabled, .lotusImagesOff .lotusui30 .lotusBtnDisabled{opacity:.5 !important;color:#000 !important;filter:alpha(opacity=50) !important;} 
+.lotusui30.lotusImagesOff .lotusBtnDisabled a.lotusAltText, .lotusImagesOff .lotusui30 .lotusBtnDisabled a.lotusAltText{text-decoration:none !important;cursor:default;}/*high contrast alt text - we don't want it to underline on hover and it doesn't inherit the lotusBtnDisabled cursor so we need to define it again.*/
+/*miscellaneous*/
+.lotusui30 .lotusBtnContainer{overflow:hidden;}/*put this around a bunch of "link" buttons*/
+.lotusui30 .lotusBtnDivider{border-bottom:1px solid #e0e0e0;padding-bottom:5px;}/*add this as an additional class when you need a bottom divider for the buttons*/
+/*generic/common buttons*/
+/*put the style on the wrapper span along with the lotusBtnImg class*/
+.lotusui30 .lotusAdd input{background-image:url(../../images/lotusHSprite-8bit.png);background-position:-519px -8px;opacity:0.45;filter:alpha(opacity=45)}
+.lotusui30 .lotusClose input{width:16px;height:16px;background-image:url(../../images/lotusHSprite-8bit.png);background-position:-555px -8px;opacity:0.45;filter:alpha(opacity=45)/*45% is the min opacity for meeting contrast requirements on white/off-white background*/;}
+.lotusui30 .lotusAdd input:hover, .lotusui30 .lotusAdd input:focus, .lotusui30 .lotusAdd input:active, .lotusui30 .lotusClose input:hover, .lotusui30 .lotusClose input:focus, .lotusui30 .lotusClose input:active{opacity:0.55;filter:alpha(opacity=55);}
+/*hover states*/
+.lotusui30 .lotusBtn:hover, .lotusui30 .lotusBtn:focus, .lotusui30 .lotusBtn:active, .lotusui30 .lotusBtnImg:hover, .lotusui30 .lotusBtnImg:focus, .lotusui30 .lotusBtnImg:active{border-color:#666;}
+
+
+
+
+
+/***********************************************************/

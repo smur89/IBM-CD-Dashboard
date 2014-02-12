@@ -1,0 +1,41 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for dialogs
+companion filea: dialogs.css / dialogsTheme.css
+companion filea: dialogsRTL.css / dialogsThemeRTL.css*/
+/*** D I A L O G ***/
+/*this can be wrapped in a dojo dialog, if desired, which gives you the lightbox behavior for free, else, wrap it in a div assigned the class lotusDialogWrapper*/
+
+
+
+
+
+.lotusui30 .lotusDialogBorder {border:3px solid #555/*this is needed for IE*/; border:3px solid rgba(2, 2, 2, 0.4);
+	-moz-border-radius:3px;
+	border-radius:3px;
+	-moz-box-shadow:0 0 15px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow:0 0 15px rgba(0, 0, 0, 0.4);
+	box-shadow:0 0 15px rgba(0, 0, 0, 0.4);}
+.lotusui30 .lotusDialog .lotusDialogHeader {border-bottom:0; background:#3c3c3c;
+	background-image:-moz-linear-gradient(top, #3c3c3c 0%, #252525 100%);
+	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#3c3c3c), color-stop(100%,#252525));}
+.lotusui30 .lotusDialog .lotusHeading {margin-left:0; display:block; color:#fff; font-size:1.2em;}
+.lotusui30.lotusImagesOff .lotusDialog .lotusHeading, .lotusImagesOff .lotusui30 .lotusDialog .lotusHeading {margin-left:15px;} /*make room for the close link*/
+
+/* close icon */
+.lotusui30 .lotusDialog .lotusDialogHeader .lotusDialogClose {position:absolute; top:-11px; left:-11px; padding:0; border:0;}
+.lotusui30.lotusImagesOff .lotusDialog .lotusDialogHeader .lotusDialogClose, .lotusImagesOff .lotusui30 .lotusDialog .lotusDialogHeader .lotusDialogClose {padding:3px; border:1px solid #000; top:15px; left:15px;} /*revert to core styles*/
+.lotusui30 .lotusDialog .lotusDialogHeader .lotusDialogClose img {background-image:url(../../images/lotusHSprite-8bit.png); background-position:-150px 0; width:32px; height:32px;}
+
+.lotusui30 .lotusDialog .lotusFormTable, .lotusui30 .lotusDialog .lotusFormTable td, .lotusui30 .lotusDialog .lotusDialogContent {border:0;}
+.lotusui30 .lotusDialog .lotusDialogFooter {background-color:#fff; margin:0 20px; padding:15px 0; border-top:1px solid #aaa;}
+.lotusui30 .lotusDialogFooter .lotusBtn {margin-right:9px; margin-left:1px;}
+.lotusui_ie .lotusui30 .lotusDialogFooter .lotusBtn, .lotusui_ie8 .lotusui30 .lotusDialogFooter .lotusBtn, .lotusui_ie9 .lotusui30 .lotusDialogFooter .lotusBtn {margin-right:10px; margin-left:0;}/*IE6-8 do not have the shadow, and IE9s shadow does not need the 1px right margin*/
+
+/* for lightbox */
+.lotusui30 .lotusOverlay {opacity:0.4; filter: alpha(opacity=40);}
+
+/***********************************************************/
+

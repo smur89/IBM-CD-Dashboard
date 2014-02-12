@@ -1,0 +1,16 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for action bar
+companion files: actionBar.css / actionBarTheme.css
+companion files: actionBarRTL.css / actionBarThemeRTL.css*/
+
+/*** A C T I O N   B A R ***/
+/*this is the area above entry tables, containing action button, view controls, drop-down find-in-table, etc.*/
+.lotusui30 .lotusActionBar{margin-bottom:4px;/*this number works with the margin-top of the paging control to simulate 8px*/position:relative;float:right;width:100%;height:2.3em;/*this height accommodates the searchTab, if it is the only element in the action bar*/}
+.lotusui30 .lotusActionBar2{margin-top:-25px;margin-bottom:4px;position:relative;float:right;width:100%;height:2.3em} /*use this in place of lotusActionBar when you want to compress the vertical space between the actionbar and the element(s) above it*/
+/***********************************************************/
+
+
+

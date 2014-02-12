@@ -1,0 +1,49 @@
+/* Licensed Materials - Property of IBM.                                    */
+/* (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.          */
+/* U.S. Government Users Restricted Rights:  Use, duplication or disclosure */
+/* restricted by GSA ADP Schedule Contract with IBM Corp.                   */
+.lotusFtype1632Sprite-ftAudio16{width:16px;height:16px;background-position:0 0}
+.lotusFtype1632Sprite-ftCode16{width:16px;height:16px;background-position:0 -24px}
+.lotusFtype1632Sprite-ftCompressed16{width:16px;height:16px;background-position:0 -48px}
+.lotusFtype1632Sprite-ftContact16{width:16px;height:16px;background-position:0 -72px}
+.lotusFtype1632Sprite-ftData16{width:16px;height:16px;background-position:0 -96px}
+.lotusFtype1632Sprite-ftDataDocs16{width:16px;height:16px;background-position:0 -120px}
+.lotusFtype1632Sprite-ftDefault16{width:16px;height:16px;background-position:0 -144px}
+.lotusFtype1632Sprite-ftFlash16{width:16px;height:16px;background-position:0 -168px}
+.lotusFtype1632Sprite-ftFolder16{width:16px;height:16px;background-position:0 -192px}
+.lotusFtype1632Sprite-ftFolderOpen16{width:16px;height:16px;background-position:0 -216px}
+.lotusFtype1632Sprite-ftGraphic16{width:16px;height:16px;background-position:0 -240px}
+.lotusFtype1632Sprite-ftLink16{width:16px;height:16px;background-position:0 -264px}
+.lotusFtype1632Sprite-ftPage16{width:16px;height:16px;background-position:0 -288px}
+.lotusFtype1632Sprite-ftPdf16{width:16px;height:16px;background-position:0 -312px}
+.lotusFtype1632Sprite-ftPresentation16{width:16px;height:16px;background-position:0 -336px}
+.lotusFtype1632Sprite-ftPresentationDocs16{width:16px;height:16px;background-position:0 -360px}
+.lotusFtype1632Sprite-ftText16{width:16px;height:16px;background-position:0 -384px}
+.lotusFtype1632Sprite-ftVideo16{width:16px;height:16px;background-position:0 -408px}
+.lotusFtype1632Sprite-ftVisualization16{width:16px;height:16px;background-position:0 -432px}
+.lotusFtype1632Sprite-ftWordProcessing16{width:16px;height:16px;background-position:0 -456px}
+.lotusFtype1632Sprite-ftWordProcessingDocs16{width:16px;height:16px;background-position:0 -480px}
+.lotusFtype1632Sprite-ftAudio32{width:32px;height:32px;background-position:0 -504px}
+.lotusFtype1632Sprite-ftCode32{width:32px;height:32px;background-position:0 -544px}
+.lotusFtype1632Sprite-ftCompressed32{width:32px;height:32px;background-position:0 -584px}
+.lotusFtype1632Sprite-ftContact32{width:32px;height:32px;background-position:0 -624px}
+.lotusFtype1632Sprite-ftData32{width:32px;height:32px;background-position:0 -664px}
+.lotusFtype1632Sprite-ftDataDocs32{width:32px;height:32px;background-position:0 -704px}
+.lotusFtype1632Sprite-ftDefault32{width:32px;height:32px;background-position:0 -744px}
+.lotusFtype1632Sprite-ftFlash32{width:32px;height:32px;background-position:0 -784px}
+.lotusFtype1632Sprite-ftFolder32{width:32px;height:32px;background-position:0 -824px}
+.lotusFtype1632Sprite-ftFolderOpen32{width:32px;height:32px;background-position:0 -864px}
+.lotusFtype1632Sprite-ftGraphic32{width:32px;height:32px;background-position:0 -904px}
+.lotusFtype1632Sprite-ftLink32{width:32px;height:32px;background-position:0 -944px}
+.lotusFtype1632Sprite-ftPage32{width:32px;height:32px;background-position:0 -984px}
+.lotusFtype1632Sprite-ftPdf32{width:32px;height:32px;background-position:0 -1024px}
+.lotusFtype1632Sprite-ftPresentation32{width:32px;height:32px;background-position:0 -1064px}
+.lotusFtype1632Sprite-ftPresentationDocs32{width:32px;height:32px;background-position:0 -1104px}
+.lotusFtype1632Sprite-ftText32{width:32px;height:32px;background-position:0 -1144px}
+.lotusFtype1632Sprite-ftVideo32{width:32px;height:32px;background-position:0 -1184px}
+.lotusFtype1632Sprite-ftVisualization32{width:32px;height:32px;background-position:0 -1224px}
+.lotusFtype1632Sprite-ftWordProcessing32{width:32px;height:32px;background-position:0 -1264px}
+.lotusFtype1632Sprite-ftWordProcessingDocs32{width:32px;height:32px;background-position:0 -1304px}
+
+.lotusFtype1632Sprite{background-image:url('../images/lotusFtype1632Sprite-8bit.png');background-repeat:no-repeat;display:-moz-inline-box;display:inline-block}
+.lotusImagesOff .lotusFtype1632Sprite{display:none}

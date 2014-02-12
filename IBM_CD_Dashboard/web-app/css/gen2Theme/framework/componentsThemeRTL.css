@@ -1,0 +1,591 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+*****************************************************************************
+This file contains styles for components
+
+components.css is created by including content from css files located in the
+components directory.
+companion files: components.css / componentsTheme.css
+companion files: componentsRTL.css / componentsThemeRTL.css
+******************************************************************************/
+
+/****************************************/
+/*** C O M P O N E N T   S T Y L E S ****/
+/****************************************/
+
+
+
+
+
+
+
+/*****************************/
+/*** A C T I O N   M E N U ***/
+/*****************************/
+
+
+
+/***********************************************************/
+
+
+
+/*** B R E A D C R U M B S ***/
+/*these sit above the page header (lotusHeader)*/
+
+/***********************************************************/
+
+
+
+/*NOTE: buttons have a lot of overrides to make them consistent across browsers and support deprecated versions.  Be very careful when modifying this code - more code found in deprecated.css*/
+/*** B U T T O N S ***/
+
+
+
+.lotusui30 .lotusBtn, .lotusui30 .lotusBtnImg{border:1px solid #aaa;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	color:#000;}
+.lotusui30 .lotusBtn{padding:3px 7px;}
+.lotusui30 .lotusBtnImg{padding:3px;}
+/*browser size adjustments*/
+.lotusui_ie8 .lotusui30 input.lotusBtn{padding:4px 7px;}
+.lotusui_ie9 .lotusui30 input.lotusBtn{padding:5px 7px;}
+.lotusui_ie .lotusui30 .lotusBtn{padding:1px 7px;}
+.lotusui_ie .lotusui30 .lotusBtnImg{padding:4px 3px;}
+.lotusui30 .lotusBtn:hover, .lotusui30 .lotusBtn:focus, .lotusui30 .lotusBtn:active, .lotusui30 .lotusBtnImg:hover, .lotusui30 .lotusBtnImg:focus, .lotusui30 .lotusBtnImg:active{border-color:#666;}
+
+
+
+/***********************************************************/
+
+
+
+/*** C A L L O U T   B O X ***/
+/*This is the portable pull-quote/callout box area. It can be used on any page.*/
+
+
+
+.lotusui30 .lotusAboutBox{background-color:#e8f0fb;border:1px solid #d1e0f7;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;}
+
+.lotusui30 .lotusWelcomeBox{background-color:#e8f0fb;border:1px solid #d1e0f7;margin-right:0;}
+
+
+
+/***********************************************************/
+
+/*** C L O S E  B U T T O N ***/
+
+
+
+/***********************************************************/
+
+
+/*** C A P T I O N ***/
+/*provides a gray background for a caption above another component*/
+
+/***********************************************************/
+
+
+
+/*** C O M M E N T ***/
+
+
+
+/*----------------------FORUMS------------------------*/
+.lotusui30 .lotusForum .lotusPostDetails blockquote{background-color:#eee;border-color:#DFE4E9;}
+.lotusui30 .lotusForum .lotusPaging{margin:0;padding-right:0;background-color:#fff;border-width:1px 0;border-style:solid;border-color:#ccc;}
+.lotusui30 .lotusForum .lotusPostContent{border-width:0;}
+.lotusui30 .lotusForum .lotusPostDetails blockquote{width:auto;}
+.lotusui_ie6 .lotusui30 .lotusForum .lotusPostDetails blockquote{width:95%;}/*fixes display issues with gray box*/
+.lotusui30 .lotusForum .lotusPostAuthorInfo{padding:5px 15px 10px 10px;background-position:100% -1373px;background-repeat:no-repeat;}
+.lotusui30 .lotusForum .lotusCaption{margin-top:0;background-color:#fff;border-width:0;float:right;}
+.lotusui30 .lotusForum .lotusFeeds{float:left;}
+.lotusui30 .lotusForum .lotusPost{margin-top:0;margin-bottom:10px;padding-top:4px;padding-bottom:4px;background-color:#fff; border:1px solid #ccc;-webkit-box-shadow:0 2px 5px #eee;-moz-box-shadow:0 2px 5px #eee;box-shadow:0px 2px 5px #eee;}
+.lotusui30 .lotusForum ul.lotusCommentList .lotusPost{background-color:#fff;}
+.lotusui30 .lotusForum ul.lotusCommentList .lotusChild{background-color:#fff;border-top-width:0;}
+.lotusui30 .lotusForum ul.lotusCommentList .lotusChild li{margin-right:0;padding:0 5px 0 0;background-color:#fff;background-image:none;background-repeat:repeat-y;}
+.lotusui30 .lotusForum ul.lotusCommentList .lotusChild .lotusActions li{padding:0 7px;border-width:0 1px 0 0;}
+.lotusui30 .lotusForum ul.lotusCommentList .lotusChild .lotusActions li.lotusFirst{padding-right:0;border-right-width:0;}
+.lotusui30 .lotusForum .lotusPostAuthorInfo{text-align:right;}
+.lotusui30 .lotusBoard .lotusStream .lotusPostHover, .lotusui30 .lotusBoard .lotusStream .lotusPostSelected{background-color:#dff0f8;}
+/*we need to reset links that have picked up the lotusMeta color back to their original color*/
+.lotusui30 .lotusBoard .lotusCommentItem > a.lotusMeta{color:#1970B0;}
+.lotusui_ie6 .lotusui30 .lotusBoard .lotusCommentItem a.lotusMeta{color:#1970B0;}
+
+/***********************************************************/
+
+
+/*** D I A L O G ***/
+/*this can be wrapped in a dojo dialog, if desired, which gives you the lightbox behavior for free, else, wrap it in a div assigned the class lotusDialogWrapper*/
+
+
+
+.lotusui30 .lotusDialog .lotusDialogHeader .lotusDialogClose {-moz-border-radius:2px; border-radius:2px;}
+.lotusui30 .lotusDialog .lotusDialogHeader .lotusDialogClose img {opacity:0.4; filter:alpha(opacity=40);}
+.lotusui30 .lotusDialog .lotusDialogHeader .lotusDialogClose:hover img, .lotusui30 .lotusDialog .lotusDialogHeader .lotusDialogClose:focus img, .lotusui30 .lotusDialog .lotusDialogHeader .lotusDialogClose:active img{opacity:0.5; filter:alpha(opacity=50);}
+
+
+
+/***********************************************************/
+
+
+
+/***************************************/
+/*** D I S P L A Y   C O N T R O L S ***/
+/***************************************/
+
+
+
+.lotusui30 .lotusViewControl div{padding:2px;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;}
+
+
+
+/***********************************************************/
+
+
+
+/*** F E E D S **/
+/*the feed links under the content*/
+
+/***********************************************************/
+
+
+
+/*** F I L T E R S **/
+/*the filter links that are removable*/
+
+
+
+
+/*** F L Y O U T **/
+/*The flyout extends from a UI component to provide a preview or additional content*/
+
+/***********************************************************/
+
+
+
+/*** F O R M S ***/
+/*these styles are for inline and popup forms*/
+/*new, div-based form, labels on top or left*/
+
+
+
+.lotusui30 .lotusForm2 .lotusFormFooter {border-width:1px 0 0; border-style:solid; border-color:#aaa;}
+
+
+
+.lotusui30 .lotusForm2 .lotusFormFooter {background-color:#eee;}
+
+
+
+/***********************************************************/
+
+
+
+
+/*** G R I D ***/
+/*for a group of same-sized elements with a div as the outer wrapper*/
+/*for example, a group of people photos*/
+
+/***********************************************************/
+
+
+
+/*** H E A D E R ***/
+/*found at the top of the page, center column*/
+
+
+
+/*----------------------FILTER------------------------*/
+.lotusui30 .lotusHeader .lotusFilters2{margin:5px 0 0;}
+
+/***********************************************************/
+
+
+
+/*** P O P U P   H E L P ***/ 
+
+
+
+/*----------------------POPUP HELP------------------------*/
+.lotusui30 .lotusHelp{background-color:#fff;}
+
+/***********************************************************/
+
+
+
+/*** L E G A L   S T A T E M E N T ***/
+/*IBM logo and legal statement*/
+/*3 different versions - regular pages, login page, and about page*/
+
+
+
+/*-------------------LEGAL-----------------------*/
+.lotusui30 table.lotusLegal{margin:5px auto 10px;}
+.lotusui30 .lotusIBMLogoFooter{display:none;}
+.lotusui30 .lotusLogin .lotusLegal{margin:5px 25px 10px;}
+
+/***********************************************************/
+
+
+
+/*** L I K E ***/
+
+
+
+/***********************************************************/
+
+
+
+/*** L I S T S ***/ 
+/*use in conjuction with sections if you want a more complex list*/
+
+
+
+.lotusui30 ul.lotusList li{padding:1px 0}
+.lotusui30 ul.lotusList li.lotusSelected{background-color:#eee;border-top:1px solid #ccc;border-bottom:1px solid #ccc;}
+.lotusui30 ul.lotusList li.lotusSelected a, .lotusui30 ul.lotusList li.lotusSelected a:visited{color:#000;}
+
+/***********************************************************/
+
+
+
+/*** M E D I A   V I E W E R ***/
+
+/***********************************************************/
+
+
+
+/*** M E G A  M E N U **/
+/*these are a type of dropdown used for global navigation*/
+
+
+
+.lotusui30 .lotusNavMenu {border-top-width:0;}
+
+
+
+/***********************************************************/
+
+
+
+/*** M E N U ***/
+/*this menu is set up to allow for rounded corners in all browsers and is a set width*/
+
+                                                                                                                      
+
+.lotusui30 .lotusMenu{width:auto;margin:0 0 25px;padding:0;background-color:transparent;border-width:0;}
+.lotusui30 .lotusMenu .lotusMenuSection{border-color:#ccc;}
+.lotusui30 .lotusMenu li a, .lotusui30 .lotusMenu .lotusMenuHeader{margin:0;padding:3px 20px 5px 10px;border-width:0;font-weight:bold;}
+.lotusui30 .lotusMenu li a, .lotusui30 .lotusMenu li a:visited, .lotusui30 .lotusMenu li a:hover, .lotusui30 .lotusMenu li a:active{color:#000;text-decoration:none;}
+.lotusui30 .lotusMenu li a:focus{text-decoration:underline;}/*for accessibility, since focus outline isn't visible in this theme*/
+.lotusui30 .lotusMenu .lotusMenuSubsection a{font-weight:normal;}
+.lotusui30 .lotusMenu li.lotusSelected a, .lotusui30 .lotusMenu .lotusHeaderSelected{margin:0;padding-right:20px;border-width:1px 0;}
+.lotusui30.lotusImagesOff .lotusMenu li.lotusSelected a, .lotusImagesOff .lotusui30 .lotusMenu li.lotusSelected a, .lotusui30.lotusImagesOff .lotusMenu .lotusHeaderSelected, .lotusImagesOff .lotusui30 .lotusMenu .lotusHeaderSelected{border-width:1px;}
+.lotusui30 .lotusMenu .lotusMenuHeader a, .lotusui30 .lotusMenu .lotusMenuHeader a:visited, .lotusui30 .lotusMenu .lotusMenuHeader a:hover, .lotusui30 .lotusMenu .lotusMenuHeader a:focus, .lotusui30 .lotusMenu .lotusMenuHeader a:active{color:#000;text-decoration:none;}
+.lotusui30 .lotusMenu .lotusMenuHeader a.lotusArrow{right:4px;top:4px;}
+.lotusui30 .lotusMenu .lotusAction{margin-right:20px;margin-bottom:5px;}
+.lotusui30 .lotusMenu .lotusMenuSubsection{margin:0;padding-top:0;}
+.lotusui30 .lotusMenu .lotusMenuSubsection{padding-right:0;}/*allows you to indent a section of the menu*/
+.lotusui30 .lotusMenu .lotusMenuSubsection li.lotusSelected a{margin-right:0;padding-right:20px;}
+.lotusui30.lotusImagesOff .lotusMenu .lotusMenuSubsection li.lotusSelected a, .lotusImagesOff .lotusui30 .lotusMenu .lotusMenuSubsection li.lotusSelected a{padding-right:15px;}
+.lotusui30 .lotusMenu ul.lotusIcons a{ padding-right: 39px; }
+.lotusui30 .lotusMenu ul.lotusIcons img, .lotusui30 .lotusMenu ul.lotusIcons .lotusSelected img{right:19px;}
+.lotusui30 .lotusMenu ul.lotusIcons .lotusSelected a{ padding-right: 39px; }
+.lotusui30 .lotusMenu .lotusMenuSubsection ul.lotusIcons a{ padding-right: 39px; }
+.lotusui30 .lotusMenu .lotusMenuSubsection ul.lotusIcons .lotusSelected a{padding-right: 39px; }
+.lotusui30.lotusImagesOff .lotusMenu .lotusMenuSubsection ul.lotusIcons a, .lotusImagesOff .lotusui30 .lotusMenu .lotusMenuSubsection ul.lotusIcons a, .lotusui30.lotusImagesOff .lotusMenu .lotusMenuSubsection ul.lotusIcons .lotusSelected a, .lotusImagesOff .lotusui30 .lotusMenu .lotusMenuSubsection ul.lotusIcons .lotusSelected a{padding-right:20px;}
+
+
+
+.lotusui30 .lotusMenu li.lotusSelected a, .lotusui30 .lotusMenu .lotusHeaderSelected {color:#fff; background:#324f76; border-color:#1e2f47;
+	background:-moz-linear-gradient(#6f849f 0%, #283f5e 100%);
+	background:-webkit-gradient(linear, left top, left bottom, from(#6f849f), to(#283f5e));}
+.lotusui30 .lotusMenu li.lotusSelected a, .lotusui30 .lotusMenu li.lotusSelected a:visited, .lotusui30 .lotusMenu li.lotusSelected a:hover, .lotusui30 .lotusMenu li.lotusSelected a:focus, .lotusui30 .lotusMenu li.lotusSelected a:active, .lotusui30 .lotusMenu .lotusHeaderSelected a, .lotusui30 .lotusMenu .lotusHeaderSelected a:visited, .lotusui30 .lotusMenu .lotusHeaderSelected a:hover, .lotusui30 .lotusMenu .lotusHeaderSelected a:focus, .lotusui30 .lotusMenu .lotusHeaderSelected a:active{color:#fff;}
+.lotusui30 .lotusMenu .lotusHeaderSelected .lotusTwistyOpenMenu{background-position:4px -1256px;opacity:1;filter:alpha(opacity=100);}/*the section is selected*/
+.lotusui30 .lotusMenu .lotusHeaderSelected .lotusTwistyClosedMenu{background-position:4px -1304px;opacity:1;filter:alpha(opacity=100);}
+.lotusui30 .lotusMenu .lotusUnreadBadge{background-color:#5F7797;}
+
+
+
+/***********************************************************/
+
+
+/*** M E S S A G E S ***/
+/*these are the yellow warning/error messages that show up at the top of the content area*/
+
+
+
+/*chained lotusMessage2 class is to up specificity so the deprecated message styles don't trump them*/
+.lotusui30 .lotusMessage2{background-color:#ffe3e0;border-color:#efa6a5;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+.lotusui30 .lotusMessage2.lotusWarning{background-color:#ffffbc;border-color:#f6e692;}
+.lotusui30 .lotusMessage2.lotusInfo{background-color:#e6f1fe;border-color:#b9cfeb;}
+.lotusui30 .lotusMessage2.lotusSuccess {background-color:#ecf9df;border-color:#c8e2b8;}
+
+
+
+/***********************************************************/
+
+
+
+/*** P A G I N G ***/
+/*these are the page bars at the top and bottom of a table/list of entries*/
+
+
+
+.lotusui30 .lotusPaging {margin:5px 0;}
+.lotusui30 .lotusPaging, 
+.lotusui30 .lotusPaging ul li, 
+.lotusui30 .lotusPaging div, 
+.lotusui30 .lotusPaging input {color:#222;}
+
+
+
+.lotusui30 .lotusPaging {background-color:#fafafa; border:1px solid #ccc;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;}
+
+
+
+/***********************************************************/
+
+
+
+/*** P A L E T T E ***/
+/*this is the palette that opens under the place bar to allow users to customize the UI */
+
+
+
+.lotusui30 .lotusPalette{border-bottom-width:0;}
+.lotusui30 .lotusPaletteHeader{border-top-width:0;border-bottom:4px solid #2a2a2a;padding:5px 10px 0;}
+.lotusui30 .lotusPaletteHeader .lotusRight, 
+.lotusui30 .lotusPaletteHeader .lotusClose{margin-top:7px;}
+.lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu li.lotusSelected, 
+.lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu li.lotusSelected a{color:#fff;}
+.lotusui30 .lotusPaletteHeader ul.lotusTabs{margin-top:5px;}
+.lotusui30 .lotusPaletteHeader ul.lotusTabs li a, 
+.lotusui30 .lotusPaletteHeader ul.lotusTabs li a:visited{display:block;margin:0;padding:9px 10px;background-color:#414648;border-width: 1px 1px 0 1px;border-style:solid;border-color: #2a2a2a;float:right;}
+.lotusui30 .lotusPaletteBody{margin-bottom:0;border-width:0;}
+.lotusui30 .lotusPaletteNav{padding:0 10px;height:auto;}
+.lotusui30 .lotusPalette .lotusChunk, 
+.lotusui30 .lotusPalette .lotusPaletteNavHeader, 
+.lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu{margin:10px 0;width:auto;}
+.lotusui30 .lotusPaletteContent{padding:10px 20px 10px 10px;}
+.lotusui30 .lotusPalette .lotusClose{padding:3px;}
+.lotusui30 .lotusPalette .lotusSearch input.lotusText{margin:0 0 0 4px;width:158px;}
+
+
+
+.lotusui30 .lotusPaletteHeader ul.lotusTabs li.lotusSelected a, .lotusui30 .lotusPaletteHeader ul.lotusTabs li.lotusSelected a:visited {background-color:#2a2a2a;}
+.lotusui30 .lotusPalette .lotusBtnImg, .lotusui30 .lotusPalette .lotusSearch .lotusBtnImg{border:1px solid #fff;}
+.lotusui30 .lotusPalette .lotusPaletteNav .lotusMenu li.lotusMore a{background-position:6px -565px;opacity:1;filter:alpha(opacity=100)/*reset opacity*/}
+
+
+
+/***********************************************************/
+
+
+
+/*** P O P U P ***/
+
+/***********************************************************/
+
+
+/*** S E A R C H ***/
+
+
+
+.lotusui30 .lotusSearch .lotusScope, .lotusui30 .lotusSearch .lotusText, .lotusui30 .lotusSearch .dijitTextBox {border-color:#aaa;}
+.lotusui30 .lotusSearch .lotusText {padding-top:3px; padding-bottom:4px;}
+.lotusui30 .lotusSearch .lotusScope {padding-top:3px; padding-bottom:3px;}
+.lotusui30 .lotusSearch .lotusSearchButton {color:#000;}
+
+
+
+.lotusui30 .lotusSearch .lotusBtnImg {padding:3px;}
+.lotusui30 .lotusSearch a.lotusScope:hover, .lotusui30 .lotusSearch a.lotusScope:focus, .lotusui30 .lotusSearch a.lotusScope:active {background-color:#283f5e;}
+
+
+
+/***********************************************************/
+
+
+
+/*** S E A R C H   T A B ***/
+/*this is the UI for a search/find control that hides the input fields until the user opens them*/
+/*this must be inside a relatively positioned div - override default positioning in the code, if necessary*/
+
+
+
+.lotusui30 .lotusSearchForm .lotusSearchButton{color:#000;}
+
+.lotusui30 .lotusSearchTab{padding:2px 6px 4px 8px;border-color:#aaa;background-color:#f1f1f1;background-image:-moz-linear-gradient(top, #ffffff 0%, #ebebeb 100%);background-image:-webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ebebeb));-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;}
+.lotusui30 .lotusTabExpanded{-moz-border-radius:0;-webkit-border-radius:0;border-radius:0;-moz-border-radius-topright:2px;-moz-border-radius-topleft:2px;-webkit-border-top-left-radius:2px;-webkit-border-top-right-radius:2px;border-top-right-radius:2px;border-top-left-radius:2px;}
+.lotusui30 .lotusSearchTab a, .lotusui30 .lotusSearchTab a:visited{padding-left:12px;font-size:0.9em;line-height:1.7;}
+.lotusui30 .lotusSearchTab a, .lotusui30 .lotusSearchTab a:visited, .lotusui30 .lotusSearchTab a:hover, .lotusui30 .lotusSearchTab a:focus, .lotusui30 .lotusSearchTab a:active { text-decoration: none; }
+.lotusui30 form.lotusSearchForm{z-index:1;-moz-border-radius:0px;-webkit-border-radius:0px;border-radius:0px;-webkit-box-shadow:0px 2px 5px #eee;-moz-box-shadow:0px 2px 5px #eee;box-shadow:0px 2px 5px #eee;}
+.lotusui30 .lotusSearchForm .lotusBtnImg{padding:3px;}
+.lotusui30 .lotusSearchForm input.lotusText{padding-top:3px;padding-bottom:4px;}
+
+/***********************************************************/
+
+
+
+/*S E C T I O N */
+/*this is used to space out different elements in all three columns*/
+/*a section contains a header*/
+
+
+
+.lotusui30 .lotusSection2{margin:0 0 20px;padding:0;}
+.lotusui30 .lotusSectionPlain .lotusSectionHeader{border-width:0;background-image:none;}
+.lotusui30 .lotusSection2 .lotusSectionHeader .lotusArrow{padding-right:5px}
+.lotusui30 .lotusSection2 .lotusSectionHeader .lotusIcon{padding:5px 0}
+.lotusui30 .lotusSection2 .lotusDragHandle{right:0; top:4px;}
+.lotusui30 .lotusSection2 .lotusSectionBody{margin:0;}
+.lotusui30 .lotusSection2 .lotusSubheader .lotusIcon{padding-left:0;}
+.lotusui30 .lotusSection2 .lotusChunk{margin-top:0;margin-bottom:5px;}
+.lotusui30 .lotusSection2 .lotusSectionFooter{border-top:1px solid #eee;}
+.lotusui30 .lotusSection2 .lotusSectionFooter .lotusPaging{margin:0;}
+
+
+
+.lotusui30 .lotusSection2 {border:1px solid #ccc;box-shadow:0 3px 5px #eee;-webkit-box-shadow:#eee 0 3px 5px;-moz-box-shadow:#eee 0 3px 5px;border-top-left-radius:3px;border-top-right-radius:3px;-moz-border-radius-topright:3px;-moz-border-radius-topleft:3px;-webkit-border-top-right-radius:3px;-webkit-border-top-left-radius:3px;border-top-right-radius:3px;border-top-left-radius:3px;background-color:#fff;}
+.lotusui30 .lotusSection2 .lotusSectionHeader {border-bottom:1px solid #ccc;background-color:#f4f4f4;background-image:none;background-image:-moz-linear-gradient(top, #f4f4f4 0%, #eaeaea 100%);background-image:-webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#eaeaea));background-position:left top;}
+.lotusui30 .lotusSection2 .lotusHeading, .lotusui30 .lotusSection2 .lotusHeading2{font-size:1em;color:#000;}
+.lotusui30 .lotusSection2 .lotusSectionBody {padding:5px 10px;}
+/*lists within a section*/
+.lotusui30 .lotusSection2 .lotusList {margin:0 -10px;} /*allows selection to extend to the left and right of the list items*/
+.lotusui30 .lotusSection2 .lotusList li {padding-right:10px; padding-left:10px;}
+
+/*needs to go at the end to override border and shadow*/
+.lotusui30 .lotusSectionPlain{border-width:0;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;background-color:transparent;}
+
+
+
+/****************************************************************/
+
+
+
+/*** S O R T ***/
+/*these are for the sort controls found at the top of a table/list of entries*/
+
+
+
+/****************************************************************/
+
+
+
+/*** T A B L E S ***/
+
+
+
+.lotusui30 .lotusInfoTable{-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;background-color:#fff;-webkit-box-shadow:0 2px 5px #eee;-moz-box-shadow:0 2px 5px #eee;box-shadow:0 2px 5px #eee;}
+.lotusui30 .lotusInfoTable td, .lotusui30 .lotusInfoTable th{border-width:0;}
+.lotusui30 .lotusTable .lotusAltRow td, .lotusui30 .lotusTable .lotusAltRow th.lotusRowHeader{background-color:transparent;}
+
+
+
+.lotusui30 .lotusTable .lotusForm2 {background-color:#f4f5f6;}
+
+
+
+/****************************************************************/
+
+
+
+/*** T A B S ***/
+/*tabs are used in content area and titlebar.  The style adjustments needed for the titlebar are grouped with the titleBar styles*/
+
+
+
+.lotusui30 .lotusTabs li{padding:0;background-color:#fff;border-color:#ccc;}
+.lotusui30 .lotusTabs li.lotusSelected{border-color:#aaa #aaa #fff;}
+
+
+
+/****************************************************************/
+
+
+/*** T A G   C L O U D ***/
+/*a tag cloud is a visual way of displaying the relative importance of tags, with lotusF1 being of least importance and lotusF5 being most important*/
+
+
+
+.lotusui30 a.lotusF5, .lotusui30 a.lotusF5:visited{color:#008abf}
+.lotusui30 a.lotusF4, .lotusui30 a.lotusF4:visited{color:#003f69}
+.lotusui30 a.lotusF3, .lotusui30 a.lotusF3:visited{color:#003f69}
+.lotusui30 a.lotusF2, .lotusui30 a.lotusF2:visited{color:#00649d}
+.lotusui30 a.lotusF1, .lotusui30 a.lotusF1:visited{color:#00649d}
+
+/***********************************************************/
+
+
+
+/*** T I P S ***/ 
+
+
+
+.lotusui30 .lotusTips{border-color:#efd159;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+
+
+
+/***********************************************************/
+
+
+
+/*** T R E E ***/ /*needs review - need additional tree visuals from Jason*/
+
+/***********************************************************/
+
+
+
+
+/*** V C A R D (P E R S O N   C A R D)***/
+/*this is the popup person card that shows up when you click on a person link (via a hover link)*/
+
+
+
+.lotusui30 .lotusVCard a:link, .lotusui30 .lotusVCard a:visited, .lotusui30 .lotusVCard a:hover, .lotusui30 .lotusVCard a:focus, .lotusui30 .lotusVCard a:active{color:#1970B0}
+.lotusui30 .lotusVCard .lotusAppLinks td{background-color:#f1f1f1;background-image:-moz-linear-gradient(top, #ffffff 0%, #ebebeb 100%);background-image:-webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ebebeb));background-position:top left;}
+.lotusui30 .lotusVCard .lotusActionMenu a, .lotusui30 .lotusVCard .lotusActionMenu a:visited{color:#000;}
+/*new adjustments*/
+.lotusui30 .lotusVCard .lotusPhoto{border-color:#ccc;background-color:#fff;}
+.lotusui30 .lotusVCard .lotusAppLinks td{border-color:#ccc;}
+.lotusui30 .lotusVCard .lotusDetails{background-color:#fafafa;border-top-width:0;}
+
+
+
+/***********************************************************/
+
+/*** V C A R D   H O V E R ***/
+/*this is the hover link that shows when you hover over a person's name and allows you to open their profile card*/
+
+
+
+/***********************************************************/
+
+
+
+
+/*** I C O N S ***/
+
+.lotusui30 .lotusIconLike,
+.lotusui30 .lotusIconMsgSuccess,
+.lotusui30 .lotusIconMsgError,
+.lotusui30 .lotusIconMsgInfo,
+.lotusui30 .lotusIconMsgWarning {background-image:url(../../images/lotusHSprite-8bit.png);width:16px;height:16px;background-repeat:no-repeat;display:-moz-inline-box;display:inline-block;}
+
+.lotusui30 .lotusIconLike {background-position:-88px -8px;}
+.lotusui30 .lotusIconMsgSuccess {background-position:0 -8px;}
+.lotusui30 .lotusIconMsgError {background-position:-22px -8px;}
+.lotusui30 .lotusIconMsgInfo {background-position:-44px -8px;}
+.lotusui30 .lotusIconMsgWarning {background-position:-66px -8px;}
+

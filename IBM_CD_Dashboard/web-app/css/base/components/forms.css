@@ -1,0 +1,89 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for forms
+companion files: forms.css / formsTheme.css
+companion files: formsRTL.css / formsThemeRTL.css*/
+/*** F O R M S ***/
+/*these styles are for inline and popup forms*/
+/*new, div-based form, labels on top or left*/
+
+.lotusui30 .lotusForm2{margin:0;padding:0;zoom:1;background-color:transparent;}
+.lotusui30 .lotusForm2 .lotusMessage2{top:20px;margin:20px;}/*global error messages*/
+.lotusui30 .lotusForm2 .lotusFormTitle{padding:15px 20px}
+.lotusui30 .lotusForm2 .lotusFormBody{padding:0 20px 10px;}
+.lotusui30 .lotusForm2 .lotusFormTitle .lotusHeading{font-size:1.3em;font-weight:bold;color:#222;}/*extra specificity here so if the form sits in a table it doesn't use the table lotusHeading size*/
+.lotusui_ie .lotusui30 .lotusForm2 .lotusFormTitle .lotusHeading{float:none;/*override for when form is in a section*/}
+.lotusui30 .lotusForm2 .lotusFormTitle .lotusMeta{font-size:1em;}
+.lotusui30 .lotusForm2 label, .lotusui30 .lotusForm2 .lotusFormLabel{display:block;margin-bottom:3px;color:#222;}/*lotusFormLabel is used when you want text that looks like a label but isn't really.  Chances are you would use a section header or fieldset legend instead, but this gives you another option*/
+.lotusui_ie8 .lotusui30 .lotusForm2 label .lotusIcon img,
+.lotusui_ie8 .lotusui30 .lotusForm2 .lotusFormLabel .lotusIcon img,
+.lotusui_ie9 .lotusui30 .lotusForm2 label .lotusIcon img,
+.lotusui_ie9 .lotusui30 .lotusForm2 .lotusFormLabel .lotusIcon img{vertical-align:text-top;}/*better alignment than the icon hanging below the label which middle alignment does*/
+.lotusui30 .lotusForm2 .lotusFormRequired{margin-right:3px;}
+.lotusui30 .lotusForm2 fieldset{margin:0;padding:0;border-width:0;min-width:271px;float:left;}/*this allows us to use fieldsets for non-sighted users, only*/
+.lotusui30 .lotusForm2 .lotusFieldset{padding:0 5px 5px 5px;border:1px solid #aaa;}/*assign this to a fieldset you want to display*/
+.lotusui30 .lotusForm2 fieldset legend{padding-left:0;padding-right:0;margin-bottom:2px;color:#222;font-weight:normal;}
+.lotusui30 .lotusForm2 .lotusFieldset legend{padding-left:2px;padding-right:2px;}
+/*adjustments to checkbox/radio buttons for better x-browser alignment*/
+.lotusui30 .lotusForm2 input.lotusCheckbox{width:13px;height:13px;margin:0 3px 0 0;padding:0;vertical-align:bottom;position:relative;top:-3px;}
+.lotusui_ie .lotusui30 .lotusForm2 input.lotusCheckbox{top:-5px;margin-right:6px;}
+.lotusui_ie .lotusui30 .lotusForm2 .lotusFieldset input.lotusCheckbox{top:-2px;} 
+.lotusui_ie9 .lotusui30 .lotusForm2 input.lotusCheckbox{top:-2px;}
+.lotusui30 .lotusForm2 label.lotusCheckbox{display:inline;}/*use for radio buttons, too*/
+.lotusui30 .lotusForm2 .lotusFormField{margin-bottom:10px;overflow:hidden;clear:both;zoom:1;}
+.lotusui30 .lotusForm2 .lotusFormField .lotusMeta{margin-top:5px;}
+.lotusui30 .lotusFormField .lotusFieldWrapper{float:left;/*this is to allow an error or help icon to align top*/}
+.lotusui30 .lotusForm2 fieldset .lotusFieldWrapper{float:none;}
+.lotusui30 .lotusForm2 .lotusText, .lotusui30 .lotusForm2 textarea, .lotusui30 .lotusForm2 select{width:275px;border:1px solid #aaa;padding:3px;}
+.lotusui30 .lotusForm2 textarea.lotusText{overflow:auto;}/*removes textarea scrollbars in IE unless they are needed*/
+.lotusui30 .lotusForm2 select{padding:1px 0;width:283px;}/*reset this to look better*/
+.lotusui30 .lotusForm2 .lotusFormFooter{padding:10px 20px;background-color:#eee;}
+.lotusui30 .lotusForm2 .lotusFormFooter .lotusBtn{margin-right:10px;}
+.lotusui_ie .lotusui30 .lotusForm2 .lotusBtn{padding:1px 7px;width:auto;overflow:visible;}/*IE button padding hack (and reset button padding from default)*/
+.lotusui_ie7 .lotusui30 .lotusForm2 input.lotusCheckbox{margin-left:-3px}/*fixes IE 3px margin jog bug - we aren't fixing in IE6 or IE8 because the checkboxes are different from the radio buttons in left alignment and this fix brings the checkbox too far to the left*/
+.lotusui_ie .lotusui30 .lotusForm2 legend, .lotusui_ie8 .lotusui30 .lotusForm2 legend{margin-left:-6px}/*align legend with content when there's no border*/
+.lotusui_ie .lotusui30 .lotusForm2 .lotusFieldset input.lotusCheckbox, .lotusui_ie .lotusui30 .lotusForm2 .lotusFieldset legend, .lotusui_ie8 .lotusui30 .lotusForm2 .lotusFieldset input.lotusCheckbox, .lotusui_ie8 .lotusui30 .lotusForm2 .lotusFieldset legend{margin-left:0}/*reset*/
+
+/*forms with labels to the left - lotusLeftLabels is an additional class beside lotusForm2*/
+/* this version of the form has adjustments to padding to get the required field indicators to hang*/
+.lotusui30 .lotusLeftLabels .lotusFormBody{padding-left:10px}
+.lotusui30 .lotusLeftLabels label, .lotusui30 .lotusLeftLabels .lotusFormLabel{margin-left:10px;padding-right:10px;float:left;width:120px;position:relative;word-wrap:break-word;zoom:1;}/*lotusFormLabel is an extra label like a fieldset legend*/
+.lotusui30 .lotusLeftLabels .lotusFormRequired{position:absolute;left:-8px;}
+/*use lotusIndent for items needed to align with the form elements, when there isn't a left label*/
+.lotusui30 .lotusLeftLabels .lotusIndent{margin-left:140px;}
+.lotusui_ie6 .lotusui30 .lotusLeftLabels .lotusIndent{margin-left:150px;}
+.lotusui30 .lotusLeftLabels label.lotusCheckbox{margin-left:0;padding-right:3px;float:none;width:auto;}
+.lotusui30 .lotusLeftLabels fieldset input.lotusCheckbox{margin-left:0;}
+.lotusui30 .lotusLeftLabels .lotusFormField .lotusMeta{width:275px;/*this needs to match the width of form fields*/}
+
+/*form sections*/
+.lotusui30 .lotusForm2 .lotusFormSection{margin-top:30px}
+.lotusui_ie6 .lotusui30 .lotusForm2 .lotusFormBody .lotusFormSectionHeader .lotusArrow{overflow:hidden;}
+.lotusui30 .lotusForm2 .lotusFormBody .lotusFormSectionHeader .lotusHeading2{font-size:1.1em;float:none;/*override for when form is in a section*/}
+.lotusui30 .lotusForm2 .lotusFormSectionHeader .lotusMeta{font-size:1em;}
+.lotusui30 .lotusForm2 .lotusFormSectionHeader .lotusHeading2 a, .lotusui30 .lotusForm2 .lotusFormSectionHeader .lotusHeading2 a:visited, .lotusui30 .lotusForm2 .lotusFormSectionHeader .lotusHeading2 a:hover, .lotusui30 .lotusForm2 .lotusFormSectionHeader .lotusHeading2 a:focus, .lotusui30 .lotusForm2 .lotusFormSectionHeader .lotusHeading2 a:active{color:#222;text-decoration:none;}
+.lotusui30 .lotusForm2 .lotusFormSectionBody{padding-top:10px;padding-left:15px;clear:both;}
+
+/*form errors*/
+/*lotusFormError applies to older form styles, it is for a message that shows up above a field in error or for an error message at the top of a smaller form.  For messages at the top of a larger form or dialog, use an error message component*/
+.lotusui30 .lotusForm2 .lotusFormError{color:#ce2c25;}/*for error text not in a message component*/
+.lotusui30 .lotusForm2 .lotusFormErrorIcon{visibility:hidden;display:inline-block;margin-left:5px;font-weight:bold;color:#ce2c25/*alt text*/;}/*displays next to a field*/
+.lotusui30 .lotusForm2 fieldset.lotusFieldset + span.lotusFormErrorIcon{margin-top:8px;}/*this is the error icon for a radio or checkbox group with a visible fieldset*/
+.lotusui30 .lotusForm2 .lotusFormErrorField{border:1px solid #ce2c25;}
+.lotusui30 .lotusForm2 fieldset.lotusFormErrorField{padding:5px;}
+/*the fieldset top border disappears when the legend isn't visible. Using progressive enhancement (and advanced CSS selectors) we can create fallback styling*/
+/*all fieldsets in error in IE get a background color instead of a border*/
+.lotusui_ie .lotusui30 .lotusForm2 fieldset.lotusFormErrorField, .lotusui_ie8 .lotusui30 .lotusForm2 fieldset.lotusFormErrorField{border-width:0;background-color:#ffe3ed;}
+/*IE7 and up browsers get a red border on a visible fieldset*/
+.lotusui_ie7 .lotusui30 .lotusForm2 fieldset.lotusFieldset.lotusFormErrorField, .lotusui_ie8 .lotusui30 .lotusForm2 fieldset.lotusFieldset.lotusFormErrorField{border:1px solid #ce2c25;background-color:transparent;}
+
+
+
+
+
+
+
+/***********************************************************/
+

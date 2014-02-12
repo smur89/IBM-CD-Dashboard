@@ -1,0 +1,89 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for section
+companion files: section.css / sectionTheme.css
+companion files: sectionRTL.css / sectionThemeRTL.css*/
+/*S E C T I O N */
+/*this is used to space out different elements in all three columns*/
+/*a section contains a header*/
+
+.lotusui30 .lotusSection2{margin:0 0 15px -3px;clear:both;zoom:1;position:relative;}
+/*main section header - other headers are part of the section body*/
+/*reset how the arrow sprite is defined (to accommodate making the lotusArrow link display:table-cell*/
+.lotusui30 .lotusSection2 .lotusArrow{background-image:none;}/*takes the background image off of the link*/
+.lotusui30 .lotusSection2 .lotusArrow img{background-image:url(../../images/lotusSprite-8bit.png);background-repeat:no-repeat;width:16px;height:16px;vertical-align:top;}/*moves the background image onto the image*/
+.lotusui30 .lotusSection2 .lotusSectionHeader{display:table;width:100%;}/*ie6 and 7 don't support display:table, so we will make adjustments to use floats.  The table solution is more optimal for long header text wrapping/image alignment */
+.lotusui30 .lotusSection2 .lotusSectionHeader .lotusInner{display:table-row;}/*extra styling flexibility*/
+/*twisty arrow, for collapsable sections*/
+/*twisty sprite definitions are in base.css*/
+.lotusui30 .lotusSection2 .lotusSectionHeader a.lotusArrow, .lotusui30 .lotusSection2 .lotusSectionHeader a.lotusArrow:visited, .lotusui30 .lotusSection2 .lotusSectionHeader a.lotusArrow:hover, .lotusui30 .lotusSection2 .lotusSectionHeader a.lotusArrow:focus, .lotusui30 .lotusSection2 .lotusSectionHeader a.lotusArrow:active{padding:5px 0 5px 5px;width:16px;display:table-cell;float:none;vertical-align:top;text-decoration:none}
+.lotusui_ie .lotusui30 .lotusSection2 .lotusSectionHeader a.lotusArrow, .lotusui_ie .lotusui30 .lotusSection2 .lotusSectionHeader a.lotusArrow:visited, .lotusui_ie .lotusui30 .lotusSection2 .lotusSectionHeader a.lotusArrow:hover, .lotusui_ie .lotusui30 .lotusSection2 .lotusSectionHeader a.lotusArrow:focus, .lotusui_ie .lotusui30 .lotusSection2 .lotusSectionHeader a.lotusArrow:active{float:left;}
+.lotusui30.lotusImagesOff .lotusSection2 .lotusArrow img, .lotusImagesOff .lotusui30 .lotusSection2 .lotusArrow img{margin-top:0;}/*TODO: do we need this?*/
+/*heading text*/
+.lotusui30 .lotusSection2 .lotusHeading{padding:5px 5px 5px 0;font-size:1.2em;font-weight:bold;display:table-cell;vertical-align:middle;}/*assigned to the h2 tag or equivalent*/
+.lotusui30 .lotusSection2 .lotusHeading a, .lotusui30 .lotusSection2 .lotusHeading a:visited, .lotusui30 .lotusSection2 .lotusHeading a:hover, .lotusui30 .lotusSection2 .lotusHeading a:focus, .lotusui30 .lotusSection2 .lotusHeading a:active{color:#222;}
+.lotusui_ie .lotusui30 .lotusSection2 .lotusHeading{padding-left:1px;/*text is being clipped*/float:left;width:70%;}/*header text*/
+.lotusui30.lotusImagesOff .lotusSection2 .lotusHeading, .lotusImagesOff .lotusui30 .lotusSection2 .lotusHeading{margin-right:10px;}/*we need more room for text in place of the action icon*/
+.lotusui30 .lotusSection2 .lotusSectionHeader .lotusFirst{padding-left:10px;}/*add along with lotusHeading class when sections don't have a twisty arrow*/
+/*action icons*/
+.lotusui30 .lotusSection2 .lotusSectionHeader .lotusIcon{padding:4px 0;display:table-cell;vertical-align:top;width:22px;background-repeat:no-repeat;}/*this is the action menu icon*/
+.lotusui_ie .lotusui30 .lotusSection2 .lotusSectionHeader .lotusIcon{float:right;}
+.lotusui30 .lotusSection2 .lotusSectionHeader .lotusActionIcon img{width:16px;height:16px;background-image:url(../../images/lotusHSprite-8bit.png);background-position:-499px -9px;opacity:0.45;filter:alpha(opacity=45)/*45% is the min opacity for meeting contrast requirements on white/off-white background*/}
+.lotusui30.lotusImagesOff .lotusSection2 .lotusHeading .lotusIcon, .lotusImagesOff .lotusui30 .lotusSection2 .lotusHeading .lotusIcon{width:auto;height:auto;}/*settings for alternate text*/
+/*for multiple icons*/
+.lotusui30 .lotusSection2 .lotusSectionHeader .lotusIcons img{margin-left:3px;}
+/*subheader before section body*/
+.lotusui30 .lotusSection2 .lotusSubheader{padding:7px 10px;overflow:hidden;color:#444;border-bottom:1px solid #eee;}
+.lotusui30 .lotusSection2 .lotusSubheader .lotusHeading2{font-size:1em;font-weight:normal;}
+/*the section body*/
+.lotusui30 .lotusSection2 .lotusSectionBody{margin:0 0 0 15px;padding:0 0 5px 0;}
+/*subheader within a section body.  With or without a twisty, optional help icon*/
+.lotusui30 .lotusSection2 .lotusSectionBody .lotusSubheader{margin-top:5px;margin-bottom:5px;padding:0 5px 0 0;border-width:0;}
+.lotusui30 .lotusSection2 .lotusSectionBody .lotusSubheader .lotusArrow{float:left;margin-left:-3px;}
+.lotusui30 .lotusSection2 .lotusSectionBody .lotusHeading2{float:left;width:85%;font-size:1.1em;font-weight:bold;}
+.lotusui30 .lotusSection2 .lotusSectionBody .lotusHeading2 a, .lotusui30 .lotusSection2 .lotusSectionBody .lotusHeading2 a:visited, .lotusui30 .lotusSection2 .lotusSectionBody .lotusHeading2 a:hover, .lotusui30 .lotusSection2 .lotusSectionBody .lotusHeading2 a:focus, .lotusui30 .lotusSection2 .lotusSectionBody .lotusHeading2 a:active{color:#000;}
+.lotusui30 .lotusSection2 .lotusSectionBody .lotusSubheader .lotusIcon{float:right;padding-right:5px;padding-top:2px;}
+.lotusui_ie .lotusui30 .lotusSection2 .lotusSectionBody .lotusSubheader .lotusIcon{padding-top:5px;}
+.lotusui30 .lotusSection2 div.lotusChunk, .lotusui30 .lotusSection2 div.lotusSubsection{margin-top:5px;clear:both;zoom:1;}
+.lotusui30 .lotusSection2 .lotusLast{margin-bottom:0;}/*gets rid of extra bottom margin on the last "subsection"*/
+/*scrolling*/
+.lotusui30 .lotusSection2 .lotusSectionScroll{overflow:hidden;clear:both;}
+.lotusui30 .lotusSection2 .lotusSectionScroll a{margin:0 auto;float:none;}
+.lotusui30.lotusImagesOff .lotusSection2 .lotusSectionScroll, .lotusImagesOff .lotusui30 .lotusSection2 .lotusSectionScroll{overflow:visible;padding-bottom:3px;}
+/*drag handle, for draggable section*/
+.lotusui30 .lotusSection2 .lotusDraggable{cursor:default;}
+.lotusui30 .lotusSection2 .lotusDragHandle{width:9px;height:17px;position:absolute;left:-7px;top:5px;background:url(../../images/lotusHSprite-8bit.png) -462px -8px no-repeat;zoom:1;cursor:move;visibility:hidden;}/*we may want to move this outside of a section and make it a more general class.  It must be positioned within a relative div*/
+/*footer*/
+.lotusui30 .lotusSection2 .lotusSectionFooter{padding:7px 10px;border-top:1px solid #eee;clear:both;zoom:1}
+/*adjustments for components within a section*/
+.lotusui30 .lotusSection2 .lotusTagCloud{width:100%; overflow:hidden;}/*to fix issues with the tag cloud overflowing the section container*/
+/*lists in sections and widgets*/
+.lotusui30 .lotusSection2 .lotusList{margin:0 0 0 -8px;} /*allows selection to extend to the left and right of the list items*/
+.lotusui30 .lotusSection2 .lotusList li{padding-left:8px;padding-right:5px;}
+.lotusui_ie6 .lotusui30 .lotusSection2 .lotusList{zoom:1;position:relative;}/*margin offset truncation fix*/
+/*for left alignment in a section*/
+.lotusui30 .lotusSection2 .lotusVertTable, .lotusui30 .lotusSection2 div.lotusChunk .lotusVertTable{margin-left:-2px;}/*to offset the 2px padding on the first table cell*/
+.lotusui30 .lotusSection2 ul.lotusTree{margin-left:-10px;}
+.lotusui30.lotusImagesOff .lotusSection2 ul.lotusTree, .lotusImagesOff .lotusui30 .lotusSection2 ul.lotusTree{margin-left:15px;}
+/*paging controls within a footer*/
+.lotusui30 .lotusSection2 .lotusSectionFooter .lotusPaging{padding:2px 0;overflow:hidden;font-size:1em;line-height:1;height:auto;background-color:transparent;border-width:0;}
+.lotusui30 .lotusSection2 .lotusPaging div{padding-left:0;}
+/*section varieties*/
+.lotusui30 .lotusPortlet{margin-left:0;border:1px solid #ccc;}
+.lotusui30 .lotusPortlet .lotusSectionHeader{border-bottom:1px solid #ccc;background-color:#f4f4f4;background-image:-moz-linear-gradient(top, #f4f4f4 0%, #eaeaea 100%);background-image:-webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#eaeaea));background-position:left top;background-repeat:repeat-x;overflow:hidden;}
+/*forms within a section*/
+.lotusui30 .lotusSection2 .lotusForm2 .lotusFormTitle{padding:15px 10px;}
+.lotusui30 .lotusSection2 .lotusForm2 .lotusFormBody{padding:0 10px 10px;}
+.lotusui30 .lotusSection2 .lotusForm2 .lotusFormFooter{margin:0 -10px -5px;zoom:1;position:relative;}
+.lotusui_ie .lotusui30 .lotusSection2 .lotusForm2 .lotusFormFooter{padding:10px 30px;}
+
+
+
+
+
+
+
+/****************************************************************/
+

@@ -1,0 +1,77 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for the title bar (layout)
+companion files: titlebar.css / titlebarTheme.css
+companion files: titlebarRTL.css / titlebarThemeRTL.css*/
+/*** T I T L E   B A R 	***/
+/*the bar under the banner that contains a title and search*/
+
+.lotusui30 .lotusTitleBar2 {margin:0 10px; position:relative; clear:both/*fix for IE6*/; zoom:1; background:#747678;
+	background:-moz-linear-gradient(top, #87898b 0%, #656769 100%);
+	background:-webkit-gradient(linear, left top, left bottom, from(#87898b), to(#656769));
+	-moz-border-radius-topright:4px;
+	-moz-border-radius-topleft:4px;
+	-webkit-border-top-right-radius:4px;
+	-webkit-border-top-left-radius:4px;
+	border-top-right-radius:4px;
+	border-top-left-radius:4px;}
+.lotusui30.lotusImagesOff .lotusTitleBar2, .lotusImagesOff .lotusui30 .lotusTitleBar2 {border-top:1px solid; border-bottom:1px solid;}
+.lotusui30 .lotusTitleBar2 .lotusInner {padding:10px; overflow:hidden; position:relative; zoom:1;}/*position fixes an IE6/7 RTL window resizing bug*/
+.lotusui30 .lotusTitleBar2 .lotusTitleBarContent {margin-right:20em; zoom:1;}
+.lotusui30 .lotusTitleBar2 .lotusHeading {float:left; margin-right:40px; font-size:1.4em; line-height:1.5; letter-spacing:0; font-weight:normal; color:#fff;}
+.lotusui30 .lotusTitleBar2 .lotusHeading .lotusIcon {margin-right:5px; float:left;}
+.lotusui_ie .lotusui30 .lotusTitleBar2 .lotusHeading .lotusIcon {float:none; margin-bottom:1px;}/*fixes IE6/7 icon and text alignment*/
+.lotusui30 .lotusTitleBar2 .lotusHeading .lotusText, .lotusui30 .lotusTitleBar2 .lotusHeading .lotusText:visited, .lotusui30 .lotusTitleBar2 .lotusHeading .lotusText:hover, .lotusui30 .lotusTitleBar2 .lotusHeading .lotusText:focus, .lotusui30 .lotusTitleBar2 .lotusHeading .lotusText:active {color:#fff;}
+
+/*tabs*/
+.lotusui30 .lotusTitleBar2.lotusTitleBar2Tabs .lotusInner {padding:0 10px; overflow:visible;}
+.lotusui30 .lotusTitleBar2.lotusTitleBar2Tabs .lotusHeading {padding-top:10px;}
+.lotusui30 .lotusTitleBar2.lotusTitleBar2Tabs .lotusHeading .lotusIcon {float:none; vertical-align:text-top;}
+
+.lotusui30 .lotusTitleBar2 .lotusNavTabs {margin:0; padding:15px 0 0; position:relative; bottom:-2px; list-style:none; zoom:1; }
+.lotusui_ie .lotusui30 .lotusTitleBar2 ul.lotusNavTabs {bottom:0;}/*right-to-left does not need this*/
+.lotusui30.lotusImagesOff .lotusTitleBar2 .lotusNavTabs, .lotusImagesOff .lotusui30 .lotusTitleBar2 .lotusNavTabs {bottom:-4px;}
+.lotusui30 .lotusTitleBar2 .lotusNavTabs li {margin:0 2px 2px 0; float:left; border:1px solid #747678; border-bottom-color:#656769; background-color:#595b5d; }
+.lotusui30 .lotusTitleBar2 .lotusNavTabs li.lotusSelected {background-color:#fff; border-bottom-color:#fff;}
+.lotusui30.lotusImagesOff .lotusTitleBar2 .lotusNavTabs li.lotusSelected, .lotusImagesOff .lotusui30 .lotusTitleBar2 .lotusNavTabs li.lotusSelected{border-bottom-width:0;}
+.lotusui30 .lotusTitleBar2 .lotusNavTabs .lotusTabWrapper {position:relative; zoom:1;}
+.lotusui_ie6 .lotusui30 .lotusTitleBar2 .lotusNavTabs .lotusTabWrapper {display:inline;}
+.lotusui30 .lotusTitleBar2 .lotusNavTabs a.lotusTab, .lotusui30 .lotusTitleBar2 .lotusNavTabs a.lotusTab:visited {line-height:1.75/*to make room for a 16px icon*/; padding:2px 10px; display:block; text-decoration:none; white-space:nowrap; color:#fff;}
+.lotusui30 .lotusTitleBar2 .lotusNavTabs li.lotusSelected a, .lotusui30 .lotusTitleBar2 .lotusNavTabs li.lotusSelected a:visited {font-weight:bold; color:#000;}
+.lotusui30 .lotusTitleBar2 .lotusNavTabs li a:hover, .lotusui30 .lotusTitleBar2 .lotusNavTabs li a:focus, .lotusui30 .lotusTitleBar2 .lotusNavTabs li a:active {text-decoration:none; color:#fff/*for the outline*/;}
+.lotusui30 .lotusTitleBar2 .lotusNavTabs li.lotusSelected a:hover, .lotusui30 .lotusTitleBar2 .lotusNavTabs li.lotusSelected a:focus, .lotusui30 .lotusTitleBar2 .lotusNavTabs li.lotusSelected a:active {color:#000;}
+
+/*leading icon*/
+.lotusui30 .lotusTitleBar2 .lotusNavTabs .lotusIcon {margin-right:10px; position:relative; top:-0.1em/*to better vertical align*/;}
+.lotusui_ie .lotusui30 .lotusTitleBar2 .lotusNavTabs .lotusIcon {padding-right:10px; margin-right:0;} /*IE7 likes padding here better in ltr, margin in rtl*/
+.lotusui_ie6 .lotusui30 .lotusTitleBar2 .lotusNavTabs .lotusIcon {margin-top:0.25em; margin-bottom:0.2em;} /*IE6 does not respect a set line-height in presense of an inline image shorter than the line-height*/
+/*close icon*/
+.lotusui30 .lotusTitleBar2 .lotusNavTabs li.lotusTabClosable .lotusTabInner {padding-right:20px; zoom:1;}
+.lotusui30 .lotusTitleBar2 .lotusNavTabs .lotusTabClose {padding:0; position:absolute; top:0.5em; right:10px; line-height:1;}
+.lotusui30 .lotusTitleBar2 .lotusTabClose img {width:14px; height:14px; background-image:url(../../images/lotusHSprite-8bit.png); background-position:-110px -9px; vertical-align:top;/*better supports both strict and transitional doctype layouts*/}
+
+/*search*/
+.lotusui30 .lotusTitleBar2 .lotusSearch {position:absolute; top:10px; right:10px;}
+.lotusui30 .lotusTitleBar2 .lotusSearch .lotusScope {min-width:0; padding-right:15px;}
+.lotusui_ie6 .lotusui30 .lotusTitleBar2 .lotusSearch .lotusScope {width:20px;}
+.lotusui30 .lotusTitleBar2 .lotusSearch .lotusText, .lotusui30 .lotusTitleBar2 .lotusSearch .lotusScope, .lotusui30 .lotusTitleBar2 .lotusSearch .lotusBtnImg {border:1px solid #747678;}
+.lotusui30.lotusImagesOff .lotusTitleBar2 .lotusBtnImg .lotusAltText, .lotusImagesOff .lotusui30 .lotusTitleBar2 .lotusBtnImg .lotusAltText {color:#000;}
+
+/*below title bar*/
+.lotusui30 .lotusTitleBarExt {margin:0 10px; padding:0 10px; border:1px solid #ccc; border-width:0 1px;}
+.lotusui30 .lotusTitleBarExt .lotusInlinelist {padding-top:5px; float:none/*for webkit*/;}
+.lotusui30 .lotusTitleBarExt .lotusInlinelist li {padding:0 0 0 15px; margin-left:15px; display:inline-block/*so they wrap to next line*/;}
+.lotusui_ie .lotusui30 .lotusTitleBarExt .lotusInlinelist li {display:inline;} /*IE7 doesn't like inline-block*/
+.lotusui30 .lotusTitleBarExt .lotusInlinelist li.lotusFirst {margin:0;}
+.lotusui30 .lotusTitleBarExt .lotusInlinelist li a, .lotusui30 .lotusTitleBarExt .lotusInlinelist li a:hover, .lotusui30 .lotusTitleBarExt .lotusInlinelist li a:focus, .lotusui30 .lotusTitleBarExt .lotusInlinelist li a:active {color:#666;}
+
+
+
+
+
+
+
+/***********************************************************/
+

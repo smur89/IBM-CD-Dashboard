@@ -1,0 +1,49 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for about box
+companion files: calloutBox.css / calloutBoxTheme.css
+companion files: calloutBoxRTL.css / calloutBoxThemeRTL.css*/
+
+/*** C A L L O U T   B O X ***/
+/*This is the portable pull-quote/callout box area. It can be used on any page.*/
+
+
+
+
+
+.lotusui30 .lotusAboutBox{background-color:#057bb0;
+	background-image:-moz-linear-gradient(top, #096da3 0%, #0189be 100%);
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#096da3), to(#0189be));
+	background-image:linear-gradient(top, #096da3, #0189be);
+	border:0;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;}
+.lotusui30 .lotusAboutBox p, .lotusui30 .lotusAboutBox li, .lotusui30 .lotusAboutBox a, .lotusui30 .lotusAboutBox a:visited, .lotusui30 .lotusAboutBox a:hover, .lotusui30 .lotusAboutBox a:focus, .lotusui30 .lotusAboutBox a:active{color:#fff;}
+.lotusui30 .lotusAboutBox .lotusHeading, .lotusui30 .lotusAboutBox .lotusHeading2{color:#fff;}
+
+.lotusui30 .lotusWelcomeBox{padding:25px; margin-left:0; background-color:#057bb0; border:0;
+	background-image:-moz-linear-gradient(top, #096da3 0%, #0189be 100%);
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#096da3), to(#0189be));
+	background-image:linear-gradient(top, #096da3, #0189be);
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;}
+.lotusui30 .lotusWelcomeBox p, .lotusui30 .lotusWelcomeBox li, .lotusui30 .lotusWelcomeBox a, .lotusui30 .lotusWelcomeBox a:visited, .lotusui30 .lotusWelcomeBox a:hover, .lotusui30 .lotusWelcomeBox a:focus, .lotusui30 .lotusWelcomeBox a:active{color:#fff;}
+.lotusui30 .lotusWelcomeBox .lotusHeading{color:#fff;}
+
+.lotusui30 .lotusWelcomeBox a, .lotusui30 .lotusAboutBox a{text-decoration:underline} /*add .lotusui30 .lotusCalloutBox a when it's appropriate*/
+
+/***********************************************************/
+
+/*** C L O S E  B U T T O N ***/
+
+
+
+.lotusui30 .lotusWelcomeBox .lotusClose {padding:0; top:20px; right:20px;}
+.lotusui30 .lotusWelcomeBox .lotusClose input {background-position:-573px -8px; opacity:0.75; filter:alpha(opacity=75);}
+.lotusui30 .lotusWelcomeBox .lotusClose input:hover, .lotusui30 .lotusWelcomeBox .lotusClose input:focus, .lotusui30 .lotusWelcomeBox .lotusClose input:active {opacity:1; filter:alpha(opacity=100);}
+
+/***********************************************************/

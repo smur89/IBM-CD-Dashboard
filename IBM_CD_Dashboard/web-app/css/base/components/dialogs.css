@@ -1,0 +1,54 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for dialogs
+companion filea: dialogs.css / dialogsTheme.css
+companion filea: dialogsRTL.css / dialogsThemeRTL.css*/
+/*** D I A L O G ***/
+/*this can be wrapped in a dojo dialog, if desired, which gives you the lightbox behavior for free, else, wrap it in a div assigned the class lotusDialogWrapper*/
+
+.lotusui30 .lotusDialogWrapper {position:absolute;}
+.lotusui_ie6 .lotusui30 .lotusDialogWrapper {width:525px;}/*this used to be 500px, the extra 25px is to accommodate forms with left labels*/
+.lotusui30 .lotusDialogBorder {border:1px solid #999;
+	-moz-box-shadow:0 3px 7px #999;
+	-webkit-box-shadow:0 3px 7px #999;
+	box-shadow:0 3px 7px #999}
+.lotusui30 .lotusDialogBorder .lotusDialog {background-color:#fff;}
+.lotusui30 .lotusDialog .lotusDialogHeader {border-bottom:1px solid #ccc; padding:15px 20px; background-color:#fafafa;
+	background-image:-moz-linear-gradient(top, #fff 0%, #f0f0f0 100%);
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#fff), to(#f0f0f0));}
+.lotusui30 .lotusDialog .lotusHeading {font-size:1.5em; font-weight:bold; margin-right:30px;}
+.lotusui30 .lotusDialog .lotusHeading {background:none; border:0; padding:0;} /*overriding deprecated css*/
+
+/* close icon */
+.lotusui30 .lotusDialog .lotusDialogHeader .lotusDialogClose {padding:3px; border:1px solid #aaa; line-height:1em; position:absolute; top:15px; right:15px;}
+.lotusui30 .lotusDialog .lotusDialogHeader .lotusDialogClose img {background-image:url(../../images/lotusHSprite-8bit.png); background-position:-555px -8px; width:16px; height:16px;} /*don't use opacity here because the gen3 image has partial transparency and IE can't handle opacity overrides when there is transparency*/
+.lotusui30.lotusImagesOff .lotusDialog .lotusDialogHeader .lotusDialogClose img, .lotusImagesOff .lotusui30 .lotusDialog .lotusDialogHeader .lotusDialogClose img {display:none;}
+
+.lotusui30 .lotusDialog .lotusFormTable, .lotusui30 .lotusDialog .lotusFormTable td, .lotusui30 .lotusDialog .lotusDialogContent {padding:15px 20px; max-height:300px; overflow:auto; border-bottom:1px solid #aaa;}
+.lotusui_ie .lotusui30 .lotusDialog .lotusDialogContent{position:relative; overflow-x:hidden;} /*position:relative is needed to make sure relatively positioned elements within a scrolled div scroll properly - otherwise they act like fixed-position elements. overflow-x:hidden is needed to prevent the horizontal scrollbar from appearing because of the position:relative.*/
+.lotusui_ie6 .lotusui30 .lotusDialog .lotusDialogContent {height:expression(this.scrollHeight > 299 ? "300px" : "auto");}
+.lotusui30 .lotusDialog .lotusHeading2 {margin:0 0 5px; font-size:1.2em; font-weight:bold;}
+.lotusui30 .lotusDialog .lotusHeading2 {background:none; border:0; color:#444; padding:0; text-shadow:none;} /*overriding deprecated css*/
+.lotusui30 .lotusDialog .lotusDialogFooter {background-color:#eaecee; padding:12px 15px; text-align:right;}
+.lotusui30 .lotusDialogFooter .lotusBtn {margin-left:5px;}
+.lotusui30 .lotusDialog td.lotusFormLabel {vertical-align:top;}
+.lotusui30 .lotusDialog.lotusForm2 .lotusFormField:last-child {margin-bottom:0;} /*this CSS3 pseudo class is only supported in modern browsers (and not IE) which makes the multiple class selector okay to use here*/
+
+/*overrides for forms in dialogs*/
+/*we need this to keep the error icon on the same line as the form field in all browsers*/
+.lotusui30 .lotusDialogBorder .lotusForm2 .lotusFormField {min-width:310px;}
+
+/* for lightbox */
+.lotusui30 .lotusOverlay {display:none; position:absolute; top:0; left:0; width:100%; background-color:#000; opacity:0.3; filter: alpha(opacity=30);}
+
+/*override for tag cloud*/
+.lotusui30 .lotusDialog .lotusTagCloud ul li {margin-bottom:3px; list-style:none;}
+
+
+
+
+
+/***********************************************************/
+

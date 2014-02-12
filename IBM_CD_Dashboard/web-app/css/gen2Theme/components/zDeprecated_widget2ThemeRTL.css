@@ -1,0 +1,30 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for widget
+companion files: zDeprecated_widget2.css / zDeprecated_widget2Theme.css
+companion files: zDeprecated_widget2RTL.css / zDeprecated_widget2ThemeRTL.css*/
+/*** D E P R E C A T E D    W I D G E T ***/
+
+
+
+.lotusui30 .lotusWidget2{margin:0 0 20px;padding:0;border-width:0;width:auto;}
+.lotusui30 .lotusWidget2 h2{margin-bottom:0;padding:5px 10px 5px 5px;font-size:1em;color:#000;
+    -webkit-box-shadow:#eee 0px 3px 5px;-moz-box-shadow:#eee 0 3px 5px;box-shadow:#eee 0 3px 5px;border:1px solid #ccc;background-color:#f4f4f4;background-image:none;background-image:-moz-linear-gradient(top, #f4f4f4 0%, #eaeaea 100%);background-image:-webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#eaeaea));background-position:left top;-moz-border-radius-topright:3px;-moz-border-radius-topleft:3px;-webkit-border-top-right-radius:3px;-webkit-border-top-left-radius:3px;border-top-right-radius:3px;border-top-left-radius:3px;}
+.lotusui30 .lotusWidgetPlain h2{border-width:1px;}
+.lotusui30 .lotusWidget2 h2 a, .lotusui30 .lotusWidget2 h2 a:visited, .lotusui30 .lotusWidget2 h2 a:hover, .lotusui30 .lotusWidget2 h2 a:focus, .lotusui30 .lotusWidget2 h2 a:active{color:#222;}
+.lotusWidget2 h3{margin:0;padding:4px 0;}
+.lotusui30 .lotusWidget2 .lotusWidgetBody{margin:0;padding:5px 10px;background-color:#fff;
+    -webkit-box-shadow:#eee 0 3px 5px;-moz-box-shadow:#eee 0 3px 5px;box-shadow:#eee 0 3px 5px;border-width:0 1px 1px;border-style:solid;border-color:#ccc;}
+.lotusui30 .lotusWidgetPlain .lotusWidgetBody{border-width:0;
+    -webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
+.lotusui30 .lotusWidget2 .lotusChunk{margin-top:0;margin-bottom:5px;}
+.lotusui30 .lotusWidget2 .lotusWidgetFooter{border-width:0 1px 1px 1px;border-style:solid;border-color:#ccc;background-color:#fff;
+    -webkit-box-shadow:#eee 0 3px 5px;-moz-box-shadow:#eee 0 3px 5px;box-shadow:#eee 0 3px 5px;height:auto;}
+.lotusui30 .lotusWidget2 .lotusWidgetFooter .lotusPaging{margin:0;padding:5px 0;}
+
+
+
+/***********************************************************/
+

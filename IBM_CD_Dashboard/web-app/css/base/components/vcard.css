@@ -1,0 +1,73 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+styles for the person card, a component sometimes used outside our framework
+companion files: vcard.css / vcardTheme.css
+companion files: vcardRTL.css / vcardThemeRTL.css*/
+
+/*** V C A R D (P E R S O N   C A R D)***/
+/*this is the popup person card that shows up when you click on a person link (via a hover link)*/
+
+.lotusui30 .lotusVCard{display:table;position:absolute;width:400px;border:1px solid #ccc;-webkit-box-shadow:0 2px 5px #eee;-moz-box-shadow:0 2px 5px #eee;box-shadow:0 2px 5px #eee;background-color:#fafafa;}
+.lotusui30 .lotusVCard table.lotusContainer{width:100%;}
+.lotusui30 .lotusVCard h2{margin:0;padding:0;font-size:1.2em;font-weight:bold;color:#444;}
+/*lotusAppLinks are the application links at the top of the card*/
+.lotusui30 .lotusVCard .lotusAppLinks td{background-repeat:repeat-x;border-width:0 0 1px 1px;border-style:solid;border-color:#c5c5c5;background-color:#fff;text-align:center;}
+.lotusui30 .lotusVCard .lotusAppLinks td.lotusFirst{border-left-width:0;}
+.lotusui30 .lotusVCard .lotusAppLinks a{display:block;padding:3px 9px;}
+/*the more arrow, for when there is a second row of application links*/
+.lotusui30 .lotusVCard .lotusMore{width:16px;margin-right:10px;background:url(../../images/lotusSprite-8bit.png) 18px -3019px no-repeat;opacity:0.55;filter:alpha(opacity=55);}
+.lotusui30 .lotusVCard a.lotusMore:visited, .lotusVCard a.lotusMore:hover, .lotusVCard a.lotusMore:focus, .lotusVCard a.lotusMore:active{text-decoration:none}
+.lotusui30 .lotusVCard .lotusMoreExpanded{background-image:url(../../images/lotusSprite-8bit.png);background-position:18px -3071px;opacity:0.55;filter:alpha(opacity=55);}
+/*lotusPersonDetails is the detail area of the card that contains all info for the person*/
+.lotusui30 .lotusVCard .lotusDetails{padding:10px;border-top:1px solid #fff;background-color:#f2f2f2;}
+.lotusui30 .lotusVCard .lotusPhoto{padding:3px;border:1px solid #bdc4ca;float:left;position:relative;/*IE fix for floated elements within a relative container not showing*/}
+.lotusui30.lotusImagesOff .lotusVCard .lotusPhoto, .lotusImagesOff .lotusui30 .lotusVCard .lotusPhoto{border-width:0;}
+.lotusui30 .lotusVCard .lotusPersonInfo{margin-left:86px;}
+/*lotusPersonActions are actions you can perform on this person, from the person card*/
+.lotusui30 .lotusVCard .lotusPersonActions{padding:5px;border-top:1px solid #c5c5c5;background-color:#fff;}
+/*action menu within person card*/
+.lotusui30 .lotusVCard .lotusPersonActions .lotusInlinelist li{border-left-color:#1970B0;}
+.lotusui30 .lotusVCard .lotusActionMenu{position:static;left:auto;top:auto;border-width:0;display:none;width:auto;margin-top:-10px;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
+/*lotusComments in the person card contains status information for the person*/
+.lotusui30.lotusImagesOff .lotusCommentHeader, .lotusImagesOff .lotusui30 .lotusCommentHeader{display:none;}
+.lotusui30 .lotusVCard .lotusComment{clear:both;}
+.lotusui30 .lotusVCard .lotusDetails .lotusComment{position:relative;margin:-10px 0 2px -10px;padding:0 0 0 10px;zoom:1;}
+.lotusui30 .lotusVCard .lotusDetails .lotusCommentHeader{padding-left:15px;padding-bottom:3px;position:absolute;top:0;left:20px;z-index:1;height:1.6em;background:url(../../images/lotusSprite-8bit.png) 0 -2097px no-repeat;}
+.lotusui30 .lotusVCard .lotusDetails .lotusCommentBody{position:relative;top:1.7em;margin:-1px 0 2.2em 0;padding:5px 10px;color:#666;background-color:#fff;border:1px solid #ccc;z-index:0;zoom:1;}
+/*adjustments for an inline version of the card*/
+.lotusui30 .lotusInlineVCard{position:static;left:auto;margin:0 0 10px 0;}
+.lotusui30 .lotusInlineVCard, .lotusui30 .lotusInlineVCard .lotusContainer{width:175px;position:static;top:auto;left:auto;}
+.lotusui30 .lotusInlineVCard .lotusPhoto{padding:0;border-width:0;margin-top:5px;}
+.lotusui30 .lotusInlineVCard h2{margin:0;padding:0;font-size:1.2em;font-weight:bold;color:#444;line-height:1.3;}
+.lotusui30 .lotusInlineVCard h2 img{vertical-align:baseline;}/*better alignment for strict and transistional doctypes*/
+.lotusui30.lotusImagesOff .lotusInlineVCard h2 .lotusAltText, .lotusImagesOff .lotusui30 .lotusInlineVCard h2 .lotusAltText{font-size:.75em;display:block;}
+.lotusui30 .lotusInlineVCard .lotusPersonInfo{margin-left:60px;margin-top:4px;}
+.lotusui30.lotusImagesOff .lotusInlineVCard .lotusPersonInfo, .lotusImagesOff .lotusui30 .lotusInlineVCard .lotusPersonInfo{margin-left:5px;}
+.lotusui30 .lotusInlineVCard .lotusEmail{padding:5px 10px;clear:both;border-width:1px 0;border-style:solid;border-color:#c5c5c5;}
+.lotusui30 .lotusInlineVCard .lotusAppLinks{list-style-type:none;margin:0;padding:0;}
+.lotusui30 .lotusInlineVCard .lotusPivotNav{padding:2px 5px 1px 2px;overflow:hidden;zoom:1;}
+.lotusui30 .lotusInlineVCard .lotusPivotNavToggle{margin:0 5px 0 0;padding:0;float:left;height:45px;width:10px;}
+.lotusui30.lotusImagesOff .lotusInlineVCard .lotusPivotNavToggle, .lotusImagesOff .lotusui30 .lotusInlineVCard .lotusPivotNavToggle{width:16px;}
+.lotusui30 .lotusPivotNavToggle a{display:block;height:45px;background:#d8d8e0 url(../../images/lotusSprite-8bit.png) -2px -348px no-repeat;opacity:0.55;filter:alpha(opacity=55)/*55% is the min opacity for meeting contrast requirements on white/off-white background for small text*/text-decoration:none;}
+.lotusui30 .lotusPivotNavToggle a:visited, .lotusui30 .lotusPivotNavToggle a:hover, .lotusui30 .lotusPivotNavToggle a:focus, .lotusui30 .lotusPivotNavToggle a:active{text-decoration:none;}
+.lotusui30 .lotusPivotNavOpen .lotusPivotNavToggle a{background-image:url(../../images/lotusSprite-8bit.png);background-position: -1px -244px;}
+.lotusui30 .lotusInlineVCard .lotusInlineVCardDetails{display:none;}
+
+
+
+
+
+/***********************************************************/
+
+/*** V C A R D   H O V E R ***/
+/*this is the hover link that shows when you hover over a person's name and allows you to open their profile card*/
+
+.lotusui30 .lotusVCardHover{padding:5px 5px 5px 25px;position:absolute;border:1px solid #aeaeae;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;background:#fff79a url(../../images/lotusSprite-8bit.png)  5px -3226px no-repeat;white-space:nowrap;}
+.lotusui30 a.lotusVCardHover:hover, .lotusui30 a.lotusVCardHover:focus, .lotusui30 a.lotusVCardHover:active{text-decoration:none;}
+.lotusui30.lotusImagesOff .lotusVCardHover, .lotusImagesOff .lotusui30 .lotusVCardHover{padding-left:5px;}
+
+
+
+/***********************************************************/

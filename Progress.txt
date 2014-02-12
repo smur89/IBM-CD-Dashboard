@@ -386,3 +386,24 @@ Week Beginning 29/01/14
 
 	Work Items no longer being saved.
 
+Week Beginning 05/02/14
+
+	45 WorkItems should be associated with each project. only 14 being associated with one project and 0 witht he other.
+
+	45 workItems being saved to the database. on the second loop.
+
+	45 workItems asigned to builds. miscalculation in workItems count!!!!
+
+	Question on forum https://jazz.net/forum/questions/141572/get-all-work-items-for-a-build-result
+
+	Reply to answer on jazz.net. Went to try implement it, but all my virtual machines are missing. error -102(File not Found)
+
+	Reinstalled IBM VM and RTC server. Installed JKE Banking sample again. 
+
+Week Beginning 12/02/14
+
+	Creating sitemesh templates for the site to include IBM style.
+
+	Created "common" module for css, this will combine all required css into one file and compress automatically optimising the imports.
+
+	Able to get CSS working. adding appropriate classes to existing views

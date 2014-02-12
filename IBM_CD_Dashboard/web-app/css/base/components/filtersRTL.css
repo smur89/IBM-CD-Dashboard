@@ -1,0 +1,39 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for feeds
+companion files: filters.css / filtersTheme.css*
+companion files: filtersRTL.css / filtersThemeRTL.css*/
+/*** F I L T E R S **/
+/*the filter links that are removable*/
+
+.lotusui30 .lotusFilters2{font-size:.9em;line-height:1.4;margin:1px 0 5px 0;}
+.lotusui30 .lotusFilters2 .lotusInlinelist{display:inline;}
+.lotusui30 .lotusFilters2 .lotusInlinelist li{margin:0;padding:0 3px;border-width:0;}/*this is added for accessibility only (screen readers) so we want no visuals, however, margin from links (adjusted) needs to be transferred to padding on li tags for proper spacing*/
+.lotusui30 .lotusFilters2 .lotusInlinelist:first-child li:first-child{padding-right:0;}/*this fix for proper edge alignment isn't perfect if the first inline list is preceded by text and there is a second inline list preceded by text (the spacing between the text and filters is different for each), otherwise, you don't really know the spacing isn't intentional.*/
+.lotusui30 .lotusFilters2 .lotusInlinelist li a.lotusFilter{margin:0;}
+.lotusui30 .lotusFilters2 a.lotusFilter{line-height:1.4;margin:0 2px;padding:1px 5px 1px 0;display:inline-block;white-space:nowrap;border:1px solid #999999;background-color:#fafafa;}
+.lotusui30 .lotusFilters2 a.lotusFilter:first-child{margin-right:0;}/*proper edge aligment*/
+.lotusui30 .lotusFilters2 a.lotusFilter, .lotusui30 .lotusFilters2 a.lotusFilter:hover, .lotusui30 .lotusFilters2 a.lotusFilter:focus{text-decoration:none;}
+.lotusui30 .lotusFilters2 img.lotusDelete{margin:0 5px;vertical-align:baseline;}
+.lotusui_ie .lotusui30 .lotusFilters2{vertical-align:middle;}
+.lotusui_ie7 .lotusui30 .lotusFilters2 a.lotusFilter{margin-top:2px;margin-bottom:4px;vertical-align:middle;}
+.lotusui_ie6 .lotusui30 .lotusFilters2 a.lotusFilter{margin-top:3px;margin-bottom:3px;padding-top:2px;padding-bottom:2px;vertical-align:middle;}
+/*some additional items for filters under a header*/
+.lotusui30.lotusImagesOff .lotusFilters2 img.lotusDelete, .lotusImagesOff .lotusui30 .lotusFilters2 img.lotusDelete{display:none;}
+.lotusui30.lotusImagesOff .lotusFilters2 a.lotusFilter .lotusAltText, .lotusImagesOff .lotusui30 .lotusFilters2 a.lotusFilter .lotusAltText{margin:0 5px;}
+.lotusui30 .lotusFilters2 .lotusDivider{margin:0 2px 0 5px;}/*accounts for the right margin on the last filter*/
+.lotusui30 .lotusFilters2 a.lotusFilter + .lotusDivider{margin-right:5px;}
+.lotusui30 .lotusFilters2 .lotusIcon{vertical-align:top;}
+.lotusui_ie .lotusui30 .lotusFilters2 .lotusIcon{vertical-align:middle;}
+.lotusui30 .lotusFilters2 a.lotusIcon:hover, .lotusui30 .lotusFilters2 a.lotusIcon:focus{text-decoration:none;}
+.lotusui30 .lotusFilters2 a.lotusAction{font-size:1em;}
+/* Make the X show up on the left side */
+.lotusui_ie .lotusui30.lotusImagesOff .lotusFilters2 a.lotusFilter, .lotusui_ie .lotusImagesOff .lotusui30 .lotusFilters2 a.lotusFilter{padding-right:5px;}
+.lotusui_ie .lotusui30.lotusImagesOff .lotusFilters2 a.lotusFilter .lotusAltText, .lotusui_ie .lotusImagesOff .lotusui30 .lotusFilters2 a.lotusFilter .lotusAltText{margin-left:0;}
+.lotusui_ie .lotusui30 .lotusFilters2 a.lotusFilter img.lotusDelete,
+.lotusui_ie .lotusui30 .lotusFilters2 a.lotusFilter span.lotusAltText{unicode-bidi: bidi-override;direction: rtl;}
+.lotusui30 .lotusFilters2 a.lotusFilter img.lotusDelete:before, .lotusui30 a.lotusFilter span.lotusAltText:before{content: "\200F";}
+
+

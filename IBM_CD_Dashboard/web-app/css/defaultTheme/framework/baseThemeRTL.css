@@ -1,0 +1,19 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+this file contains contains namespaced default styles
+companion files: base.css / baseTheme.css
+companion files: baseRTL.css / baseThemeRTL.css*/
+/******************************/
+/*** B A S E   S T Y L E S ****/
+/******************************/
+
+
+/*** R E S E T ***/
+/*redefinitions*/
+.lotusui30 a, .lotusui30 a:visited{color:#1970B0;}
+.lotusui30 a:hover, .lotusui30 a:focus, .lotusui30 a:active{color:#05386b;}
+/***********************************************************/
+
+

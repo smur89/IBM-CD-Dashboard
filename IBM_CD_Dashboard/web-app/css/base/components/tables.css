@@ -1,0 +1,98 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for tables
+companion files: tables.css / tablesTheme.css
+companion files: tablesRTL.css / tablesThemeRTL.css*/
+/*** T A B L E S ***/
+
+/*layout table*/
+/*note, if you need to use the structure of a relative div containing an absolute div within a layout table, be aware that Safari will only show the portion of your absolute div that is within the table area.  This is by design.*/
+/*there is no cellpadding built into the plain vanilla layout tables. Used judiciously for complex layouts.*/
+.lotusui30 .lotusLayout td{padding:0;vertical-align:top;text-align:left;} /*default alignment*/
+.lotusui30 .lotusLayout td.lotusvAlignMid{vertical-align:middle;}/*allows you to override default alignment*/
+.lotusui30 .lotusColumns{width:100%;}/*a varient of the layout table used to create multiple columns*/
+.lotusui30 .lotusColumns td{padding:0 10px;}
+.lotusui30 .lotusColumns td:first-child, .lotusui30 .lotusColumns td.lotusFirst{padding-left:0;}
+.lotusui30 .lotusColumns td:last-child{padding-right:0;}
+.lotusui30 .lotusColumns td.lotusLast{padding-right:0;} /*Keep this on a separate declaration from td:last-child for IE*/
+.lotusui30 .lotusLayout .lotusAlignRight{text-align:right;}
+.lotusui30 .lotusLayout .lotusCenter{text-align:center;}
+/*used for presenting information in a vertical format*/
+.lotusui30 .lotusVertTable th, .lotusui30 .lotusVertTable td{padding:2px;}
+.lotusui30 .lotusVertTable th{padding-right:50px;text-align:left;vertical-align:top;font-weight:normal;color:#666;}
+.lotusui30 .lotusVertTable p{margin:0;}
+/*entry/data table*/
+.lotusui30 .lotusTable{width:100%;border-collapse:collapse;border-bottom-color:#eee;}
+.lotusui30 .lotusTable th, .lotusui30 .lotusTable td{padding:5px 2px;vertical-align:top;text-align:left;font-weight:normal;}
+.lotusui30 .lotusTable th.lotusSubHeader{padding-top:15px;}/*wrap an h4 tag in a th tag that spans the table columns for a subheader*/
+.lotusui30 .lotusTable .lotusFirst th.lotusSubHeader{padding-top:5px;}
+.lotusui30 .lotusTable .lotusSummary td{padding:5px 2px 0 2px;}
+.lotusui30 .lotusTable .lotusDetails td, .lotusui30 .lotusTable .lotusMore td{padding:0 2px 5px 2px;}
+.lotusui30 .lotusTable td p:first-child, .lotusui30 p.lotusFirst{margin-top:0;}/*for IE6, you have to assign the class lotusFirst to the first paragraph*/
+.lotusui30 .lotusTable td, .lotusui30 .lotusTable th.lotusRowHeader, .lotusui30 .lotusTable th.lotusSubHeader{border-top:1px solid #eee;}/*use lotusRowHeader as a class on a th tag for a header that is the first cell of a row*/
+.lotusui30 .lotusTable .lotusLast td, .lotusui30 .lotusTable .lotusLast th.lotusRowHeader{border-bottom:1px solid #eee;}/*this give the option of a border under the last table row*/
+
+.lotusui30 .lotusTable .lotusDetails td, .lotusui30 .lotusTable .lotusFirst td, .lotusui30 .lotusTable .lotusMore td, .lotusui30 .lotusTable .lotusFirst th.lotusRowHeader, .lotusui30 .lotusTable .lotusFirst th.lotusSubHeader{border-top-width:0;}
+.lotusui30 .lotusTable th.lotusFirstCell, .lotusui30 .lotusTable td.lotusFirstCell{padding-left:10px;}
+.lotusui30 .lotusTable th.lotusLastCell, .lotusui30 .lotusTable td.lotusLastCell{padding-right:10px;}
+.lotusui30 .lotusTable .lotusAltRow td, .lotusui30 .lotusTable .lotusAltRow th.lotusRowHeader{background-color:#fafafa;}
+.lotusui30 .lotusTable th.lotusAltCell, .lotusui30 .lotusTable td.lotusAltCell{background-color:#fafafa;border-width:0 1px 1px 0;border-style:solid;border-right-color:#fff;border-bottom-color:#fff;}
+.lotusui30 .lotusTable .lotusAlignRight{text-align:right;}
+.lotusui30 .lotusTable .lotusCenter{text-align:center;}
+
+.lotusui30 .lotusTable .lotusSS{font-size:.9em;white-space:nowrap;width:30px;color:#666;}
+.lotusui30 .lotusTable .lotusType{margin-left:5px;padding:0;font-weight:normal;font-size:.75em;color:#666;}/*allows you to add an image and text inside a header to indicate the type of entry - requires an additional class*/
+/*h4 tags with class lotusTitle are used for entry titles*/
+.lotusui30 .lotusTable .lotusComplete, .lotusui30 .lotusTable .lotusComplete a{text-decoration:line-through;color:#666;} /*for to do items*/
+/*h5 tags with class lotusHeading are used for subsections in entry details*/
+.lotusui30 .lotusTable .lotusHeading{margin:12px 0 2px 0;font-size:1.1em;}
+/*when the h4 tag occurs in the details row (like in notifications), we need some bottom margin*/
+.lotusui30 .lotusTable .lotusDetails .lotusTitle{margin-bottom:2px;}
+.lotusui30 .lotusTable .lotusDivider{padding:0 5px;}
+.lotusui30 .lotusTable .lotusFirstCell input{margin:3px 0 0 0;}
+.lotusui30 .lotusui_ie .lotusTable .lotusFirstCell input{margin:0;}
+.lotusui30 .lotusTable .lotusPaging td{border-color:#eee;}
+.lotusui30 .lotusTable .lotusActions{white-space:nowrap;}/*fix for Safari*/
+/*this table also shows up at the top of the UI, for announcements.*/
+.lotusui30 .lotusInfoTable{margin:0 0 12px 0;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;background-color:#f0f0f0;border:1px solid #ccc;}
+.lotusui30 .lotusInfoTable .lotusTableHeader{position:relative;zoom:1;}
+.lotusui30 .lotusInfoTable .lotusHeading{margin:0;padding:0;font-size:1.2em;font-weight:bold;}
+.lotusui30 .lotusInfoTable th, .lotusui30 .lotusInfoTable td{padding:5px 10px;}
+.lotusui30 .lotusInfoTable .lotusClose{position:absolute;right:-5px;top:0;display:block;padding:2px;font-weight:bold;/*for HC mode*/}
+.lotusui_ie6 .lotusui30 .lotusInfoTable .lotusClose{font-size:12px;}/*preserves the height of the close button when the font size is made larger*/
+/*forms in a table*/
+.lotusui30 .lotusTable .lotusForm2{background-color:#fafafa;}/*forms only have a background color when they are inline in a table*/
+
+/*this is a bug fix for IE8, which incorrectly renders tables with column spans, and we can't just target the colspan attribute in the CSS, because it views all cells as having a colspan attribute. So we target each colspan other than 1*/
+.lotusui_ie8 .lotusui30 .lotusTable th[colspan*="0"],
+.lotusui_ie8 .lotusui30 .lotusTable td[colspan*="0"],
+.lotusui_ie8 .lotusui30 .lotusTable th[colspan*="2"],
+.lotusui_ie8 .lotusui30 .lotusTable td[colspan*="2"],
+.lotusui_ie8 .lotusui30 .lotusTable th[colspan*="3"],
+.lotusui_ie8 .lotusui30 .lotusTable td[colspan*="3"],
+.lotusui_ie8 .lotusui30 .lotusTable th[colspan*="4"],
+.lotusui_ie8 .lotusui30 .lotusTable td[colspan*="4"],
+.lotusui_ie8 .lotusui30 .lotusTable th[colspan*="5"],
+.lotusui_ie8 .lotusui30 .lotusTable td[colspan*="5"],
+.lotusui_ie8 .lotusui30 .lotusTable th[colspan*="6"],
+.lotusui_ie8 .lotusui30 .lotusTable td[colspan*="6"],
+.lotusui_ie8 .lotusui30 .lotusTable th[colspan*="7"],
+.lotusui_ie8 .lotusui30 .lotusTable td[colspan*="7"],
+.lotusui_ie8 .lotusui30 .lotusTable th[colspan*="8"],
+.lotusui_ie8 .lotusui30 .lotusTable td[colspan*="8"],
+.lotusui_ie8 .lotusui30 .lotusTable th[colspan*="9"],
+.lotusui_ie8 .lotusui30 .lotusTable td[colspan*="9"],
+.lotusui_ie8 .lotusui30 .lotusTable th[colspan*="11"],
+.lotusui_ie8 .lotusui30 .lotusTable td[colspan*="11"]
+{width:100%;}
+
+
+
+
+
+
+
+/****************************************************************/
+

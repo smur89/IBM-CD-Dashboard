@@ -1,0 +1,18 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for a mini grid
+companion files: grid.css / gridTheme.css
+companion files: gridRTL.css / gridThemeRTL.css*/
+
+/*** G R I D ***/
+/*for a group of same-sized elements with a div as the outer wrapper*/
+/*for example, a group of people photos*/
+
+.lotusui30 .lotusGrid{zoom:1;margin:5px 0 0 0;overflow:hidden;zoom:1}
+.lotusui_ie .lotusui30 .lotusGrid{margin-bottom:5px;}
+.lotusui30 .lotusGrid div{margin:0 5px 5px 0;float:left}
+
+/***********************************************************/
+

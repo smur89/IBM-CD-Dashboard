@@ -1,0 +1,47 @@
+/*! Licensed Materials - Property of IBM.
+    (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
+    U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+This CSS was built on August 16 2012. (version: OneUI-3.0.3_20120816-1522)
+these are the styles for about box
+companion files: calloutBox.css / calloutBoxTheme.css
+companion files: calloutBoxRTL.css / calloutBoxThemeRTL.css*/
+
+/*** C A L L O U T   B O X ***/
+/*This is the portable pull-quote/callout box area. It can be used on any page.*/
+
+.lotusui30 .lotusAboutBox .lotusAboutText .lotusHeading{font-size:3em;font-weight:normal;line-height:1.2;}
+.lotusui30 .lotusAboutBox .lotusAboutText .lotusHeading2{margin:3px 0 15px;font-size:1.5em;font-weight:normal;}
+.lotusui30 .lotusAboutBox{padding-right:25px;padding-bottom:15px;position:relative;background-position:left top;background-repeat:repeat-x;overflow:hidden;min-height:160px;background-color:#eee;border:1px solid #ccc;}
+.lotusui_ie .lotusui30 .lotusAboutBox{display:inline-block;}
+.lotusui_ie6 .lotusui30 .lotusAboutBox{height:auto !important;height:160px;}
+.lotusui30 .lotusAboutBox img{position:absolute;left:30px;top:22px;width:128px;height:128px;}
+.lotusui30 .lotusAboutText{margin:22px 20px 20px 185px;}
+
+.lotusui30 .lotusWelcomeBox{margin-left:-15px;margin-bottom:20px;padding:15px;position:relative;border:1px solid #ccc;overflow:hidden;zoom:1;background-color:#eee;}
+.lotusui30 .lotusWelcomeBox .lotusHeading{margin:0 25px 10px 0;font-size:1.7em;font-weight:normal;line-height:1;}
+.lotusui30 .lotusWelcomeBox .lotusBtnContainer{margin:15px 0 0 0;}
+.lotusui30 .lotusWelcomeBox .lotusBtnContainer .lotusBtn{float:left;}
+.lotusui30 .lotusWelcomeBox .lotusBtnContainer .lotusInlinelist li{border-width:0;}
+.lotusui30 .lotusWelcomeBox p, 
+.lotusui30 .lotusWelcomeBox ul{margin-top:5px;margin-bottom:0;margin-right:0;}
+.lotusui30 .lotusWelcomeBox ul.lotusInlinelist{float:left;} /*fixes alignment issues between button text and links*/
+
+
+
+
+
+/***********************************************************/
+
+/*** C L O S E  B U T T O N ***/
+
+.lotusui30 .lotusWelcomeBox .lotusClose{position:absolute;top:10px;right:12px;font-weight:bold;/*for HC mode*/}
+.lotusui30.lotusImagesOff .lotusWelcomeBox, .lotusImagesOff .lotusui30 .lotusWelcomeBox, 
+.lotusui30.lotusImagesOff .lotusAboutBox, .lotusImagesOff .lotusui30 .lotusAboutBox{border:solid 1px #666;}
+.lotusui30.lotusImagesOff .lotusWelcomeBox .lotusClose a, .lotusImagesOff .lotusui30 .lotusWelcomeBox .lotusClose a{text-decoration:none;}
+.lotusui30.lotusImagesOff .lotusWelcomeBox .lotusClose a:hover, .lotusImagesOff .lotusui30 .lotusWelcomeBox .lotusClose a:hover,
+.lotusui30.lotusImagesOff .lotusWelcomeBox .lotusClose a:hover, .lotusImagesOff .lotusui30 .lotusWelcomeBox .lotusClose a:hover,
+.lotusui30.lotusImagesOff .lotusWelcomeBox .lotusClose a:active, .lotusImagesOff .lotusui30 .lotusWelcomeBox .lotusClose a:active{text-decoration:underline} /*add .lotusui30 .lotusCalloutBox a when it's appropriate*/
+
+
+
+/***********************************************************/
