@@ -406,4 +406,5 @@ Week Beginning 12/02/14
 
 	Created "common" module for css, this will combine all required css into one file and compress automatically optimising the imports.
 
-	Able to get CSS working. adding appropriate classes to existing views
+	Able to get CSS working. adding appropriate classes to existing views.
+

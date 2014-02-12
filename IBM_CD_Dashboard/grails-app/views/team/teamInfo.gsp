@@ -57,15 +57,19 @@
         %{--Apply the lotusFirst class to the first row of the table--}%
         <tr class="${ i  == 0 ? 'lotusFirst' : ''}">
             <td class="lotusFirstCell"><h4 class="lotusTitle"><g:link action="buildInfo" controller="build" id="${it.buildId}">
-                <g:if>
-                    ${it.name}
+                %{--If no name associated with build, print N/A--}%
+                <g:if test="${it.name.equals(null)}">
+                    N/A
                 </g:if>
+                <g:else>
+                    ${it.name}
+                </g:else>
             </g:link></h4></td>
             <td class="lotusMeta lotusNowrap lotusAltCell">${it.getBuildStatus()}</td>
             <td class="lotusMeta lotusNowrap ">${it.getBuildState()}</td>
             <td class="lotusMeta lotusNowrap lotusAltCell">${it.getModified().format('dd/MM/yyyy',TimeZone.getTimeZone('GMT'))}</td>
             <td class="lotusMeta lotusNowrap ">${it.getWorkItems().count {it}}</td>
-            <td class="lotusAlignRight lotusAltCell lotusLastCell"><a class="lotusAction" href="javascript:;" role="button" aria-expanded="false" aria-controls="[detailRowID]" title="Show details"><img class="lotusIcon16 lotusIconShow" src="../../css/images/blank.gif" alt="" aria-label="Show details" /><span class="lotusAltText">${it.getWorkItems().count {it}}</span></a></td>
+            <td class="lotusAlignRight lotusAltCell lotusLastCell"><a class="lotusAction" href="javascript:;" role="button" aria-expanded="false" aria-controls="[detailRowID]" title="Show details"><img class="lotusIcon16 lotusIconShow" src="../../css/images/blank.gif" alt="" aria-label="Show details" /><span class="lotusAltText"></span></a></td>
         </tr>
     </g:each>
     </tbody>
