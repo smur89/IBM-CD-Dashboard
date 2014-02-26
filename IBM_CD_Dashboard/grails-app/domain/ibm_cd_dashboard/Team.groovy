@@ -2,6 +2,8 @@ package ibm_cd_dashboard
 
 import com.ibm.team.repository.common.IContributor
 
+import java.security.Timestamp
+
 /*
     In Rational Team Concert, project areas define the process used by everything they include.
     The initial process definition and description are provided by a process template.
@@ -9,6 +11,7 @@ import com.ibm.team.repository.common.IContributor
     project area and it's enclosed teams.
  */
 class Team {
+
 
     // use teamID as the primary key
     static mapping = {

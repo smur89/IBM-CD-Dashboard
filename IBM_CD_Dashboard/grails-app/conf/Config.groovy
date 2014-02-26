@@ -1,3 +1,5 @@
+import org.apache.log4j.Level
+
 // locations to search for config files that get merged into the main config;
 // config files can be ConfigSlurper scripts, Java properties files, or classes
 // in the classpath in ConfigSlurper format
@@ -10,6 +12,10 @@
 // if (System.properties["${appName}.config.location"]) {
 //    grails.config.locations << "file:" + System.properties["${appName}.config.location"]
 // }
+
+DomainLastModified = null
+ServerLastModified = null
+
 
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination
 
@@ -95,6 +101,18 @@ environments {
 
 // log4j configuration
 log4j = {
+    appenders {
+        rollingFile  name:'infoLog', file:'logs/info.log', threshold: Level.INFO, maxFileSize:1024
+        rollingFile  name:'warnLog', file:'logs/warn.log', threshold: Level.WARN, maxFileSize:1024
+        rollingFile  name:'errorLog', file:'logs/error.log', threshold: Level.ERROR, maxFileSize:1024
+    }
+
+    root {
+        info 'infoLog','warnLog','errorLog', 'stdout'
+        error()
+        additivity = true
+    }
+    info "grails.app"
     // Example of changing the log pattern for the default console appender:
     //
     //appenders {
@@ -112,4 +130,5 @@ log4j = {
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
+
 }

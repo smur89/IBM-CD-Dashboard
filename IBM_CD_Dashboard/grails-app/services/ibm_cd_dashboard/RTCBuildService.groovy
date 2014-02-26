@@ -40,6 +40,7 @@ import com.ibm.team.workitem.common.model.IWorkItemHandle
 import com.ibm.team.workitem.common.query.IQueryResult
 import com.ibm.team.workitem.common.query.IResolvedResult
 import grails.transaction.Transactional
+import grails.util.Holders
 import org.eclipse.core.runtime.NullProgressMonitor
 
 @Transactional
@@ -98,6 +99,32 @@ class RTCBuildService {
             e.printStackTrace()
         } catch (IllegalStateException ise) {
             ise.printStackTrace()
+        } finally {
+            //shutdownService()
+        }
+    }
+
+    def updateServerLastModified() {
+       // startService()
+        try {
+            def teamRepository = loginToRepo(URI, USERID, PASSWORD)
+
+            IProcessItemService connect = (IProcessItemService) teamRepository.getClientLibrary(IProcessItemService.class);
+            List<IProjectArea> projects = connect.findAllProjectAreas(null, null);
+            def lastMod = null
+
+            //Create list of all project areas that are not in an archived state
+            def grailsApplication = Holders.getGrailsApplication()
+            for (currProject in projects) {
+                if (currProject.modified() > lastMod ) {
+                    lastMod = currProject.modified()
+                }
+            }
+            //teamRepository.logout();
+            grailsApplication.config.ServerLastModified = lastMod
+
+        } catch (TeamRepositoryException e) {
+            e.printStackTrace()
         } finally {
             //shutdownService()
         }
@@ -203,7 +230,6 @@ class RTCBuildService {
             for (IContributorHandle member in membersHandle) {
                 members.add((IContributor) teamRepository.itemManager().fetchCompleteItem(member, IItemManager.DEFAULT, monitor))
             }
-
             return members
 
         } catch (TeamRepositoryException tre) {

@@ -2,17 +2,19 @@ package ibm_cd_dashboard
 
 import com.ibm.team.build.common.model.IBuildResult
 import com.ibm.team.process.common.IProjectArea
-import com.ibm.team.workitem.common.internal.model.WorkItemHandle
-import com.ibm.team.workitem.common.model.IWorkItemHandle
 import grails.transaction.Transactional
 import org.codehaus.groovy.grails.commons.ApplicationHolder
+import org.codehaus.groovy.grails.commons.ConfigurationHolder
 import org.springframework.dao.DuplicateKeyException
+import grails.util.Holders
+
+import java.sql.Timestamp
+
 
 @Transactional
 class DomainService {
 
     def rtcService = ApplicationHolder.application.mainContext.RTCBuildService //Todo: would be nice to remove this dependancy in code refactor
-
 
     def deleteAllTeamData() {
         if (Team.count() > 0) {
@@ -27,6 +29,10 @@ class DomainService {
         println("Deleted")
     }
 
+    def serverLastModified(){
+        rtcService.updateServerLastModified()
+    }
+
     def populateTeams() {
         try {
             List<IProjectArea> allActiveProjects = rtcService.getActiveProjects()
@@ -35,12 +41,15 @@ class DomainService {
             for (project in allActiveProjects) {
                 def newTeam
                 def projId = project.getItemId().toString().substring(6, project.getItemId().toString().length() - 1) //Remove [UUID and ] from the string
+                def projMems = rtcService.getProjectMembers(project)
+                println("projMems ${projMems[1]}")
                 newTeam = new Team(teamId: projId,
                         teamName: project.getName(),
-                        teamMembers: rtcService.getProjectMembers(project)) // todo: team members always assigned as null
+                        teamMembers: projMems ) // todo: team members always assigned as null
 
                 println("Populating Builds for project ${i++} of ${allActiveProjects.count { it }}... (${projId})")
                 populateBuilds(newTeam, project)
+                ConfigurationHolder.getConfig().getProperty("updateServerLastModified")
 
                 print("Saving...")
                 if (!newTeam.save()) {
@@ -58,7 +67,13 @@ class DomainService {
                         println it
                     }
                 }
+
                 println("Workitems count: ${WorkItem.count()}")
+
+                def grailsApplication = Holders.getGrailsApplication()
+                grailsApplication.config.DomainLastModified = new Date().toTimestamp()
+                serverLastModified()
+
             }
         } catch (DuplicateKeyException dke) {
             println("Duplicate Key Exception (New workItem)")
@@ -99,7 +114,7 @@ class DomainService {
                 for (workItem in buildWorkItems) {
                     def workItemId = workItem.getItemId().toString().substring(6, workItem.getItemId().toString().length() - 1)
                     def buildWorkId = buildId << workItemId  // concatenate buildId and workItemId to get unique key identifier
-                    println(workItem.workItemType)
+//                    println(workItem.workItemType)
                     def newWorkItem = new WorkItem(workItemId: buildWorkId,
                             buildOwner: thisBuild,
                             modified: workItem.modified(),

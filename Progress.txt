@@ -408,3 +408,51 @@ Week Beginning 12/02/14
 
 	Able to get CSS working. adding appropriate classes to existing views.
 
+Week Beginning 19/2/14
+	
+	To try verify workitem count in the GUI compared to what's returned and email brendan asking for help, recommended by Gary and John.
+
+	Total work Items should be 89. 
+	There should be 34 defects. 
+	24 of these shoudl be Tasks.
+	25 Stories
+	2 Track Build Items
+	2 Impediments
+	2 Retrospectives
+
+	Installed D3 plugin into application
+	Trying to pass buildtimes variable to javascript/d3 'Unexpected token ILLEGAL'
+	Passing JSONObject to view, in the source it is references as 
+	    var jsonOb = \u007b\u0022M20140211-0211\u0022:404413\u002c\u0022M20140210-0353\u0022:301858\u002c\u0022C20140128-1513\u0022:315050\u002c\u0022C20140204-0152\u0022:376989\u002c\u0022Q20140210-0924\u0022:375980\u002c\u0022Q20140209-2358\u0022:306343\u002c\u0022P20140211-0957\u0022:380815\u002c\u0022I20140203-1713\u0022:400477\u002c\u0022P20140211-1604\u0022:376959\u002c\u0022I20140128-1032\u0022:342344\u002c\u0022C20140204-0641\u0022:327617\u002c\u0022I20140210-1538\u0022:406061\u002c\u0022C20140210-0929\u0022:328254\u002c\u0022M20140209-2112\u0022:408360\u007d;
+
+	passing in JSON now results in &quot in the objects.
+	    for(var x in [{&quot;class&quot;:&quot;grails.converters.JSON&quot;,&quot;depth&quot;:0,&quot;writer&quot;:{&quot;class&quot;:&quot;org.codehaus.groovy.grails.web.json.JSONWriter&quot;}},{&quot;class&quot;:&quot;grails.converters.JSON&quot;,&quot;depth&quot;:0,&quot;writer&quot;:{&quot;class&quot;:&quot;org.codehaus.groovy.grails.web.json.JSONWriter&quot;}},{&quot;class&quot;:&quot;grails.converters.JSON&quot;,&quot;depth&quot;:0,&quot;writer&quot;:{&quot;class&quot;:&quot;org.codehaus.groovy.grails.web.json.JSONWriter&quot;}},{&quot;class&quot;:&quot;grails.converters.JSON&quot;,&quot;depth&quot;:0,&quot;writer&quot;:{&quot;class&quot;:&quot;org.codehaus.groovy.grails.web.json.JSONWriter&quot;}},{&quot;class&quot;:&quot;grails.converters.JSON&quot;,&quot;depth&quot;:0,&quot;writer&quot;:{&quot;class&quot;:&quot;org.codehaus.groovy.grails.web.json.JSONWriter&quot;}},{&quot;class&quot;:&quot;grails.converters.JSON&quot;,&quot;depth&quot;:0,&quot;writer&quot;:{&quot;class&quot;:&quot;org.codehaus.groovy.grails.web.json.JSONWriter&quot;}},{&quot;class&quot;:&quot;grails.converters.JSON&quot;,&quot;depth&quot;:0,&quot;writer&quot;:{&quot;class&quot;:&quot;org.codehaus.groovy.grails.web.json.JSONWriter&quot;}},{&quot;class&quot;:&quot;grails.converters.JSON&quot;,&quot;depth&quot;:0,&quot;writer&quot;:{&quot;class&quot;:&quot;org.codehaus.groovy.grails.web.json.JSONWriter&quot;}},{&quot;class&quot;:&quot;grails.converters.JSON&quot;,&quot;depth&quot;:0,&quot;writer&quot;:{&quot;class&quot;:&quot;org.codehaus.groovy.grails.web.json.JSONWriter&quot;}},{&quot;class&quot;:&quot;grails.converters.JSON&quot;,&quot;depth&quot;:0,&quot;writer&quot;:{&quot;class&quot;:&quot;org.codehaus.groovy.grails.web.json.JSONWriter&quot;}},{&quot;class&quot;:&quot;grails.converters.JSON&quot;,&quot;depth&quot;:0,&quot;writer&quot;:{&quot;class&quot;:&quot;org.codehaus.groovy.grails.web.json.JSONWriter&quot;}},{&quot;class&quot;:&quot;grails.converters.JSON&quot;,&quot;depth&quot;:0,&quot;writer&quot;:{&quot;class&quot;:&quot;org.codehaus.groovy.grails.web.json.JSONWriter&quot;}},{&quot;class&quot;:&quot;grails.converters.JSON&quot;,&quot;depth&quot;:0,&quot;writer&quot;:{&quot;class&quot;:&quot;org.codehaus.groovy.grails.web.json.JSONWriter&quot;}},{&quot;class&quot;:&quot;grails.converters.JSON&quot;,&quot;depth&quot;:0,&quot;writer&quot;:{&quot;class&quot;:&quot;org.codehaus.groovy.grails.web.json.JSONWriter&quot;}},{&quot;class&quot;:&quot;grails.converters.JSON&quot;,&quot;depth&quot;:0,&quot;writer&quot;:{&quot;class&quot;:&quot;org.codehaus.groovy.grails.web.json.JSONWriter&quot;}}]){
+        times.add(x);
+    }
+
+    Researching how to integrate Jenkins with RTC.
+    Installed github plugin to jenkins for auce demo install
+    https://saucelabs.com/jenkins/4
+
+    Managed to pass Groovy object into View and manipulate with Javascript. put values of Groovy object into two 1D arrays, with corresponding indexes.
+    Used a map to pass details into D3.js using the nv.d3.js models to create a line chart of the build times in order of modified date. Added another row to table of builds to have build number which is references in the line graph on the x axis.
+
+    http://nvd3.org/ghpages/line.html
+
+    Trying to get TeamMembers to display on teaminfo page. Team members are being returned and associated with thread right through the PopulateTeams() method. but after this method, the field is null.
+
+Week Beginning 26/02/14
+	
+	Going to change code logic to check if domain has any teams, if not, populate teams, if it has teams but they have not been modified in some time period, check the server for additional information, otherwise, load the index page. 
+
+	Researching Quartz for AJAX type request to the server.
+	Installed grails quartz plugin
+	 - create-job script not there
+	 needed to issue command grails refresh-dependencies - create-job script now available.
+
+	 Created methods and variables to hold and set DomainLastModified and ServerLastModified, check whether DomainLastModified < ServerLastModified to see if Domain is up to date, can add this to a quartz job to check priodically.
+
+	 Changed default page to load the TeamController/checkState action.
+
+	 Implementing logging in the application.
+	 Log files creating, but empty.

@@ -59,7 +59,8 @@
         <div class="lotusBanner"><div class="lotusRightCorner"><div class="lotusInner">
             <a href="#lotusMainContent" accesskey="S" class="lotusAccess"><img src="../../css/images/blank.gif"
                                                                                alt="Skip to main content link. Accesskey S"/>
-            </a><g:link controller="team" action="index" class ="lotusLogo"><img alt="Product Name" src="../../css/images/blank.gif"/><span
+            </a><g:link controller="team" action="index" class="lotusLogo"><img alt="Product Name"
+                                                                                src="../../css/images/blank.gif"/><span
                     class="lotusAltText">CD Adoption Dashboard</span></g:link>
             <ul class="lotusInlinelist lotusUtility"><li class="lotusFirst"><a role="button" aria-haspopup="true"
                                                                                href="javascript:;">Alex Kay <img

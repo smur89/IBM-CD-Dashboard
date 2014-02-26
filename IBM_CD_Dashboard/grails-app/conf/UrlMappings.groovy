@@ -7,7 +7,8 @@ class UrlMappings {
             }
         }
 
-        "/"(view:"/index")
+        "/"(controller: "team", action: "checkState")
+        //"/"(view:"/index")  //default Grails page, list of controllers.
         "500"(view:'/error')
 	}
 }
