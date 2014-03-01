@@ -8,13 +8,10 @@ import org.codehaus.groovy.grails.commons.ConfigurationHolder
 import org.springframework.dao.DuplicateKeyException
 import grails.util.Holders
 
-import java.sql.Timestamp
-
-
 @Transactional
 class DomainService {
 
-    def rtcService = ApplicationHolder.application.mainContext.RTCBuildService //Todo: would be nice to remove this dependancy in code refactor
+    def rtcService = ApplicationHolder.application.mainContext.RTCService //Todo: would be nice to remove this dependancy in code refactor
 
     def deleteAllTeamData() {
         if (Team.count() > 0) {

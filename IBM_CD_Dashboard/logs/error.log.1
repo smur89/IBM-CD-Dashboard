@@ -1,0 +1,12 @@
+2014-03-01 13:43:28,126 [http-bio-8090-exec-10] ERROR errors.GrailsExceptionResolver  - MissingPropertyException occurred when processing request: [GET] /IBM_CD_Dashboard/RtcTest/index
+No such property: slurper for class: ibm_cd_dashboard.RtcTestController. Stacktrace follows:
+groovy.lang.MissingPropertyException: No such property: slurper for class: ibm_cd_dashboard.RtcTestController
+	at ibm_cd_dashboard.RtcTestController$_index_closure1$$EOXGT5tA.doCall(RtcTestController.groovy:44)
+	at groovyx.net.http.HTTPBuilder.doRequest(HTTPBuilder.java:508)
+	at groovyx.net.http.HTTPBuilder.get(HTTPBuilder.java:292)
+	at ibm_cd_dashboard.RtcTestController$$EOXGT5tA.index(RtcTestController.groovy:42)
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)

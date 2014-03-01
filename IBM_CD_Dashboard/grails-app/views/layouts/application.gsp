@@ -62,48 +62,39 @@
             </a><g:link controller="team" action="index" class="lotusLogo"><img alt="Product Name"
                                                                                 src="../../css/images/blank.gif"/><span
                     class="lotusAltText">CD Adoption Dashboard</span></g:link>
-            <ul class="lotusInlinelist lotusUtility"><li class="lotusFirst"><a role="button" aria-haspopup="true"
-                                                                               href="javascript:;">Alex Kay <img
-                        class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt=""
-                        aria-label="Show menu"/><span class="lotusAltText">&#x25bc;</span></a></li><li><a
-                    class="lotusBannerBtn" role="button" aria-haspopup="true" href="javascript:;">Share</a></li><li><a
-                    role="button" aria-haspopup="true" aria-label="Email" href="javascript:;"><img
-                        class="yourProductSprite yourProductSprite-iconPlaceholder16" src="../../css/images/blank.gif"
-                        alt=""/><span class="lotusAltText">Email</span><span
-                        class="lotusUnreadBadge lotusBadgeIcon"><img src="../../css/images/blank.gif" alt=""
-                                                                     aria-label="New items"><span
-                            class="lotusAltText">*</span></span> <img class="lotusArrow lotusDropDownSprite"
-                                                                      src="../../css/images/blank.gif" alt=""
-                                                                      aria-label="Show menu"/><span
-                        class="lotusAltText">&#x25bc;</span></a></li><li><a role="button" aria-haspopup="true"
-                                                                            aria-label="Calendar"
-                                                                            href="javascript:;"><img
-                        class="yourProductSprite yourProductSprite-iconPlaceholder16" src="../../css/images/blank.gif"
-                        alt=""/><span class="lotusAltText">Calendar</span> <img class="lotusArrow lotusDropDownSprite"
-                                                                                src="../../css/images/blank.gif" alt=""
-                                                                                aria-label="Show menu"/><span
-                        class="lotusAltText">&#x25bc;</span></a></li><li><a role="button" aria-haspopup="true"
-                                                                            aria-label="Help" href="javascript:;"><img
-                        class="yourProductSprite yourProductSprite-bannerHelp16" src="../../css/images/blank.gif"
-                        alt=""/><span class="lotusAltText">Help</span></a></li><li><span class="lotusBranding"><img
-                    src="../../css/images/blank.gif" alt="IBM" class="lotusIBMLogo"/><span
-                    class="lotusAltText">IBM</span></span></li></ul>
+            <ul class="lotusInlinelist lotusUtility">
+                <li class="lotusFirst">
+                    <a class="lotusBannerBtn" role="button" aria-haspopup="true" href="javascript:;">Share</a>
+                </li>
+                <li>
+                    <g:link controller="help" action="index" class="yourProductSprite yourProductSprite-bannerHelp16">
+                        <img class="yourProductSprite yourProductSprite-bannerHelp16" src="../../css/images/help.gif"
+                             alt=""/>
+                    </g:link>
+                </li>
+                <li>
+                    <span class="lotusBranding">
+                        <img src="../../css/images/blank.gif" alt="IBM" class="lotusIBMLogo"/>
+                        <span class="lotusAltText">IBM</span>
+                    </span>
+                </li>
+            </ul>
             <!-- nav is an HTML5 element. Use div if you are using HTML4. -->
             <nav role="navigation" aria-label="[Product]">
-                <ul class="lotusInlinelist lotusLinks" role="toolbar"><li class="lotusFirst lotusSelected"
-                                                                          role="presentation"><a href="javascript:;"
-                                                                                                 role="button"
-                                                                                                 aria-pressed="true"><strong>Home</strong>
-                    </a></li><li role="presentation"><a role="button" aria-haspopup="true"
-                                                        href="javascript:;">People <img
-                            class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt=""
-                            aria-label="Show menu"/><span class="lotusAltText">&#x25bc;</span></a></li><li
-                        role="presentation"><a role="button" aria-haspopup="true" href="javascript:;">Communities <img
-                            class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt=""
-                            aria-label="Show menu"/><span class="lotusAltText">&#x25bc;</span></a></li><li
-                        role="presentation"><a role="button" aria-haspopup="true" href="javascript:;">Apps <img
-                            class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt=""
-                            aria-label="Show menu"/><span class="lotusAltText">&#x25bc;</span></a></li></ul>
+                <ul class="lotusInlinelist lotusLinks" role="toolbar">
+                    <li class="lotusFirst lotusSelected" role="presentation">
+                        <a href="javascript:;" role="button" aria-pressed="true">
+                            <strong>Home</strong>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a role="button" aria-haspopup="true" href="javascript:;">People
+                            <img class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt=""
+                                 aria-label="Show menu"/>
+                            <span class="lotusAltText">&#x25bc;</span>
+                        </a>
+                    </li>
+                </ul>
             </nav>
         </div></div></div><!--end lotusBanner-->
 
@@ -115,25 +106,6 @@
                         class="lotusText">${layoutTitle()}</span></h2>
             </div>
 
-            <form class="lotusSearch" action="javascript:;" method="post" role="search">
-                <table class="lotusLayout" cellspacing="0" role="presentation"><tr><td><a href="javascript:;"
-                                                                                          id="searchScope"
-                                                                                          class="lotusScope"
-                                                                                          role="button"
-                                                                                          aria-haspopup="true"
-                                                                                          aria-label="Refine search scope"
-                                                                                          title="Refine search scope"><img
-                            class="lotusIcon yourProductSprite yourProductSprite-iconPlaceholder16"
-                            src="../../css/images/blank.gif" alt="[Search scope]"/><span
-                            class="lotusAltText">&#x25bc;</span></a></td><td><input id="lotusSearchtext"
-                                                                                    name="lotusSearchtext"
-                                                                                    class="lotusText lotusInactive"
-                                                                                    type="text" value="Search"
-                                                                                    title="Search"/></td><td><span
-                        class="lotusBtnImg"><input class="lotusSearchButton" type="image" alt="Submit search"
-                                                   title="Submit search" src="../../css/images/blank.gif"/><a
-                            href="javascript:;" class="lotusAltText">Search</a></span></td></tr></table>
-            </form>
         </div></div></div><!--end titleBar-->
         <div class="lotusTitleBarExt"><div class="lotusWrapper"><div class="lotusInner">
             <ul class="lotusInlinelist lotusRight lotusActions"><li class="lotusFirst"><a href="javascript:;"

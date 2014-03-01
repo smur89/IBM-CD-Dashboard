@@ -13,14 +13,7 @@
 </head>
 <body>
 
-<table>
-    <g:each in="${teams}">
-        <tr>
-            <td><g:link action="teamInfo" id="${it.teamId}">${it.teamName}</g:link></td>
-            <td><g:link action="teamInfo" id="${it.teamId}">${it.teamId}</g:link></td>
-        </tr>
-    </g:each>
-</table>
+<p>${returnedXML}</p>
 
 </body>
 </html>

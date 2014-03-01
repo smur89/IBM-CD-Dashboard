@@ -456,3 +456,19 @@ Week Beginning 26/02/14
 
 	 Implementing logging in the application.
 	 Log files creating, but empty.
+
+	 Changed server back to basic form authentication for REST access for RQM
+
+	 Trying to parse RDF/XML, easy to do with XML, not sure how to do with RDF/XML
+	 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<oslc_disc:ServiceProviderCatalog rdf:about="https://localhost:9443/qm/oslc_qm/catalog" xmlns:jproc="http://jazz.net/xmlns/prod/jazz/process/1.0/" xmlns:oslc_qm="http://open-services.net/xmlns/qm/1.0/" xmlns:ns5="http://open-services.net/ns/qm#" xmlns="http://purl.org/dc/elements/1.1/" xmlns:ns8="http://jazz.net/ns/qm/rqm#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:oslc_disc="http://open-services.net/xmlns/discovery/1.0/" xmlns:jpres="http://jazz.net/xmlns/prod/jazz/presentation/1.0/" xmlns:ns3="http://open-services.net/ns/core#" xmlns:calm="http://jazz.net/xmlns/prod/jazz/calm/1.0/" xmlns:dc="http://purl.org/dc/terms/">
+    <dc:title>RQM Quality Management Service Provider Catalog</dc:title>
+    <oslc_disc:entry>
+        <oslc_disc:ServiceProvider>
+            <dc:title>JKE Banking (Quality Management)</dc:title>
+            <oslc_disc:details rdf:resource="https://localhost:9443/qm/process/project-areas/_CoPfAJMuEeO5Z-budGdtwQ"/>
+            <oslc_disc:services rdf:resource="https://localhost:9443/qm/oslc_qm/contexts/_CoPfAJMuEeO5Z-budGdtwQ/services.xml"/>
+            <jproc:consumerRegistry rdf:resource="https://localhost:9443/qm/process/project-areas/_CoPfAJMuEeO5Z-budGdtwQ/links"/>
+        </oslc_disc:ServiceProvider>
+    </oslc_disc:entry>
+</oslc_disc:ServiceProviderCatalog>

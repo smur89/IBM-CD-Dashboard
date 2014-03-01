@@ -10,7 +10,7 @@ import org.codehaus.groovy.grails.web.json.JSONObject
 class TeamController {
     private static final log = LogFactory.getLog(this)
 
-    //def rtcService = ApplicationHolder.application.mainContext.RTCBuildService
+    //def rtcService = ApplicationHolder.application.mainContext.RTCService
     def domainService = ApplicationHolder.application.mainContext.DomainService
 
     def index() { //teamInfo
@@ -34,8 +34,9 @@ class TeamController {
 
             } else if (Team.count()<1){ //if Database empty
                 println("Redirect to setup, ")
-                redirect(setup())
+                redirect(controller: "team", action: "setup")
             } else {  // database up to date
+                println("Database up to date.")
                 redirect(index())
             }
         } catch (Exception e) {
