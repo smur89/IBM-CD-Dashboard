@@ -10,7 +10,6 @@ import org.codehaus.groovy.grails.web.json.JSONObject
 class TeamController {
     private static final log = LogFactory.getLog(this)
 
-    //def rtcService = ApplicationHolder.application.mainContext.RTCService
     def domainService = ApplicationHolder.application.mainContext.DomainService
 
     def index() { //teamInfo
@@ -22,7 +21,8 @@ class TeamController {
             [teams: allTeams]
         }
         catch (Exception e) {
-            println("Index Exception : " << e.printStackTrace())
+            log.error("Index Exception in index(): ${e.getMessage()} \n ${e.printStackTrace()}")
+            println("Index Exception : ${e.getMessage()}")
         }
     }
 
@@ -40,7 +40,8 @@ class TeamController {
                 redirect(index())
             }
         } catch (Exception e) {
-            println("Index Exception : " << e.printStackTrace())
+            log.error("Index Exception in checkState(): ${e.getMessage()} \n ${e.printStackTrace()}")
+            println("Index Exception : ${e.getMessage()}")
         }
     }
 
@@ -50,7 +51,8 @@ class TeamController {
             domainService.populateTeams()     // repopulate
             redirect(index())
         } catch (Exception e) {
-            println("Index Exception : " << e.printStackTrace())
+            log.error("Index Exception in setup(): ${e.getMessage()} \n ${e.printStackTrace()}")
+            println("Index Exception : ${e.getMessage()}")
         }
     }
 
@@ -73,7 +75,6 @@ class TeamController {
         }
         println(team.getTeamMembers())
 
-        //println(jsonTimes)
         [team: team, avgBuildTime: builds.buildTimeInMillis.sum { it } / builds.count { it }, jsonTimes: jsonTimes.sort {a, b -> a.modified <=> b.modified}]
     }
 }

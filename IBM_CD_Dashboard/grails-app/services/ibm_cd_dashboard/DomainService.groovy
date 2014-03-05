@@ -11,7 +11,18 @@ import grails.util.Holders
 @Transactional
 class DomainService {
 
-    def rtcService = ApplicationHolder.application.mainContext.RTCService //Todo: would be nice to remove this dependancy in code refactor
+    def rtcService = ApplicationHolder.application.mainContext.RTCService
+
+    def updateDomain(Date lastUpdate) {
+        def projects = rtcService.getAllProjects();
+        //Get Project Areas that need to be updated.
+        List<IProjectArea> projectsToUpdate = null;
+        for(project in projects){
+            if(project.modified() > lastUpdate){
+                projectsToUpdate.add(project)
+            }
+        }
+    }
 
     def deleteAllTeamData() {
         if (Team.count() > 0) {
@@ -39,7 +50,6 @@ class DomainService {
                 def newTeam
                 def projId = project.getItemId().toString().substring(6, project.getItemId().toString().length() - 1) //Remove [UUID and ] from the string
                 def projMems = rtcService.getProjectMembers(project)
-                println("projMems ${projMems[1]}")
                 newTeam = new Team(teamId: projId,
                         teamName: project.getName(),
                         teamMembers: projMems ) // todo: team members always assigned as null
@@ -73,10 +83,13 @@ class DomainService {
 
             }
         } catch (DuplicateKeyException dke) {
-            println("Duplicate Key Exception (New workItem)")
+            log.error("\${new Date()}: Duplicate Key Exception (New workItem): ${dke.getMessage()} : ${dke.printStackTrace()}")
+            println("Duplicate Key Exception (New workItem): ${dke.getMessage()}")
         } catch (NullPointerException npe) {
-            println("Null Pointer in populateTeams() : " << npe.printStackTrace())
+            log.error("${new Date()}: Null Pointer in populateTeams(): ${npe.getMessage()}" << npe.printStackTrace())
+            println("Null Pointer in populateTeams(): ${npe.getMessage()}" << npe.printStackTrace())
         } finally {
+            log.info("${new Date()}: Database Loaded and Ready")
             println("Done. Database ready")
         }
     }

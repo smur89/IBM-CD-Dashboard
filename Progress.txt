@@ -442,26 +442,18 @@ Week Beginning 19/2/14
     Trying to get TeamMembers to display on teaminfo page. Team members are being returned and associated with thread right through the PopulateTeams() method. but after this method, the field is null.
 
 Week Beginning 26/02/14
-	
-	Going to change code logic to check if domain has any teams, if not, populate teams, if it has teams but they have not been modified in some time period, check the server for additional information, otherwise, load the index page. 
-
-	Researching Quartz for AJAX type request to the server.
-	Installed grails quartz plugin
-	 - create-job script not there
-	 needed to issue command grails refresh-dependencies - create-job script now available.
-
-	 Created methods and variables to hold and set DomainLastModified and ServerLastModified, check whether DomainLastModified < ServerLastModified to see if Domain is up to date, can add this to a quartz job to check priodically.
 
 	 Changed default page to load the TeamController/checkState action.
 
 	 Implementing logging in the application.
 	 Log files creating, but empty.
+	 Adding logging for exceptions etc.
 
 	 Changed server back to basic form authentication for REST access for RQM
 
 	 Trying to parse RDF/XML, easy to do with XML, not sure how to do with RDF/XML
 	 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<oslc_disc:ServiceProviderCatalog rdf:about="https://localhost:9443/qm/oslc_qm/catalog" xmlns:jproc="http://jazz.net/xmlns/prod/jazz/process/1.0/" xmlns:oslc_qm="http://open-services.net/xmlns/qm/1.0/" xmlns:ns5="http://open-services.net/ns/qm#" xmlns="http://purl.org/dc/elements/1.1/" xmlns:ns8="http://jazz.net/ns/qm/rqm#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:oslc_disc="http://open-services.net/xmlns/discovery/1.0/" xmlns:jpres="http://jazz.net/xmlns/prod/jazz/presentation/1.0/" xmlns:ns3="http://open-services.net/ns/core#" xmlns:calm="http://jazz.net/xmlns/prod/jazz/calm/1.0/" xmlns:dc="http://purl.org/dc/terms/">
+	<oslc_disc:ServiceProviderCatalog rdf:about="https://localhost:9443/qm/oslc_qm/catalog" xmlns:jproc="http://jazz.net/xmlns/prod/jazz/process/1.0/" xmlns:oslc_qm="http://open-services.net/xmlns/qm/1.0/" xmlns:ns5="http://open-services.net/ns/qm#" xmlns="http://purl.org/dc/elements/1.1/" xmlns:ns8="http://jazz.net/ns/qm/rqm#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:oslc_disc="http://open-services.net/xmlns/discovery/1.0/" xmlns:jpres="http://jazz.net/xmlns/prod/jazz/presentation/1.0/" xmlns:ns3="http://open-services.net/ns/core#" xmlns:calm="http://jazz.net/xmlns/prod/jazz/calm/1.0/" xmlns:dc="http://purl.org/dc/terms/">
     <dc:title>RQM Quality Management Service Provider Catalog</dc:title>
     <oslc_disc:entry>
         <oslc_disc:ServiceProvider>
@@ -471,4 +463,48 @@ Week Beginning 26/02/14
             <jproc:consumerRegistry rdf:resource="https://localhost:9443/qm/process/project-areas/_CoPfAJMuEeO5Z-budGdtwQ/links"/>
         </oslc_disc:ServiceProvider>
     </oslc_disc:entry>
-</oslc_disc:ServiceProviderCatalog>
+	</oslc_disc:ServiceProviderCatalog>
+
+	Going to change code logic to check if domain has any teams, if not, populate teams, if it has teams but they have not been modified in some time period, check the server for additional information, otherwise, load the index page. 
+
+	Researching Quartz for AJAX type request to the server.
+	Installed grails quartz plugin
+	 - create-job script not there
+	 needed to issue command grails refresh-dependencies - create-job script now available.
+
+	 Created methods and variables to hold and set DomainLastModified and ServerLastModified, check whether DomainLastModified < ServerLastModified to see if Domain is up to date, can add this to a quartz job to check priodically.
+
+	 Added Quartz job to run eevery 2 hours. need to implement method in service to be called by this Job to actually check the server. Method stub in DomainServer for this.
+
+Week Beginning 05/03/14
+
+	Looking at unit testing application.
+	JUnit vs Spock.
+	Junit s
+
+	Groovy Mock, Gmock, EasyMock, JMock, Mockito.
+	Jazz forum recommends Mockito, this is what IBM use internally.
+
+	Using Mockito external jar I get error:
+		| Error Compilation error compiling [unit] tests: startup failed:
+		/Users/shanemurphy/IBM-CD-Dashboard/IBM_CD_Dashboard/test/unit/ibm_cd_dashboard/DomainServiceSpec.groovy: 5: unable to resolve class org.mockito.Mockito
+	 	@ line 5, column 1.
+	   	import org.mockito.Mockito
+	   	^
+
+		1 error
+	 	(Use --stacktrace to see the full trace)
+
+	 Needed to ad to lib folder aswell as import as external library.
+
+	 Error on the .when() method of Mockito:
+	 No signature of method: com.ibm.team.process.common.IProjectArea$$EnhancerByMockitoWithCGLIB$$9b0c8d8.when() is applicable for argument types: (null) values: [null]
+	Possible solutions: wait(), grep(), wait(long), use([Ljava.lang.Object;), grep(java.lang.Object), with(groovy.lang.Closure)
+	groovy.lang.MissingMethodException: No signature of method: com.ibm.team.process.common.IProjectArea$$EnhancerByMockitoWithCGLIB$$9b0c8d8.when() is applicable for argument types: (null) values: [null]
+	Possible solutions: wait(), grep(), wait(long), use([Ljava.lang.Object;), grep(java.lang.Object), with(groovy.lang.Closure)
+	at ibm_cd_dashboard.DomainServiceSpec.setup(DomainServiceSpec.groovy:16)
+
+	Reply from Brendan - Spock is not approved for use in IBM - use JUnit.
+	
+
+

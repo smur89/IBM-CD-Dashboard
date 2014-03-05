@@ -64,6 +64,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="grails-2.3.1" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mockito-all-1.9.5" level="project" />
     <orderEntry type="module-library" exported="">
       <library name="Grails User Library (IBM_CD_Dashboard-grailsPlugins)">
         <CLASSES>

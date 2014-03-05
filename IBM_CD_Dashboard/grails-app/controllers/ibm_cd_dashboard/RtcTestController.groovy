@@ -1,6 +1,5 @@
 package ibm_cd_dashboard
 
-import grails.converters.XML
 import groovyx.net.http.RESTClient
 import javax.net.ssl.X509TrustManager
 import javax.net.ssl.SSLContext
@@ -10,8 +9,6 @@ import java.security.SecureRandom
 import org.apache.http.conn.ssl.SSLSocketFactory
 import org.apache.http.conn.scheme.Scheme
 import groovyx.net.http.*
-import static groovyx.net.http.ContentType.*
-import static groovyx.net.http.Method.*
 
 class RtcTestController {
 
@@ -74,4 +71,6 @@ class RtcTestController {
         [returnedXML: myXML]
 
     }
+
+
 }

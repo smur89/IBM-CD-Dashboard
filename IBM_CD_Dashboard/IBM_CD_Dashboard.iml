@@ -38,6 +38,7 @@
       <sourceFolder url="file://$MODULE_DIR$/test/integration" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/grails-app/jobs" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target/classes" />
+      <excludeFolder url="file://$MODULE_DIR$/target/test-classes" />
       <excludeFolder url="file://$MODULE_DIR$/target/work/plugin-build-classes" />
       <excludeFolder url="file://$MODULE_DIR$/target/work/plugin-classes" />
       <excludeFolder url="file://$MODULE_DIR$/target/work/plugin-provided-classes" />
@@ -84,6 +85,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="IBM_CD_Dashboard-grailsPlugins" />
+    <orderEntry type="library" name="mockito-all-1.9.5" level="project" />
   </component>
 </module>
 

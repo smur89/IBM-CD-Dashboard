@@ -15,6 +15,7 @@ class TeamControllerSpec extends Specification {
     def cleanup() {
     }
 
-    void "test something"() {
+    void "getAll() returns Teams"() {
+
     }
 }

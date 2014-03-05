@@ -1,0 +1,10 @@
+Testsuite: ibm_cd_dashboard.DomainServiceSpec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 1.192 sec
+------------- Standard Output ---------------
+--Output from test something--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from test something--
+------------- ---------------- ---------------
+
+Testcase: test something took 1.186 sec
