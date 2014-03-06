@@ -1,3 +1,4 @@
+<%@ page import="ibm_cd_dashboard.User" %>
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -63,15 +64,23 @@
                                                                                 src="../../css/images/blank.gif"/><span
                     class="lotusAltText">CD Adoption Dashboard</span></g:link>
             <ul class="lotusInlinelist lotusUtility">
-                <li class="lotusFirst">
-                    <a class="lotusBannerBtn" role="button" aria-haspopup="true" href="javascript:;">Share</a>
-                </li>
+                <sec:ifNotLoggedIn>
+                    <li>
+                        <g:link controller="login">Login</g:link>
+                    </li>
+                </sec:ifNotLoggedIn>
+                <sec:ifLoggedIn>
+                    <li>
+                        <g:link controller="logout" role="button" class="lotusBannerBtn">Logout</g:link>
+                    </li>
+                </sec:ifLoggedIn>
                 <li>
                     <g:link controller="help" action="index" class="yourProductSprite yourProductSprite-bannerHelp16">
                         <img class="yourProductSprite yourProductSprite-bannerHelp16" src="../../css/images/help.gif"
                              alt=""/>
                     </g:link>
                 </li>
+
                 <li>
                     <span class="lotusBranding">
                         <img src="../../css/images/blank.gif" alt="IBM" class="lotusIBMLogo"/>
@@ -94,6 +103,7 @@
                             <span class="lotusAltText">&#x25bc;</span>
                         </a>
                     </li>
+
                 </ul>
             </nav>
         </div></div></div><!--end lotusBanner-->
@@ -106,15 +116,9 @@
                         class="lotusText">${layoutTitle()}</span></h2>
             </div>
 
-        </div></div></div><!--end titleBar-->
-        <div class="lotusTitleBarExt"><div class="lotusWrapper"><div class="lotusInner">
-            <ul class="lotusInlinelist lotusRight lotusActions"><li class="lotusFirst"><a href="javascript:;"
-                                                                                          role="button">Action</a>
-            </li><li><a href="javascript:;" role="button">Action</a></li><li><a href="javascript:;" role="button"
-                                                                                aria-haspopup="true">More Actions <img
-                        class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt=""/><span
-                        class="lotusAltText">&#x25bc;</span></a></li></ul>
-        </div></div></div><!--end lotusTitleBarExt-->
+        </div>
+        </div>
+        </div><!--end titleBar-->
 
     </header>
 
@@ -124,30 +128,21 @@
 
     <!-- aside is an HTML5 element. Use div if you are using HTML4. -->
         <aside class="lotusColRight">
+
         </aside><!--end colRight-->
-        <a id="lotusMainContent" name="lotusMainContent"></a>
-
         <div class="lotusContent" role="main">
+
             <g:layoutBody/>
-
-
-
-            <!-- Insert your content here -->
 
         </div><!--end content-->
     </div><!--end main-->
 <!-- footer is an HTML5 element. Use div if you are using HTML4. -->
     <footer class="lotusFooter" role="contentinfo">
         <ul>
-            <li><a href="javascript:;">Home</a></li>
-            <li><a href="javascript:;">Demo</a></li>
+            <li><a href="http://ibm.com">Home</a></li>
             <li><a href="javascript:;">Help</a></li>
-            <li><a href="javascript:;">Support Forums</a></li>
-            <li><a href="javascript:;">Link</a></li>
-            <li><a href="javascript:;">Link</a></li>
             <li><a href="javascript:;">About</a></li>
-            <li><a href="javascript:;">[Application] on ibm.com</a></li>
-            <li><a href="javascript:;">Submit Feedback</a></li>
+            <li><a href="mailto:feedback@ibm.com?Subject=CD%20Dashboard%20Feedback">Submit Feedback</a></li>
         </ul>
     </footer><!--end footer-->
 
@@ -156,7 +151,7 @@
         <table class="lotusLegal" cellspacing="0" role="presentation">
             <tr>
                 <td><img class="lotusIBMLogoFooter" src="../../css/images/blank.gif" alt="IBM"/></td>
-                <td class="lotusLicense">&copy; Copyright IBM Corporation &lt;2014&gt;.</td>
+                <td class="lotusLicense">&copy; Copyright IBM Corporation 2014.</td>
             </tr>
         </table>
     </footer>

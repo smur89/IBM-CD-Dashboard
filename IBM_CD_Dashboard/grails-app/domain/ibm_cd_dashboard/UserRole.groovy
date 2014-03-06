@@ -4,62 +4,62 @@ import org.apache.commons.lang.builder.HashCodeBuilder
 
 class UserRole implements Serializable {
 
-    private static final long serialVersionUID = 1
+	private static final long serialVersionUID = 1
 
-    User secUser
-    Role secRole
+	User user
+	Role role
 
-    boolean equals(other) {
-        if (!(other instanceof UserRole)) {
-            return false
-        }
+	boolean equals(other) {
+		if (!(other instanceof UserRole)) {
+			return false
+		}
 
-        other.secUser?.id == secUser?.id &&
-                other.secRole?.id == secRole?.id
-    }
+		other.user?.id == user?.id &&
+			other.role?.id == role?.id
+	}
 
-    int hashCode() {
-        def builder = new HashCodeBuilder()
-        if (secUser) builder.append(secUser.id)
-        if (secRole) builder.append(secRole.id)
-        builder.toHashCode()
-    }
+	int hashCode() {
+		def builder = new HashCodeBuilder()
+		if (user) builder.append(user.id)
+		if (role) builder.append(role.id)
+		builder.toHashCode()
+	}
 
-    static UserRole get(long secUserId, long secRoleId) {
-        UserRole.where {
-            secUser == User.load(secUserId) &&
-                    secRole == Role.load(secRoleId)
-        }.get()
-    }
+	static UserRole get(long userId, long roleId) {
+		UserRole.where {
+			user == User.load(userId) &&
+			role == Role.load(roleId)
+		}.get()
+	}
 
-    static UserRole create(User secUser, Role secRole, boolean flush = false) {
-        new UserRole(secUser: secUser, secRole: secRole).save(flush: flush, insert: true)
-    }
+	static UserRole create(User user, Role role, boolean flush = false) {
+		new UserRole(user: user, role: role).save(flush: flush, insert: true)
+	}
 
-    static boolean remove(User u, Role r, boolean flush = false) {
+	static boolean remove(User u, Role r, boolean flush = false) {
 
-        int rowCount = UserRole.where {
-            secUser == User.load(u.id) &&
-                    secRole == Role.load(r.id)
-        }.deleteAll()
+		int rowCount = UserRole.where {
+			user == User.load(u.id) &&
+			role == Role.load(r.id)
+		}.deleteAll()
 
-        rowCount > 0
-    }
+		rowCount > 0
+	}
 
-    static void removeAll(User u) {
-        UserRole.where {
-            secUser == User.load(u.id)
-        }.deleteAll()
-    }
+	static void removeAll(User u) {
+		UserRole.where {
+			user == User.load(u.id)
+		}.deleteAll()
+	}
 
-    static void removeAll(Role r) {
-        UserRole.where {
-            secRole == Role.load(r.id)
-        }.deleteAll()
-    }
+	static void removeAll(Role r) {
+		UserRole.where {
+			role == Role.load(r.id)
+		}.deleteAll()
+	}
 
-    static mapping = {
-        id composite: ['secRole', 'secUser']
-        version false
-    }
+	static mapping = {
+		id composite: ['role', 'user']
+		version false
+	}
 }

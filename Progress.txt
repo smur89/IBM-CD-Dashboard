@@ -505,6 +505,10 @@ Week Beginning 05/03/14
 	at ibm_cd_dashboard.DomainServiceSpec.setup(DomainServiceSpec.groovy:16)
 
 	Reply from Brendan - Spock is not approved for use in IBM - use JUnit.
-	
 
+	IBM Meeting - Yellow status. Issues surrounding the workitems is an internal issue and outside of the scope of the project - don't know how to resolve, move on. The main point of the project is the GUI, should concentrate on providing mock data, showing an understanding of how the data would be collected from the server, but not actually having to fetch from the server. Focus on User Stories of user roles and providing different views to different users. Focus on bringing more information on first page and only delve deeper where really nessecary. Should be able to get all information required at a glance.
+
+	Created user and role domain. Following tutorial - http://grails-plugins.github.io/grails-spring-security-core/docs/manual/guide/single.html#tutorials
+	
+	Can now login and logout, changed logout to accept GET requests. To implement profile editing page next where user can select projects from all projects in the database to associate with their profile.
 

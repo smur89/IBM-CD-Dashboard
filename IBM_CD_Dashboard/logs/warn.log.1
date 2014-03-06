@@ -1,11 +1,12 @@
-2014-03-05 13:20:45,053 [quartzScheduler_Worker-5] ERROR listeners.ExceptionPrinterJobListener  - Exception occurred in job: Grails Job
-org.quartz.JobExecutionException: java.lang.NullPointerException: Cannot invoke method getClientLibrary() on null object [See nested exception: java.lang.NullPointerException: Cannot invoke method getClientLibrary() on null object]
-	at grails.plugins.quartz.GrailsJobFactory$GrailsJob.execute(GrailsJobFactory.java:111)
-	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
-	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
-Caused by: java.lang.NullPointerException: Cannot invoke method getClientLibrary() on null object
-	at ibm_cd_dashboard.RTCService$_getAllProjects_closure4.doCall(RTCService.groovy:92)
-	at ibm_cd_dashboard.RTCService$_checkServerLastUpdate_closure13.doCall(RTCService.groovy:336)
-	at ibm_cd_dashboard.CheckForServerUpdatesJob$$EOXda09w.execute(CheckForServerUpdatesJob.groovy:19)
-	at grails.plugins.quartz.GrailsJobFactory$GrailsJob.execute(GrailsJobFactory.java:104)
-	... 2 more
+2014-03-06 14:52:54,032 [http-bio-8090-exec-3] ERROR [Tomcat].[localhost]  - Exception Processing ErrorPage[errorCode=500, location=/grails-errorhandler]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.grails.internal.SESSION_FACTORY_HOLDER': Cannot create inner bean '(inner bean)' of type [org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean] while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#2': Invocation of init method failed; nested exception is java.io.FileNotFoundException: class path resource [hibernate.cfg.xml] cannot be resolved to URL because it does not exist
+	at grails.plugin.springsecurity.web.filter.GrailsAnonymousAuthenticationFilter$$EOXjy45g.doFilter(GrailsAnonymousAuthenticationFilter.java:53)
+	at grails.plugin.springsecurity.web.authentication.RequestHolderAuthenticationFilter$$EOXjy45g.doFilter(RequestHolderAuthenticationFilter.java:49)
+	at grails.plugin.springsecurity.web.authentication.logout.MutableLogoutFilter$$EOXjy45g.doFilter(MutableLogoutFilter.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#2': Invocation of init method failed; nested exception is java.io.FileNotFoundException: class path resource [hibernate.cfg.xml] cannot be resolved to URL because it does not exist
+	... 6 more
+Caused by: java.io.FileNotFoundException: class path resource [hibernate.cfg.xml] cannot be resolved to URL because it does not exist
+	... 6 more

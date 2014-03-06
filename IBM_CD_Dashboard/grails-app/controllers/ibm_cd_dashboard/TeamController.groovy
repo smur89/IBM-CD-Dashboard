@@ -1,19 +1,23 @@
 package ibm_cd_dashboard
 
-import com.google.gson.Gson
-import grails.converters.JSON
 import grails.util.Holders
 import org.apache.commons.logging.LogFactory
 import org.codehaus.groovy.grails.commons.ApplicationHolder
-import org.codehaus.groovy.grails.web.json.JSONObject
 
 class TeamController {
     private static final log = LogFactory.getLog(this)
+    def springSecurityService
 
     def domainService = ApplicationHolder.application.mainContext.DomainService
 
     def index() { //teamInfo
         try {
+            def username = null
+            if(springSecurityService.isLoggedIn()){
+                username = (User.get(springSecurityService.principal.id).username)
+            }
+
+
             log.info("Getting all teams from local database.")
             def allTeams = Team.getAll()
             log.info("Teams returned: ${allTeams}")

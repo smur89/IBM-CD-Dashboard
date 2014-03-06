@@ -8,8 +8,8 @@ import org.codehaus.groovy.grails.commons.ApplicationHolder
 class CheckForServerUpdatesJob {
 
        static triggers = {
-        cron name: 'cronTrigger', cronExpression: " 0/5 * * * * ?" //every 5 seconds
-//        cron name: 'cronTrigger', cronExpression: "0 0 0/2 1/1 * ? *" //every 2 hours
+        //cron name: 'cronTrigger', cronExpression: " 0/5 * * * * ?" //every 5 seconds
+        cron name: 'cronTrigger', cronExpression: "0 0 0/2 1/1 * ? *" //every 2 hours
     }
 
     def rtcService = ApplicationHolder.application.mainContext.RTCService
