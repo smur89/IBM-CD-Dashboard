@@ -1,9 +1,12 @@
-2014-03-04 18:04:12,793 [http-bio-8090-exec-8] ERROR [/IBM_CD_Dashboard].[gsp]  - Servlet.service() for servlet [gsp] in context with path [/IBM_CD_Dashboard] threw exception [java.lang.IllegalAccessError: tried to access method org.springframework.web.filter.GenericFilterBean.getServletContext()Ljavax/servlet/ServletContext; from class grails.plugin.cache.web.filter.AbstractFilter$$EOXZ2rMG] with root cause
-java.lang.IllegalAccessError: tried to access method org.springframework.web.filter.GenericFilterBean.getServletContext()Ljavax/servlet/ServletContext; from class grails.plugin.cache.web.filter.AbstractFilter$$EOXZ2rMG
-	at grails.plugin.cache.web.filter.AbstractFilter$$EOXZ2rMG.getBean(AbstractFilter.java:194)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter$$EOXZ2rMG.lookupController(PageFragmentCachingFilter.java:851)
-	at grails.plugin.cache.web.filter.PageFragmentCachingFilter$$EOXZ2rMG.doFilter(PageFragmentCachingFilter.java:175)
-	at grails.plugin.cache.web.filter.AbstractFilter$$EOXZ2rMG.doFilter(AbstractFilter.java:63)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:744)
+2014-03-05 13:20:41,704 [quartzScheduler_Worker-1] INFO  ibm_cd_dashboard.CheckForServerUpdatesJob  - Server Checked on: Wed Mar 05 13:20:41 GMT 2014
+2014-03-05 13:20:45,053 [quartzScheduler_Worker-5] ERROR listeners.ExceptionPrinterJobListener  - Exception occurred in job: Grails Job
+org.quartz.JobExecutionException: java.lang.NullPointerException: Cannot invoke method getClientLibrary() on null object [See nested exception: java.lang.NullPointerException: Cannot invoke method getClientLibrary() on null object]
+	at grails.plugins.quartz.GrailsJobFactory$GrailsJob.execute(GrailsJobFactory.java:111)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException: Cannot invoke method getClientLibrary() on null object
+	at ibm_cd_dashboard.RTCService$_getAllProjects_closure4.doCall(RTCService.groovy:92)
+	at ibm_cd_dashboard.RTCService$_checkServerLastUpdate_closure13.doCall(RTCService.groovy:336)
+	at ibm_cd_dashboard.CheckForServerUpdatesJob$$EOXda09w.execute(CheckForServerUpdatesJob.groovy:19)
+	at grails.plugins.quartz.GrailsJobFactory$GrailsJob.execute(GrailsJobFactory.java:104)
+	... 2 more

@@ -1,2 +1,0 @@
-2014-03-04 18:09:58,761 [http-bio-8090-exec-7] INFO  ibm_cd_dashboard.DomainService  - Tue Mar 04 18:09:58 GMT 2014: Database Loaded and Ready
-2014-03-04 20:00:00,481 [quartzScheduler_Worker-1] INFO  ibm_cd_dashboard.CheckForServerUpdatesJob  - Server Checked on: Tue Mar 04 20:00:00 GMT 2014
