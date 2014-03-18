@@ -1,1 +1,2 @@
-2014-03-06 14:55:48,955 [http-bio-8090-exec-7] INFO  ibm_cd_dashboard.DomainService  - Thu Mar 06 14:55:48 GMT 2014: Database Loaded and Ready
+2014-03-18 10:32:11,799 [http-bio-8090-exec-8] ERROR ibm_cd_dashboard.TeamController  - Index Exception in setup(): Transaction rolled back because it has been marked as rollback-only 
+ null

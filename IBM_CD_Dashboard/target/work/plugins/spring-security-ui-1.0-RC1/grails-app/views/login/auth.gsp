@@ -2,7 +2,7 @@
 
 <head>
 <title><g:message code='spring.security.ui.login.title'/></title>
-    <meta name='layout' content='application'/>
+<meta name='layout' content='register'/>
 </head>
 
 <body>
