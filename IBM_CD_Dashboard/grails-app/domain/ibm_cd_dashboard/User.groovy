@@ -3,10 +3,11 @@ package ibm_cd_dashboard
 class User {
 
 	transient springSecurityService
+    static hasOne = [userProfile:UserProfile]
 
-	String username
+
+    String username
 	String password
-    List<String> projects
 	boolean enabled = true
 	boolean accountExpired
 	boolean accountLocked
@@ -17,8 +18,9 @@ class User {
 	static constraints = {
 		username blank: false, unique: true
 		password blank: false
-        projects blank: true, nullable: true
-	}
+        userProfile unique:true, nullable: true
+
+    }
 
 	static mapping = {
 		password column: '`password`'

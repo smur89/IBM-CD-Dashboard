@@ -1,2 +1,4 @@
-2014-03-18 10:32:11,799 [http-bio-8090-exec-8] ERROR ibm_cd_dashboard.TeamController  - Index Exception in setup(): Transaction rolled back because it has been marked as rollback-only 
+2014-03-25 17:30:37,780 [http-bio-8090-exec-4] ERROR ibm_cd_dashboard.DomainService  - Tue Mar 25 17:30:37 GMT 2014: Null Pointer in populateTeams(): Cannot invoke method getClientLibrary() on null objectnull
+2014-03-25 17:30:37,790 [http-bio-8090-exec-4] INFO  ibm_cd_dashboard.DomainService  - Tue Mar 25 17:30:37 GMT 2014: Database Loaded and Ready
+2014-03-25 17:30:37,805 [http-bio-8090-exec-4] ERROR ibm_cd_dashboard.TeamController  - Index Exception in setup(): Transaction rolled back because it has been marked as rollback-only 
  null

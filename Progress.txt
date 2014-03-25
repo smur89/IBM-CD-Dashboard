@@ -512,3 +512,10 @@ Week Beginning 05/03/14
 	
 	Can now login and logout, changed logout to accept GET requests. To implement profile editing page next where user can select projects from all projects in the database to associate with their profile.
 
+Week Beginning 19/3/14
+	
+	Adding userprofile to user domain
+
+	error starting application - | Error 2014-03-20 22:06:49,195 [localhost-startStop-1] ERROR util.JDBCExceptionReporter  - Parameter "#2" is not set; SQL statement:
+
+

@@ -1,7 +1,22 @@
-2014-03-06 14:55:48,955 [http-bio-8090-exec-7] INFO  ibm_cd_dashboard.DomainService  - Thu Mar 06 14:55:48 GMT 2014: Database Loaded and Ready
-2014-03-18 10:31:34,032 [http-bio-8090-exec-3] ERROR ibm_cd_dashboard.DomainService  - Tue Mar 18 10:31:34 GMT 2014: Null Pointer in populateTeams(): Cannot invoke method getClientLibrary() on null objectnull
-2014-03-18 10:31:34,069 [http-bio-8090-exec-3] INFO  ibm_cd_dashboard.DomainService  - Tue Mar 18 10:31:34 GMT 2014: Database Loaded and Ready
-2014-03-18 10:31:34,088 [http-bio-8090-exec-3] ERROR ibm_cd_dashboard.TeamController  - Index Exception in setup(): Transaction rolled back because it has been marked as rollback-only 
- null
-2014-03-18 10:32:11,788 [http-bio-8090-exec-8] ERROR ibm_cd_dashboard.DomainService  - Tue Mar 18 10:32:11 GMT 2014: Null Pointer in populateTeams(): Cannot invoke method getClientLibrary() on null objectnull
-2014-03-18 10:32:11,794 [http-bio-8090-exec-8] INFO  ibm_cd_dashboard.DomainService  - Tue Mar 18 10:32:11 GMT 2014: Database Loaded and Ready
+2014-03-20 22:33:27,071 [Thread-13] ERROR hbm2ddl.SchemaExport  - schema export unsuccessful
+org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-173]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:331)
+	at org.h2.message.DbException.get(DbException.java:171)
+	at org.h2.message.DbException.get(DbException.java:148)
+	at org.h2.message.DbException.get(DbException.java:137)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1413)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1388)
+	at org.h2.jdbc.JdbcConnection.getAutoCommit(JdbcConnection.java:428)
+	at java.lang.Thread.run(Thread.java:744)
+2014-03-25 17:19:56,152 [localhost-startStop-1] ERROR context.GrailsContextLoader  - Error initializing the application: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: hasOne property [User.userProfile] is not bidirectional. Specify the other side of the relationship!
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: hasOne property [User.userProfile] is not bidirectional. Specify the other side of the relationship!
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: hasOne property [User.userProfile] is not bidirectional. Specify the other side of the relationship!
+	... 4 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: hasOne property [User.userProfile] is not bidirectional. Specify the other side of the relationship!
+	... 4 more
+Caused by: org.hibernate.MappingException: hasOne property [User.userProfile] is not bidirectional. Specify the other side of the relationship!
+	... 4 more

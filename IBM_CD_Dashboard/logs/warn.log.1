@@ -1,12 +1,22 @@
-2014-03-06 14:52:54,032 [http-bio-8090-exec-3] ERROR [Tomcat].[localhost]  - Exception Processing ErrorPage[errorCode=500, location=/grails-errorhandler]
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.grails.internal.SESSION_FACTORY_HOLDER': Cannot create inner bean '(inner bean)' of type [org.codehaus.groovy.grails.orm.hibernate.ConfigurableLocalSessionFactoryBean] while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#2': Invocation of init method failed; nested exception is java.io.FileNotFoundException: class path resource [hibernate.cfg.xml] cannot be resolved to URL because it does not exist
-	at grails.plugin.springsecurity.web.filter.GrailsAnonymousAuthenticationFilter$$EOXjy45g.doFilter(GrailsAnonymousAuthenticationFilter.java:53)
-	at grails.plugin.springsecurity.web.authentication.RequestHolderAuthenticationFilter$$EOXjy45g.doFilter(RequestHolderAuthenticationFilter.java:49)
-	at grails.plugin.springsecurity.web.authentication.logout.MutableLogoutFilter$$EOXjy45g.doFilter(MutableLogoutFilter.java:82)
+2014-03-20 22:33:27,071 [Thread-13] ERROR hbm2ddl.SchemaExport  - schema export unsuccessful
+org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-173]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:331)
+	at org.h2.message.DbException.get(DbException.java:171)
+	at org.h2.message.DbException.get(DbException.java:148)
+	at org.h2.message.DbException.get(DbException.java:137)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1413)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1388)
+	at org.h2.jdbc.JdbcConnection.getAutoCommit(JdbcConnection.java:428)
+	at java.lang.Thread.run(Thread.java:744)
+2014-03-25 17:19:56,152 [localhost-startStop-1] ERROR context.GrailsContextLoader  - Error initializing the application: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: hasOne property [User.userProfile] is not bidirectional. Specify the other side of the relationship!
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManagerPostProcessor': Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: hasOne property [User.userProfile] is not bidirectional. Specify the other side of the relationship!
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:744)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#2': Invocation of init method failed; nested exception is java.io.FileNotFoundException: class path resource [hibernate.cfg.xml] cannot be resolved to URL because it does not exist
-	... 6 more
-Caused by: java.io.FileNotFoundException: class path resource [hibernate.cfg.xml] cannot be resolved to URL because it does not exist
-	... 6 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'transactionManager': Cannot resolve reference to bean 'sessionFactory' while setting bean property 'sessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: hasOne property [User.userProfile] is not bidirectional. Specify the other side of the relationship!
+	... 4 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory': Invocation of init method failed; nested exception is org.hibernate.MappingException: hasOne property [User.userProfile] is not bidirectional. Specify the other side of the relationship!
+	... 4 more
+Caused by: org.hibernate.MappingException: hasOne property [User.userProfile] is not bidirectional. Specify the other side of the relationship!
+	... 4 more
