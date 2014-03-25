@@ -1,3 +1,10 @@
-2014-03-25 17:30:37,780 [http-bio-8090-exec-4] ERROR ibm_cd_dashboard.DomainService  - Tue Mar 25 17:30:37 GMT 2014: Null Pointer in populateTeams(): Cannot invoke method getClientLibrary() on null objectnull
-2014-03-25 17:30:37,805 [http-bio-8090-exec-4] ERROR ibm_cd_dashboard.TeamController  - Index Exception in setup(): Transaction rolled back because it has been marked as rollback-only 
- null
+2014-03-25 18:14:15,922 [Thread-7] ERROR hbm2ddl.SchemaExport  - schema export unsuccessful
+org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-173]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:331)
+	at org.h2.message.DbException.get(DbException.java:171)
+	at org.h2.message.DbException.get(DbException.java:148)
+	at org.h2.message.DbException.get(DbException.java:137)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1413)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1388)
+	at org.h2.jdbc.JdbcConnection.getAutoCommit(JdbcConnection.java:428)
+	at java.lang.Thread.run(Thread.java:744)
