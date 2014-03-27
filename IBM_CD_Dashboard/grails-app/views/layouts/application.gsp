@@ -73,6 +73,9 @@
                     <li>
                         <g:link controller="logout" role="button" class="lotusBannerBtn">Logout</g:link>
                     </li>
+                    <li>
+                        <g:link controller="userProfile" action="show" role="button" class="lotusBannerBtn">User Profile</g:link>
+                    </li>
                 </sec:ifLoggedIn>
                 <li>
                     <g:link controller="help" action="index" class="yourProductSprite yourProductSprite-bannerHelp16">

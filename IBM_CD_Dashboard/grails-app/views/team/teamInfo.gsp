@@ -110,7 +110,9 @@ function buildTimes() {
     </tr>
     <tr>
         <th>Total Defects</th>
-        <td>${team.builds.each { it }.workItems.count { it.type.equals({ WorkItemTypes.DEFECT }) }}</td>
+        <td>${team.builds.count { it.workItems.each { it.getType().equals(WorkItemTypes.DEFECT)}}}</td>
+        %{--TODO fix this, it doesn't count properly.--}%
+
     </tr>
 </table>
 

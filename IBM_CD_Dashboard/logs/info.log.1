@@ -1,13 +1,13 @@
-2014-03-25 18:14:13,017 [main] WARN  resource.BundleResourceMapper  - Cannot create a bundle from resource [/plugins/spring-security-ui-1.0-RC1/js/spring-security-ui.js], the content type [null] is not supported. Set the resource to exclude bundle mapper.
-2014-03-25 18:14:13,024 [main] WARN  resource.BundleResourceMapper  - Cannot create a bundle from resource [/plugins/spring-security-ui-1.0-RC1/js/jquery/jquery.form.js], the content type [null] is not supported. Set the resource to exclude bundle mapper.
-2014-03-25 18:14:13,030 [main] WARN  resource.BundleResourceMapper  - Cannot create a bundle from resource [/plugins/spring-security-ui-1.0-RC1/js/ajaxLogin.js], the content type [null] is not supported. Set the resource to exclude bundle mapper.
-2014-03-25 18:14:15,922 [Thread-7] ERROR hbm2ddl.SchemaExport  - schema export unsuccessful
-org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-173]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:331)
-	at org.h2.message.DbException.get(DbException.java:171)
-	at org.h2.message.DbException.get(DbException.java:148)
-	at org.h2.message.DbException.get(DbException.java:137)
-	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1413)
-	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1388)
-	at org.h2.jdbc.JdbcConnection.getAutoCommit(JdbcConnection.java:428)
+2014-03-27 22:11:38,602 [http-bio-8090-exec-8] ERROR errors.GrailsExceptionResolver  - GrailsTagException occurred when processing request: [GET] /IBM_CD_Dashboard/team/teamInfo/_BSTID1393889189
+Unclosed GSP expression. Stacktrace follows:
+java.lang.RuntimeException: Error initializing GroovyPageView
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at grails.plugin.springsecurity.web.filter.GrailsAnonymousAuthenticationFilter.doFilter(GrailsAnonymousAuthenticationFilter.java:53)
+	at grails.plugin.springsecurity.web.authentication.RequestHolderAuthenticationFilter.doFilter(RequestHolderAuthenticationFilter.java:49)
+	at grails.plugin.springsecurity.web.authentication.logout.MutableLogoutFilter.doFilter(MutableLogoutFilter.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Unclosed GSP expression
+	... 8 more

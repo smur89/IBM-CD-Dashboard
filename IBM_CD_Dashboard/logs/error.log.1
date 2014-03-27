@@ -1,14 +1,13 @@
-2014-03-25 17:30:37,780 [http-bio-8090-exec-4] ERROR ibm_cd_dashboard.DomainService  - Tue Mar 25 17:30:37 GMT 2014: Null Pointer in populateTeams(): Cannot invoke method getClientLibrary() on null objectnull
-2014-03-25 17:30:37,805 [http-bio-8090-exec-4] ERROR ibm_cd_dashboard.TeamController  - Index Exception in setup(): Transaction rolled back because it has been marked as rollback-only 
- null
-2014-03-25 18:00:03,706 [quartzScheduler_Worker-1] ERROR listeners.ExceptionPrinterJobListener  - Exception occurred in job: Grails Job
-org.quartz.JobExecutionException: java.lang.NullPointerException: Cannot invoke method getClientLibrary() on null object [See nested exception: java.lang.NullPointerException: Cannot invoke method getClientLibrary() on null object]
-	at grails.plugins.quartz.GrailsJobFactory$GrailsJob.execute(GrailsJobFactory.java:111)
-	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
-	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
-Caused by: java.lang.NullPointerException: Cannot invoke method getClientLibrary() on null object
-	at ibm_cd_dashboard.RTCService$_getAllProjects_closure4.doCall(RTCService.groovy:92)
-	at ibm_cd_dashboard.RTCService$_checkServerLastUpdate_closure13.doCall(RTCService.groovy:336)
-	at ibm_cd_dashboard.CheckForServerUpdatesJob.execute(CheckForServerUpdatesJob.groovy:19)
-	at grails.plugins.quartz.GrailsJobFactory$GrailsJob.execute(GrailsJobFactory.java:104)
-	... 2 more
+2014-03-27 22:11:38,602 [http-bio-8090-exec-8] ERROR errors.GrailsExceptionResolver  - GrailsTagException occurred when processing request: [GET] /IBM_CD_Dashboard/team/teamInfo/_BSTID1393889189
+Unclosed GSP expression. Stacktrace follows:
+java.lang.RuntimeException: Error initializing GroovyPageView
+	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
+	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
+	at grails.plugin.springsecurity.web.filter.GrailsAnonymousAuthenticationFilter.doFilter(GrailsAnonymousAuthenticationFilter.java:53)
+	at grails.plugin.springsecurity.web.authentication.RequestHolderAuthenticationFilter.doFilter(RequestHolderAuthenticationFilter.java:49)
+	at grails.plugin.springsecurity.web.authentication.logout.MutableLogoutFilter.doFilter(MutableLogoutFilter.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Unclosed GSP expression
+	... 8 more

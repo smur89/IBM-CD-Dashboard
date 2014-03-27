@@ -17,7 +17,6 @@ class TeamController {
                 username = (User.get(springSecurityService.principal.id).username)
             }
 
-
             log.info("Getting all teams from local database.")
             def allTeams = Team.getAll()
             log.info("Teams returned: ${allTeams}")
@@ -35,7 +34,8 @@ class TeamController {
         def config = Holders.getGrailsApplication().config
         try {
             if(config.DomainLastModified < config.ServerLastModified && Team.count()>0) {  //If last modified date < newest entry in server DB
-
+              println("Domain < Server - No action implemented")
+                //TODO implement case scenario
             } else if (Team.count()<1){ //if Database empty
                 println("Redirect to setup, ")
                 redirect(controller: "team", action: "setup")
@@ -51,7 +51,7 @@ class TeamController {
 
     def setup() {
         try {
-            domainService.deleteAllTeamData() // Delete everything
+            //domainService.deleteAllTeamData() // Delete everything
             domainService.populateTeams()     // repopulate
             redirect(index())
         } catch (Exception e) {

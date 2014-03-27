@@ -518,4 +518,43 @@ Week Beginning 19/3/14
 
 	error starting application - | Error 2014-03-20 22:06:49,195 [localhost-startStop-1] ERROR util.JDBCExceptionReporter  - Parameter "#2" is not set; SQL statement:
 
+Week Beginning 27/3/14
 
+	User Profile linked, edit page lists current teams/projects with a checkbox beside them. If the team/project is listed in the users profile list of projects, the checkbox will be ticked already, showing it has already been selected.
+	Problem at the minute - UserProfile doesn't persist.
+
+	Seperate issue:
+	GRAILS-7799: Subtype 'grails.plugin.springsecurity.SpringSecurityService$$EnhancerByCGLIB$$8288660c' of reloadable type grails.plugin.springsecurity.SpringSecurityService is not reloadable: may not see changes reloaded in this hierarchy (please comment on that jira)
+
+
+	Build Duration 				Minutes        						
+	SPRs opened per capita     											
+	(general quality measure)    Number					 				id (type: xs:string). The id of the 																		type (e.g. "com.ibm team.workitem.																			defect"), unique 
+																		in a repository.
+																		name (type: xs:string). The name of the type (e.g. "Defect"). Not necessarily unique.
+																		
+	                                                
+	Cumulative open+deferred   											WORKITEM STATE
+	defects (technical debt)     Number				 					"OPEN_STATES", "CLOSED_STATES" "IN_PROGRESS_STATES".
+																		
+
+	Manual testing duration    
+	(automatable) 	          Person Weeks      	RQM
+
+	Manual testing duration    
+	(non-automatable) 			Person Weeks       	RQM
+
+	API Test Coverage (via     
+	automated measurement) 		% Value  
+	
+
+	Time from final code       
+	submission to production     Days				
+	(Cloud) 						               
+	                                                     
+	Time from final code       
+	submission to GA             Days				
+	(On-Premises)              
+		          
+	Bootstrapped meaningless data into current domain objects using random integers etc. All working. Only RTC methods not being called so only bootstrap data showing.
+	Got around this by calling populateTeams() method from bootstrap.

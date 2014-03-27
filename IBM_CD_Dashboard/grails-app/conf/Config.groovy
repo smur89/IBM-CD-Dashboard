@@ -13,8 +13,8 @@ import org.apache.log4j.Level
 //    grails.config.locations << "file:" + System.properties["${appName}.config.location"]
 // }
 
-DomainLastModified = null
-ServerLastModified = null
+DomainLastModified = new Date()
+ServerLastModified = new Date()
 
 
 grails.project.groupId = appName // change this to alter the default package name and Maven publishing destination

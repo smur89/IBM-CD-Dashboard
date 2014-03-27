@@ -7,15 +7,16 @@
 		<g:set var="entityName" value="${message(code: 'userProfile.label', default: 'UserProfile')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
+
 	<body>
 		<a href="#show-userProfile" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
+		<sec:ifAllGranted roles="ROLE_ADMIN">
+        <div class="nav" role="navigation">
 			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
+        </sec:ifAllGranted>
 		<div id="show-userProfile" class="content scaffold-show" role="main">
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
@@ -26,11 +27,13 @@
 				<g:if test="${userProfileInstance?.user}">
 				<li class="fieldcontain">
 					<span id="user-label" class="property-label"><g:message code="userProfile.user.label" default="User" /></span>
-					
-						<span class="property-value" aria-labelledby="user-label"><g:link controller="user" action="show" id="${userProfileInstance?.user?.id}">${userProfileInstance?.user?.encodeAsHTML()}</g:link></span>
-					
+				    <span class="property-value" aria-labelledby="user-label"><g:link controller="user" action="show" id="${userProfileInstance?.user?.id}">${userProfileInstance?.user?.encodeAsHTML()}</g:link></span>
 				</li>
 				</g:if>
+                
+                <g:each in="${projojojojoj}">
+                    <p>dddd</p>
+                </g:each>
 			
 			</ol>
 			<g:form url="[resource:userProfileInstance, action:'delete']" method="DELETE">

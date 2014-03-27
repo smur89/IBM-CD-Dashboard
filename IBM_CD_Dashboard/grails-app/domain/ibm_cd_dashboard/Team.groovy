@@ -11,8 +11,6 @@ import java.security.Timestamp
     project area and it's enclosed teams.
  */
 class Team {
-
-
     // use teamID as the primary key
     static mapping = {
         id generator: 'assigned'

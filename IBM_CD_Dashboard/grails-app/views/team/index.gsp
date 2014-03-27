@@ -65,7 +65,7 @@
                     <tr>
                         <th scope="row">Average Build Time:</th>
                         <td><g:formatNumber
-                                number="${(it.builds.buildTimeInMillis.sum { it } / it.builds.count { it })}"
+                                number="${(it?.builds?.buildTimeInMillis?.sum { it } / it?.builds?.count { it })}"
                                 type="number"
                                 maxFractionDigits="2"/>ms
                         </td>
