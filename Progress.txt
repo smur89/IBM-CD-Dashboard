@@ -527,13 +527,11 @@ Week Beginning 27/3/14
 	GRAILS-7799: Subtype 'grails.plugin.springsecurity.SpringSecurityService$$EnhancerByCGLIB$$8288660c' of reloadable type grails.plugin.springsecurity.SpringSecurityService is not reloadable: may not see changes reloaded in this hierarchy (please comment on that jira)
 
 
-	Build Duration 				Minutes        						
+	Build Duration 				Minutes  
+
 	SPRs opened per capita     											
-	(general quality measure)    Number					 				id (type: xs:string). The id of the 																		type (e.g. "com.ibm team.workitem.																			defect"), unique 
-																		in a repository.
-																		name (type: xs:string). The name of the type (e.g. "Defect"). Not necessarily unique.
-																		
-	                                                
+	(general quality measure)    Number					 				
+
 	Cumulative open+deferred   											WORKITEM STATE
 	defects (technical debt)     Number				 					"OPEN_STATES", "CLOSED_STATES" "IN_PROGRESS_STATES".
 																		
@@ -558,3 +556,5 @@ Week Beginning 27/3/14
 		          
 	Bootstrapped meaningless data into current domain objects using random integers etc. All working. Only RTC methods not being called so only bootstrap data showing.
 	Got around this by calling populateTeams() method from bootstrap.
+
+	Seperated info in main index (TeamController) nested in table into partial view _teamData

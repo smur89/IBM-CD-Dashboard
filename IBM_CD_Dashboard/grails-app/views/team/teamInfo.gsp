@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 
-<%@ page import="java.text.DecimalFormat; grails.converters.JSON; com.ibm.team.workitem.common.model.WorkItemTypes" contentType="text/html;charset=UTF-8" %>
+<%@ page import="ibm_cd_dashboard.Team; java.text.DecimalFormat; grails.converters.JSON; com.ibm.team.workitem.common.model.WorkItemTypes" contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'nv.d3.css')}" type="text/css"/>
@@ -110,9 +110,11 @@ function buildTimes() {
     </tr>
     <tr>
         <th>Total Defects</th>
-        <td>${team.builds.count { it.workItems.each { it.getType().equals(WorkItemTypes.DEFECT)}}}</td>
-        %{--TODO fix this, it doesn't count properly.--}%
-
+        <%  //Calculate total defects
+            def count = 0
+            team.getBuilds().each { it.workItems.each { if(it.getType() == WorkItemTypes.DEFECT){ count++ }}}
+        %>
+        <td>${count}</td>
     </tr>
 </table>
 

@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page import="ibm_cd_dashboard.Team; com.ibm.team.build.common.model.BuildState; com.ibm.team.workitem.common.model.WorkItemTypes" contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <title>Teams</title>
@@ -57,28 +57,12 @@
         <tr id="detailRowID_${it.getTeamId()}" class="lotusDetails" style="display:none">
             <td class="lotusFirstCell">&nbsp;</td>
             <td class="lotusLastCell" colspan="2">
-                <table class="lotusVertTable" border="0" summary="Build Summary">
-                    <tr>
-                        <th scope="row">Total number of builds:</th>
-                        <td>${it.getBuilds().count { it }}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Average Build Time:</th>
-                        <td><g:formatNumber
-                                number="${(it?.builds?.buildTimeInMillis?.sum { it } / it?.builds?.count { it })}"
-                                type="number"
-                                maxFractionDigits="2"/>ms
-                        </td>
-                    </tr>
-                </table>
 
-                <div class="lotusChunk"><ul class="lotusInlinelist lotusLeft lotusActions"><li class="lotusFirst"><a
-                        href="javascript:;" role="button">Edit</a></li><li><a href="javascript:;"
-                                                                              onclick="MenuPopup.showMenu('dogEntryActionMenu', event, { focus: this });"
-                                                                              role="button" aria-haspopup="true"
-                                                                              aria-owns="dogEntryActionMenu">More actions <img
-                            class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt=""/><span
-                            class="lotusAltText">&#x25bc;</span></a></li></ul></div>
+                <fieldset class="form">
+                    <g:render template="teamData" model="${[it: it]}"/>
+                </fieldset>
+
+
             </td>
         </tr>
     </g:each>

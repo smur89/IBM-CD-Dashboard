@@ -63,14 +63,16 @@
 <table>
     %{--Column Headings--}%
     <tr>
-        <td>ID<td>
+        <td>Type<td>
         <td>Created</td>
+        <td>ID</td>
     </tr>
     %{--Each build is a row--}%
     <g:each in="${workItems}">
         <tr>
             <td><g:link action="workItemInfo" controller="workItem" id="${it.getWorkItemId()}">${it.type}</g:link><td>
-            <td>${it.getCreationDate().format('dd/MM/yyyy',TimeZone.getTimeZone('GMT'))}</td>
+            <td><g:link action="workItemInfo" controller="workItem" id="${it.getWorkItemId()}">${it.getCreationDate().format('dd/MM/yyyy',TimeZone.getTimeZone('GMT'))}</g:link></td>
+            <td><g:link action="workItemInfo" controller="workItem" id="${it.getWorkItemId()}">${it.getWorkItemId()}</g:link></td>
         </tr>
     </g:each>
 </table>

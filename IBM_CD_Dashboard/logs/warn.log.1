@@ -1,6 +1,6 @@
-2014-03-27 22:11:38,602 [http-bio-8090-exec-8] ERROR errors.GrailsExceptionResolver  - GrailsTagException occurred when processing request: [GET] /IBM_CD_Dashboard/team/teamInfo/_BSTID1393889189
-Unclosed GSP expression. Stacktrace follows:
-java.lang.RuntimeException: Error initializing GroovyPageView
+2014-03-28 18:36:42,026 [http-bio-8090-exec-4] ERROR errors.GrailsExceptionResolver  - NullPointerException occurred when processing request: [GET] /IBM_CD_Dashboard/team/index
+Cannot invoke method getBuilds() on null object. Stacktrace follows:
+org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error processing GroovyPageView: Error executing tag <g:render>: Error evaluating expression [it.getBuilds().count { it }] on line [14]: Cannot invoke method getBuilds() on null object
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at grails.plugin.springsecurity.web.filter.GrailsAnonymousAuthenticationFilter.doFilter(GrailsAnonymousAuthenticationFilter.java:53)
@@ -9,5 +9,13 @@ java.lang.RuntimeException: Error initializing GroovyPageView
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:744)
-Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Unclosed GSP expression
+Caused by: org.codehaus.groovy.grails.web.taglib.exceptions.GrailsTagException: Error executing tag <g:render>: Error evaluating expression [it.getBuilds().count { it }] on line [14]: Cannot invoke method getBuilds() on null object
+	at Users_shanemurphy_IBM_CD_Dashboard_IBM_CD_Dashboard_grails_app_views_team_index_gsp$_run_closure2.doCall(index.gsp:58)
+	at Users_shanemurphy_IBM_CD_Dashboard_IBM_CD_Dashboard_grails_app_views_team_index_gsp.run(index.gsp:103)
 	... 8 more
+Caused by: org.codehaus.groovy.grails.web.pages.exceptions.GroovyPagesException: Error evaluating expression [it.getBuilds().count { it }] on line [14]: Cannot invoke method getBuilds() on null object
+	at Users_shanemurphy_IBM_CD_Dashboard_IBM_CD_Dashboard_grails_app_views_team__teamData_gsp.run(_teamData.gsp:14)
+	... 10 more
+Caused by: java.lang.NullPointerException: Cannot invoke method getBuilds() on null object
+	at Users_shanemurphy_IBM_CD_Dashboard_IBM_CD_Dashboard_grails_app_views_team__teamData_gsp$_run_closure4.doCall(_teamData.gsp:14)
+	... 11 more

@@ -1,3 +1,5 @@
+import com.ibm.team.build.common.model.BuildState
+import com.ibm.team.build.common.model.BuildStatus
 import com.ibm.team.repository.common.model.impl.ContributorImpl
 import com.ibm.team.workitem.common.model.WorkItemTypes
 import ibm_cd_dashboard.Build
@@ -50,36 +52,41 @@ class BootStrap {
 
         def randomId = new Random()
         def randomTime = new Random()
+        println("Bootstrapping Teams...")
 
-        for (int i = 0; i < randomId.nextInt(30); i++){
+        for (int i = 0; i < randomId.nextInt(50); i++){
             Team newTeam = new Team(teamId: "_BSTID"<<randomId.nextInt(),
                     teamName: "BootstrapTeam"<<i ,
                     teamMembers: [new ContributorImpl(emailAddress: "bootstrap1"<<i<<"@cddashboard.com", name: "Bootstrap1"<<i),
                             new ContributorImpl(emailAddress: "bootstrap2"<<i<<"@cddashboard.com", name: "Bootstrap2"<<i),
                             new ContributorImpl(emailAddress: "bootstrap3"<<i<<"@cddashboard.com", name: "Bootstrap3"<<i)]
             )
+            println("Teams " << newTeam.teamId)
+            def buildStates = BuildState.values()
+            def buildStatus = BuildStatus.values()
+            def workItemTypes = [WorkItemTypes.DEFECT, WorkItemTypes.TASK]
 
-            for (int j = 0; j < randomId.nextInt(50); j++){
+            for (int j = 0; j < randomId.nextInt(60); j++){
 
                 Build newBuild = new Build(buildId: "_BSBID"<<randomId.nextInt()<<i<<j,
                         name: "_BSBuildName"<<i<<j,
-                        buildDefinitionId: randomId.nextInt(),
+                        buildDefinitionId: "bootstrap.build.injection",
                         buildTimeInMillis: randomTime.nextInt(1000000),
                         startTime: randomTime.nextInt(1000000),
-                        buildStatus: "OK",
-                        buildState: "COMPLETED",
+                        buildStatus: buildStatus[randomId.nextInt(4)],
+                        buildState: buildStates[randomId.nextInt(5)],
                         modified: new Date(randomTimeStamp().getTime())
                 )
                 newTeam.addToBuilds(newBuild)
 
-                for (int k = 0; k < randomId.nextInt(80); k++){
+                for (int k = 0; k < randomId.nextInt(100); k++){
                     WorkItem newWorkItem = new WorkItem(
-                            workItemId: "_BSWIID"<<randomId.nextInt()<<i<<j<<k,
+                            workItemId: newBuild.buildId<<"_BSWIID"<<randomId.nextInt()<<i<<j<<k,
                             modified: new Date(),
                             creationDate: randomTimeStamp(),
                             resolutionDate: randomTimeStamp(),
                             duration: randomTime.nextInt(100000),
-                            type: WorkItemTypes.DEFECT
+                            type: workItemTypes.get(randomId.nextInt(2))
                     )
                     newBuild.addToWorkItems(newWorkItem)
                     newTeam.addToBuilds(newBuild)

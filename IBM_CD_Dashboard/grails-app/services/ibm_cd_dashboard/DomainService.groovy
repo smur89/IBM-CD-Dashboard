@@ -131,20 +131,10 @@ class DomainService {
                             creationDate: workItem.getCreationDate(),
                             resolutionDate: workItem.getResolutionDate(),
                             duration: workItem.getDuration(),
-                            type: workItem.getWorkItemType(),
+                            type: workItem.getWorkItemType()
                     )
                     //newWorkItem.addToBuilds(thisBuild)
                     thisBuild.addToWorkItems(newWorkItem)
-
-//                    if (!newWorkItem.save(flush: true)) {
-//                        newWorkItem.errors.each {
-//                            println it
-//                        }
-//                    }
-//                    newWorkItem.addToBuilds(thisBuild)
-//                    thisBuild.addToWorkItems(newWorkItem)
-//                    thisBuild.save(flush: true)
-
                 }
             }
         }
