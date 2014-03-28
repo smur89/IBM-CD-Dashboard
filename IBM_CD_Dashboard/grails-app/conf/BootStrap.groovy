@@ -3,6 +3,7 @@ import com.ibm.team.build.common.model.BuildStatus
 import com.ibm.team.repository.common.model.impl.ContributorImpl
 import com.ibm.team.workitem.common.model.WorkItemTypes
 import ibm_cd_dashboard.Build
+import ibm_cd_dashboard.Contributor
 import ibm_cd_dashboard.Role
 import ibm_cd_dashboard.Team
 import ibm_cd_dashboard.User
@@ -55,11 +56,11 @@ class BootStrap {
         println("Bootstrapping Teams...")
 
         for (int i = 0; i < randomId.nextInt(50); i++){
-            Team newTeam = new Team(teamId: "_BSTID"<<randomId.nextInt(),
+            Team newTeam = new Team(teamId: "_BSTID"<<randomId.nextLong(),
                     teamName: "BootstrapTeam"<<i ,
-                    teamMembers: [new ContributorImpl(emailAddress: "bootstrap1"<<i<<"@cddashboard.com", name: "Bootstrap1"<<i),
-                            new ContributorImpl(emailAddress: "bootstrap2"<<i<<"@cddashboard.com", name: "Bootstrap2"<<i),
-                            new ContributorImpl(emailAddress: "bootstrap3"<<i<<"@cddashboard.com", name: "Bootstrap3"<<i)]
+                    teamMembers: [new Contributor(email: "bootstrap1"<<i<<"@cddashboard.com", name: "Bootstrap1"<<i, userId: "BootstrapUser"<<i),
+                            new Contributor(email: "bootstrap2"<<i<<"@cddashboard.com", name: "Bootstrap2"<<i, userId: "BootstrapUser"<<i),
+                            new Contributor(email: "bootstrap3"<<i<<"@cddashboard.com", name: "Bootstrap3"<<i, userId: "BootstrapUser"<<i)]
             )
             println("Teams " << newTeam.teamId)
             def buildStates = BuildState.values()

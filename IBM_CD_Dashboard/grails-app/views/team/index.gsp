@@ -10,6 +10,7 @@
 <html>
 <head>
     <title>Teams</title>
+    <meta name="layout" content="application">
 
     <script type="text/javascript" charset="utf-8">
         function showHide(elementid) {
@@ -58,8 +59,9 @@
             <td class="lotusFirstCell">&nbsp;</td>
             <td class="lotusLastCell" colspan="2">
 
+                %{--Render Partial View _teamData--}%
                 <fieldset class="form">
-                    <g:render template="teamData" model="${[it: it]}"/>
+                    <g:render template="teamData" model="${[team: it]}"/>
                 </fieldset>
 
 

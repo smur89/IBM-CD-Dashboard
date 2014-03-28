@@ -50,6 +50,7 @@
 </script>
 <![endif]-->
     <g:layoutHead/>
+    <r:layoutResources />
 </head>
 
 <body class="lotusui30_body lotusui30_fonts lotusui30">
@@ -161,6 +162,6 @@
 </div><!--end frame-->
 
 <!--popups go here-->
-
+<r:layoutResources />
 </body>
 </html>

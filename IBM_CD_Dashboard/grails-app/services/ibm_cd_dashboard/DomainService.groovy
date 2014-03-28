@@ -50,9 +50,16 @@ class DomainService {
                 def newTeam
                 def projId = project.getItemId().toString().substring(6, project.getItemId().toString().length() - 1) //Remove [UUID and ] from the string
                 def projMems = rtcService.getProjectMembers(project)
+                def membersList = []
+                for(member in projMems){
+                    def newContributor = new Contributor(userId: member.userId,
+                        email: member.emailAddress,
+                        name: member.name)
+                    membersList.add(newContributor)
+                }
                 newTeam = new Team(teamId: projId,
                         teamName: project.getName(),
-                        teamMembers: projMems ) // todo: team members always assigned as null
+                        teamMembers: membersList ) // todo: team members always assigned as null
 
                 println("Populating Builds for project ${i++} of ${allActiveProjects.count { it }}... (${projId})")
                 populateBuilds(newTeam, project)

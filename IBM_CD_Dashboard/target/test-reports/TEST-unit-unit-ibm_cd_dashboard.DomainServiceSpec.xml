@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Shanes-MacBook-Pro.local" name="ibm_cd_dashboard.DomainServiceSpec" tests="1" time="1.192" timestamp="2014-03-04T21:12:38">
-  <properties />
-  <testcase classname="ibm_cd_dashboard.DomainServiceSpec" name="test something" time="1.186" />
-  <system-out><![CDATA[--Output from test something--
-]]></system-out>
-  <system-err><![CDATA[--Output from test something--
-]]></system-err>
-</testsuite>

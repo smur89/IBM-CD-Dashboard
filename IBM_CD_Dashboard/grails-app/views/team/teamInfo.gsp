@@ -9,19 +9,19 @@
 <%@ page import="ibm_cd_dashboard.Team; java.text.DecimalFormat; grails.converters.JSON; com.ibm.team.workitem.common.model.WorkItemTypes" contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
+    <meta name="layout" content="application">
+
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'nv.d3.css')}" type="text/css"/>
     <g:javascript src="d3/d3.js"/>
     <g:javascript src="d3/nv.d3.min.js"/>
 
     <title>${team.getTeamName()}</title>
-    <r:layoutResources/>
 </head>
 
 <body>
 
 <h2>Team Members</h2>
 <table>
-
     <g:each var="member" in="${team.teamMembers}">
     %{--Column Headings--}%
         <tr>
@@ -167,6 +167,5 @@ function buildTimes() {
     </g:each>
     </tbody>
 </table>
-<r:layoutResources/>
 </body>
 </html>
