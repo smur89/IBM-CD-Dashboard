@@ -25,10 +25,10 @@
     <g:each var="member" in="${team.teamMembers}">
     %{--Column Headings--}%
         <tr>
-            <td>Member Name</td>
-        </tr>
-        <tr>
-            <td>${member.name}</td>
+            <th>Member Name</th>
+        <td>
+           ${member.name}
+        </td>
         </tr>
     </g:each>
 

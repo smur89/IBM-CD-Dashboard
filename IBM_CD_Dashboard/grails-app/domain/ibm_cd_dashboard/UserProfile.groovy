@@ -3,7 +3,10 @@ package ibm_cd_dashboard
 class UserProfile {
 
     static belongsTo = [user:User]
-    public List<String> projects
+
+    List projects
+    static hasMany = [ projects: String ]
+
 
     static constraints = {
     }

@@ -1,9 +1,1 @@
-2014-03-28 20:48:58,591 [Thread-14] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
-/Users/shanemurphy/IBM-CD-Dashboard/IBM_CD_Dashboard/grails-app/domain/ibm_cd_dashboard/Team.groovy: 20: The field 'hasMany' is declared multiple times.
- @ line 20, column 5.
-       static hasMany = [builds: Build] // Cascade save to Build
-       ^
-
-1 error
-
-2014-03-28 20:50:18,656 [localhost-startStop-1] INFO  ibm_cd_dashboard.DomainService  - Fri Mar 28 20:50:18 GMT 2014: Database Loaded and Ready
+2014-03-29 13:01:53,920 [localhost-startStop-1] INFO  ibm_cd_dashboard.DomainService  - Sat Mar 29 13:01:53 GMT 2014: Database Loaded and Ready

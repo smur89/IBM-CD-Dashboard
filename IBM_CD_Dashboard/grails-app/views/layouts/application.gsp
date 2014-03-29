@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="${resource(dir: 'css/base', file: 'core.css')}" type="text/css"/>
     <link rel="stylesheet" href="${resource(dir: 'css/defaultTheme', file: 'defaultTheme.css')}" type="text/css"/>
 
+
     <!--
 	The following conditional logic is needed to add in the IE specific classes.
 	If you really wanted to do this on the server with browser sniffing, you could do that too,

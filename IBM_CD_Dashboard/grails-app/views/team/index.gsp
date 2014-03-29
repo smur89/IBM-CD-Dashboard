@@ -12,7 +12,7 @@
     <title>Teams</title>
     <meta name="layout" content="application">
 
-    <script type="text/javascript" charset="utf-8">
+    <r:script type="text/javascript" charset="utf-8">
         function showHide(elementid) {
             if (document.getElementById(elementid).style.display == 'none') {
                 document.getElementById(elementid).style.display = '';
@@ -20,25 +20,26 @@
                 document.getElementById(elementid).style.display = 'none';
             }
         }
-    </script>
+    </r:script>
+    <r:require module="jquery"/>
+    <g:javascript src="d3/d3.js"/>
+    <g:javascript src="d3/nv.d3.min.js"/>
 
 </head>
 
 <body>
 
-<table>
-    <tbody>
+<table id=teamTable>
+    <thead>
     %{--Column Headings--}%
     <tr class="lotusFirst lotusSort">
-        <th class="lotusFirstCell"><a class="lotusActiveSort lotusAscending" aria-sort="ascending" href="javascript:;"
-                                      title="Reverse sort" onclick="clearSort(this);
-                reverseSort(this)">Team Name</a></th>
-        <th><a href="javascript:;" title="Reverse sort" onclick="clearSort(this);
-        reverseSort(this)">ID</a></th>
-        <th><a href="javascript:;" title="Reverse sort" onclick="clearSort(this);
-        reverseSort(this)">Team Members</a></th>
+        <th class="lotusFirstCell">Team Name</th>
+        <th>ID</th>
+        <th>Team Members</th>
         <th>&nbsp;</th>
     </tr>
+    </thead>
+    <tbody>
     %{--Teams--}%
     <g:each status="i" in="${teams}" var="it">
     %{--Apply the lotusFirst class to the first row of the table--}%
@@ -56,14 +57,27 @@
                         aria-label="Show details"/><span class="lotusAltText"></span></a></td>
         </tr>
         <tr id="detailRowID_${it.getTeamId()}" class="lotusDetails" style="display:none">
-            <td class="lotusFirstCell">&nbsp;</td>
-            <td class="lotusLastCell" colspan="2">
 
-                %{--Render Partial View _teamData--}%
+            <td class="lotusFirstCell" colspan="4">
+
+                %{--
+                    Render Partial View _teamData
+                    Pass in jsonTimes for SVG
+                --}%
+                <%
+                    def jsonTimes = []
+                    it.getBuilds().each {
+                        def timeMap = [
+                                name: it.getName(),
+                                time: it.getBuildTimeInMillis(),
+                                modified: it.getModified()
+                        ]
+                        jsonTimes.add(timeMap)
+                    }
+                %>
                 <fieldset class="form">
-                    <g:render template="teamData" model="${[team: it]}"/>
+                    <g:render template="teamData" model="${[team: it, jsonTimes:jsonTimes]}"/>
                 </fieldset>
-
 
             </td>
         </tr>

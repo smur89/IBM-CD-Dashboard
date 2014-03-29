@@ -19,7 +19,7 @@ class UserProfileController {
 
     def show() {
         UserProfile userProfileInstance = User.get(springSecurityService.principal.id).getUserProfile()
-        [projojojojoj:userProfileInstance.projects]
+        [userProjectList:userProfileInstance.projects]
         println("Show Projects " << userProfileInstance.projects)
         respond userProfileInstance
 

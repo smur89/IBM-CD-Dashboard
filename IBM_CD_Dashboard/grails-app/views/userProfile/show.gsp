@@ -30,7 +30,7 @@
 				    <span class="property-value" aria-labelledby="user-label"><g:link controller="user" action="show" id="${userProfileInstance?.user?.id}">${userProfileInstance?.user?.encodeAsHTML()}</g:link></span>
 				</li>
 				</g:if>
-                
+
                 <g:each in="${projojojojoj}">
                     <p>dddd</p>
                 </g:each>
