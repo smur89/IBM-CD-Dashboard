@@ -111,6 +111,7 @@
 
 			<p>
 				<input type='submit' id="submit" value='${message(code: "springSecurity.login.button")}'/>
+                <g:link controller="user" action="create">Create Profile</g:link>
 			</p>
 		</form>
 	</div>

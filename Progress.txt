@@ -559,4 +559,10 @@ Week Beginning 27/3/14
 
 	Seperated info in main index (TeamController) nested in table into partial view _teamData
 
+	UserProfile Issue resolved. now persisting. cannot store Lists in domains as you might expect the be able to.
+	List<String> projects 
+		changed to
+	List projects
+	static hasMany = [projects:String]
+
 	

@@ -1,6 +1,6 @@
-2014-03-29 12:54:12,466 [http-bio-8090-exec-5] ERROR errors.GrailsExceptionResolver  - IllegalStateException occurred when processing request: [GET] /IBM_CD_Dashboard/userProfile/edit/1
-Method on class [ibm_cd_dashboard.UserProfile] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.. Stacktrace follows:
-java.lang.IllegalStateException: Method on class [ibm_cd_dashboard.UserProfile] was used outside of a Grails application. If running in the context of a test using the mocking API or bootstrap Grails correctly.
+2014-03-29 13:45:41,540 [http-bio-8090-exec-9] ERROR errors.GrailsExceptionResolver  - TypeMismatchException occurred when processing request: [GET] /IBM_CD_Dashboard/userProfile/edit/ibm_cd_dashboard.UserProfile%20:%201
+Provided id of the wrong type for class ibm_cd_dashboard.UserProfile. Expected: class java.lang.Long, got class java.lang.String. Stacktrace follows:
+org.hibernate.TypeMismatchException: Provided id of the wrong type for class ibm_cd_dashboard.UserProfile. Expected: class java.lang.Long, got class java.lang.String
 	at grails.plugin.cache.web.filter.PageFragmentCachingFilter.doFilter(PageFragmentCachingFilter.java:200)
 	at grails.plugin.cache.web.filter.AbstractFilter.doFilter(AbstractFilter.java:63)
 	at grails.plugin.springsecurity.web.filter.GrailsAnonymousAuthenticationFilter.doFilter(GrailsAnonymousAuthenticationFilter.java:53)

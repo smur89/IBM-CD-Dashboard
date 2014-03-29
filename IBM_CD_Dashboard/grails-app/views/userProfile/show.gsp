@@ -1,5 +1,5 @@
 
-<%@ page import="ibm_cd_dashboard.UserProfile" %>
+<%@ page import="ibm_cd_dashboard.Team; ibm_cd_dashboard.UserProfile" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -30,11 +30,11 @@
 				    <span class="property-value" aria-labelledby="user-label"><g:link controller="user" action="show" id="${userProfileInstance?.user?.id}">${userProfileInstance?.user?.encodeAsHTML()}</g:link></span>
 				</li>
 				</g:if>
-
-                <g:each in="${projojojojoj}">
-                    <p>dddd</p>
+                <h2>You are subscribed to the following Projects:</h2>
+                <g:each var="project" in="${userProjectList}">
+                    <p>${project}</p>
                 </g:each>
-			
+
 			</ol>
 			<g:form url="[resource:userProfileInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

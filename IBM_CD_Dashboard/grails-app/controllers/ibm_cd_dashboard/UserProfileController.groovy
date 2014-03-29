@@ -19,9 +19,8 @@ class UserProfileController {
 
     def show() {
         UserProfile userProfileInstance = User.get(springSecurityService.principal.id).getUserProfile()
-        [userProjectList:userProfileInstance.projects]
-        println("Show Projects " << userProfileInstance.projects)
-        respond userProfileInstance
+        [userProfileInstance:userProfileInstance, userProjectList:userProfileInstance.getProjects()]
+        //respond userProfileInstance
 
     }
 
@@ -99,6 +98,7 @@ class UserProfileController {
             respond userProfileInstance.errors, view: 'edit'
             return
         }
+        userProfileInstance.projects.clear()
 
         for(Team team in Team.getAll()){
             if(params.checkbox."${team.teamId}") {

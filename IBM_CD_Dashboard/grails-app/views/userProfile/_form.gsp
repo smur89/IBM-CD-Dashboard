@@ -12,7 +12,7 @@
 
     <g:each var="team" in="${Team.getAll()}">
         <p>
-            <g:if test="${userProfileInstance?.projects?.contains(team.getId())}">
+            <g:if test="${userProfileInstance?.projects?.contains(team.getTeamId())}">
                 <g:checkBox name="checkbox.${team.getTeamId()}" checked="true" value="${team.id}"/>
             </g:if>
             <g:else>
