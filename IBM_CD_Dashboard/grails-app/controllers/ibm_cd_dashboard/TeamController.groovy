@@ -12,16 +12,30 @@ class TeamController {
 
     def index() { //teamInfo
         try {
-            def username = null
-            if(springSecurityService.isLoggedIn()){
-                username = (User.get(springSecurityService.principal.id).username)
+            def user
+            def userProfile
+            def teams = []
+            def allTeams = Team.getAll()
+            if (springSecurityService.isLoggedIn()) {
+                user = User.get(springSecurityService.principal.id)
+                userProfile = user.getUserProfile()
+                log.info("Getting subscribed teams for ${user}.")
+                for (team in allTeams) {
+                    if (userProfile.projects.contains(team.teamId)) {
+                        teams.add(team)
+                        print(team.teamId)
+                    }
+                }
+            } else {
+                log.info("Getting all teams from local database.")
+                for (team in allTeams) {
+                    teams.add(team)
+                    print(team.teamId)
+                }
+                log.info("Teams returned: ${allTeams}")
             }
 
-            log.info("Getting all teams from local database.")
-            def allTeams = Team.getAll()
-            log.info("Teams returned: ${allTeams}")
-
-            [teams: allTeams]
+            [teams: teams]
         }
         catch (Exception e) {
             log.error("Index Exception in index(): ${e.getMessage()} \n ${e.printStackTrace()}")
@@ -33,10 +47,12 @@ class TeamController {
         println("Checking State.")
         def config = Holders.getGrailsApplication().config
         try {
-            if(config.DomainLastModified < config.ServerLastModified && Team.count()>0) {  //If last modified date < newest entry in server DB
-              println("Domain < Server - No action implemented")
+            if (config.DomainLastModified < config.ServerLastModified && Team.count() > 0) {  //If last modified date < newest entry in server DB
+                println("Domain < Server - No action implemented")
+                redirect(controller: "team", action: "index")
+
                 //TODO implement case scenario
-            } else if (Team.count()<1){ //if Database empty
+            } else if (Team.count() < 1) { //if Database empty
                 println("Redirect to setup, ")
                 redirect(controller: "team", action: "setup")
             } else {  // database up to date
@@ -79,6 +95,6 @@ class TeamController {
         }
         println(team.getTeamMembers())
 
-        [team: team, avgBuildTime: builds.buildTimeInMillis.sum { it } / builds.count { it }, jsonTimes: jsonTimes.sort {a, b -> a.modified <=> b.modified}]
+        [team: team, avgBuildTime: builds.buildTimeInMillis.sum { it } / builds.count { it }, jsonTimes: jsonTimes.sort { a, b -> a.modified <=> b.modified }]
     }
 }

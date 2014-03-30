@@ -84,6 +84,15 @@
     </g:each>
     </tbody>
 </table>
-
+<g:if test="${teams.size()<1}">
+    <p>No Teams? Check your subscriptions in your user profile</p>
+</g:if>
+<sec:ifNotLoggedIn>
+    <ul>
+        <li>
+            <g:link controller="login" action="auth" >Log in</g:link> in to customise what teams you subscribe to.
+        </li>
+    </ul>
+</sec:ifNotLoggedIn>
 </body>
 </html>

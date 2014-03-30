@@ -565,4 +565,6 @@ Week Beginning 27/3/14
 	List projects
 	static hasMany = [projects:String]
 
-	
+	Logged in users can now customise which teams they see in their dashboard when they're logged in. When a user is not logged in, all teams are shown
+
+

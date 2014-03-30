@@ -35,7 +35,7 @@ class BootStrap {
         assert UserRole.count() == 2
 
         bootstrapBuilds()
-        domainService.populateTeams()
+        //domainService.populateTeams()
     }
     def destroy = {
     }

@@ -1,4 +1,6 @@
-2014-03-29 13:56:23,849 [http-bio-8090-exec-4] ERROR resource.ResourceMeta  - Resource not found: /plugins/jquery-1.10.2/js/jquery/jquery-1.10.2.min.map
-2014-03-29 14:05:07,041 [http-bio-8090-exec-8] ERROR resource.ResourceMeta  - Resource not found: /plugins/jquery-1.10.2/js/jquery/jquery-1.10.2.min.map
-2014-03-29 14:05:16,568 [http-bio-8090-exec-8] ERROR resource.ResourceMeta  - Resource not found: /plugins/jquery-1.10.2/js/jquery/jquery-1.10.2.min.map
-2014-03-29 14:05:28,389 [http-bio-8090-exec-8] ERROR resource.ResourceMeta  - Resource not found: /plugins/jquery-1.10.2/js/jquery/jquery-1.10.2.min.map
+2014-03-29 16:08:13,291 [http-bio-8090-exec-1] ERROR ibm_cd_dashboard.TeamController  - Index Exception in index(): No such property: id for class: org.springframework.security.core.userdetails.User 
+ null
+2014-03-29 16:08:14,665 [http-bio-8090-exec-4] ERROR ibm_cd_dashboard.TeamController  - Index Exception in index(): No such property: id for class: org.springframework.security.core.userdetails.User 
+ null
+2014-03-29 16:09:37,314 [http-bio-8090-exec-2] ERROR ibm_cd_dashboard.TeamController  - Index Exception in index(): No such property: id for class: org.springframework.security.core.userdetails.User 
+ null
