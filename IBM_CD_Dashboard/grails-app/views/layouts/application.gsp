@@ -60,10 +60,10 @@
     <!-- header is an HTML5 element. Remove header if you are using HTML4. -->
     <header role="banner">
         <div class="lotusBanner"><div class="lotusRightCorner"><div class="lotusInner">
-            <a href="#lotusMainContent" accesskey="S" class="lotusAccess"><img src="../../css/images/blank.gif"
+            <a href="#lotusMainContent" accesskey="S" class="lotusAccess"><img src="../css/images/blank.gif"
                                                                                alt="Skip to main content link. Accesskey S"/>
             </a><g:link controller="team" action="index" class="lotusLogo"><img alt="Product Name"
-                                                                                src="../../css/images/blank.gif"/><span
+                                                                                src="../css/images/blank.gif"/><span
                     class="lotusAltText">CD Adoption Dashboard</span></g:link>
             <ul class="lotusInlinelist lotusUtility">
                 <sec:ifNotLoggedIn>
@@ -80,15 +80,15 @@
                     </li>
                 </sec:ifLoggedIn>
                 <li>
-                    <g:link controller="help" action="index" class="yourProductSprite yourProductSprite-bannerHelp16">
-                        <img class="yourProductSprite yourProductSprite-bannerHelp16" src="../../css/images/help.gif"
+                    <g:link controller="Home" action="help" class="yourProductSprite yourProductSprite-bannerHelp16">
+                        <img class="yourProductSprite yourProductSprite-bannerHelp16" src="../css/images/help.gif"
                              alt=""/>
                     </g:link>
                 </li>
 
                 <li>
                     <span class="lotusBranding">
-                        <img src="../../css/images/blank.gif" alt="IBM" class="lotusIBMLogo"/>
+                        <img src="../css/images/blank.gif" alt="IBM" class="lotusIBMLogo"/>
                         <span class="lotusAltText">IBM</span>
                     </span>
                 </li>
@@ -101,14 +101,6 @@
                             <strong>Home</strong>
                         </a>
                     </li>
-                    <li role="presentation">
-                        <a role="button" aria-haspopup="true" href="javascript:;">People
-                            <img class="lotusArrow lotusDropDownSprite" src="../../css/images/blank.gif" alt=""
-                                 aria-label="Show menu"/>
-                            <span class="lotusAltText">&#x25bc;</span>
-                        </a>
-                    </li>
-
                 </ul>
             </nav>
         </div></div></div><!--end lotusBanner-->
@@ -117,7 +109,7 @@
             <div class="lotusTitleBarContent">
                 <h2 class="lotusHeading"><img alt=""
                                               class="lotusIcon yourProductSprite yourProductSprite-iconPlaceholder24"
-                                              src="../../css/images/blank.gif"><span
+                                              src="../css/images/blank.gif"><span
                         class="lotusText">${layoutTitle()}</span></h2>
             </div>
 
@@ -145,7 +137,7 @@
     <footer class="lotusFooter" role="contentinfo">
         <ul>
             <li><a href="http://ibm.com">Home</a></li>
-            <li><a href="javascript:;">Help</a></li>
+            <li><g:link controller="Home" action="help">Help</g:link></li>
             <li><a href="javascript:;">About</a></li>
             <li><a href="mailto:feedback@ibm.com?Subject=CD%20Dashboard%20Feedback">Submit Feedback</a></li>
         </ul>
@@ -155,7 +147,7 @@
     <footer role="contentinfo">
         <table class="lotusLegal" cellspacing="0" role="presentation">
             <tr>
-                <td><img class="lotusIBMLogoFooter" src="../../css/images/blank.gif" alt="IBM"/></td>
+                <td><img class="lotusIBMLogoFooter" src="../css/images/blank.gif" alt="IBM"/></td>
                 <td class="lotusLicense">&copy; Copyright IBM Corporation 2014.</td>
             </tr>
         </table>

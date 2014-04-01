@@ -1,9 +1,13 @@
-2014-03-29 16:08:13,291 [http-bio-8090-exec-1] ERROR ibm_cd_dashboard.TeamController  - Index Exception in index(): No such property: id for class: org.springframework.security.core.userdetails.User 
- null
-2014-03-29 16:08:14,665 [http-bio-8090-exec-4] ERROR ibm_cd_dashboard.TeamController  - Index Exception in index(): No such property: id for class: org.springframework.security.core.userdetails.User 
- null
-2014-03-29 16:09:37,314 [http-bio-8090-exec-2] ERROR ibm_cd_dashboard.TeamController  - Index Exception in index(): No such property: id for class: org.springframework.security.core.userdetails.User 
- null
-2014-03-30 10:59:34,536 [quartzScheduler_Worker-1] INFO  ibm_cd_dashboard.CheckForServerUpdatesJob  - Server Checked on: Sun Mar 30 10:59:34 IST 2014
-2014-03-30 12:00:06,315 [quartzScheduler_Worker-2] INFO  ibm_cd_dashboard.CheckForServerUpdatesJob  - Server Checked on: Sun Mar 30 12:00:06 IST 2014
-2014-03-30 14:00:10,300 [quartzScheduler_Worker-3] INFO  ibm_cd_dashboard.CheckForServerUpdatesJob  - Server Checked on: Sun Mar 30 14:00:10 IST 2014
+2014-04-01 13:29:21,878 [main] WARN  resource.BundleResourceMapper  - Cannot create a bundle from resource [/plugins/spring-security-ui-1.0-RC1/js/spring-security-ui.js], the content type [null] is not supported. Set the resource to exclude bundle mapper.
+2014-04-01 13:29:21,890 [main] WARN  resource.BundleResourceMapper  - Cannot create a bundle from resource [/plugins/spring-security-ui-1.0-RC1/js/jquery/jquery.form.js], the content type [null] is not supported. Set the resource to exclude bundle mapper.
+2014-04-01 13:29:21,899 [main] WARN  resource.BundleResourceMapper  - Cannot create a bundle from resource [/plugins/spring-security-ui-1.0-RC1/js/ajaxLogin.js], the content type [null] is not supported. Set the resource to exclude bundle mapper.
+2014-04-01 13:29:24,626 [Thread-7] ERROR hbm2ddl.SchemaExport  - schema export unsuccessful
+org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-173]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:331)
+	at org.h2.message.DbException.get(DbException.java:171)
+	at org.h2.message.DbException.get(DbException.java:148)
+	at org.h2.message.DbException.get(DbException.java:137)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1413)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1388)
+	at org.h2.jdbc.JdbcConnection.getAutoCommit(JdbcConnection.java:428)
+	at java.lang.Thread.run(Thread.java:744)

@@ -567,4 +567,8 @@ Week Beginning 27/3/14
 
 	Logged in users can now customise which teams they see in their dashboard when they're logged in. When a user is not logged in, all teams are shown
 
+	Meeting with Brendan, dropped 3 requirements, one as not applicable and 2 as outside the newly defined scope of a commit phase dashboard. Summary : We will refocus the project around delivering a CD Dashboard
+	around the Commit Phase and Defects.
+
+	Working on UI, created a HomeController, this will house methods to display an About page as well as the Help section.
 
