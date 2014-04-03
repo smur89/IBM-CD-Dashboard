@@ -90,24 +90,11 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/tomcat/work/Tomcat/localhost/IBM_CD_Dashboard/grails-resources/plugins/spring-security-ui-1.0-RC1/js/jquery/jquery.jgrowl.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/tomcat/work/Tomcat/localhost/IBM_CD_Dashboard/grails-resources/plugins/spring-security-ui-1.0-RC1/js/jquery/jquery.positionBy.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/work/tomcat/work/Tomcat/localhost/IBM_CD_Dashboard/grails-resources/plugins/spring-security-ui-1.0-RC1/js/spring-security-ui.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/DomainService.groovy" afterPath="$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/DomainService.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IBM_CD_Dashboard-grailsPlugins.iml" afterPath="$PROJECT_DIR$/IBM_CD_Dashboard-grailsPlugins.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Progress.txt" afterPath="$PROJECT_DIR$/../Progress.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/ibm_cd_dashboard/TeamController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/ibm_cd_dashboard/TeamController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/ibm_cd_dashboard/WorkItem.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/ibm_cd_dashboard/WorkItem.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/team/_teamData.gsp" afterPath="$PROJECT_DIR$/grails-app/views/team/_teamData.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/home/about.gsp" afterPath="$PROJECT_DIR$/grails-app/views/home/about.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/application.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/application.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugins/spring-security-core-2.0-RC2/grails-app/views/login/auth.gsp" afterPath="$PROJECT_DIR$/target/work/plugins/spring-security-core-2.0-RC2/grails-app/views/login/auth.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/error.log.1" afterPath="$PROJECT_DIR$/logs/error.log.1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/team/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/team/index.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/info.log.1" afterPath="$PROJECT_DIR$/logs/info.log.1" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/team/teamInfo.gsp" afterPath="$PROJECT_DIR$/grails-app/views/team/teamInfo.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/warn.log.1" afterPath="$PROJECT_DIR$/logs/warn.log.1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/workItem/workItemInfo.gsp" afterPath="$PROJECT_DIR$/grails-app/views/workItem/workItemInfo.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="IBM_CD_Dashboard.iws" />
@@ -166,7 +153,7 @@
     <file path="/UserProfileController.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1396100717260" ignored="false" />
     <file path="/show.gsp" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1396100647910" ignored="false" />
     <file path="/_form.gsp" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1396100512427" ignored="false" />
-    <file path="/_teamData.gsp" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1396555128985" ignored="false" />
+    <file path="/_teamData.gsp" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1396560392542" ignored="false" />
     <file path="/Contributor.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1396037298786" ignored="false" />
     <file path="/create.gsp" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1396101078299" ignored="false" />
     <file path="/HomeController.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1396355300640" ignored="false" />
@@ -271,7 +258,7 @@
       <file leaf-file-name="_teamData.gsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/views/team/_teamData.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="913" selection-end="913" vertical-scroll-proportion="0.6833713">
+            <state line="103" column="61" selection-start="4363" selection-end="4363" vertical-scroll-proportion="0.52164006">
               <folding />
             </state>
           </provider>
@@ -669,7 +656,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.0036390102" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24460432" sideWeight="0.8" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30474934" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30474934" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -864,7 +851,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/team/_teamData.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="913" selection-end="913" vertical-scroll-proportion="0.6833713">
+        <state line="103" column="61" selection-start="4363" selection-end="4363" vertical-scroll-proportion="0.52164006">
           <folding />
         </state>
       </provider>

@@ -1,6 +1,7 @@
-<%@ page import="ibm_cd_dashboard.Team; com.ibm.team.workitem.common.internal.setup.builders.DefaultIdentifiers; com.ibm.team.workitem.common.model.WorkItemTypes;" %>
+<%@ page import="org.grails.plugins.google.visualization.formatter.BarFormatter; ibm_cd_dashboard.Team; com.ibm.team.workitem.common.internal.setup.builders.DefaultIdentifiers; com.ibm.team.workitem.common.model.WorkItemTypes; org.grails.plugins.google.visualization.formatter.ColorRange; org.grails.plugins.google.visualization.formatter.ColorFormatter;" %>
 <div>
     <%
+        //      AreaChart
         def buildColumns = [['string', 'Build Id'], ['number', 'Build Time (ms)'], ['number', 'Average Build Time']]
         def totalBuildTime = 0
         def buildTimes = []
@@ -45,6 +46,11 @@
             }
         }
         def avgDefects = (totalDefects / builds.size())
+
+//      BarChart
+        def test = []
+        test.add([team.id, unassignedSev, minorSev, normalSev, majorSev, criticalSev, blockerSev])
+        def test2 = [['string', 'Team Name'], ['number', 'Unassigned'], ['number', 'Minor'], ['number', 'Normal'], ['number', 'Major'], ['number', 'Critical'], ['number', 'Blocker']]
     %>
 
     <table class="lotusVertTable" summary="Build Summary">
@@ -58,15 +64,6 @@
                                           columns="${buildColumns}"
                                           data="${buildTimes}"/>
             <div id="googlechart${team.teamId}"></div>
-        </tr>
-        <tr>
-            <gvisualization:barCoreChart elementId="barChart${team.teamId}"
-                                         title="Defects"
-                                         height="${250}"
-                                         columns="${[['number', 'Total'], ['number', 'Unassigned'], ['number', 'Minor'], ['number', 'Normal'], ['number', 'Major'], ['number', 'Critical'], ['number', 'Blocker']]}"
-                                         data="${[totalDefects, unassignedSev, minorSev, normalSev, majorSev, criticalSev, blockerSev]}"/>
-            <div id="barChart${team.teamId}"></div>
-
         </tr>
 
         <tr>
@@ -99,26 +96,25 @@
             <table class="lotusTable">
                 <thead>
                 <tr>
-                    <th>Total</th>
-                    <th>Unassigned</th>
-                    <th>Minor</th>
-                    <th>Normal</th>
-                    <th>Major</th>
-                    <th>Critical</th>
-                    <th>Blocker</th>
+                    <th>Total Defects</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td>${totalDefects}</td>
-                    <td>${unassignedSev}</td>
-                    <td>${minorSev}</td>
-                    <td>${normalSev}</td>
-                    <td>${majorSev}</td>
-                    <td>${criticalSev}</td>
-                    <td>${blockerSev}</td>
                 </tr>
                 </tbody>
+
             </table>
+
+            <gvisualization:columnCoreChart elementId="barChart${team.teamId}"
+                                            title="Defects"
+                                            height="${200}"
+                                            width="${500}"
+                                            columns="${test2}"
+                                            data="${test}" />
+            <div id="barChart${team.teamId}"></div>
+
+
         </tr>
 </div>
