@@ -83,7 +83,7 @@ class TeamController {
     def teamInfo() {
         // Calculate average build time
         def team = Team.get(params.id)
-        def builds = team.getBuilds()
+        def builds = team.getBuilds().sort { a, b -> a.modified <=> b.modified }
         def jsonTimes = []
         builds.each {
             def timeMap = [
@@ -93,8 +93,6 @@ class TeamController {
             ]
             jsonTimes.add(timeMap)
         }
-        println(team.getTeamMembers())
-
-        [team: team, avgBuildTime: builds.buildTimeInMillis.sum { it } / builds.count { it }, jsonTimes: jsonTimes.sort { a, b -> a.modified <=> b.modified }]
+        [team: team, avgBuildTime: builds.buildTimeInMillis.sum { it } / builds.count { it }, jsonTimes: jsonTimes]
     }
 }

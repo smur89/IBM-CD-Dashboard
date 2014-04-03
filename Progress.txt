@@ -571,4 +571,13 @@ Week Beginning 27/3/14
 	around the Commit Phase and Defects.
 
 	Working on UI, created a HomeController, this will house methods to display an About page as well as the Help section.
+	Added template for about page
 
+	Looking at identifying s1, s2, s3 severity for work items. WorkItems have a severity of NORMAL, MINOR, MAJOR, CRITICAL or BLOCKER (com.ibm.team.workitem.common.model.ISeverity:severity.literal.l1 - com.ibm.team.workitem.common.model.ISeverity:severity.literal.l6)
+
+	Count broken down by severity and added to view.
+
+	Doesn't seem to be any access to the State grouping for workitems. The state is now called state2, so perhaps this was removed in the newer state version.
+	Will just need to decide what state corresponds to Open/In Progress/Closed
+
+	Replaced d3.js with Google visualisation API to create graphs/charts. No issue with repeated graphs now - not sure whether to replace existing d3 graph in teamInfo view.

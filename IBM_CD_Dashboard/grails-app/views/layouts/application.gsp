@@ -51,7 +51,7 @@
 </script>
 <![endif]-->
     <g:layoutHead/>
-    <r:layoutResources />
+    <r:layoutResources/>
 </head>
 
 <body class="lotusui30_body lotusui30_fonts lotusui30">
@@ -76,7 +76,8 @@
                         <g:link controller="logout" role="button" class="lotusBannerBtn">Logout</g:link>
                     </li>
                     <li>
-                        <g:link controller="userProfile" action="show" role="button" class="lotusBannerBtn">User Profile</g:link>
+                        <g:link controller="userProfile" action="show" role="button"
+                                class="lotusBannerBtn">User Profile</g:link>
                     </li>
                 </sec:ifLoggedIn>
                 <li>
@@ -85,7 +86,6 @@
                              alt=""/>
                     </g:link>
                 </li>
-
                 <li>
                     <span class="lotusBranding">
                         <img src="../css/images/blank.gif" alt="IBM" class="lotusIBMLogo"/>
@@ -96,9 +96,9 @@
             <!-- nav is an HTML5 element. Use div if you are using HTML4. -->
             <nav role="navigation" aria-label="[Product]">
                 <ul class="lotusInlinelist lotusLinks" role="toolbar">
-                    <li class="lotusFirst lotusSelected" role="presentation">
-                        <a href="javascript:;" role="button" aria-pressed="true">
-                            <strong>Home</strong>
+                    <li class="lotusFirst" role="presentation">
+                        <a onclick="window.location.reload();" role="button" aria-pressed="true">
+                            <strong>Refresh Page</strong>
                         </a>
                     </li>
                 </ul>
@@ -120,19 +120,17 @@
     </header>
 
     <div class="lotusMain">
-        <div class="lotusColLeft">
-        </div><!--end colLeft-->
 
-    <!-- aside is an HTML5 element. Use div if you are using HTML4. -->
-        <aside class="lotusColRight">
-
-        </aside><!--end colRight-->
         <div class="lotusContent" role="main">
 
             <g:layoutBody/>
 
         </div><!--end content-->
+        <span aria-hidden="true" class="lotusRight"><img src="../css/images/blank.gif" alt="IBM" class="lotusIBMLogo"><span class="lotusAltText">IBM</span></span>
+
     </div><!--end main-->
+
+
 <!-- footer is an HTML5 element. Use div if you are using HTML4. -->
     <footer class="lotusFooter" role="contentinfo">
         <ul>
@@ -145,7 +143,7 @@
 
 <!-- footer is an HTML5 element. Use div if you are using HTML4. -->
     <footer role="contentinfo">
-        <table class="lotusLegal" cellspacing="0" role="presentation">
+    <table class="lotusLegal" cellspacing="0" role="presentation">
             <tr>
                 <td><img class="lotusIBMLogoFooter" src="../css/images/blank.gif" alt="IBM"/></td>
                 <td class="lotusLicense">&copy; Copyright IBM Corporation 2014.</td>
@@ -155,6 +153,6 @@
 </div><!--end frame-->
 
 <!--popups go here-->
-<r:layoutResources />
+<r:layoutResources/>
 </body>
 </html>

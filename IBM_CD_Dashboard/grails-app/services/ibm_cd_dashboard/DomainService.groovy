@@ -2,6 +2,9 @@ package ibm_cd_dashboard
 
 import com.ibm.team.build.common.model.IBuildResult
 import com.ibm.team.process.common.IProjectArea
+import com.ibm.team.workitem.common.internal.model.State
+import com.ibm.team.workitem.common.internal.setup.builders.DefaultIdentifiers
+import com.ibm.team.workitem.common.model.IState
 import grails.transaction.Transactional
 import org.codehaus.groovy.grails.commons.ApplicationHolder
 import org.codehaus.groovy.grails.commons.ConfigurationHolder
@@ -131,16 +134,16 @@ class DomainService {
                 for (workItem in buildWorkItems) {
                     def workItemId = workItem.getItemId().toString().substring(6, workItem.getItemId().toString().length() - 1)
                     def buildWorkId = buildId << workItemId  // concatenate buildId and workItemId to get unique key identifier
-//                    println(workItem.workItemType)
                     def newWorkItem = new WorkItem(workItemId: buildWorkId,
                             buildOwner: thisBuild,
                             modified: workItem.modified(),
                             creationDate: workItem.getCreationDate(),
                             resolutionDate: workItem.getResolutionDate(),
                             duration: workItem.getDuration(),
-                            type: workItem.getWorkItemType()
+                            type: workItem.getWorkItemType(),
+                            severity: workItem.getSeverity().toString()
                     )
-                    //newWorkItem.addToBuilds(thisBuild)
+                    println("State: "<<workItem.state2.type)
                     thisBuild.addToWorkItems(newWorkItem)
                 }
             }

@@ -35,6 +35,10 @@
         <th>Type</th>
         <td>${workItem.getType()}</td>
     </tr>
+    <tr>
+        <th>Severity</th>
+        <td>${workItem.getSeverity().toString()}</td>
+    </tr>
 </table>
 
 </body>

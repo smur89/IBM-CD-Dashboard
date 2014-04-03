@@ -135,7 +135,7 @@ function buildTimes() {
     </tr>
 
     %{--Sort builds by last modified date, most recent first--}%
-    <% def builds = team.getBuilds().sort { a, b -> b.getModified() <=> a.getModified() } %>
+    <% def builds = team.getBuilds().sort { a, b -> a.getModified() <=> b.getModified() } %>
     %{--Each build is a row--}%
     <g:each status="i" in="${builds}" var="it">
     %{--Apply the lotusFirst class to the first row of the table--}%

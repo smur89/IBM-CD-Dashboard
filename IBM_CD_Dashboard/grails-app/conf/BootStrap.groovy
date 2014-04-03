@@ -1,6 +1,7 @@
 import com.ibm.team.build.common.model.BuildState
 import com.ibm.team.build.common.model.BuildStatus
 import com.ibm.team.repository.common.model.impl.ContributorImpl
+import com.ibm.team.workitem.common.internal.setup.builders.DefaultIdentifiers
 import com.ibm.team.workitem.common.model.WorkItemTypes
 import ibm_cd_dashboard.Build
 import ibm_cd_dashboard.Contributor
@@ -35,7 +36,7 @@ class BootStrap {
         assert UserRole.count() == 2
 
         bootstrapBuilds()
-        //domainService.populateTeams()
+        domainService.populateTeams()
     }
     def destroy = {
     }
@@ -65,6 +66,9 @@ class BootStrap {
             println("Teams " << newTeam.teamId)
             def buildStates = BuildState.values()
             def buildStatus = BuildStatus.values()
+            def severities = [DefaultIdentifiers.Severity.BLOCKER.toString(), DefaultIdentifiers.Severity.NORMAL.toString(),
+                    DefaultIdentifiers.Severity.CRITICAL.toString(), DefaultIdentifiers.Severity.MAJOR.toString(),
+                    DefaultIdentifiers.Severity.MINOR.toString(), DefaultIdentifiers.Severity.UNASSIGNED.toString()]
             def workItemTypes = [WorkItemTypes.DEFECT, WorkItemTypes.TASK]
 
             for (int j = 0; j < randomId.nextInt(60); j++){
@@ -87,13 +91,16 @@ class BootStrap {
                             creationDate: randomTimeStamp(),
                             resolutionDate: randomTimeStamp(),
                             duration: randomTime.nextInt(100000),
-                            type: workItemTypes.get(randomId.nextInt(2))
+                            type: workItemTypes.get(randomId.nextInt(2)),
+                            severity: severities.get(randomId.nextInt(5))
                     )
                     newBuild.addToWorkItems(newWorkItem)
                     newTeam.addToBuilds(newBuild)
                 }
             }
             newTeam.save(flush:true, failOnError: true)
+
+
         }
     }
 }
