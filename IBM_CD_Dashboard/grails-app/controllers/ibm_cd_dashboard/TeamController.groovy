@@ -10,7 +10,7 @@ class TeamController {
 
     def domainService = ApplicationHolder.application.mainContext.DomainService
 
-    def index() { //teamInfo
+    def index() {
         try {
             def user
             def userProfile
@@ -23,14 +23,12 @@ class TeamController {
                 for (team in allTeams) {
                     if (userProfile.projects.contains(team.teamId)) {
                         teams.add(team)
-                        print(team.teamId)
                     }
                 }
             } else {
                 log.info("Getting all teams from local database.")
                 for (team in allTeams) {
                     teams.add(team)
-                    print(team.teamId)
                 }
                 log.info("Teams returned: ${allTeams}")
             }

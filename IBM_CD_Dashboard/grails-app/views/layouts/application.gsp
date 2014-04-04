@@ -136,7 +136,7 @@
         <ul>
             <li><a href="http://ibm.com">Home</a></li>
             <li><g:link controller="Home" action="help">Help</g:link></li>
-            <li><a href="javascript:;">About</a></li>
+            <li><g:link controller="Home" action="about">About</g:link></li>
             <li><a href="mailto:feedback@ibm.com?Subject=CD%20Dashboard%20Feedback">Submit Feedback</a></li>
         </ul>
     </footer><!--end footer-->

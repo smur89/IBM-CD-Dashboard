@@ -1,11 +1,14 @@
-2014-04-03 22:16:44,909 [http-bio-8090-exec-2] ERROR [/IBM_CD_Dashboard].[default]  - Servlet.service() for servlet [default] in context with path [/IBM_CD_Dashboard] threw exception
+2014-04-04 16:48:35,004 [http-bio-8090-exec-1] ERROR [/IBM_CD_Dashboard].[default]  - Servlet.service() for servlet [default] in context with path [/IBM_CD_Dashboard] threw exception
 java.lang.RuntimeException: It looks like you are missing some calls to the r:layoutResources tag. After rendering your page the following have not been rendered: [head]
-	at sun.reflect.GeneratedConstructorAccessor250.newInstance(Unknown Source)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
 	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrConstructorNewInstance(ReflectiveInterceptor.java:986)
 	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:77)
 	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:102)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:182)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:190)
 	at org.grails.plugin.resource.DevModeSanityFilter.doFilter(DevModeSanityFilter.groovy:54)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
@@ -58,7 +61,7 @@ java.lang.RuntimeException: It looks like you are missing some calls to the r:la
 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
 	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1023)
 	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
-	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:744)

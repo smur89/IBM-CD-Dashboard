@@ -16,11 +16,13 @@ class Build {
         name nullable: true
 
         workItems cascade: 'none'
+        testResults nullable: true
 
     }
 
     static belongsTo = [team: Team] // Cascade delete from Team
     static hasMany = [workItems: WorkItem] // Cascade save to workItems
+    static hasOne = [testResults: BuildTestMetrics]
     //static mappedBy = [workItems: 'buildOwner']
 
     String buildId                //String

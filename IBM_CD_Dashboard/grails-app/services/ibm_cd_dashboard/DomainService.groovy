@@ -143,7 +143,6 @@ class DomainService {
                             type: workItem.getWorkItemType(),
                             severity: workItem.getSeverity().toString()
                     )
-                    println("State: "<<workItem.state2.type)
                     thisBuild.addToWorkItems(newWorkItem)
                 }
             }

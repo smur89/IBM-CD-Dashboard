@@ -4,6 +4,7 @@ import com.ibm.team.repository.common.model.impl.ContributorImpl
 import com.ibm.team.workitem.common.internal.setup.builders.DefaultIdentifiers
 import com.ibm.team.workitem.common.model.WorkItemTypes
 import ibm_cd_dashboard.Build
+import ibm_cd_dashboard.BuildTestMetrics
 import ibm_cd_dashboard.Contributor
 import ibm_cd_dashboard.Role
 import ibm_cd_dashboard.Team
@@ -80,7 +81,8 @@ class BootStrap {
                         startTime: randomTime.nextInt(1000000),
                         buildStatus: buildStatus[randomId.nextInt(4)],
                         buildState: buildStates[randomId.nextInt(5)],
-                        modified: new Date(randomTimeStamp().getTime())
+                        modified: new Date(randomTimeStamp().getTime()),
+                        testResults: new BuildTestMetrics(randomId.nextInt(1000000))
                 )
                 newTeam.addToBuilds(newBuild)
 

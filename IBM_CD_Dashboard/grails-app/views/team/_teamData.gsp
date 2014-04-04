@@ -27,21 +27,22 @@
                     if (it.severity == DefaultIdentifiers.Severity.UNASSIGNED.toString()) {
                         unassignedSev++
                     }
-                    if (it.severity == DefaultIdentifiers.Severity.MINOR.toString()) {
+                    else if (it.severity == DefaultIdentifiers.Severity.MINOR.toString()) {
                         minorSev++
                     }
-                    if (it.severity == DefaultIdentifiers.Severity.NORMAL.toString()) {
+                    else if (it.severity == DefaultIdentifiers.Severity.NORMAL.toString()) {
                         normalSev++
                     }
-                    if (it.severity == DefaultIdentifiers.Severity.MAJOR.toString()) {
+                    else if (it.severity == DefaultIdentifiers.Severity.MAJOR.toString()) {
                         majorSev++
                     }
-                    if (it.severity == DefaultIdentifiers.Severity.CRITICAL.toString()) {
+                    else if (it.severity == DefaultIdentifiers.Severity.CRITICAL.toString()) {
                         criticalSev++
                     }
-                    if (it.severity == DefaultIdentifiers.Severity.BLOCKER.toString()) {
+                    else if (it.severity == DefaultIdentifiers.Severity.BLOCKER.toString()) {
                         blockerSev++
                     }
+
                 }
             }
         }
@@ -51,7 +52,8 @@
         def test = []
         test.add([team.id, unassignedSev, minorSev, normalSev, majorSev, criticalSev, blockerSev])
         def test2 = [['string', 'Team Name'], ['number', 'Unassigned'], ['number', 'Minor'], ['number', 'Normal'], ['number', 'Major'], ['number', 'Critical'], ['number', 'Blocker']]
-    %>
+
+        %>
 
     <table class="lotusVertTable" summary="Build Summary">
         <h4 class="lotusTitle"><g:link action="teamInfo" id="${team.teamId}">${team.teamId}</g:link></h4>
@@ -107,14 +109,25 @@
 
             </table>
 
-            <gvisualization:columnCoreChart elementId="barChart${team.teamId}"
-                                            title="Defects"
-                                            height="${200}"
-                                            width="${500}"
-                                            columns="${test2}"
-                                            data="${test}" />
-            <div id="barChart${team.teamId}"></div>
+            %{--<gvisualization:columnCoreChart elementId="barChart${team.teamId}"--}%
+                                            %{--title="Defects"--}%
+                                            %{--height="${200}"--}%
+                                            %{--width="${500}"--}%
+                                            %{--columns="${test2}"--}%
+                                            %{--data="${test}" />--}%
+            %{--<div id="barChart${team.teamId}"></div>--}%
 
+            <%
+                def pieColumns = [['string', 'Team Name'], ['number', 'numDefects']]
+                def pieData = [["Unassigned", unassignedSev], ["Minor", minorSev], ["Normal", normalSev], ["Major", majorSev], ["Critical", criticalSev], ["Blocker", blockerSev]]
+            %>
+
+            <gvisualization:pieCoreChart elementId="piechart${team.teamId}" title="Defects Breakdown"
+                                         width="${450}"
+                                         height="${300}"
+                                         columns="${pieColumns}"
+                                         data="${pieData}" />
+            <div id="piechart${team.teamId}"></div>
 
         </tr>
 </div>
