@@ -2,29 +2,82 @@ package ibm_cd_dashboard
 
 import com.ibm.team.build.common.model.IBuildResult
 import com.ibm.team.process.common.IProjectArea
-import com.ibm.team.workitem.common.internal.model.State
-import com.ibm.team.workitem.common.internal.setup.builders.DefaultIdentifiers
-import com.ibm.team.workitem.common.model.IState
+import com.ibm.team.workitem.common.model.IWorkItem
 import grails.transaction.Transactional
+import grails.util.Holders
 import org.codehaus.groovy.grails.commons.ApplicationHolder
 import org.codehaus.groovy.grails.commons.ConfigurationHolder
 import org.springframework.dao.DuplicateKeyException
-import grails.util.Holders
+
+import java.sql.Timestamp
 
 @Transactional
 class DomainService {
 
     def rtcService = ApplicationHolder.application.mainContext.RTCService
 
-    def updateDomain(Date lastUpdate) {
-        def projects = rtcService.getAllProjects();
-        //Get Project Areas that need to be updated.
-        List<IProjectArea> projectsToUpdate = null;
-        for(project in projects){
-            if(project.modified() > lastUpdate){
-                projectsToUpdate.add(project)
+    def updateDomain(Timestamp lastUpdate) {
+        //TODO Refactor this, it's not even finished yet and it's becoming unwieldy
+        def projectsToUpdate = identifyOutOfDateProjects(lastUpdate)
+        projectsToUpdate.each {
+            def teamId = it.getItemId().toString().substring(6, it.getItemId().toString().length() - 1) //Remove [UUID and ] from the string
+            def team = new Team(teamId: teamId,
+                    teamName: it.getName())
+            def builds = rtcService.getProjectBuildResults(it)
+            builds.each {
+                def buildId = it.getItemId().toString().substring(6, it.getItemId().toString().length() - 1)
+                // If this build doesn't already exist, we need to add it.
+                if (it.modified() > lastUpdate) {
+                    if (!Build.exists(buildId)) {
+                        println("Creating build " << buildId)
+                        def newBuild = createNewBuildObject(team, it)
+                        newBuild.save(failOnError: true)
+                        log.info("Created build " << buildId)
+                        populateWorkItems(it)
+                    } else {
+                        //If the build was last updated after the last time the server was updated.
+                        if (it.modified() > lastUpdate) {
+                            def thisBuild = Build.get(buildId)
+                            def workItems = rtcService.getBuildWorkItems(it)
+                            workItems.each {
+                                def workItemId = it.getItemId().toString().substring(6, it.getItemId().toString().length() - 1)
+                                def buildWorkId = buildId << workItemId  // concatenate buildId and workItemId to get unique key identifier
+                                //If this workItem doesn't exist in the local database, we need to add it.
+                                if (!WorkItem.exists(buildWorkId)) {
+                                    log.info("Creating workitem " << workItemId)
+                                    def newWorkItem = createNewWorkItemObject(thisBuild, it)
+                                    thisBuild.addToWorkItems(newWorkItem)
+                                    println("Workitem " << it.modified())
+                                } else {
+                                    //TODO Update the workitem
+                                }
+                            }
+                            //TODO Update the Build
+                        }
+                    }
+                }
             }
         }
+    }
+
+    /**
+     * Gets a list of projects that have been updated after the pased in parameter time
+     * @param lastUpdate timestamp after which projects are deemed out of date
+     * @return list of projects to be updated
+     */
+    def identifyOutOfDateProjects(Timestamp lastUpdate) {
+        def projects = rtcService.getAllProjects();
+        //Get Project Areas that need to be updated.
+        log.info("identifying projects")
+        List<IProjectArea> projectsToUpdate = new ArrayList<IProjectArea>();
+        projects.each {
+            //TODO change this < to a >
+            if (it.modified() < lastUpdate) {
+                projectsToUpdate.add(it)
+                log.info("To be updated: " << it.name)
+            }
+        }
+        return projectsToUpdate
     }
 
     def deleteAllTeamData() {
@@ -40,31 +93,28 @@ class DomainService {
         println("Deleted")
     }
 
-    def serverLastModified(){
+    def serverLastModified() {
         rtcService.updateServerLastModified()
     }
 
+    /**
+     * This is only called on initial startup.
+     * //TODO Fill this out.
+     * @return
+     */
     def populateTeams() {
         try {
             List<IProjectArea> allActiveProjects = rtcService.getActiveProjects()
             def i = 1
-            // For Each project, create a new team object
+            // For Each it, create a new team object
             for (project in allActiveProjects) {
                 def newTeam
                 def projId = project.getItemId().toString().substring(6, project.getItemId().toString().length() - 1) //Remove [UUID and ] from the string
-                def projMems = rtcService.getProjectMembers(project)
-                def membersList = []
-                for(member in projMems){
-                    def newContributor = new Contributor(userId: member.userId,
-                        email: member.emailAddress,
-                        name: member.name)
-                    membersList.add(newContributor)
-                }
-                newTeam = new Team(teamId: projId,
-                        teamName: project.getName(),
-                        teamMembers: membersList ) // todo: team members always assigned as null
 
-                println("Populating Builds for project ${i++} of ${allActiveProjects.count { it }}... (${projId})")
+                newTeam = new Team(teamId: projId,
+                        teamName: project.getName())
+
+                println("Populating Builds for it ${i++} of ${allActiveProjects.count { it }}... (${projId})")
                 populateBuilds(newTeam, project)
                 ConfigurationHolder.getConfig().getProperty("updateServerLastModified")
 
@@ -76,8 +126,10 @@ class DomainService {
                 }
 
                 println("Populating WorkItems...")
-                populateWorkItems(project)
-
+                List<IBuildResult> buildResults = rtcService.getProjectBuildResults(project)
+                buildResults.each {
+                    populateWorkItems(it)
+                }
                 print("Saving...")
                 if (!newTeam.save()) {
                     newTeam.errors.each {
@@ -93,8 +145,8 @@ class DomainService {
 
             }
         } catch (DuplicateKeyException dke) {
-            log.error("\${new Date()}: Duplicate Key Exception (New workItem): ${dke.getMessage()} : ${dke.printStackTrace()}")
-            println("Duplicate Key Exception (New workItem): ${dke.getMessage()}")
+            log.error("\${new Date()}: Duplicate Key Exception (New it): ${dke.getMessage()} : ${dke.printStackTrace()}")
+            println("Duplicate Key Exception (New it): ${dke.getMessage()}")
         } catch (NullPointerException npe) {
             log.error("${new Date()}: Null Pointer in populateTeams(): ${npe.getMessage()}" << npe.printStackTrace())
             println("Null Pointer in populateTeams(): ${npe.getMessage()}" << npe.printStackTrace())
@@ -105,47 +157,54 @@ class DomainService {
     }
 
     def populateBuilds(Team newTeam, IProjectArea project) {
-        //For each build associated with this project create a new build and add it to the team builds
+        //For each it associated with this it create a new it and add it to the team builds
         List<IBuildResult> buildResults = rtcService.getProjectBuildResults(project)
-        for (build in buildResults) {
-            def newBuild
-            def buildId = build.getItemId().toString().substring(6, build.getItemId().toString().length() - 1)
-            newBuild = new Build(buildId: buildId,
-                    team: newTeam,
-                    name: build.getLabel(),
-                    modified: build.modified(),
-                    buildDefinitionId: rtcService.getBuildDefinition(build.buildDefinition).getId(),
-                    buildTimeInMillis: build.getBuildTimeTaken(),
-                    startTime: build.getBuildStartTime(),
-                    buildStatus: build.getStatus(),
-                    buildState: build.getState())
+        buildResults.each {
+            def newBuild = createNewBuildObject(newTeam, it)
             newTeam.addToBuilds(newBuild)
         }
     }
 
-    def populateWorkItems(IProjectArea project) {
-        List<IBuildResult> buildResults = rtcService.getProjectBuildResults(project)
-        for (build in buildResults) {
-            def buildId = build.getItemId().toString().substring(6, build.getItemId().toString().length() - 1)
-            def thisBuild = Build.get(buildId)
-
-            def buildWorkItems = rtcService.getBuildWorkItems(build)
-            if (buildWorkItems != null) {
-                for (workItem in buildWorkItems) {
-                    def workItemId = workItem.getItemId().toString().substring(6, workItem.getItemId().toString().length() - 1)
-                    def buildWorkId = buildId << workItemId  // concatenate buildId and workItemId to get unique key identifier
-                    def newWorkItem = new WorkItem(workItemId: buildWorkId,
-                            buildOwner: thisBuild,
-                            modified: workItem.modified(),
-                            creationDate: workItem.getCreationDate(),
-                            resolutionDate: workItem.getResolutionDate(),
-                            duration: workItem.getDuration(),
-                            type: workItem.getWorkItemType(),
-                            severity: workItem.getSeverity().toString()
-                    )
-                    thisBuild.addToWorkItems(newWorkItem)
-                }
+    def populateWorkItems(IBuildResult build) {
+        def buildId = build.getItemId().toString().substring(6, build.getItemId().toString().length() - 1)
+        def thisBuild = Build.get(buildId)
+        def buildWorkItems = rtcService.getBuildWorkItems(build)
+        if (buildWorkItems != null) {
+            buildWorkItems.each {
+                def newWorkItem = createNewWorkItemObject(thisBuild, it)
+                thisBuild.addToWorkItems(newWorkItem)
             }
         }
     }
+
+    def createNewBuildObject(Team newTeam, IBuildResult build) {
+        def buildId = build.getItemId().toString().substring(6, build.getItemId().toString().length() - 1)
+        log.info("Creating creating new build for database. Build ID: " << buildId)
+        def newBuild = new Build(buildId: buildId,
+                team: newTeam,
+                name: build.getLabel(),
+                modified: build.modified(),
+                buildDefinitionId: rtcService.getBuildDefinition(build.buildDefinition).getId(),
+                buildTimeInMillis: build.getBuildTimeTaken(),
+                startTime: build.getBuildStartTime(),
+                buildStatus: build.getStatus(),
+                buildState: build.getState())
+        return newBuild
+    }
+
+    def createNewWorkItemObject(Build thisBuild, IWorkItem workItem) {
+        def workItemId = workItem.getItemId().toString().substring(6, workItem.getItemId().toString().length() - 1)
+        def buildWorkId = thisBuild.getBuildId() << workItemId  // concatenate buildId and workItemId to get unique key identifier
+        def newWorkItem = new WorkItem(workItemId: buildWorkId,
+                buildOwner: thisBuild,
+                modified: workItem.modified(),
+                creationDate: workItem.getCreationDate(),
+                resolutionDate: workItem.getResolutionDate(),
+                duration: workItem.getDuration(),
+                type: workItem.getWorkItemType(),
+                severity: workItem.getSeverity().toString()
+        )
+        return newWorkItem
+    }
+
 }

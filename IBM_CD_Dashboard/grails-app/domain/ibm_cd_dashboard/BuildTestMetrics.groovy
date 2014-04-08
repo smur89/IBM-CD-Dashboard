@@ -6,10 +6,5 @@ class BuildTestMetrics {
 
     static constraints = {
     }
-
-    def BuildTestMetrics(int commitPhaseTime){
-        commitPhaseTestingTime = commitPhaseTime
-    }
-
-    def commitPhaseTestingTime = 0
+    long commitPhaseTestingTime
 }

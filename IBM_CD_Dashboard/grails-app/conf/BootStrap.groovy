@@ -73,7 +73,6 @@ class BootStrap {
             def workItemTypes = [WorkItemTypes.DEFECT, WorkItemTypes.TASK]
 
             for (int j = 0; j < randomId.nextInt(60); j++){
-
                 Build newBuild = new Build(buildId: "_BSBID"<<randomId.nextInt()<<i<<j,
                         name: "_BSBuildName"<<i<<j,
                         buildDefinitionId: "bootstrap.build.injection",
@@ -82,7 +81,7 @@ class BootStrap {
                         buildStatus: buildStatus[randomId.nextInt(4)],
                         buildState: buildStates[randomId.nextInt(5)],
                         modified: new Date(randomTimeStamp().getTime()),
-                        testResults: new BuildTestMetrics(randomId.nextInt(1000000))
+                        testResults: new BuildTestMetrics(commitPhaseTestingTime: randomTime.nextInt(400000))  //Commit Phase test Times should be ~5mins/300000ms (According to IBM documentation)
                 )
                 newTeam.addToBuilds(newBuild)
 

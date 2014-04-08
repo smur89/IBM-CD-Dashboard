@@ -586,4 +586,12 @@ Week Beginning 2/4/14
 
 	Implemented bar chart to show breakdown of defects in Team.
 
-	Changed this to pie chart. 
+	Changed this to pie chart.  
+
+Week Beginning 9/4/14
+	
+	Beginning to implement methods to update only out of date (compared with the server) domain objects, as triggered in the cron job.
+
+	Refactoring methods - seperating large methods into a number of reuseable parts, e.g createNewBuildObject, createNewWorkItemObject etc.
+
+	

@@ -21,17 +21,6 @@
 <body>
 
 <table id="teamTable" class="lotusTable">
-    <thead>
-    %{--Column Headings--}%
-    <tr class="lotusFirst lotusSort">
-        <th class="lotusFirstCell">Team Name</th>
-        <th></th>
-        <th></th>
-        %{--<th>ID</th>--}%
-        %{--<th>Team Members</th>--}%
-        <th>&nbsp;</th>
-    </tr>
-    </thead>
     <tbody>
     %{--Teams--}%
     <g:each status="i" in="${teams}" var="it">
@@ -41,12 +30,6 @@
                 <h4 class="lotusTitle">
                     <g:link action="teamInfo" id="${it.teamId}">${it.teamName}</g:link>
                 </h4>
-            </td>
-            <td class="lotusMeta lotusNowrap lotusAltCell">
-                %{--<g:link action="teamInfo" id="${it.teamId}">${it.teamId}</g:link>--}%
-            </td>
-            <td class="lotusMeta lotusNowrap">
-                <g:link action="teamInfo" id="${it.getTeamMembers()}">${it.getTeamMembers()}</g:link>
             </td>
         </tr>
         <tr id="detailRowID_${it.getTeamId()}" class="lotusDetails">

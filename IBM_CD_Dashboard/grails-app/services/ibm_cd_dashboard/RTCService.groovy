@@ -332,6 +332,11 @@ class RTCService {
         }
     }
 
+    /**
+     * Checks all projects on the server and returns the last time
+     * the server was updated.
+     * @return time server was last updated
+     */
     def checkServerLastUpdate() {
         def projects = getAllProjects()
         def serverModified = null
@@ -340,7 +345,7 @@ class RTCService {
                 serverModified = it.modified()
             }
         }
+        log.info("Server Checked on: ${new Date()}. Server last updated : " << serverModified)
         return serverModified
     }
-
 }
