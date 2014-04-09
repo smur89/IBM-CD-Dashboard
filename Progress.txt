@@ -594,7 +594,19 @@ Week Beginning 9/4/14
 
 	Refactoring methods - seperating large methods into a number of reuseable parts, e.g createNewBuildObject, createNewWorkItemObject etc.
 
+	Brendan advised to group the l1 - l6 defects as follows:
 	S1 - Critical + Blocker
 	S2 - Major
 	S3 - Normal, Minor
+	also wants the chart for build time and test time seperated out into two seperate charts as in reality, the difference between build times and test times would be too large to be able to read the test times on the same chart.
+	Said the wording on the page should be changed to reflect the new scope - mostly 'build' should be changed to 'commit'
+
+	Implemented changes Brendan asked for. Layout is now different to screenshot sent in for the project booklet, emails John asking if I could resubmit
+	-Can submit anytime before Friday - to email John the new screenshot.
+
+	Changed "Refresh Page" Text to circular refresh arrow.
+
+	Fixed issues with images not linking properly on all pages - use <g:img /> instead of <img />
+
+	
 	

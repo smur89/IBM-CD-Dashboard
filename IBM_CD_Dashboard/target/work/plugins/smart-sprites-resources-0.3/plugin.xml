@@ -1,0 +1,33 @@
+<plugin name='smart-sprites-resources' version='0.3' grailsVersion='1.3.7 &gt; *'>
+  <author>Jeff Beck and Colin Harrington</author>
+  <authorEmail>grails.smart.sprite.resources@gmail.com</authorEmail>
+  <title>Smart Sprites Resources</title>
+  <description>Creates Sprites using SmartSprites as a component of the Resources plugin.</description>
+  <documentation>http://grails.org/plugin/smart-sprites-resources</documentation>
+  <type>SmartSpritesResourcesGrailsPlugin</type>
+  <resources>
+    <resource>SmartspritesCssspritesResourceMapper</resource>
+  </resources>
+  <repositories>
+    <repository name='grailsCentral' url='http://grails.org/plugins' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+    <repository name='http://grails.org/plugins' url='http://grails.org/plugins' />
+  </repositories>
+  <dependencies>
+    <test>
+      <dependency group='org.spockframework' name='spock-grails-support' version='0.7-groovy-2.0' />
+    </test>
+    <runtime>
+      <dependency group='com.carrotsearch' name='smartsprites' version='0.2.10' />
+    </runtime>
+  </dependencies>
+  <plugins>
+    <test>
+      <plugin group='org.grails.plugins' name='spock' version='0.7' />
+    </test>
+  </plugins>
+  <runtimePluginRequirements>
+    <plugin name='resources' version='1.0 &gt; *' />
+  </runtimePluginRequirements>
+  <behavior />
+</plugin>

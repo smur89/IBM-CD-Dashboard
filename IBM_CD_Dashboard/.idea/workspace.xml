@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c592f022-a46d-4067-ac8c-6eb26a714759" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/css/images/refresh_graphic.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/jobs/ibm_cd_dashboard/CheckForServerUpdatesJob.groovy" afterPath="$PROJECT_DIR$/grails-app/jobs/ibm_cd_dashboard/CheckForServerUpdatesJob.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Progress.txt" afterPath="$PROJECT_DIR$/../Progress.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/team/_teamData.gsp" afterPath="$PROJECT_DIR$/grails-app/views/team/_teamData.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/css/defaultTheme/defaultTheme.css" afterPath="$PROJECT_DIR$/web-app/css/defaultTheme/defaultTheme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IBM_CD_Dashboard-grailsPlugins.iml" afterPath="$PROJECT_DIR$/IBM_CD_Dashboard-grailsPlugins.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/application.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/application.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/error.log.1" afterPath="$PROJECT_DIR$/logs/error.log.1" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/error.log" afterPath="$PROJECT_DIR$/logs/error.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/info.log.1" afterPath="$PROJECT_DIR$/logs/info.log.1" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/info.log" afterPath="$PROJECT_DIR$/logs/info.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/warn.log.1" afterPath="$PROJECT_DIR$/logs/warn.log.1" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/warn.log" afterPath="$PROJECT_DIR$/logs/warn.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="IBM_CD_Dashboard.iws" />
@@ -35,7 +35,7 @@
     <file path="/RtcConnectionService.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1386083734098" ignored="false" />
     <file path="/RTCBuildService.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1393420396506" ignored="false" />
     <file path="/WorkItem.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1396368857641" ignored="false" />
-    <file path="/a.dummy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1396992804664" ignored="false" />
+    <file path="/a.dummy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1397069755392" ignored="false" />
     <file path="/DomainService.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1396997102557" ignored="false" />
     <file path="/teamInfo.gsp" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1396538104472" ignored="false" />
     <file path="/buildInfo.gsp" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1396028886359" ignored="false" />
@@ -47,15 +47,15 @@
     <file path="/allBuilds.gsp" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1391879159982" ignored="false" />
     <file path="/allTeams.gsp" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1391879387334" ignored="false" />
     <file path="/allWorkItems.gsp" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1391879597873" ignored="false" />
-    <file path="/application.gsp" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1396627035262" ignored="false" />
+    <file path="/application.gsp" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1397070847954" ignored="false" />
     <file path="/core.css" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1392206363476" ignored="false" />
     <file path="/ApplicationResources.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1392823056282" ignored="false" />
     <file path="/error.gsp" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1393960000812" ignored="false" />
-    <file path="/Dummy.txt" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1397062922223" ignored="false" />
+    <file path="/Dummy.txt" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1397069757940" ignored="false" />
     <file path="/Config.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1395928934436" ignored="false" />
     <file path="/UrlMappings.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1393422688492" ignored="false" />
     <file path="/CheckServerForUpdatesJob.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1393933199403" ignored="false" />
-    <file path="/CheckForServerUpdatesJob.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1396996571205" ignored="false" />
+    <file path="/CheckForServerUpdatesJob.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1397067503232" ignored="false" />
     <file path="/QuartzService.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1393934018542" ignored="false" />
     <file path="/RTCService.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1396991023469" ignored="false" />
     <file path="/BuildControllerSpec.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1393953489830" ignored="false" />
@@ -150,25 +150,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application.gsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application.gsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/application.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="123" column="26" selection-start="5061" selection-end="5061" vertical-scroll-proportion="-11.083333">
+            <state line="98" column="70" selection-start="4081" selection-end="4081" vertical-scroll-proportion="0.35532996">
               <folding>
-                <marker date="1397064331000" expanded="true" signature="913:1003" placeholder="..." />
-                <marker date="1397064331000" expanded="true" signature="1044:1134" placeholder="..." />
-                <marker date="1397064331000" expanded="true" signature="1175:1254" placeholder="..." />
-                <marker date="1397064331000" expanded="true" signature="1295:1374" placeholder="..." />
-                <marker date="1397064331000" expanded="true" signature="1413:1666" placeholder="..." />
+                <marker date="1397070850000" expanded="true" signature="913:1003" placeholder="..." />
+                <marker date="1397070850000" expanded="true" signature="1044:1134" placeholder="..." />
+                <marker date="1397070850000" expanded="true" signature="1175:1254" placeholder="..." />
+                <marker date="1397070850000" expanded="true" signature="1295:1374" placeholder="..." />
+                <marker date="1397070850000" expanded="true" signature="1413:1666" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_teamData.gsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="lotusHSprite-32bit.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web-app/css/images/lotusHSprite-32bit.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CheckForServerUpdatesJob.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/jobs/ibm_cd_dashboard/CheckForServerUpdatesJob.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="36" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_teamData.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/team/_teamData.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="96" selection-start="4411" selection-end="4411" vertical-scroll-proportion="0.93318486">
+            <state line="60" column="28" selection-start="3328" selection-end="3328" vertical-scroll-proportion="-6.0425534">
               <folding />
             </state>
           </provider>
@@ -211,7 +227,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/grails-app/views/workItem/workItemInfo.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/team/teamInfo.gsp" />
         <option value="$PROJECT_DIR$/grails-app/domain/ibm_cd_dashboard/Build.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/ibm_cd_dashboard/TeamController.groovy" />
@@ -220,12 +235,13 @@
         <option value="$PROJECT_DIR$/grails-app/domain/ibm_cd_dashboard/Team.groovy" />
         <option value="$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/RTCService.groovy" />
         <option value="$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/DomainService.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/jobs/ibm_cd_dashboard/CheckForServerUpdatesJob.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/team/index.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/application.gsp" />
         <option value="$PROJECT_DIR$/web-app/css/defaultTheme/defaultTheme.css" />
         <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/jobs/ibm_cd_dashboard/CheckForServerUpdatesJob.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/team/_teamData.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/layouts/application.gsp" />
       </list>
     </option>
   </component>
@@ -235,8 +251,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="24" />
     <option name="y" value="22" />
-    <option name="width" value="1416" />
-    <option name="height" value="878" />
+    <option name="width" value="1140" />
+    <option name="height" value="825" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -286,12 +302,12 @@
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="dashboard_tests" />
       <recent name="ibm_cd_dashboard" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web-app/js" />
@@ -301,6 +317,7 @@
       <recent name="$PROJECT_DIR$/web-app/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web-app/css/images" />
       <recent name="$PROJECT_DIR$/web-app/js" />
       <recent name="$PROJECT_DIR$/web-app/css" />
       <recent name="$PROJECT_DIR$/web-app/js/d3" />
@@ -537,20 +554,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="24" y="22" width="1416" height="878" extended-state="0" />
+    <frame x="24" y="22" width="1140" height="825" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298153" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891467" sideWeight="0.68289477" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24676259" sideWeight="0.29023746" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32056737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891467" sideWeight="0.6592105" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24977778" sideWeight="0.6569921" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5231788" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32585752" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25036496" sideWeight="0.7084433" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3815603" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31352833" sideWeight="0.67943263" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891467" sideWeight="0.6596306" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977778" sideWeight="0.6569921" order="5" side_tool="false" content_ui="tabs" />
@@ -561,12 +580,10 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.0036390102" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24460432" sideWeight="0.8" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29155672" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35488126" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2889182" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32189974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32453826" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.69920844" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -637,73 +654,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/views/team/allTeams.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/ibm_cd_dashboard/UserRole.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="88" selection-end="88" vertical-scroll-proportion="0.13363029">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/ibm_cd_dashboard/UserProfile.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="32" selection-end="32" vertical-scroll-proportion="0.066815145">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/ibm_cd_dashboard/Build.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="9" selection-start="836" selection-end="836" vertical-scroll-proportion="0.65033406">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/home/about.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="44" selection-start="2693" selection-end="2693" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/ibm_cd_dashboard/Team.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="4" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/work/plugins/quartz-1.0.1/src/java/grails/plugins/quartz/GrailsJobFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="0" selection-start="4387" selection-end="4387" vertical-scroll-proportion="0.33266532" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/ibm_cd_dashboard/BuildTestMetrics.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="85" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/RTCService.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="321" column="63" selection-start="15558" selection-end="15558" vertical-scroll-proportion="0.0">
@@ -718,30 +668,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/jobs/ibm_cd_dashboard/CheckForServerUpdatesJob.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="56" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/team/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="22" selection-start="1138" selection-end="1138" vertical-scroll-proportion="-0.63829786">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/application.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="26" selection-start="5061" selection-end="5061" vertical-scroll-proportion="-11.083333">
-          <folding>
-            <marker date="1397064331000" expanded="true" signature="913:1003" placeholder="..." />
-            <marker date="1397064331000" expanded="true" signature="1044:1134" placeholder="..." />
-            <marker date="1397064331000" expanded="true" signature="1175:1254" placeholder="..." />
-            <marker date="1397064331000" expanded="true" signature="1295:1374" placeholder="..." />
-            <marker date="1397064331000" expanded="true" signature="1413:1666" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -759,10 +689,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/jobs/ibm_cd_dashboard/CheckForServerUpdatesJob.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="36" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/team/_teamData.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="96" selection-start="4411" selection-end="4411" vertical-scroll-proportion="0.93318486">
+        <state line="60" column="28" selection-start="3328" selection-end="3328" vertical-scroll-proportion="-6.0425534">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-app/css/images/msgErrorInField.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-app/css/images/lotusSprite-32bit.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-app/css/images/lotusSprite-8bit.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-app/css/images/lotusHSprite-32bit.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="7" selection-start="2765" selection-end="2765" vertical-scroll-proportion="0.81182796">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-app/css/images/help.jpeg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-app/css/images/help.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/application.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="70" selection-start="4081" selection-end="4081" vertical-scroll-proportion="0.35532996">
+          <folding>
+            <marker date="1397070850000" expanded="true" signature="913:1003" placeholder="..." />
+            <marker date="1397070850000" expanded="true" signature="1044:1134" placeholder="..." />
+            <marker date="1397070850000" expanded="true" signature="1175:1254" placeholder="..." />
+            <marker date="1397070850000" expanded="true" signature="1295:1374" placeholder="..." />
+            <marker date="1397070850000" expanded="true" signature="1413:1666" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -774,7 +768,7 @@
           <value>
             <GrailsSettings>
               <option name="buildConfigCrc" value="-1993083287" />
-              <option name="pluginDependenciesCrc" value="1369989157" />
+              <option name="pluginDependenciesCrc" value="-2096311906" />
               <option name="properties">
                 <map>
                   <entry key="grails.global.plugins.dir" value="$USER_HOME$/.grails/2.3.1/global-plugins" />

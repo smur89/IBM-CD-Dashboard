@@ -30,6 +30,8 @@ class CheckForServerUpdatesJob {
             domainService.updateDomain(lastModified);
             log.info("Domain objects updated. Domain last modified set to ${lastModified}")
 
+        } else {
+            log.info("Domain up to date.")
         }
     }
 }

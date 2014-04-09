@@ -60,10 +60,10 @@
     <!-- header is an HTML5 element. Remove header if you are using HTML4. -->
     <header role="banner">
         <div class="lotusBanner"><div class="lotusRightCorner"><div class="lotusInner">
-            <a href="#lotusMainContent" accesskey="S" class="lotusAccess"><img src="../css/images/blank.gif"
-                                                                               alt="Skip to main content link. Accesskey S"/>
-            </a><g:link controller="team" action="index" class="lotusLogo"><img alt="Product Name"
-                                                                                src="../css/images/blank.gif"/><span
+            <a href="#lotusMainContent" accesskey="S" class="lotusAccess">
+                <g:img dir="css/images" file="blank.gif" alt="Skip to main content link. Accesskey S"/>
+            </a><g:link controller="team" action="index" class="lotusLogo">
+                <g:img dir="css/images" file="blank.gif" alt="Product Name" /><span
                     class="lotusAltText">CD Adoption Dashboard</span></g:link>
             <ul class="lotusInlinelist lotusUtility">
                 <sec:ifNotLoggedIn>
@@ -82,13 +82,12 @@
                 </sec:ifLoggedIn>
                 <li>
                     <g:link controller="Home" action="help" class="yourProductSprite yourProductSprite-bannerHelp16">
-                        <img class="yourProductSprite yourProductSprite-bannerHelp16" src="../css/images/help.gif"
-                             alt=""/>
+                        <g:img dir="css/images" file="help.gif" class="yourProductSprite yourProductSprite-bannerHelp16"/>
                     </g:link>
                 </li>
                 <li>
                     <span class="lotusBranding">
-                        <img src="../css/images/blank.gif" alt="IBM" class="lotusIBMLogo"/>
+                        <g:img dir="/css/images" file="blank.gif" alt="IBM" class="lotusIBMLogo"/>
                         <span class="lotusAltText">IBM</span>
                     </span>
                 </li>
@@ -98,7 +97,7 @@
                 <ul class="lotusInlinelist lotusLinks" role="toolbar">
                     <li class="lotusFirst" role="presentation">
                         <a onclick="window.location.reload();" role="button" aria-pressed="true">
-                            <strong>Refresh Page</strong>
+                            <g:img dir="css/images" file="refresh_graphic.png" class="lotusIcon" />
                         </a>
                     </li>
                 </ul>
@@ -107,10 +106,9 @@
 
         <div class="lotusTitleBar2"><div class="lotusWrapper"><div class="lotusInner">
             <div class="lotusTitleBarContent">
-                <h2 class="lotusHeading"><img alt=""
-                                              class="lotusIcon yourProductSprite yourProductSprite-iconPlaceholder24"
-                                              src="../css/images/blank.gif"><span
-                        class="lotusText">${layoutTitle()}</span></h2>
+                <h2 class="lotusHeading">
+                    <g:img dir="/css/images" file="blank.gif" class="lotusIcon yourProductSprite yourProductSprite-iconPlaceholder24"/>
+                    <span class="lotusText">${layoutTitle()}</span></h2>
             </div>
 
         </div>
@@ -123,10 +121,11 @@
 
         <div class="lotusContent" role="main">
 
+
             <g:layoutBody/>
 
         </div><!--end content-->
-        <span aria-hidden="true" class="lotusRight"><img src="../css/images/blank.gif" alt="IBM" class="lotusIBMLogo"><span class="lotusAltText">IBM</span></span>
+        <span aria-hidden="true" class="lotusRight"><g:img dir="/css/images" file="blank.gif" alt="IBM" class="lotusIBMLogo"/><span class="lotusAltText">IBM</span></span>
 
     </div><!--end main-->
 
@@ -145,7 +144,7 @@
     <footer role="contentinfo">
     <table class="lotusLegal" cellspacing="0" role="presentation">
             <tr>
-                <td><img class="lotusIBMLogoFooter" src="../css/images/blank.gif" alt="IBM"/></td>
+                <td><g:img dir="/css/images" file="blank.gif" alt="IBM" class="lotusIBMLogoFooter"/></td>
                 <td class="lotusLicense">&copy; Copyright IBM Corporation 2014.</td>
             </tr>
         </table>
