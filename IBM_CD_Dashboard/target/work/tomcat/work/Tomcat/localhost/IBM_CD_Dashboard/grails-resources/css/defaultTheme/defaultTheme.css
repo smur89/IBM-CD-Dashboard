@@ -873,14 +873,14 @@ companion files: coreRTL.css / <theme name>ThemeRTL.css (for example: coreRTL.cs
 
 
 .lotusui30_body {color:#222; background-color:#fff;}
-.lotusui30_layout .lotusMain .lotusContent {padding:25px 0 20px; border-width:0; background:none;}
+.lotusui30_layout .lotusMain .lotusContent {padding:10px 0 20px; border-width:0; background:none;}
 
 /*min/max layout*/
 .lotusui30 .lotusBanner .lotusInner,
 .lotusui30 .lotusBannerExt .lotusWrapper,
 .lotusui30 .lotusTitleBar2 .lotusWrapper,
 .lotusui30 .lotusTitleBarExt .lotusWrapper,
-.lotusui30_body .lotusMain {margin:0 auto; padding:0 5px; min-width:980px; max-width:1190px;}
+.lotusui30_body .lotusMain {margin:0 auto; padding:0 5px; min-width:980px; max-width:1340px;}
 /*fluid layout*/
 .lotusui30_layout.lotusFluid .lotusBanner .lotusInner,
 .lotusui30_layout.lotusFluid .lotusBannerExt .lotusWrapper,

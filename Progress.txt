@@ -594,4 +594,7 @@ Week Beginning 9/4/14
 
 	Refactoring methods - seperating large methods into a number of reuseable parts, e.g createNewBuildObject, createNewWorkItemObject etc.
 
+	S1 - Critical + Blocker
+	S2 - Major
+	S3 - Normal, Minor
 	

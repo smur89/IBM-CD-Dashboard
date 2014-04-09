@@ -10,7 +10,7 @@ import java.sql.Timestamp
 class CheckForServerUpdatesJob {
 
        static triggers = {
-        cron name: 'cronTrigger', cronExpression: " 0/20 * * * * ?" //every 5 seconds
+        cron name: 'cronTrigger', cronExpression: " 0/120 * * * * ?" //every 5 seconds
         //cron name: 'cronTrigger', cronExpression: "0 0 0/2 1/1 * ? *" //every 2 hours
     }
 
