@@ -1,8 +1,16 @@
-2014-04-09 19:27:28,572 [http-bio-8090-exec-2] ERROR resource.ResourceMeta  - Resource not found: /images/help.gif
-2014-04-09 19:27:28,679 [http-bio-8090-exec-8] ERROR resource.ResourceMeta  - Resource not found: /images/help.gif
-2014-04-09 19:27:36,753 [http-bio-8090-exec-8] ERROR resource.ResourceMeta  - Resource not found: /plugins/jquery-1.10.2/js/jquery/jquery-1.10.2.min.map
-2014-04-09 19:28:25,693 [http-bio-8090-exec-8] ERROR resource.ResourceMeta  - Resource not found: /plugins/jquery-1.10.2/js/jquery/jquery-1.10.2.min.map
-2014-04-09 19:29:02,213 [http-bio-8090-exec-2] ERROR resource.ResourceMeta  - Resource not found: /plugins/jquery-1.10.2/js/jquery/jquery-1.10.2.min.map
-2014-04-09 19:29:26,434 [http-bio-8090-exec-2] ERROR resource.ResourceMeta  - Resource not found: /plugins/jquery-1.10.2/js/jquery/jquery-1.10.2.min.map
-2014-04-09 19:30:12,783 [http-bio-8090-exec-3] ERROR resource.ResourceMeta  - Resource not found: /plugins/jquery-1.10.2/js/jquery/jquery-1.10.2.min.map
-2014-04-09 19:30:22,889 [http-bio-8090-exec-3] ERROR resource.ResourceMeta  - Resource not found: /plugins/jquery-1.10.2/js/jquery/jquery-1.10.2.min.map
+2014-04-15 17:27:00,118 [quartzScheduler_Worker-2] ERROR listeners.ExceptionPrinterJobListener  - Exception occurred in job: Grails Job
+org.quartz.JobExecutionException: org.codehaus.groovy.runtime.metaclass.MethodSelectionException: Could not find which method <init>() to invoke from this list:
+  public java.sql.Timestamp#<init>(int, int, int, int, int, int, int)
+  public java.sql.Timestamp#<init>(long) [See nested exception: org.codehaus.groovy.runtime.metaclass.MethodSelectionException: Could not find which method <init>() to invoke from this list:
+  public java.sql.Timestamp#<init>(int, int, int, int, int, int, int)
+  public java.sql.Timestamp#<init>(long)]
+	at grails.plugins.quartz.GrailsJobFactory$GrailsJob.execute(GrailsJobFactory.java:111)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.codehaus.groovy.runtime.metaclass.MethodSelectionException: Could not find which method <init>() to invoke from this list:
+  public java.sql.Timestamp#<init>(int, int, int, int, int, int, int)
+  public java.sql.Timestamp#<init>(long)
+	at ibm_cd_dashboard.DomainService$_updateDomain_closure1$$EObWFBK4.doCall(DomainService.groovy:71)
+	at ibm_cd_dashboard.CheckForServerUpdatesJob.execute(CheckForServerUpdatesJob.groovy:30)
+	at grails.plugins.quartz.GrailsJobFactory$GrailsJob.execute(GrailsJobFactory.java:104)
+	... 2 more

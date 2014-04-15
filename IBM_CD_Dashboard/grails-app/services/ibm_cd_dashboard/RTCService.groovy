@@ -104,32 +104,6 @@ class RTCService {
         }
     }
 
-    def updateServerLastModified() {
-       // startService()
-        try {
-            def teamRepository = loginToRepo(URI, USERID, PASSWORD)
-
-            IProcessItemService connect = (IProcessItemService) teamRepository.getClientLibrary(IProcessItemService.class);
-            List<IProjectArea> projects = connect.findAllProjectAreas(null, null);
-            def lastMod = null
-
-            //Create list of all project areas that are not in an archived state
-            def grailsApplication = Holders.getGrailsApplication()
-            for (currProject in projects) {
-                if (currProject.modified() > lastMod ) {
-                    lastMod = currProject.modified()
-                }
-            }
-            //teamRepository.logout();
-            grailsApplication.config.ServerLastModified = lastMod
-
-        } catch (TeamRepositoryException e) {
-            e.printStackTrace()
-        } finally {
-            //shutdownService()
-        }
-    }
-
     def List<IProjectArea> getActiveProjects() {
         startService()
         try {
@@ -145,8 +119,6 @@ class RTCService {
                     activeProjects.add(currProject)
                 }
             }
-
-            //teamRepository.logout();
             return activeProjects
 
         } catch (TeamRepositoryException e) {
@@ -179,11 +151,11 @@ class RTCService {
             buildResults
 
         } catch (TeamRepositoryException e) {
-            println("getAllBuildResults Team Repository Exception: " << tre.printStackTrace())
+            log.error("getAllBuildResults Team Repository Exception: " << tre.printStackTrace())
         } catch (NullPointerException npe) {
-            println("getAllBuildResults Null Pointer Exception: " << npe.printStackTrace())
+            log.error("getAllBuildResults Null Pointer Exception: " << npe.printStackTrace())
         } catch (IllegalStateException ise) {
-            println("getAllBuildResults Illegal State Exception: " << ise.printStackTrace())
+            log.error("getAllBuildResults Illegal State Exception: " << ise.printStackTrace())
         } finally {
             //shutdownService()
         }
@@ -213,13 +185,10 @@ class RTCService {
 
         } catch (TeamRepositoryException tre) {
             log.error("getProjectBuildResults Team Repository Exception: ${tre.getMessage()} \n ${tre.printStackTrace()}")
-            println("getProjectBuildResults Team Repository Exception: ${tre.getMessage()}")
         } catch (NullPointerException npe) {
             log.error("getProjectBuildResults Null Pointer Exception: ${npe.getMessage()} \n ${npe.printStackTrace()}")
-            println("getProjectBuildResults Null Pointer Exception: ${npe.getMessage()}")
         } catch (IllegalStateException ise) {
             log.error("getProjectBuildResults Illegal State Exception: ${ise.getMessage()} \n ${ise.printStackTrace()}")
-            println("getProjectBuildResults Illegal State Exception: ${ise.getMessage()}")
         } finally {
             //shutdownService()
         }
@@ -237,13 +206,10 @@ class RTCService {
 
         } catch (TeamRepositoryException tre) {
             log.error("getProjectMembers Team Repository Exception: ${tre.getMessage()} \n ${tre.printStackTrace()}")
-            println("getProjectMembers Team Repository Exception: " << tre.printStackTrace())
         } catch (NullPointerException npe) {
             log.error("getProjectMembers Null Pointer Exception: ${npe.getMessage()} \n ${npe.printStackTrace()}")
-            println("getProjectMembers Null Pointer Exception: " << npe.printStackTrace())
         } catch (IllegalStateException ise) {
             log.error("getProjectMembers Illegal State Exception: ${ise.getMessage()} \n ${ise.printStackTrace()}")
-            println("getProjectMembers Illegal State Exception: ${ise.getMessage()}")
         } finally {
 
         }
@@ -263,13 +229,10 @@ class RTCService {
             return results
         } catch (TeamRepositoryException tre) {
             log.error("getProjectWorkItems Team Repository Exception: ${tre.getMessage()} \n ${tre.printStackTrace()}")
-            println("getProjectWorkItems Team Repository Exception: " << tre.printStackTrace())
         } catch (NullPointerException npe) {
             log.error("getProjectWorkItems Null Pointer Exception: ${npe.getMessage()} \n ${npe.printStackTrace()}")
-            println("getProjectWorkItems Null Pointer Exception: ${npe.getMessage()}")
         } catch (IllegalStateException ise) {
             log.error("getProjectWorkItems Illegal State Exception: ${ise.getMessage()} \n ${ise.printStackTrace()}")
-            println("getProjectWorkItems Illegal State Exception: " << ise.printStackTrace())
         } finally {
 
         }
@@ -297,13 +260,10 @@ class RTCService {
             }
         } catch (TeamRepositoryException tre) {
             log.error("getBuildWorkItems Team Repository Exception: ${tre.getMessage()} \n ${tre.printStackTrace()}")
-            println("getBuildWorkItems Team Repository Exception: ${tre.getMessage()}")
         } catch (NullPointerException npe) {
             log.error("getBuildWorkItems Null Pointer Exception: ${npe.getMessage()} \n ${npe.printStackTrace()}")
-            println("getBuildWorkItems Null Pointer Exception: ${npe.getMessage()}")
         } catch (IllegalStateException ise) {
             log.error("getBuildWorkItems Illegal State Exception: ${ise.getMessage()} \n ${ise.printStackTrace()}")
-            println("getBuildWorkItems Illegal State Exception: ${ise.getMessage()}")
         } finally {
 
         }
@@ -320,13 +280,10 @@ class RTCService {
             return buildDef
         } catch (TeamRepositoryException tre) {
             log.error("getBuildDefinition Team Repository Exception: ${tre.getMessage()} \n ${tre.printStackTrace()}")
-            println("getBuildDefinition Team Repository Exception: ${tre.getMessage()}")
         } catch (NullPointerException npe) {
             log.error("getBuildDefinition Null Pointer Exception: ${npe.getMessage()} \n ${npe.printStackTrace()}")
-            println("getBuildDefinition Null Pointer Exception: ${npe.getMessage()}")
         } catch (IllegalStateException ise) {
             log.error("getBuildDefinition Illegal State Exception: ${ise.getMessage()} \n ${ise.printStackTrace()}")
-            println("getBuildDefinition Illegal State Exception: ${ise.getMessage()}")
         } finally {
 
         }
@@ -339,12 +296,13 @@ class RTCService {
      */
     def checkServerLastUpdate() {
         def projects = getAllProjects()
-        def serverModified = null
+        def serverModified = Holders.getGrailsApplication().config.ServerLastModified
         projects.each {
-            if(it.modified() > serverModified){
+            if (it.modified() > serverModified) {
                 serverModified = it.modified()
             }
         }
+        Holders.getGrailsApplication().config.ServerLastModified = serverModified
         log.info("Server Checked on: ${new Date()}. Server last updated : " << serverModified)
         return serverModified
     }

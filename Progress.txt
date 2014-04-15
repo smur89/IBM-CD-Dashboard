@@ -608,5 +608,17 @@ Week Beginning 9/4/14
 
 	Fixed issues with images not linking properly on all pages - use <g:img /> instead of <img />
 
+Week Beginning 16/4/14
+
+	Tested creating new project area - this was recognised by the app and the domain was updated as expected - however the index page isn't null safe - error on page now because the team.builds loop is accessing null objects - to fix.
+
+	Trial Licenses expired again. Cannot create workItems etc. - Tried reinstalling the 10 Developer free licenses, but this is not enough. Can still create project areas, which demonstrates the functionality of refreshing page etc.
+
+	Made all scripting/groovy code in the views null safe.
+	Only allow to load partial view (graphs) if there are builds/commits for the build.
+
+	"There are no commits defined for this project" Displayed for projects with no builds/commits associated with them.
+
+	Emailed Brendan - it is ok that this functionality isn't 100% - License issues are a valid reason.
 	
 	
