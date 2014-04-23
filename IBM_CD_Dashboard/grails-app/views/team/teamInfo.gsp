@@ -26,9 +26,9 @@
     %{--Column Headings--}%
         <tr>
             <th>Member Name</th>
-        <td>
-           ${member.name}
-        </td>
+            <td>
+                ${member.name}
+            </td>
         </tr>
     </g:each>
 
@@ -82,11 +82,11 @@ function buildTimes() {
 
     //Data is represented as an array of {x,y} pairs.
     <g:each var="jt" in="${jsonTimes}">
-        <g:if test="${jt.getAt("time") > 0}">
-            builds.push({x: i, y: ${jt.getAt("time")}});
+    <g:if test="${jt.getAt("time") > 0}">
+        builds.push({x: i, y: ${jt.getAt("time")}});
             names[i++] = "${jt.getAt("name")}";
-        </g:if>
-    </g:each>
+    </g:if>
+</g:each>
 
     //Line chart data should be sent as an array of series objects.
     return [
@@ -110,9 +110,15 @@ function buildTimes() {
     </tr>
     <tr>
         <th>Total Defects</th>
-        <%  //Calculate total defects
-            def count = 0
-            team.getBuilds().each { it.workItems.each { if(it.getType() == WorkItemTypes.DEFECT){ count++ }}}
+        <% //Calculate total defects
+        def count = 0
+        team.getBuilds().each {
+            it.workItems.each {
+                if (it.getType() == WorkItemTypes.DEFECT) {
+                    count++
+                }
+            }
+        }
         %>
         <td>${count}</td>
     </tr>
@@ -124,13 +130,19 @@ function buildTimes() {
     <tbody>
     <tr class="lotusFirst lotusSort">
         <th class="lotusFirstCell"><a class="lotusActiveSort lotusAscending" aria-sort="ascending" href="javascript:;"
-                                      title="Reverse sort" onclick="clearSort(this); reverseSort(this)">Build No.</a></th>
+                                      title="Reverse sort" onclick="clearSort(this);
+                reverseSort(this)">Build No.</a></th>
 
-        <th><a href="javascript:;" title="Reverse sort" onclick="clearSort(this); reverseSort(this)">Name</a></th>
-        <th><a href="javascript:;" title="Reverse sort" onclick="clearSort(this); reverseSort(this)">Build Status</a></th>
-        <th><a href="javascript:;" title="Reverse sort" onclick="clearSort(this); reverseSort(this)">Build State</a></th>
-        <th><a href="javascript:;" title="Reverse sort" onclick="clearSort(this); reverseSort(this)">Modified</a></th>
-        <th><a href="javascript:;" title="Reverse sort" onclick="clearSort(this); reverseSort(this)">WorkItems</a></th>
+        <th><a href="javascript:;" title="Reverse sort" onclick="clearSort(this);
+        reverseSort(this)">Name</a></th>
+        <th><a href="javascript:;" title="Reverse sort" onclick="clearSort(this);
+        reverseSort(this)">Build Status</a></th>
+        <th><a href="javascript:;" title="Reverse sort" onclick="clearSort(this);
+        reverseSort(this)">Build State</a></th>
+        <th><a href="javascript:;" title="Reverse sort" onclick="clearSort(this);
+        reverseSort(this)">Modified</a></th>
+        <th><a href="javascript:;" title="Reverse sort" onclick="clearSort(this);
+        reverseSort(this)">WorkItems</a></th>
         <th>&nbsp;</th>
     </tr>
 
@@ -140,7 +152,7 @@ function buildTimes() {
     <g:each status="i" in="${builds}" var="it">
     %{--Apply the lotusFirst class to the first row of the table--}%
         <tr class="${i == 0 ? 'lotusFirst' : ''}">
-            <td class="lotusMeta lotusNowrap lotusAltCell">${builds.size()-(i+1)}</td>
+            <td class="lotusMeta lotusNowrap lotusAltCell">${builds.size() - (i + 1)}</td>
 
             <td class="lotusFirstCell"><h4 class="lotusTitle"><g:link action="buildInfo" controller="build"
                                                                       id="${it.buildId}">

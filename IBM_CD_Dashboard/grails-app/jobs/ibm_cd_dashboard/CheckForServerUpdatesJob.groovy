@@ -31,8 +31,8 @@ class CheckForServerUpdatesJob {
         log.info("Cron Job - Checking server in sync with local database")
 
         if (serverLastModified > Holders.getGrailsApplication().config.DomainLastModified) {
-            //Update the domain with the new information from the server. Only update those after the DomainLastModified time.
             log.info("Updating domain objects. Domain last modified ${lastModified}")
+            //Update the domain with the new information from the server. Only update those after the DomainLastModified time.
             domainService.updateDomain(lastModified);
             log.info("Domain objects updated. Domain last modified set to ${lastModified}")
         } else {

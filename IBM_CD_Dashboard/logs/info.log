@@ -1,3 +1,5 @@
-2014-04-23 22:06:00,022 [quartzScheduler_Worker-8] INFO  ibm_cd_dashboard.RTCService  - Server Checked on: Wed Apr 23 22:06:00 IST 2014. Server last updated : Wed Apr 23 21:43:52 IST 2014
-2014-04-23 22:06:00,023 [quartzScheduler_Worker-8] INFO  ibm_cd_dashboard.CheckForServerUpdatesJob  - Cron Job - Checking server in sync with local database
-2014-04-23 22:06:00,023 [quartzScheduler_Worker-8] INFO  ibm_cd_dashboard.CheckForServerUpdatesJob  - Domain up to date.
+2014-04-23 22:31:00,019 [quartzScheduler_Worker-3] INFO  ibm_cd_dashboard.CheckForServerUpdatesJob  - Domain up to date.
+2014-04-23 22:32:00,019 [quartzScheduler_Worker-4] ERROR ibm_cd_dashboard.RTCService  - loginToRepo Team Repository Exception: CRJAZ1371E The following URL cannot be reached: https://localhost:9443/ccm/versionCompatibility?clientVersion=4.0.4. The server cannot be reached. The network could not connect to the server. Error details: Connection refused. }
+2014-04-23 22:32:00,020 [quartzScheduler_Worker-4] INFO  ibm_cd_dashboard.RTCService  - Server Checked on: Wed Apr 23 22:32:00 IST 2014. Server last updated : Wed Apr 23 21:43:52 IST 2014
+2014-04-23 22:32:00,020 [quartzScheduler_Worker-4] INFO  ibm_cd_dashboard.CheckForServerUpdatesJob  - Cron Job - Checking server in sync with local database
+2014-04-23 22:32:00,020 [quartzScheduler_Worker-4] INFO  ibm_cd_dashboard.CheckForServerUpdatesJob  - Domain up to date.
