@@ -15,6 +15,8 @@ class Team {
         teamId nullable: false
         teamId blank: false
         teamId unique: true
+
+        builds nullable: true
     }
 
     static hasMany = [builds: Build] // Cascade save to Build

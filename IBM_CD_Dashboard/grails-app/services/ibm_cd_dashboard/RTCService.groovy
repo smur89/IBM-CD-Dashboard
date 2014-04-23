@@ -8,42 +8,29 @@ import com.ibm.team.build.common.model.IBuildResultHandle
 import com.ibm.team.build.common.model.query.IBaseBuildResultQueryModel
 import com.ibm.team.build.internal.client.iterator.ItemQueryIterator
 import com.ibm.team.build.internal.client.workitem.WorkItemHelper
-import com.ibm.team.build.internal.common.links.BuildLinkTypes
 import com.ibm.team.filesystem.client.internal.rest.util.LoginUtil
-import com.ibm.team.links.client.ILinkManager
-import com.ibm.team.links.common.ILink
-import com.ibm.team.links.common.ILinkCollection
-import com.ibm.team.links.common.IReference
 import com.ibm.team.process.client.IProcessItemService
 import com.ibm.team.process.common.IProjectArea
 import com.ibm.team.repository.client.IItemManager
 import com.ibm.team.repository.client.ITeamRepository
 import com.ibm.team.repository.client.TeamPlatform
-import com.ibm.team.repository.common.IContributor
-import com.ibm.team.repository.common.IContributorHandle
 import com.ibm.team.repository.common.TeamRepositoryException
 import com.ibm.team.repository.common.query.IItemQuery
 import com.ibm.team.repository.common.service.IQueryService
-import com.ibm.team.workitem.client.IAuditableClient
-import com.ibm.team.workitem.client.IQueryClient
 import com.ibm.team.workitem.client.IWorkItemClient
 import com.ibm.team.workitem.client.IWorkItemWorkingCopyManager
 import com.ibm.team.workitem.client.WorkItemWorkingCopy
-import com.ibm.team.workitem.common.expression.AttributeExpression
-import com.ibm.team.workitem.common.expression.Expression
-import com.ibm.team.workitem.common.expression.IQueryableAttribute
-import com.ibm.team.workitem.common.expression.QueryableAttributes
 import com.ibm.team.workitem.common.internal.model.impl.WorkItemHandleImpl
-import com.ibm.team.workitem.common.model.AttributeOperation
 import com.ibm.team.workitem.common.model.IWorkItem
 import com.ibm.team.workitem.common.model.IWorkItemHandle
-import com.ibm.team.workitem.common.query.IQueryResult
-import com.ibm.team.workitem.common.query.IResolvedResult
 import grails.transaction.Transactional
 import grails.util.Holders
 import org.eclipse.core.runtime.NullProgressMonitor
 
 @Transactional
+/**
+ * Service class for handling any functionality that requires access to the RTC server.
+ */
 class RTCService {
     final NullProgressMonitor monitor = new NullProgressMonitor()
     static final String USERID = "smur89"; // Retrieve the userId in a secure way
@@ -55,12 +42,23 @@ class RTCService {
      */
     def startService() {
         if (!TeamPlatform.isStarted()) {
-            TeamPlatform.startup()
+            try {
+                TeamPlatform.startup()
+            } catch (Exception e) {
+                println(e)
+            }
         }
     }
 
+    /**
+     * Shutdown the RTC TeamPlatform
+     */
     def shutdownService() {
-        TeamPlatform.shutdown()
+        try {
+            TeamPlatform.shutdown()
+        } catch (Exception e) {
+            println(e)
+        }
     }
 
     /**
@@ -72,38 +70,49 @@ class RTCService {
      * @return Repository instance
      */
     def loginToRepo(String Uri, String UserId, String Password) {
+        def teamRepository = null
         try {
-            ITeamRepository teamRepository = TeamPlatform.getTeamRepositoryService().getTeamRepository(Uri)
+            teamRepository = TeamPlatform.getTeamRepositoryService().getTeamRepository(Uri)
             teamRepository.registerLoginHandler(new LoginUtil.LoginHandler(UserId, Password))
             teamRepository.login(monitor)
-            return teamRepository
 
-        } catch (TeamRepositoryException e) {
-            e.printStackTrace()
+        } catch (TeamRepositoryException tre) {
+            log.error("loginToRepo Team Repository Exception: ${tre.getMessage()}}")
         } finally {
+
             //TeamPlatform.shutdown();
         }
+        return teamRepository
     }
 
+    /**
+     * Gets all projects on the RTC server.
+     *
+     * @return List of Project Area objects on the RTC server
+     */
     def List<IProjectArea> getAllProjects() {
         startService()
+        def projects = null   // List<IProjectArea>
         try {
             ITeamRepository teamRepository = loginToRepo(URI, USERID, PASSWORD)
             IProcessItemService connect = (IProcessItemService) teamRepository.getClientLibrary(IProcessItemService.class)
-            List<IProjectArea> projects = connect.findAllProjectAreas(null, monitor)
-            //teamRepository.logout()
-
-            return projects
+            projects = connect.findAllProjectAreas(null, monitor)
 
         } catch (TeamRepositoryException e) {
-            e.printStackTrace()
+            println(e.getMessage())
         } catch (IllegalStateException ise) {
             ise.printStackTrace()
         } finally {
             //shutdownService()
         }
+        return projects
     }
 
+    /**
+     * Gets all project areas on the RTC server that are in an active state (i.e. not archived)
+     *
+     * @return List of Project Area objects active on the RTC server
+     */
     def List<IProjectArea> getActiveProjects() {
         startService()
         try {
@@ -128,39 +137,12 @@ class RTCService {
         }
     }
 
-    def getAllBuildResults() {
-        startService()
-        try {
-            def teamRepository = loginToRepo(URI, USERID, PASSWORD)
-            ITeamBuildClient buildClient = (ITeamBuildClient) teamRepository.getClientLibrary(ITeamBuildClient.class)
-            IItemManager itemManager = teamRepository.itemManager()
-            IItemQuery itemQuery = IItemQuery.FACTORY.newInstance(IBaseBuildResultQueryModel.IBuildResultQueryModel.ROOT)
-            ItemQueryIterator<IBuildResultHandle> iter = new ItemQueryIterator<IBuildResultHandle>(buildClient, itemQuery, IQueryService.EMPTY_PARAMETERS)
-
-            List<IBuildResult> buildResults = new LinkedList<IBuildResult>()
-            while (iter.hasNext(monitor)) {
-                List<IBuildResultHandle> definitionHandles = iter.next(IQueryService.ITEM_QUERY_MAX_PAGE_SIZE, monitor)
-                List<IBuildResult> items = itemManager.fetchCompleteItems(definitionHandles, IItemManager.DEFAULT, monitor)
-                for (item in items) {
-                    if (item != null) {
-                        buildResults.add(item)
-                    }
-                }
-            }
-            //teamRepository.logout()
-            buildResults
-
-        } catch (TeamRepositoryException e) {
-            log.error("getAllBuildResults Team Repository Exception: " << tre.printStackTrace())
-        } catch (NullPointerException npe) {
-            log.error("getAllBuildResults Null Pointer Exception: " << npe.printStackTrace())
-        } catch (IllegalStateException ise) {
-            log.error("getAllBuildResults Illegal State Exception: " << ise.printStackTrace())
-        } finally {
-            //shutdownService()
-        }
-    }
-
+    /**
+     * Get all Builds for a given project area.
+     *
+     * @param project The project Area to return BuildResults for
+     * @return List of BuildResult objects associated with the project area
+     */
     def List<IBuildResult> getProjectBuildResults(IProjectArea project) {
         startService()
         try {
@@ -184,60 +166,22 @@ class RTCService {
             return buildResults
 
         } catch (TeamRepositoryException tre) {
-            log.error("getProjectBuildResults Team Repository Exception: ${tre.getMessage()} \n ${tre.printStackTrace()}")
+            log.error("getProjectBuildResults Team Repository Exception: ${tre.getMessage()}")
         } catch (NullPointerException npe) {
-            log.error("getProjectBuildResults Null Pointer Exception: ${npe.getMessage()} \n ${npe.printStackTrace()}")
+            log.error("getProjectBuildResults Null Pointer Exception: ${npe.getMessage()}")
         } catch (IllegalStateException ise) {
-            log.error("getProjectBuildResults Illegal State Exception: ${ise.getMessage()} \n ${ise.printStackTrace()}")
+            log.error("getProjectBuildResults Illegal State Exception: ${ise.getMessage()}")
         } finally {
             //shutdownService()
         }
     }
 
-    def List<IContributor> getProjectMembers(IProjectArea projectArea) {
-        try {
-            ITeamRepository teamRepository = loginToRepo(URI, USERID, PASSWORD)
-            IContributorHandle[] membersHandle = projectArea.getMembers()
-            List<IContributor> members = []
-            for (IContributorHandle member in membersHandle) {
-                members.add((IContributor) teamRepository.itemManager().fetchCompleteItem(member, IItemManager.DEFAULT, monitor))
-            }
-            return members
-
-        } catch (TeamRepositoryException tre) {
-            log.error("getProjectMembers Team Repository Exception: ${tre.getMessage()} \n ${tre.printStackTrace()}")
-        } catch (NullPointerException npe) {
-            log.error("getProjectMembers Null Pointer Exception: ${npe.getMessage()} \n ${npe.printStackTrace()}")
-        } catch (IllegalStateException ise) {
-            log.error("getProjectMembers Illegal State Exception: ${ise.getMessage()} \n ${ise.printStackTrace()}")
-        } finally {
-
-        }
-
-    }
-
-    def IQueryResult<IResolvedResult<IWorkItem>> getProjectWorkItems(IProjectArea projectArea) {
-        try {
-            ITeamRepository teamRepository = loginToRepo(URI, USERID, PASSWORD)
-            IAuditableClient auditableClient = (IAuditableClient) teamRepository.getClientLibrary(IAuditableClient.class)
-            IQueryClient queryClient = (IQueryClient) teamRepository.getClientLibrary(IQueryClient.class)
-
-            IQueryableAttribute attribute = QueryableAttributes.getFactory(IWorkItem.ITEM_TYPE).findAttribute(projectArea, IWorkItem.PROJECT_AREA_PROPERTY, auditableClient, null)
-            Expression expression = new AttributeExpression(attribute, AttributeOperation.EQUALS, projectArea)
-            IQueryResult<IResolvedResult<IWorkItem>> results = queryClient.getResolvedExpressionResults(projectArea, expression, IWorkItem.FULL_PROFILE)
-
-            return results
-        } catch (TeamRepositoryException tre) {
-            log.error("getProjectWorkItems Team Repository Exception: ${tre.getMessage()} \n ${tre.printStackTrace()}")
-        } catch (NullPointerException npe) {
-            log.error("getProjectWorkItems Null Pointer Exception: ${npe.getMessage()} \n ${npe.printStackTrace()}")
-        } catch (IllegalStateException ise) {
-            log.error("getProjectWorkItems Illegal State Exception: ${ise.getMessage()} \n ${ise.printStackTrace()}")
-        } finally {
-
-        }
-    }
-
+    /**
+     * Get all Builds for a given project area.
+     *
+     * @param buildResult The Build to return Work Items for
+     * @return List of WorkItem objects associated with the project area
+     */
     def ArrayList<IWorkItem> getBuildWorkItems(IBuildResult buildResult) {
         try {
             ITeamRepository teamRepository = loginToRepo(URI, USERID, PASSWORD)
@@ -259,16 +203,22 @@ class RTCService {
                 return null
             }
         } catch (TeamRepositoryException tre) {
-            log.error("getBuildWorkItems Team Repository Exception: ${tre.getMessage()} \n ${tre.printStackTrace()}")
+            log.error("getBuildWorkItems Team Repository Exception: ${tre.getMessage()}")
         } catch (NullPointerException npe) {
-            log.error("getBuildWorkItems Null Pointer Exception: ${npe.getMessage()} \n ${npe.printStackTrace()}")
+            log.error("getBuildWorkItems Null Pointer Exception: ${npe.getMessage()}")
         } catch (IllegalStateException ise) {
-            log.error("getBuildWorkItems Illegal State Exception: ${ise.getMessage()} \n ${ise.printStackTrace()}")
+            log.error("getBuildWorkItems Illegal State Exception: ${ise.getMessage()}")
         } finally {
 
         }
     }
 
+    /**
+     * Gets the build definition from a BuildDefinitionHandle
+     *
+     * @param buildDefHandle
+     * @return The full BuildDefinition for the Handle
+     */
     def getBuildDefinition(IBuildDefinitionHandle buildDefHandle) {
         try {
             ITeamRepository teamRepository = loginToRepo(URI, USERID, PASSWORD)
@@ -279,11 +229,11 @@ class RTCService {
 
             return buildDef
         } catch (TeamRepositoryException tre) {
-            log.error("getBuildDefinition Team Repository Exception: ${tre.getMessage()} \n ${tre.printStackTrace()}")
+            log.error("getBuildDefinition Team Repository Exception: ${tre.getMessage()}")
         } catch (NullPointerException npe) {
-            log.error("getBuildDefinition Null Pointer Exception: ${npe.getMessage()} \n ${npe.printStackTrace()}")
+            log.error("getBuildDefinition Null Pointer Exception: ${npe.getMessage()}")
         } catch (IllegalStateException ise) {
-            log.error("getBuildDefinition Illegal State Exception: ${ise.getMessage()} \n ${ise.printStackTrace()}")
+            log.error("getBuildDefinition Illegal State Exception: ${ise.getMessage()}")
         } finally {
 
         }
@@ -292,18 +242,23 @@ class RTCService {
     /**
      * Checks all projects on the server and returns the last time
      * the server was updated.
+     *
      * @return time server was last updated
      */
     def checkServerLastUpdate() {
-        def projects = getAllProjects()
-        def serverModified = Holders.getGrailsApplication().config.ServerLastModified
-        projects.each {
-            if (it.modified() > serverModified) {
-                serverModified = it.modified()
+        try {
+            def projects = getAllProjects()
+            def serverModified = Holders.getGrailsApplication().config.ServerLastModified
+            projects.each {
+                if (it.modified() > serverModified) {
+                    serverModified = it.modified()
+                }
             }
+            Holders.getGrailsApplication().config.ServerLastModified = serverModified
+            log.info("Server Checked on: ${new Date()}. Server last updated : " << serverModified)
+            return serverModified
+        } catch (Exception e) {
+            println(e.getMessage())
         }
-        Holders.getGrailsApplication().config.ServerLastModified = serverModified
-        log.info("Server Checked on: ${new Date()}. Server last updated : " << serverModified)
-        return serverModified
     }
 }

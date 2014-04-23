@@ -31,6 +31,7 @@ class TeamController {
                     teams.add(team)
                 }
                 log.info("Teams returned: ${allTeams}")
+
             }
 
             [teams: teams]

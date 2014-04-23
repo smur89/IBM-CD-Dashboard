@@ -620,5 +620,46 @@ Week Beginning 16/4/14
 	"There are no commits defined for this project" Displayed for projects with no builds/commits associated with them.
 
 	Emailed Brendan - it is ok that this functionality isn't 100% - License issues are a valid reason.
+
+	Finished method (i think) to update domain.
+
+	General refactoring and code cleanup - refactroing methods, deleting now unused methods, adding Javadocs.
 	
+	Trying to get index page to reload automatically when updated.
+	Difficulty in doing this because a the update is detected in a Job and passed to a service, there is not user entity associated, so refreshes cannot be done this way. It is bad practice to pass from Service or Job into controller for this reason.
 	
+	Installed DB2
+	Errors:
+		bash: ulimit: open files: cannot modify limit: Invalid argument
+
+	Increased mac open files using
+	    sudo launchctl limit maxfiles 1000000 10000000
+
+	Error:
+	SQL1220N  The database manager failed to allocate shared memory.
+
+	Whole day spent on this. deleted everything and started again, worked after 10mins.
+
+	Created db2 databse node 
+	Node 1 entry:
+
+		Node name                      = DB2_01
+		Comment                        =
+		Directory entry type           = LOCAL
+		Protocol                       = TCPIP
+		Hostname                       = 10.134.5.10
+		Service name                   = 50000
+
+Week Beginning 23/4/14
+	
+	Brendan recommended that if DB2 is proving too difficult, I could use MySQL or Mongo. Also note why I would swap out existing database in slides for next week.
+
+	Not all of the RTCService methods try or catch blocks are properly implemented. TODO
+	Long error messages are caused from me printing out the stack trace as a place holder for proper exception handling.
+
+	Looking into MAMP to run MySQL database
+
+	Installed MAMP
+	Added MySQL database
+	Configured Hibernate to work with MySQL and the MAMP server.
+	Fixed average defects problem (wasn't displaying)
