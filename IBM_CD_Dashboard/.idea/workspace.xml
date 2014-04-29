@@ -4,20 +4,17 @@
     <option name="SCOPE_TYPE" value="4" />
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/RTCService.groovy" line="135" />
+    <bookmark url="file://$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/RTCService.groovy" line="142" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c592f022-a46d-4067-ac8c-6eb26a714759" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Documentation/Architecture.docx" afterPath="$PROJECT_DIR$/../Documentation/Architecture.docx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/DomainService.groovy" afterPath="$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/DomainService.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/ibm_cd_dashboard/TeamController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/ibm_cd_dashboard/TeamController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/RTCService.groovy" afterPath="$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/RTCService.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/error.log.1" afterPath="$PROJECT_DIR$/logs/error.log.1" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/error.log" afterPath="$PROJECT_DIR$/logs/error.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/info.log.1" afterPath="$PROJECT_DIR$/logs/info.log.1" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/info.log" afterPath="$PROJECT_DIR$/logs/info.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/warn.log.1" afterPath="$PROJECT_DIR$/logs/warn.log.1" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/warn.log" afterPath="$PROJECT_DIR$/logs/warn.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="IBM_CD_Dashboard.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,7 +56,7 @@
     <file path="/CheckServerForUpdatesJob.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1393933199403" ignored="false" />
     <file path="/CheckForServerUpdatesJob.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1398287110710" ignored="false" />
     <file path="/QuartzService.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1393934018542" ignored="false" />
-    <file path="/RTCService.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1398797852794" ignored="false" />
+    <file path="/RTCService.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1398807063022" ignored="false" />
     <file path="/BuildControllerSpec.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1393953489830" ignored="false" />
     <file path="/TeamControllerSpec.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1393954945515" ignored="false" />
     <file path="/DomainServiceSpec.groovy" changelist="c592f022-a46d-4067-ac8c-6eb26a714759" time="1393967678051" ignored="false" />
@@ -155,73 +152,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UrlMappings.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
+      <file leaf-file-name="RTCService.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/RTCService.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="24" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BootStrap.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="43" selection-start="1330" selection-end="1330" vertical-scroll-proportion="0.0">
+            <state line="44" column="49" selection-start="2087" selection-end="2087" vertical-scroll-proportion="0.33054394">
               <folding>
-                <element signature="e#0#49#0" expanded="true" />
+                <element signature="e#26#75#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="404.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/404.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="137" selection-start="332" selection-end="332" vertical-scroll-proportion="-8.75">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="error.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/error.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="26" selection-start="2599" selection-end="2599" vertical-scroll-proportion="-10.333333">
-              <folding>
-                <marker date="1398801126000" expanded="true" signature="857:947" placeholder="..." />
-                <marker date="1398801126000" expanded="true" signature="988:1078" placeholder="..." />
-                <marker date="1398801126000" expanded="true" signature="1119:1198" placeholder="..." />
-                <marker date="1398801126000" expanded="true" signature="1239:1318" placeholder="..." />
-                <marker date="1398801126000" expanded="true" signature="1357:1610" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/team/index.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="31" selection-start="1846" selection-end="1846" vertical-scroll-proportion="-11.808511">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TeamController.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/ibm_cd_dashboard/TeamController.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="77" selection-start="897" selection-end="897" vertical-scroll-proportion="-1.8367347">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DomainService.groovy" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/DomainService.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="228" column="43" selection-start="10204" selection-end="10204" vertical-scroll-proportion="0.5875543">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -251,7 +188,6 @@
         <option value="$PROJECT_DIR$/grails-app/controllers/ibm_cd_dashboard/UserProfileController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/team/_teamData.gsp" />
         <option value="$PROJECT_DIR$/grails-app/domain/ibm_cd_dashboard/Team.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/RTCService.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/team/teamInfo.gsp" />
         <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
@@ -260,6 +196,7 @@
         <option value="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/ibm_cd_dashboard/TeamController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/DomainService.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/RTCService.groovy" />
       </list>
     </option>
   </component>
@@ -735,15 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/RTCService.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="238" column="102" selection-start="9902" selection-end="9902" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#26#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/team/teamInfo.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="122" column="31" selection-start="4013" selection-end="4013" vertical-scroll-proportion="0.5503212">
@@ -759,13 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="24" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/team/_teamData.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="137" selection-start="848" selection-end="848" vertical-scroll-proportion="0.41755888">
@@ -773,45 +694,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/404.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="137" selection-start="332" selection-end="332" vertical-scroll-proportion="-8.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/error.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="26" selection-start="2599" selection-end="2599" vertical-scroll-proportion="-10.333333">
-          <folding>
-            <marker date="1398801126000" expanded="true" signature="857:947" placeholder="..." />
-            <marker date="1398801126000" expanded="true" signature="988:1078" placeholder="..." />
-            <marker date="1398801126000" expanded="true" signature="1119:1198" placeholder="..." />
-            <marker date="1398801126000" expanded="true" signature="1239:1318" placeholder="..." />
-            <marker date="1398801126000" expanded="true" signature="1357:1610" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="35" selection-start="672" selection-end="672" vertical-scroll-proportion="0.56925994">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="43" selection-start="1330" selection-end="1330" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/team/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="31" selection-start="1846" selection-end="1846" vertical-scroll-proportion="-11.808511">
           <folding />
         </state>
       </provider>
@@ -826,17 +711,69 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/ibm_cd_dashboard/TeamController.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/DomainService.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="77" selection-start="897" selection-end="897" vertical-scroll-proportion="-1.8367347">
+        <state line="41" column="33" selection-start="1580" selection-end="1580" vertical-scroll-proportion="0.1316932">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/DomainService.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/ibm_cd_dashboard/TeamController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="228" column="43" selection-start="10204" selection-end="10204" vertical-scroll-proportion="0.5875543">
+        <state line="25" column="77" selection-start="897" selection-end="897" vertical-scroll-proportion="0.13473053">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/team/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="31" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.82835823">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/error.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="26" selection-start="2599" selection-end="2599" vertical-scroll-proportion="0.63203466">
+          <folding>
+            <marker date="1398801126000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1398801126000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1398801126000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1398801126000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1398801126000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/404.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="137" selection-start="332" selection-end="332" vertical-scroll-proportion="0.3030303">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="43" selection-start="1330" selection-end="1330" vertical-scroll-proportion="0.29288703">
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="24" selection-start="367" selection-end="367" vertical-scroll-proportion="0.24657534">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/services/ibm_cd_dashboard/RTCService.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="49" selection-start="2087" selection-end="2087" vertical-scroll-proportion="0.33054394">
+          <folding>
+            <element signature="e#26#75#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -50,6 +50,8 @@ class RTCService {
         if (!TeamPlatform.isStarted()) {
             try {
                 TeamPlatform.startup()
+            } catch (TeamRepositoryException tre) {
+                log.error("startService() Team Repository Exception: ${tre.getMessage()}}")
             } catch (Exception e) {
                 log.error("Cannot start the Team Platform:  ${e.getMessage()}")
             }
@@ -62,6 +64,8 @@ class RTCService {
     def shutdownService() {
         try {
             TeamPlatform.shutdown()
+        } catch (TeamRepositoryException tre) {
+            log.error("shutDownService() Team Repository Exception: ${tre.getMessage()}}")
         } catch (Exception e) {
             log.error("Cannot shutdown the Team Platform:  ${e.getMessage()}")
         }
@@ -84,8 +88,9 @@ class RTCService {
 
         } catch (TeamRepositoryException tre) {
             log.error("loginToRepo Team Repository Exception: ${tre.getMessage()}}")
+        } catch (Exception e) {
+            log.error("Exception thrown in loginToRepo(): ${e.getMessage()}")
         } finally {
-
             //TeamPlatform.shutdown();
         }
         return teamRepository
@@ -104,10 +109,12 @@ class RTCService {
             IProcessItemService connect = (IProcessItemService) teamRepository.getClientLibrary(IProcessItemService.class)
             projects = connect.findAllProjectAreas(null, monitor)
 
-        } catch (TeamRepositoryException e) {
-            println(e.getMessage())
+        } catch (TeamRepositoryException tre) {
+            log.error("Team Repository Exceltion thrown in getAllProjects(): ${tre.getMessage()}")
         } catch (IllegalStateException ise) {
-            ise.printStackTrace()
+            log.error("Illegal State Exception thrown in getAllProjects(): ${ise.getMessage()}")
+        } catch (Exception e) {
+            log.error("Exception thrown in getAllProjects(): ${e.getMessage()}")
         } finally {
             //shutdownService()
         }
@@ -121,12 +128,12 @@ class RTCService {
      */
     def List<IProjectArea> getActiveProjects() {
         startService()
+        List<IProjectArea> activeProjects = new ArrayList();
         try {
             def teamRepository = loginToRepo(URI, USERID, PASSWORD)
 
             IProcessItemService connect = (IProcessItemService) teamRepository.getClientLibrary(IProcessItemService.class);
             List<IProjectArea> projects = connect.findAllProjectAreas(null, monitor);
-            List<IProjectArea> activeProjects = new ArrayList();
 
             //Create list of all project areas that are not in an archived state
             for (currProject in projects) {
@@ -134,13 +141,14 @@ class RTCService {
                     activeProjects.add(currProject)
                 }
             }
-            return activeProjects
-
-        } catch (TeamRepositoryException e) {
-            e.printStackTrace()
+        } catch (TeamRepositoryException tre) {
+            log.error("Team Repository Exception thrown in getActiveProjects(): ${tre.getMessage()}")
+        } catch (Exception e) {
+            log.error("Exception thrown in getActiveProjects(): ${e.getMessage()}")
         } finally {
             //shutdownService()
         }
+        return activeProjects
     }
 
     /**
@@ -151,14 +159,13 @@ class RTCService {
      */
     def List<IBuildResult> getProjectBuildResults(IProjectArea project) {
         startService()
+        List<IBuildResult> buildResults = new LinkedList<IBuildResult>()
         try {
             def teamRepository = loginToRepo(URI, USERID, PASSWORD)
             ITeamBuildClient buildClient = (ITeamBuildClient) teamRepository.getClientLibrary(ITeamBuildClient.class)
             IItemManager itemManager = teamRepository.itemManager()
             IItemQuery itemQuery = IItemQuery.FACTORY.newInstance(IBaseBuildResultQueryModel.IBuildResultQueryModel.ROOT)
             ItemQueryIterator<IBuildResultHandle> iter = new ItemQueryIterator<IBuildResultHandle>(buildClient, itemQuery, IQueryService.EMPTY_PARAMETERS)
-
-            List<IBuildResult> buildResults = new LinkedList<IBuildResult>()
             while (iter.hasNext(monitor)) {
                 List<IBuildResultHandle> definitionHandles = iter.next(IQueryService.ITEM_QUERY_MAX_PAGE_SIZE, monitor)
                 List<IBuildResult> items = itemManager.fetchCompleteItems(definitionHandles, IItemManager.DEFAULT, monitor)
@@ -168,18 +175,18 @@ class RTCService {
                     }
                 }
             }
-            //teamRepository.logout()
-            return buildResults
-
         } catch (TeamRepositoryException tre) {
             log.error("getProjectBuildResults Team Repository Exception: ${tre.getMessage()}")
         } catch (NullPointerException npe) {
             log.error("getProjectBuildResults Null Pointer Exception: ${npe.getMessage()}")
         } catch (IllegalStateException ise) {
             log.error("getProjectBuildResults Illegal State Exception: ${ise.getMessage()}")
+        } catch (Exception e) {
+            log.error("Exception thrown in getProjectBuildResults(): ${e.getMessage()}")
         } finally {
             //shutdownService()
         }
+        return buildResults
     }
 
     /**
@@ -189,11 +196,10 @@ class RTCService {
      * @return List of WorkItem objects associated with the project area
      */
     def ArrayList<IWorkItem> getBuildWorkItems(IBuildResult buildResult) {
+        List<IWorkItem> workItems = []
         try {
             ITeamRepository teamRepository = loginToRepo(URI, USERID, PASSWORD)
-
             IWorkItemHandle[] workItemHandles = WorkItemHelper.getFixedInBuild(teamRepository, buildResult, monitor)
-            List<IWorkItem> workItems = []
             if (!workItemHandles.toList().isEmpty()) {
                 for (int i = 0; i < workItemHandles.length; i++) {
                     if (workItemHandles[i].class == WorkItemHandleImpl) {
@@ -204,9 +210,8 @@ class RTCService {
                         workItems.add(itemCopy.getWorkItem())
                     }
                 }
-                return workItems
             } else {
-                return null
+                workItems = null
             }
         } catch (TeamRepositoryException tre) {
             log.error("getBuildWorkItems Team Repository Exception: ${tre.getMessage()}")
@@ -214,9 +219,10 @@ class RTCService {
             log.error("getBuildWorkItems Null Pointer Exception: ${npe.getMessage()}")
         } catch (IllegalStateException ise) {
             log.error("getBuildWorkItems Illegal State Exception: ${ise.getMessage()}")
-        } finally {
-
+        } catch (Exception e) {
+            log.error("Exception thrown in getBuildWorkItems(): ${e.getMessage()}")
         }
+        return workItems
     }
 
     /**
@@ -226,30 +232,44 @@ class RTCService {
      * @return The full BuildDefinition for the Handle
      */
     def getBuildDefinition(IBuildDefinitionHandle buildDefHandle) {
+        IBuildDefinition buildDef
         try {
             ITeamRepository teamRepository = loginToRepo(URI, USERID, PASSWORD)
             IItemManager itemManager = teamRepository.itemManager();
 
-            IBuildDefinition buildDef = (IBuildDefinition) itemManager.fetchPartialItem(buildDefHandle, IItemManager.DEFAULT,
+            buildDef = (IBuildDefinition) itemManager.fetchPartialItem(buildDefHandle, IItemManager.DEFAULT,
                     Collections.singletonList(IBuildDefinition.PROPERTY_ID), monitor);
-
-            return buildDef
         } catch (TeamRepositoryException tre) {
             log.error("getBuildDefinition Team Repository Exception: ${tre.getMessage()}")
         } catch (NullPointerException npe) {
             log.error("getBuildDefinition Null Pointer Exception: ${npe.getMessage()}")
         } catch (IllegalStateException ise) {
             log.error("getBuildDefinition Illegal State Exception: ${ise.getMessage()}")
-        } finally {
-
+        } catch (Exception e) {
+            log.error("Exception thrown in getBuildDefinition(): ${e.getMessage()}")
         }
+        return buildDef
+
     }
 
+    /**
+     * Converts an IContributorHandle into an IContributor
+     *
+     * @param handle IContributorHandle to convert
+     * @return The converted Contributor
+     */
     def getContributor(IContributorHandle handle) {
-        ITeamRepository teamRepository = loginToRepo(URI, USERID, PASSWORD)
-        IContributor contributor = (IContributor) teamRepository.itemManager()
-                .fetchCompleteItem(handle, IItemManager.DEFAULT, null);
-        contributor
+        IContributor contributor
+        try {
+            ITeamRepository teamRepository = loginToRepo(URI, USERID, PASSWORD)
+            contributor = (IContributor) teamRepository.itemManager()
+                    .fetchCompleteItem(handle, IItemManager.DEFAULT, null);
+        } catch (TeamRepositoryException tre) {
+            log.error("Error getting Contributor from handle in getContributor(): ${tre.getMessage()}")
+        } catch (Exception e) {
+            log.error("Exception thrown in getContributor(): ${e.getMessage()}")
+        }
+        return contributor
     }
 
     /**
@@ -259,9 +279,10 @@ class RTCService {
      * @return time server was last updated
      */
     def checkServerLastUpdate() {
+        def serverModified
         try {
             def projects = getAllProjects()
-            def serverModified = Holders.getGrailsApplication().config.ServerLastModified
+            serverModified = Holders.getGrailsApplication().config.ServerLastModified
             projects.each {
                 if (it.modified() > serverModified) {
                     serverModified = it.modified()
@@ -269,9 +290,10 @@ class RTCService {
             }
             Holders.getGrailsApplication().config.ServerLastModified = serverModified
             log.info("Server Checked on: ${new Date()}. Server last updated : " << serverModified)
-            return serverModified
         } catch (Exception e) {
-            println(e.getMessage())
+            log.error("Exception in checkServerLastUpdate(): ${e.getMessage()}")
         }
+        return serverModified
+
     }
 }

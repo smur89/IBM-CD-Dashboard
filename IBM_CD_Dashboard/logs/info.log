@@ -1,1 +1,4 @@
-2014-04-29 22:16:00,064 [quartzScheduler_Worker-4] INFO  ibm_cd_dashboard.CheckForServerUpdatesJob  - Domain up to date.
+2014-04-29 22:32:00,418 [quartzScheduler_Worker-10] INFO  ibm_cd_dashboard.CheckForServerUpdatesJob  - Domain up to date.
+2014-04-29 22:33:00,459 [quartzScheduler_Worker-1] INFO  ibm_cd_dashboard.RTCService  - Server Checked on: Tue Apr 29 22:33:00 IST 2014. Server last updated : Tue Apr 29 21:51:40 IST 2014
+2014-04-29 22:33:00,460 [quartzScheduler_Worker-1] INFO  ibm_cd_dashboard.CheckForServerUpdatesJob  - Cron Job - Checking server in sync with local database
+2014-04-29 22:33:00,460 [quartzScheduler_Worker-1] INFO  ibm_cd_dashboard.CheckForServerUpdatesJob  - Domain up to date.

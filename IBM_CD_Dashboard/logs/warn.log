@@ -1,0 +1,7 @@
+2014-04-29 22:22:31,898 [Thread-13] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+/Users/shanemurphy/IBM-CD-Dashboard/IBM_CD_Dashboard/grails-app/services/ibm_cd_dashboard/RTCService.groovy: 218: expecting '{', found '}' @ line 218, column 5.
+       }
+       ^
+
+1 error
+
