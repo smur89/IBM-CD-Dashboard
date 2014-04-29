@@ -1,3 +1,25 @@
-2014-04-29 20:05:00,994 [quartzScheduler_Worker-1] ERROR ibm_cd_dashboard.RTCService  - loginToRepo Team Repository Exception: CRJAZ0099E An HTTP error occurred when this URL was being accessed: https://localhost:9443/ccm/versionCompatibility?clientVersion=4.0.4. Error details: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target.}
-2014-04-29 20:05:01,816 [localhost-startStop-1] ERROR ibm_cd_dashboard.RTCService  - loginToRepo Team Repository Exception: CRJAZ0099E An HTTP error occurred when this URL was being accessed: https://localhost:9443/ccm/versionCompatibility?clientVersion=4.0.4. Error details: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target.}
-2014-04-29 20:08:12,341 [localhost-startStop-1] ERROR ibm_cd_dashboard.DomainService  - Tue Apr 29 20:08:12 IST 2014: Null Pointer in populateTeams(): Cannot invoke method add() on null object
+2014-04-29 20:15:26,932 [http-bio-8090-exec-7] ERROR ibm_cd_dashboard.TeamController  - Exception in checkState(): Cannot invoke method div() on null object
+2014-04-29 22:00:55,680 [Thread-13] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+/Users/shanemurphy/IBM-CD-Dashboard/IBM_CD_Dashboard/grails-app/services/ibm_cd_dashboard/DomainService.groovy: 272: The current scope already contains a variable of the name workItem
+ @ line 272, column 5.
+       def updateWorkItem(WorkItem workItem, IWorkItem workItem) {
+       ^
+
+1 error
+
+2014-04-29 22:01:05,362 [Thread-13] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+/Users/shanemurphy/IBM-CD-Dashboard/IBM_CD_Dashboard/grails-app/services/ibm_cd_dashboard/DomainService.groovy: 267: The current scope already contains a variable of the name workItem
+ @ line 267, column 5.
+       def updateWorkItem(WorkItem workItem, IWorkItem workItem) {
+       ^
+
+1 error
+
+2014-04-29 22:08:40,395 [Thread-13] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
+/Users/shanemurphy/IBM-CD-Dashboard/IBM_CD_Dashboard/grails-app/services/ibm_cd_dashboard/DomainService.groovy: 282: The current scope already contains a variable of the name team
+ @ line 282, column 13.
+           def team
+               ^
+
+1 error
+

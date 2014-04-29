@@ -23,6 +23,7 @@ class TeamController {
      * In the case that the user is logged in, a list of the users subscribed teams are displayed.
      * Otherwise, a list of all teams are displayed. This list includes charts displaying the
      * breakdown of defects within the project and the build time and test time of the project.
+     * These are passed to the view to be displayed in alphabetical ordering.
      */
     def index() {
         try {
@@ -42,7 +43,7 @@ class TeamController {
                 }
                 log.info("Teams returned: ${allTeams}")
             }
-            [teams: teams]
+            [teams: teams.sort { a, b -> a.teamName <=> b.teamName }]
 
         } catch (SQLException sqle) {
             log.error("SQL Exception in checkState(): ${sqle.getMessage()}")
