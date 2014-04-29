@@ -9,8 +9,9 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-  <title>${workItem.getWorkItemId()}</title>
+    <title>${workItem.getWorkItemId()}</title>
 </head>
+
 <body>
 
 <h1>${workItem.getWorkItemId()}</h1>

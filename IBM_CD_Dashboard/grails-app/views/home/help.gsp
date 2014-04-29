@@ -9,8 +9,9 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-  <title>Help Page</title>
+    <title>Help Page</title>
 </head>
+
 <body>
 
 </body>

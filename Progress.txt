@@ -663,3 +663,9 @@ Week Beginning 23/4/14
 	Added MySQL database
 	Configured Hibernate to work with MySQL and the MAMP server.
 	Fixed average defects problem (wasn't displaying)
+
+	Team Members functionality fixed and working.
+
+	added 404 not found page.
+
+

@@ -1,10 +1,17 @@
 package ibm_cd_dashboard
 
 import grails.plugin.springsecurity.annotation.Secured
-
-import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
+import static org.springframework.http.HttpStatus.*
+
+/**
+ * Controller for managing the User Profile and it's link to the User object.
+ *
+ * @author  Shane Murphy
+ * @version 1.0
+ * @since   2014-05-07
+ */
 @Transactional(readOnly = true)
 @Secured(['ROLE_USER', 'ROLE_ADMIN'])
 class UserProfileController {
@@ -19,9 +26,7 @@ class UserProfileController {
 
     def show() {
         UserProfile userProfileInstance = User.get(springSecurityService.principal.id).getUserProfile()
-        [userProfileInstance:userProfileInstance, userProjectList:userProfileInstance.getProjects()]
-        //respond userProfileInstance
-
+        [userProfileInstance: userProfileInstance, userProjectList: userProfileInstance.getProjects()]
     }
 
     @Transactional
@@ -53,14 +58,10 @@ class UserProfileController {
 
     @Transactional
     def update(UserProfile userProfileInstance) {
-        println("PARAMS" << params.checkbox)
-
-        for(def team in Team.all){
-            if(params.checkbox."${team.teamId}") {
+        for (def team in Team.all) {
+            if (params.checkbox."${team.teamId}") {
                 userProfileInstance.projects.add(team.getTeamId())
-                userProfileInstance.save(flush:true)
-                println("INSERT " << team.getTeamId())
-                println(userProfileInstance.projects)
+                userProfileInstance.save(flush: true)
             }
         }
         if (userProfileInstance == null) {
@@ -100,22 +101,15 @@ class UserProfileController {
         }
         userProfileInstance.projects.clear()
 
-        for(Team team in Team.getAll()){
-            if(params.checkbox."${team.teamId}") {
-                if(userProfileInstance.projects == null){
+        for (Team team in Team.getAll()) {
+            if (params.checkbox."${team.teamId}") {
+                if (userProfileInstance.projects == null) {
                     userProfileInstance.projects = new ArrayList<>()
                 }
                 userProfileInstance.projects.add(team.teamId)
-                println("INSERT " << team.getTeamId())
-                if (!userProfileInstance.save(flush: true, failOnError: true)){
-                    println("NULL")
-                    println("Errors " << user.errors.allErrors)
-                }
+                userProfileInstance.save(flush: true, failOnError: true)
             }
         }
-
-        println("proj " << userProfileInstance.projects)
-
         request.withFormat {
             form {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'UserProfile.label', default: 'UserProfile'), userProfileInstance.id])
@@ -124,8 +118,6 @@ class UserProfileController {
             '*' { respond userProfileInstance, [status: OK] }
         }
     }
-
-
 
     protected void notFound() {
         request.withFormat {

@@ -21,6 +21,7 @@ class BootStrap {
 
     def init = { servletContext ->
         //domainService.deleteAllTeamData()
+        log.info("Server Startup initialisation")
         if(User.count() == 0 || Role.count() == 0){
             log.info("No Users or Roles, Bootstrapping default users: 'user' and 'admin'")
             addUserAndAdmin()
@@ -28,9 +29,9 @@ class BootStrap {
         if(Team.count() == 0){
             log.info("No Teams, Bootstrapping Team, Build and WorkItem Data")
             bootstrapBuilds()
+            domainService.populateTeams()
         }
-        domainService.populateTeams()
-
+        log.info("Initialisation complete")
     }
 
     def destroy = {
@@ -67,17 +68,17 @@ class BootStrap {
 
         def randomId = new Random()
         def randomTime = new Random()
-        println("Bootstrapping Teams...")
+        log.info("Bootstrapping Teams...")
 
         for (int i = 0; i < randomId.nextInt(50); i++){
             Team newTeam = new Team(teamId: "_BSTID"<<randomId.nextLong(),
                     teamName: "BootstrapTeam"<<i ,
-                    teamMembers: [new Contributor(email: "bootstrap1"<<i<<"@cddashboard.com", name: "Bootstrap1"<<i, userId: "BootstrapUser"<<i),
-                            new Contributor(email: "bootstrap2"<<i<<"@cddashboard.com", name: "Bootstrap2"<<i, userId: "BootstrapUser"<<i),
-                            new Contributor(email: "bootstrap3"<<i<<"@cddashboard.com", name: "Bootstrap3"<<i, userId: "BootstrapUser"<<i)]
+                    teamMembers: [new Contributor(email: "bootstrap1"<<i<<"@cddashboard.com", name: "Bootstrap1"<<i, userId: "BootstrapUser1"<<i),
+                            new Contributor(email: "bootstrap2"<<i<<"@cddashboard.com", name: "Bootstrap2"<<i, userId: "BootstrapUser2"<<i),
+                            new Contributor(email: "bootstrap3"<<i<<"@cddashboard.com", name: "Bootstrap3"<<i, userId: "BootstrapUser3"<<i)]
             )
             newTeam.save(flush: true, failOnError: true)
-            println("Teams " << newTeam.teamId)
+            log.info("Created Teams " << newTeam.teamId)
             def buildStates = BuildState.values()
             def buildStatus = BuildStatus.values()
             def severities = [DefaultIdentifiers.Severity.BLOCKER.toString(), DefaultIdentifiers.Severity.NORMAL.toString(),

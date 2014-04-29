@@ -60,17 +60,20 @@
                 </header>
 
                 <p>
-                    This application was created as part of an ongoing collaboration between <abbr title="Institute of Technology, Tallaght">ITT</abbr>
-                    and <abbr title="International Business Machines">IBM</abbr>. Whereby students of ITT undertake a project on IBM's behalf. Students are
-                    reportable on a bi-weekly basis to IBM, and also directly to the IBM project coordinator, Dr. John Burns. The projects are developed
-                    using an Agile methodology and all technologies and approaches are decided by the students, however, technologies must be approved for
-                    use within IBM
+                    This application was created as part of an ongoing collaboration between <abbr
+                        title="Institute of Technology, Tallaght">ITT</abbr>
+                    and <abbr
+                        title="International Business Machines">IBM</abbr>. Whereby students of ITT undertake a project on IBM's behalf. Students are
+                reportable on a bi-weekly basis to IBM, and also directly to the IBM project coordinator, Dr. John Burns. The projects are developed
+                using an Agile methodology and all technologies and approaches are decided by the students, however, technologies must be approved for
+                use within IBM
                 </p>
             </div><!-- end aboutText -->
         </div><!-- end aboutBox -->
 
         <div class="lotusContentColOne">
-        <h1>Technology and Approahces</h1>
+            <h1>Technology and Approahces</h1>
+
             <h2 class="lotusHeading">Groovy</h2>
 
             <p>
@@ -78,6 +81,7 @@
                 where I knew I would most likely be working with Java. However, I didn't want to just use Java, I wanted to try something new.
                 I had some limited experience of Groovy, and decided it would be worth considering. When I found Grails, my decision was made.
             </p>
+
             <p>
                 Groovy allowed me to write dynamically compiled, statically typed code that would be converted to JVM bytecode. It also has many
                 additional features over the current version of Java (Java 7), such as closures, which I used extensively when interacting with
@@ -85,6 +89,7 @@
                 groovy-like solution. It's simple handling of XML also appealed to me, as the project would be required to parse XML to traverse
                 the RQM server to extract test results.
             </p>
+
             <p><a href="http://groovy.codehaus.org/" class="lotusAction">Find out more</a></p>
 
             <h2 class="lotusHeading">Grails</h2>
@@ -95,6 +100,7 @@
                 would allow me to implement the projects quickly and handle some of the more repetitive or simple tasks, hiding much of the
                 configuration details for high productivity development.
             </p>
+
             <p>
                 It offers a consistent framework for development, using existing Java technologies like Spring and Hibernate. It uses SiteMesh
                 templates for it's user GUI GSP (Groovy Server Pages) where one can embed tag libraries for creating web page components.
@@ -113,8 +119,10 @@
                 This proved useful on a number of occasions when for unknown reasons, class files and folders went missing. It also
                 roll back to a working copy of the application when I could not recover from changes I had made.
             </p>
+
             <p>
-                Rather than choosing git for any of it's specific features, as I believe many <abbr title="Source Code Management">SCM</abbr>
+                Rather than choosing git for any of it's specific features, as I believe many <abbr
+                    title="Source Code Management">SCM</abbr>
                 would have suited my basic needs fine, I chose it as I was familiar with it already and seems to becoming the industry
                 standard.
             </p>
@@ -128,10 +136,12 @@
                 use an agile process by the college, but it also suited this project as features, requirements and scope changed throughout
                 development. Developing in an agile enviroment allowed the project to adapt to these changes and stay on target for delivery.
             </p>
+
             <p>
                 Agile development methods are guidelines, and can be adapted to on a case by case basis as required, and there are a number of
                 Agile practices one can use, such as, Pair Programming, Refactoring, Scrum meetings and Test Driven Development.
             </p>
+
             <p><a href="http://agilemethodology.org/" class="lotusAction">Find out more</a></p>
         </div><!--end contentColTwo-->
     </div><!--end content-->

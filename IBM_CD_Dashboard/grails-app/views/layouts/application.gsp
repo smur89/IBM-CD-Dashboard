@@ -63,8 +63,8 @@
             <a href="#lotusMainContent" accesskey="S" class="lotusAccess">
                 <g:img dir="css/images" file="blank.gif" alt="Skip to main content link. Accesskey S"/>
             </a><g:link controller="team" action="index" class="lotusLogo">
-                <g:img dir="css/images" file="blank.gif" alt="Product Name" /><span
-                    class="lotusAltText">CD Adoption Dashboard</span></g:link>
+                <g:img dir="css/images" file="blank.gif" alt="Product Name"/><span
+                        class="lotusAltText">CD Adoption Dashboard</span></g:link>
             <ul class="lotusInlinelist lotusUtility">
                 <sec:ifNotLoggedIn>
                     <li>
@@ -82,7 +82,8 @@
                 </sec:ifLoggedIn>
                 <li>
                     <g:link controller="Home" action="help" class="yourProductSprite yourProductSprite-bannerHelp16">
-                        <g:img dir="css/images" file="help.gif" class="yourProductSprite yourProductSprite-bannerHelp16"/>
+                        <g:img dir="css/images" file="help.gif"
+                               class="yourProductSprite yourProductSprite-bannerHelp16"/>
                     </g:link>
                 </li>
                 <li>
@@ -97,7 +98,7 @@
                 <ul class="lotusInlinelist lotusLinks" role="toolbar">
                     <li class="lotusFirst" role="presentation">
                         <a onclick="window.location.reload();" role="button" aria-pressed="true">
-                            <g:img dir="css/images" file="refresh_graphic.png" class="lotusIcon" />
+                            <g:img dir="css/images" file="refresh_graphic.png" class="lotusIcon"/>
                         </a>
                     </li>
                 </ul>
@@ -107,7 +108,8 @@
         <div class="lotusTitleBar2"><div class="lotusWrapper"><div class="lotusInner">
             <div class="lotusTitleBarContent">
                 <h2 class="lotusHeading">
-                    <g:img dir="/css/images" file="blank.gif" class="lotusIcon yourProductSprite yourProductSprite-iconPlaceholder24"/>
+                    <g:img dir="/css/images" file="blank.gif"
+                           class="lotusIcon yourProductSprite yourProductSprite-iconPlaceholder24"/>
                     <span class="lotusText">${layoutTitle()}</span></h2>
             </div>
 
@@ -121,11 +123,12 @@
 
         <div class="lotusContent" role="main">
 
-
             <g:layoutBody/>
 
         </div><!--end content-->
-        <span aria-hidden="true" class="lotusRight"><g:img dir="/css/images" file="blank.gif" alt="IBM" class="lotusIBMLogo"/><span class="lotusAltText">IBM</span></span>
+        <span aria-hidden="true" class="lotusRight"><g:img dir="/css/images" file="blank.gif" alt="IBM"
+                                                           class="lotusIBMLogo"/><span class="lotusAltText">IBM</span>
+        </span>
 
     </div><!--end main-->
 
@@ -142,7 +145,7 @@
 
 <!-- footer is an HTML5 element. Use div if you are using HTML4. -->
     <footer role="contentinfo">
-    <table class="lotusLegal" cellspacing="0" role="presentation">
+        <table class="lotusLegal" cellspacing="0" role="presentation">
             <tr>
                 <td><g:img dir="/css/images" file="blank.gif" alt="IBM" class="lotusIBMLogoFooter"/></td>
                 <td class="lotusLicense">&copy; Copyright IBM Corporation 2014.</td>

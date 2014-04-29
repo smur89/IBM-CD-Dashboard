@@ -11,9 +11,11 @@
 <head>
     <title>${build.getName()}</title>
 </head>
+
 <body>
 
 <h1>${build.getName()}</h1>
+
 <h2>Team Members</h2>
 <table class="lotusVertTable" border="0" summary="Build Summary">
     <tr>
@@ -53,13 +55,13 @@
 <table>
     <tr>
         <th>Total Defects</th>
-        <td>${build.getWorkItems().count {it.getType().equals(WorkItemTypes.DEFECT)}}</td>
+        <td>${build.getWorkItems().count { it.getType().equals(WorkItemTypes.DEFECT) }}</td>
     </tr>
 </table>
 
 %{--Sort builds by last modified date, most recent first--}%
-<% def workItems = build.getWorkItems().sort{a,b-> b.getModified() <=> a.getModified()}%>
-<h2>Work Items (${workItems.count {it}})</h2>
+<% def workItems = build.getWorkItems().sort { a, b -> b.getModified() <=> a.getModified() } %>
+<h2>Work Items (${workItems.count { it }})</h2>
 <table>
     %{--Column Headings--}%
     <tr>
@@ -67,12 +69,14 @@
         <td>Created</td>
         <td>ID</td>
     </tr>
-    %{--Each build is a row--}%
+%{--Each build is a row--}%
     <g:each in="${workItems}">
         <tr>
             <td><g:link action="workItemInfo" controller="workItem" id="${it.getWorkItemId()}">${it.type}</g:link><td>
-            <td><g:link action="workItemInfo" controller="workItem" id="${it.getWorkItemId()}">${it.getCreationDate().format('dd/MM/yyyy',TimeZone.getTimeZone('GMT'))}</g:link></td>
-            <td><g:link action="workItemInfo" controller="workItem" id="${it.getWorkItemId()}">${it.getWorkItemId()}</g:link></td>
+            <td><g:link action="workItemInfo" controller="workItem"
+                        id="${it.getWorkItemId()}">${it.getCreationDate().format('dd/MM/yyyy', TimeZone.getTimeZone('GMT'))}</g:link></td>
+            <td><g:link action="workItemInfo" controller="workItem"
+                        id="${it.getWorkItemId()}">${it.getWorkItemId()}</g:link></td>
         </tr>
     </g:each>
 </table>

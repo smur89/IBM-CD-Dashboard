@@ -6,7 +6,7 @@ Licensed Materials - Property of IBM.
 (c) Copyright IBM Corporation 2001, 2012.  All Rights Reserved.
 U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
 -->
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title><g:if env="development">Grails Runtime Exception</g:if><g:else>Error</g:else></title>
     <meta name="Description" content="Example error page"/>
     <!--[if IE 6]><![endif]--><!--fixes IE8 performance issue of conditional comments blocking css download-->
@@ -50,16 +50,19 @@ U.S. Government Users Restricted Rights:  Use, duplication or disclosure restric
 <![endif]-->
 
 </head>
+
 <body class="lotusui30_body lotusui30_fonts lotusui30 lotusError">
 
 <div class="lotusui30_layout">
     <div class="lotusErrorBox">
         <div class="lotusErrorContent" role="main">
-            <img class="lotusIcon yourProductSprite yourProductSprite-msgError48" src="../../css/images/blank.gif" alt="Error" />
+            <img class="lotusIcon yourProductSprite yourProductSprite-msgError48" src="../../css/images/blank.gif"
+                 alt="Error"/>
+
             <div class="lotusErrorForm">
                 <h1 class="lotusHeading">We are unable to process your request</h1>
                 <g:if env="development">
-                    <g:renderException exception="${exception}" />
+                    <g:renderException exception="${exception.getMessage()}"/>
                 </g:if>
                 <g:else>
                     <ul class="errors">
@@ -67,7 +70,11 @@ U.S. Government Users Restricted Rights:  Use, duplication or disclosure restric
                     </ul>
                 </g:else>
                 <p>Click the browser back button to return to the previous page and try again.  If this error persists, report the problem to your administrator.</p>
-                    <div class="lotusBtnContainer"><g:link controller="team" action="index" class = "lotusBtn" >Return to Application</g:link><span><a href="mailto:X00085315@ittd.ie?subject=Error%20${exception.getCause()}%20body=${exception.getStackTraceText()}">Report this Problem</a></span></div>
+
+                <div class="lotusBtnContainer"><g:link controller="team" action="index"
+                                                       class="lotusBtn">Return to Application</g:link><span><a
+                        href="mailto:X00085315@ittd.ie?subject=Error%20${exception.getCause()}%20body=${exception.getStackTraceText()}">Report this Problem</a>
+                </span></div>
             </div><!-- end errorForm -->
         </div>
         <!-- end errorContent -->

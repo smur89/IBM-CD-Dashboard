@@ -20,21 +20,6 @@
 
 <body>
 
-<h2>Team Members</h2>
-<table>
-    <g:each var="member" in="${team.teamMembers}">
-    %{--Column Headings--}%
-        <tr>
-            <th>Member Name</th>
-            <td>
-                ${member.name}
-            </td>
-        </tr>
-    </g:each>
-
-</table>
-
-
 <h2>Build Times</h2>
 
 <div id='chart'>
@@ -124,6 +109,20 @@ function buildTimes() {
     </tr>
 </table>
 
+<h2>Team Members</h2>
+<table class="lotusTable" border="0" cellspacing="0" cellpadding="0" summary="Team Members">
+    <g:each var="member" in="${team.teamMembers}">
+    %{--Column Headings--}%
+        <tr>
+            <th>Name:</th>
+            <td>${member.name}</td>
+            <th>Email:</th>
+            <td><a href="mailto:${member.email}?Subject=CD%20Dashboard%20Contact">${member.email}</a></td>
+        </tr>
+    </g:each>
+
+</table>
+
 <h2>Builds</h2>
 <table class="lotusTable" border="0" cellspacing="0" cellpadding="0" summary="Team Builds">
     %{--Column Headings--}%
@@ -179,5 +178,6 @@ function buildTimes() {
     </g:each>
     </tbody>
 </table>
+
 </body>
 </html>

@@ -42,7 +42,7 @@
         }
     }
 
-    def avgDefects
+    def avgDefects = 0
     if (totalDefects > 0 && builds.size() > 0) {
         avgDefects = (totalDefects / builds?.size())
     }

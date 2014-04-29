@@ -1,15 +1,19 @@
 package ibm_cd_dashboard
 
+import groovyx.net.http.ContentType
 import groovyx.net.http.RESTClient
-import javax.net.ssl.X509TrustManager
-import javax.net.ssl.SSLContext
-import java.security.cert.X509Certificate
-import javax.net.ssl.TrustManager
-import java.security.SecureRandom
-import org.apache.http.conn.ssl.SSLSocketFactory
 import org.apache.http.conn.scheme.Scheme
-import groovyx.net.http.*
+import org.apache.http.conn.ssl.SSLSocketFactory
 
+import javax.net.ssl.SSLContext
+import javax.net.ssl.TrustManager
+import javax.net.ssl.X509TrustManager
+import java.security.SecureRandom
+import java.security.cert.X509Certificate
+
+/**
+ * DELETE ME!
+ */
 class RtcTestController {
 
     def index() {

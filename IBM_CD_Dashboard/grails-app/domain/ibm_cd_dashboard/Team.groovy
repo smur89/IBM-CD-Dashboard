@@ -1,4 +1,5 @@
 package ibm_cd_dashboard
+
 /*
     In Rational Team Concert, project areas define the process used by everything they include.
     The initial process definition and description are provided by a process template.
@@ -18,10 +19,13 @@ class Team {
 
         builds nullable: true
     }
-
-    static hasMany = [builds: Build] // Cascade save to Build
-
     String teamId //String
     String teamName //String
-    ArrayList<Contributor> teamMembers //List<IContributor>
+    List teamMembers
+
+    static hasMany = [builds: Build, teamMembers: Contributor] // Cascade save to Build
+
+
+
+    //ArrayList<Contributor> teamMembers //List<IContributor>
 }

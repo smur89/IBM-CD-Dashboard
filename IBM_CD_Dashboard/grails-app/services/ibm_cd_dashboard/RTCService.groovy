@@ -14,6 +14,8 @@ import com.ibm.team.process.common.IProjectArea
 import com.ibm.team.repository.client.IItemManager
 import com.ibm.team.repository.client.ITeamRepository
 import com.ibm.team.repository.client.TeamPlatform
+import com.ibm.team.repository.common.IContributor
+import com.ibm.team.repository.common.IContributorHandle
 import com.ibm.team.repository.common.TeamRepositoryException
 import com.ibm.team.repository.common.query.IItemQuery
 import com.ibm.team.repository.common.service.IQueryService
@@ -30,6 +32,10 @@ import org.eclipse.core.runtime.NullProgressMonitor
 @Transactional
 /**
  * Service class for handling any functionality that requires access to the RTC server.
+ *
+ * @author Shane Murphy
+ * @version 1.0
+ * @since 2014-05-07
  */
 class RTCService {
     final NullProgressMonitor monitor = new NullProgressMonitor()
@@ -45,7 +51,7 @@ class RTCService {
             try {
                 TeamPlatform.startup()
             } catch (Exception e) {
-                println(e)
+                log.error("Cannot start the Team Platform:  ${e.getMessage()}")
             }
         }
     }
@@ -57,7 +63,7 @@ class RTCService {
         try {
             TeamPlatform.shutdown()
         } catch (Exception e) {
-            println(e)
+            log.error("Cannot shutdown the Team Platform:  ${e.getMessage()}")
         }
     }
 
@@ -237,6 +243,13 @@ class RTCService {
         } finally {
 
         }
+    }
+
+    def getContributor(IContributorHandle handle) {
+        ITeamRepository teamRepository = loginToRepo(URI, USERID, PASSWORD)
+        IContributor contributor = (IContributor) teamRepository.itemManager()
+                .fetchCompleteItem(handle, IItemManager.DEFAULT, null);
+        contributor
     }
 
     /**

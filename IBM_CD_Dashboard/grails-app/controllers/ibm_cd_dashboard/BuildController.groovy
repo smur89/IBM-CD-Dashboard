@@ -1,15 +1,31 @@
 package ibm_cd_dashboard
 
-import org.codehaus.groovy.grails.commons.ApplicationHolder
-
+/**
+ * Controls all logic and requests relating to the Build domain model.
+ *
+ * @author  Shane Murphy
+ * @version 1.0
+ * @since   2014-05-07
+ */
 class BuildController {
 
-    def allBuilds(){
-        [builds:Build.getAll()]
+    /**
+     * Show a list of all builds
+     *
+     * @return allBuilds.gsp
+     */
+    def allBuilds() {
+        [builds: Build.getAll()]
     }
 
-    def buildInfo(){
-        [build:Build.get(params.id)]
+    /**
+     * Display the buildInfo page which shows build metrics for this
+     * particular build and links to it's workitems.
+     *
+     * @param The Build object to be displayed
+     */
+    def buildInfo() {
+        [build: Build.get(params.id)]
     }
 
 }
