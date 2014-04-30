@@ -62,7 +62,7 @@ class TeamController {
         try {
             if (config.DomainLastModified < config.ServerLastModified && Team.count() > 0) {  //If last modified date < newest entry in server DB
                 log.info("Domain needs to be Updated")
-                domainService.updateDomain(config.DomainLastModified)
+                domainService.updateDomain(config.DomainLastModified.getTime())
             } else if (Team.count() < 1) { //if Database empty
                 log.info("Redirect to setup, ")
                 redirect(action: "setup")

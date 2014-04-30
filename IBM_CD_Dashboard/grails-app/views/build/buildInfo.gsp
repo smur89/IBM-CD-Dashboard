@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: shanemurphy
-  Date: 30/01/2014
-  Time: 17:17
-  To change this template use File | Settings | File Templates.
---%>
 
 <%@ page import="com.ibm.team.workitem.common.model.WorkItemTypes" contentType="text/html;charset=UTF-8" %>
 <html>
