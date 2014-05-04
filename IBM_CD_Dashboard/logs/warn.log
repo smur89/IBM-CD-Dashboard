@@ -1,0 +1,1 @@
+2014-05-04 13:55:06,129 [http-bio-8090-exec-8] ERROR ibm_cd_dashboard.TeamController  - Exception in checkState(): Cannot invoke method div() on null object

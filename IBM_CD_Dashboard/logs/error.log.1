@@ -1,13 +1,36 @@
-2014-04-29 22:22:31,898 [Thread-13] ERROR compiler.GrailsProjectWatcher  - Compilation Error: startup failed:
-/Users/shanemurphy/IBM-CD-Dashboard/IBM_CD_Dashboard/grails-app/services/ibm_cd_dashboard/RTCService.groovy: 218: expecting '{', found '}' @ line 218, column 5.
-       }
-       ^
-
-1 error
-
-2014-04-30 16:26:02,499 [http-bio-8090-exec-2] ERROR ibm_cd_dashboard.TeamController  - Exception in checkState(): No signature of method: ibm_cd_dashboard.DomainService.updateDomain() is applicable for argument types: (java.util.Date) values: [Wed Apr 30 16:25:31 IST 2014]
-Possible solutions: updateDomain(java.sql.Timestamp)
-2014-04-30 16:26:15,461 [http-bio-8090-exec-5] ERROR ibm_cd_dashboard.TeamController  - Exception in checkState(): No signature of method: ibm_cd_dashboard.DomainService.updateDomain() is applicable for argument types: (java.util.Date) values: [Wed Apr 30 16:25:31 IST 2014]
-Possible solutions: updateDomain(java.sql.Timestamp)
-2014-04-30 16:26:22,849 [http-bio-8090-exec-7] ERROR ibm_cd_dashboard.TeamController  - Exception in checkState(): No signature of method: ibm_cd_dashboard.DomainService.updateDomain() is applicable for argument types: (java.util.Date) values: [Wed Apr 30 16:25:31 IST 2014]
-Possible solutions: updateDomain(java.sql.Timestamp)
+2014-05-04 13:49:42,455 [http-bio-8090-exec-3] ERROR [/IBM_CD_Dashboard].[default]  - Servlet.service() for servlet [default] in context with path [/IBM_CD_Dashboard] threw exception
+java.io.FileNotFoundException: /Users/shanemurphy/IBM-CD-Dashboard/IBM_CD_Dashboard/target/work/tomcat/work/Tomcat/localhost/IBM_CD_Dashboard/grails-resources/plugins/jquery-1.10.2/js/jquery/jquery-1.10.2.min.js (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.codehaus.groovy.runtime.ResourceGroovyMethods.newInputStream(ResourceGroovyMethods.java:1843)
+	at org.codehaus.groovy.runtime.dgm$799.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoMetaMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:271)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:53)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:112)
+	at org.grails.plugin.resource.ResourceMeta.newInputStream(ResourceMeta.groovy:219)
+	at org.grails.plugin.resource.ResourceMeta$newInputStream$12.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.grails.plugin.resource.ResourceMeta$newInputStream$12.call(Unknown Source)
+	at org.grails.plugin.resource.ResourceProcessor.processModernResource(ResourceProcessor.groovy:318)
+	at org.grails.plugin.resource.ResourceProcessor$processModernResource$28.call(Unknown Source)
+	at org.grails.plugin.resource.ProcessingFilter.doFilter(ProcessingFilter.groovy:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:343)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:260)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1023)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)

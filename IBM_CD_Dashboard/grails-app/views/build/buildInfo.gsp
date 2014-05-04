@@ -9,7 +9,7 @@
 
 <h1>${build.getName()}</h1>
 
-<h2>Team Members</h2>
+<h2>Build Information</h2>
 <table class="lotusVertTable" border="0" summary="Build Summary">
     <tr>
         <th scope="row">Build ID</th>
