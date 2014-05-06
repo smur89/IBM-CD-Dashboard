@@ -16,7 +16,6 @@ class Team {
         teamId nullable: false
         teamId blank: false
         teamId unique: true
-
         builds nullable: true
     }
     String teamId //String
